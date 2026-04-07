@@ -47,8 +47,12 @@ public abstract class AbstractDepositDealBillListUI extends com.kingdee.eas.fdc.
 {
     private static final Logger logger = CoreUIObject.getLogger(AbstractDepositDealBillListUI.class);
     protected com.kingdee.bos.ctrl.swing.KDCheckBox cbIsAll;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer1;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer2;
     protected com.kingdee.bos.ctrl.swing.KDSplitPane kDSplitPane1;
     protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtTenancy;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkAuditDate;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkAuditDateTo;
     protected com.kingdee.bos.ctrl.swing.KDMenuItem menuItemBatchReceieving;
     protected com.kingdee.bos.ctrl.swing.KDMenuItem menuItemUpdateSubject;
     /**
@@ -111,13 +115,21 @@ public abstract class AbstractDepositDealBillListUI extends com.kingdee.eas.fdc.
         actionBatchReceiving.putValue(ItemAction.NAME, _tempStr);
          this.actionBatchReceiving.addService(new com.kingdee.eas.framework.client.service.PermissionService());
         this.cbIsAll = new com.kingdee.bos.ctrl.swing.KDCheckBox();
+        this.kDLabelContainer1 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer2 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.kDSplitPane1 = new com.kingdee.bos.ctrl.swing.KDSplitPane();
         this.kdtTenancy = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.pkAuditDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.pkAuditDateTo = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.menuItemBatchReceieving = new com.kingdee.bos.ctrl.swing.KDMenuItem();
         this.menuItemUpdateSubject = new com.kingdee.bos.ctrl.swing.KDMenuItem();
         this.cbIsAll.setName("cbIsAll");
+        this.kDLabelContainer1.setName("kDLabelContainer1");
+        this.kDLabelContainer2.setName("kDLabelContainer2");
         this.kDSplitPane1.setName("kDSplitPane1");
         this.kdtTenancy.setName("kdtTenancy");
+        this.pkAuditDate.setName("pkAuditDate");
+        this.pkAuditDateTo.setName("pkAuditDateTo");
         this.menuItemBatchReceieving.setName("menuItemBatchReceieving");
         this.menuItemUpdateSubject.setName("menuItemUpdateSubject");
         // CoreUI
@@ -144,6 +156,14 @@ public abstract class AbstractDepositDealBillListUI extends com.kingdee.eas.fdc.
                 }
             }
         });
+        // kDLabelContainer1		
+        this.kDLabelContainer1.setBoundLabelText(resHelper.getString("kDLabelContainer1.boundLabelText"));		
+        this.kDLabelContainer1.setBoundLabelLength(100);		
+        this.kDLabelContainer1.setBoundLabelUnderline(true);
+        // kDLabelContainer2		
+        this.kDLabelContainer2.setBoundLabelText(resHelper.getString("kDLabelContainer2.boundLabelText"));		
+        this.kDLabelContainer2.setBoundLabelLength(100);		
+        this.kDLabelContainer2.setBoundLabelUnderline(true);
         // kDSplitPane1		
         this.kDSplitPane1.setOrientation(0);		
         this.kDSplitPane1.setDividerLocation(350);
@@ -174,6 +194,8 @@ public abstract class AbstractDepositDealBillListUI extends com.kingdee.eas.fdc.
 
         
 
+        // pkAuditDate
+        // pkAuditDateTo
         // menuItemBatchReceieving
         this.menuItemBatchReceieving.setAction((IItemAction)ActionProxyFactory.getProxy(actionBatchReceiving, new Class[] { IItemAction.class }, getServiceContext()));		
         this.menuItemBatchReceieving.setText(resHelper.getString("menuItemBatchReceieving.text"));		
@@ -213,6 +235,10 @@ public abstract class AbstractDepositDealBillListUI extends com.kingdee.eas.fdc.
         this.add(pnlMain, new KDLayout.Constraints(8, 25, 993, 596, KDLayout.Constraints.ANCHOR_CENTRE | KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
         cbIsAll.setBounds(new Rectangle(219, 4, 140, 19));
         this.add(cbIsAll, new KDLayout.Constraints(219, 4, 140, 19, 0));
+        kDLabelContainer1.setBounds(new Rectangle(362, 3, 270, 19));
+        this.add(kDLabelContainer1, new KDLayout.Constraints(362, 3, 270, 19, 0));
+        kDLabelContainer2.setBounds(new Rectangle(640, 3, 270, 19));
+        this.add(kDLabelContainer2, new KDLayout.Constraints(640, 3, 270, 19, 0));
         //pnlMain
         pnlMain.add(treeView, "left");
         pnlMain.add(kDSplitPane1, "right");
@@ -221,6 +247,10 @@ public abstract class AbstractDepositDealBillListUI extends com.kingdee.eas.fdc.
         //kDSplitPane1
         kDSplitPane1.add(tblMain, "bottom");
         kDSplitPane1.add(kdtTenancy, "top");
+        //kDLabelContainer1
+        kDLabelContainer1.setBoundEditor(pkAuditDate);
+        //kDLabelContainer2
+        kDLabelContainer2.setBoundEditor(pkAuditDateTo);
 
     }
 

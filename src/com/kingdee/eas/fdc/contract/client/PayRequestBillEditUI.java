@@ -276,6 +276,7 @@ import com.kingdee.eas.ma.budget.client.NewBgItemDialog;
 import com.kingdee.eas.util.SysUtil;
 import com.kingdee.eas.util.app.ContextUtil;
 import com.kingdee.eas.util.client.EASResource;
+import com.kingdee.eas.util.client.MsgBox;
 import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.util.DateTimeUtils;
 import com.kingdee.util.UuidException;
@@ -1312,7 +1313,7 @@ public class PayRequestBillEditUI extends AbstractPayRequestBillEditUI implement
 
 		txtcapitalAmount.setEditable(false);
 
-		txtMoneyDesc.setMaxLength(500);
+		txtMoneyDesc.setMaxLength(800);
 		txtProcess.setMaxLength(255);
 
 		txtUsage.setMaxLength(usageLegth);
@@ -3138,6 +3139,10 @@ public class PayRequestBillEditUI extends AbstractPayRequestBillEditUI implement
 		storeFields();
 		Set payReqBillSet = new HashSet();
 		payReqBillSet.add(this.editData);
+		if(!PayRequestBillFactory.getRemoteInstance().exists(new ObjectUuidPK(this.editData.getId()))){
+			MsgBox.showInfo("请先保存！");
+			SysUtil.abort();
+		}
 		boolean isCanPass = PayReqUtils.checkProjectPriceInContract(payReqBillSet, this.txtBcAmount.getBigDecimalValue());
 		if (!isCanPass) {
 			FDCMsgBox.showError("合同实付款不能大于合同结算价【合同实付款 =已关闭的付款申请单对应的付款单合同内工程款合计 + 未关闭的付款申请单合同内工程款合计】");
@@ -3316,6 +3321,17 @@ public class PayRequestBillEditUI extends AbstractPayRequestBillEditUI implement
 				editData.setState(FDCBillStateEnum.SAVED);
 			}
 		}
+		Object cell = bindCellMap.get(PayRequestBillContants.CURPAID);
+		KDTEditEvent e1=new KDTEditEvent(cell);
+		if (cell != null && cell instanceof ICell) {
+			BigDecimal amount = TableUtils.getColumnValueSum(this.kdtBgEntry, "requestAmount");
+			this.kdtEntrys.getRow(rowIndex).getCell(columnIndex).setValue(amount);
+			e1.setColIndex(columnIndex);
+			e1.setRowIndex(rowIndex);
+			e1.setValue(amount);
+			this.kdtEntrys_editStopped(e1);
+		}
+		TableUtils.getFootRow(this.kdtBgEntry, new String[] { "requestAmount", "amount" });
 
 		btnInputCollect_actionPerformed(null);
 		super.actionSave_actionPerformed(e);
@@ -3346,6 +3362,19 @@ public class PayRequestBillEditUI extends AbstractPayRequestBillEditUI implement
 	 */
 	public void actionSubmit_actionPerformed(ActionEvent e) throws Exception {
 		btnInputCollect_actionPerformed(null);
+		
+		Object cell = bindCellMap.get(PayRequestBillContants.CURPAID);
+		KDTEditEvent e1=new KDTEditEvent(cell);
+		if (cell != null && cell instanceof ICell) {
+			BigDecimal amount = TableUtils.getColumnValueSum(this.kdtBgEntry, "requestAmount");
+			this.kdtEntrys.getRow(rowIndex).getCell(columnIndex).setValue(amount);
+			e1.setColIndex(columnIndex);
+			e1.setRowIndex(rowIndex);
+			e1.setValue(amount);
+			this.kdtEntrys_editStopped(e1);
+		}
+		TableUtils.getFootRow(this.kdtBgEntry, new String[] { "requestAmount", "amount" });
+		
 		if (isMoreSettlement) {
 			check();
 		}
@@ -6698,8 +6727,8 @@ public class PayRequestBillEditUI extends AbstractPayRequestBillEditUI implement
 		((ICell) bindCellMap.get(PayRequestBillContants.PAYPARTAMATLAMT)).setValue(amount);
 
 	}
-
 	protected void kdtEntrys_editStopped(KDTEditEvent e) throws Exception {
+
 		boolean isZeroPay = false;
 		if ((e.getRowIndex() == rowIndex) && (e.getColIndex() == columnIndex)) {
 			BigDecimal originalAmount = FDCHelper.toBigDecimal(e.getValue());

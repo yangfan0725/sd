@@ -59,4 +59,19 @@ public abstract class AbstractTenancyBillEditUIHandler extends com.kingdee.eas.f
 	}
 	protected void _handleActionUpdateTenPrice(RequestContext request,ResponseContext response, Context context) throws Exception {
 	}
+	public void handleActionUpdateXHTenancyBill(RequestContext request,ResponseContext response, Context context) throws Exception {
+		_handleActionUpdateXHTenancyBill(request,response,context);
+	}
+	protected void _handleActionUpdateXHTenancyBill(RequestContext request,ResponseContext response, Context context) throws Exception {
+	}
+	public void handleActionALine(RequestContext request,ResponseContext response, Context context) throws Exception {
+		_handleActionALine(request,response,context);
+	}
+	protected void _handleActionALine(RequestContext request,ResponseContext response, Context context) throws Exception {
+	}
+	public void handleActionRLine(RequestContext request,ResponseContext response, Context context) throws Exception {
+		_handleActionRLine(request,response,context);
+	}
+	protected void _handleActionRLine(RequestContext request,ResponseContext response, Context context) throws Exception {
+	}
 }

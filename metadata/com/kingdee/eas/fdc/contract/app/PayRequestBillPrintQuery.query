@@ -5026,6 +5026,37 @@
                 <key name="name" value="PayRequestBillPrintQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>curProject.description</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PayRequestBillPrintQuery].units.queryField[curProject.description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ef97d6cf-0e41-4d38-b6ad-8da4a392cf87</key>
+                    <parentUnit>
+                        <key name="name" value="curProject.description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="curProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PayRequestBillPrintQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -6410,6 +6441,12 @@
             <lang locale="zh_CN" value="本期计划付款" />
             <lang locale="zh_HK" value="本期計畫付款" />
             <lang locale="zh_TW" value="本期計畫付款" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PayRequestBillPrintQuery].units.queryField[curProject.description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目描述" />
+            <lang locale="zh_HK" value="工程項目描述" />
+            <lang locale="zh_TW" value="工程項目描述" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PayRequestBillPrintQuery].units.queryField[curProject.name].displayName">
             <lang locale="en_US" value="null" />

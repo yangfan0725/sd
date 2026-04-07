@@ -14,6 +14,7 @@ import java.awt.event.MouseEvent;
 import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -37,6 +38,7 @@ import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import javax.swing.text.NumberFormatter;
 
 import org.apache.log4j.Logger;
 
@@ -57,6 +59,7 @@ import com.kingdee.bos.ctrl.kdf.table.event.BeforeActionEvent;
 import com.kingdee.bos.ctrl.kdf.table.event.BeforeActionListener;
 import com.kingdee.bos.ctrl.kdf.table.event.KDTEditEvent;
 import com.kingdee.bos.ctrl.kdf.table.event.KDTMouseEvent;
+import com.kingdee.bos.ctrl.kdf.table.foot.KDTFootManager;
 import com.kingdee.bos.ctrl.kdf.table.util.KDTableUtil;
 import com.kingdee.bos.ctrl.kdf.util.editor.ICellEditor;
 import com.kingdee.bos.ctrl.kdf.util.style.Styles.HorizontalAlignment;
@@ -71,6 +74,7 @@ import com.kingdee.bos.ctrl.swing.event.DataChangeEvent;
 import com.kingdee.bos.ctrl.swing.event.DataChangeListener;
 import com.kingdee.bos.ctrl.swing.event.SelectorEvent;
 import com.kingdee.bos.ctrl.swing.event.SelectorListener;
+import com.kingdee.bos.ctrl.swing.util.CtrlCommonConstant;
 import com.kingdee.bos.dao.IObjectCollection;
 import com.kingdee.bos.dao.IObjectPK;
 import com.kingdee.bos.dao.IObjectValue;
@@ -108,8 +112,10 @@ import com.kingdee.eas.base.param.ParamControlFactory;
 import com.kingdee.eas.base.permission.UserInfo;
 import com.kingdee.eas.base.uiframe.client.UIFactoryHelper;
 import com.kingdee.eas.basedata.assistant.CurrencyInfo;
+import com.kingdee.eas.basedata.master.cssp.CustomerInfo;
 import com.kingdee.eas.basedata.org.CtrlUnitInfo;
 import com.kingdee.eas.basedata.org.FullOrgUnitInfo;
+import com.kingdee.eas.basedata.org.OrgConstants;
 import com.kingdee.eas.basedata.org.OrgType;
 import com.kingdee.eas.basedata.org.OrgUnitInfo;
 import com.kingdee.eas.basedata.org.SaleOrgUnitInfo;
@@ -131,7 +137,10 @@ import com.kingdee.eas.fdc.basedata.MoneySysTypeEnum;
 import com.kingdee.eas.fdc.basedata.client.FDCClientHelper;
 import com.kingdee.eas.fdc.basedata.client.FDCMsgBox;
 import com.kingdee.eas.fdc.basedata.client.FDCTableHelper;
+import com.kingdee.eas.fdc.contract.ContractMDeveloperEntryInfo;
 import com.kingdee.eas.fdc.contract.FDCUtils;
+import com.kingdee.eas.fdc.contract.app.MarketCostTypeEnum;
+import com.kingdee.eas.fdc.contract.app.YesOrNoEnum;
 import com.kingdee.eas.fdc.sellhouse.BuildingInfo;
 import com.kingdee.eas.fdc.sellhouse.BuildingUnitInfo;
 import com.kingdee.eas.fdc.sellhouse.CertifacateNameEnum;
@@ -144,6 +153,7 @@ import com.kingdee.eas.fdc.sellhouse.MoneyTypeEnum;
 import com.kingdee.eas.fdc.sellhouse.RoomCollection;
 import com.kingdee.eas.fdc.sellhouse.RoomFactory;
 import com.kingdee.eas.fdc.sellhouse.RoomInfo;
+import com.kingdee.eas.fdc.sellhouse.SHEManageHelper;
 import com.kingdee.eas.fdc.sellhouse.SellProjectInfo;
 import com.kingdee.eas.fdc.sellhouse.SubareaInfo;
 import com.kingdee.eas.fdc.sellhouse.ToIntegerTypeEnum;
@@ -243,6 +253,13 @@ import com.kingdee.eas.fdc.tenancy.TenancyRoomPayListEntryCollection;
 import com.kingdee.eas.fdc.tenancy.TenancyRoomPayListEntryFactory;
 import com.kingdee.eas.fdc.tenancy.TenancyRoomPayListEntryInfo;
 import com.kingdee.eas.fdc.tenancy.TenancyStateEnum;
+import com.kingdee.eas.fdc.tenancy.TenancyXHRoomEntryInfo;
+import com.kingdee.eas.fdc.tenancy.TenancyXHRoomPayListEntryCollection;
+import com.kingdee.eas.fdc.tenancy.XHCustomerInfo;
+import com.kingdee.eas.fdc.tenancy.XHRoomInfo;
+import com.kingdee.eas.fdc.tenancy.XHTenancyBillCollection;
+import com.kingdee.eas.fdc.tenancy.XHTenancyBillFactory;
+import com.kingdee.eas.fdc.tenancy.XHTenancyBillInfo;
 import com.kingdee.eas.framework.CoreBaseCollection;
 import com.kingdee.eas.util.SysUtil;
 import com.kingdee.eas.util.app.ContextUtil;
@@ -510,8 +527,284 @@ public class TenancyBillEditUI extends AbstractTenancyBillEditUI implements
 			this.txtTenPrice.setEnabled(false);
 			this.txtTenPrice.setRequired(false);
 		}
+		try {
+			loadXHTenancyBill();
+		} catch (BOSException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Override
+	public void actionALine_actionPerformed(ActionEvent e) throws Exception {
+		IRow row = this.tblXHRoom.addRow();
+		TenancyXHRoomEntryInfo info = new TenancyXHRoomEntryInfo();
+		info.setId(BOSUuid.create(info.getBOSType()));
+		
+		row.setUserObject(info);
 	}
 
+	@Override
+	public void actionRLine_actionPerformed(ActionEvent e) throws Exception {
+		int activeRowIndex = tblXHRoom.getSelectManager().getActiveRowIndex();
+		if(activeRowIndex<0){
+			FDCMsgBox.showError("请先选择一行数据");
+			abort();
+		}
+		tblXHRoom.removeRow(activeRowIndex);
+		
+		CRMClientHelper.getFootRow(this.tblXHRoom, new String[] { "area"});
+		 KDTFootManager footRowManager = this.tblXHRoom.getFootManager();
+	        IRow footRow = footRowManager.getFootRow(0);
+			if(footRow.getCell("area").getValue()==null||(footRow.getCell("area").getValue()!=null&&((BigDecimal)footRow.getCell("area").getValue()).compareTo(this.txtXHRoomArea.getBigDecimalValue()==null?FDCHelper.ZERO:this.txtXHRoomArea.getBigDecimalValue())!=0)){
+				footRow.getCell("area").getStyleAttributes().setBackground(Color.red);
+			}else{
+				footRow.getCell("area").getStyleAttributes().setBackground(footRow.getCell("isSale").getStyleAttributes().getBackground());
+			}
+	}
+
+	@Override
+	protected void tblXHRoom_editStopped(KDTEditEvent e) throws Exception {
+		int colIndex=e.getColIndex();
+		int rowIndex=e.getRowIndex();
+		if(colIndex==this.tblXHRoom.getColumn("room").getColumnIndex()){
+			XHRoomInfo info=(XHRoomInfo) this.tblXHRoom.getRow(rowIndex).getCell("room").getValue();
+			if(info!=null){
+				this.tblXHRoom.getRow(rowIndex).getCell("area").setValue(info.getArea());
+				this.tblXHRoom.getRow(rowIndex).getCell("isSale").setValue(info.getIsSale());
+			}else{
+				this.tblXHRoom.getRow(rowIndex).getCell("area").setValue(null);
+				this.tblXHRoom.getRow(rowIndex).getCell("isSale").setValue(null);
+			}
+			CRMClientHelper.getFootRow(this.tblXHRoom, new String[] { "area"});
+			 KDTFootManager footRowManager = this.tblXHRoom.getFootManager();
+		        IRow footRow = footRowManager.getFootRow(0);
+				if(footRow.getCell("area").getValue()==null||(footRow.getCell("area").getValue()!=null&&((BigDecimal)footRow.getCell("area").getValue()).compareTo(this.txtXHRoomArea.getBigDecimalValue()==null?FDCHelper.ZERO:this.txtXHRoomArea.getBigDecimalValue())!=0)){
+					footRow.getCell("area").getStyleAttributes().setBackground(Color.red);
+				}else{
+					footRow.getCell("area").getStyleAttributes().setBackground(footRow.getCell("isSale").getStyleAttributes().getBackground());
+				}
+				
+		}
+	}
+	protected void prmtXHCustomer_dataChanged(DataChangeEvent e)
+			throws Exception {
+		XHCustomerInfo info=(XHCustomerInfo) this.prmtXHCustomer.getValue();
+		if(info!=null){
+			this.txtXHCustomerNumber.setText(info.getNumber());
+		}else{
+			this.txtXHCustomerNumber.setText(null);
+		}
+	}
+
+	@Override
+	public void actionUpdateXHTenancyBill_actionPerformed(ActionEvent e)
+			throws Exception {
+		EntityViewInfo view=new EntityViewInfo();
+		FilterInfo filter=new FilterInfo();
+		filter.getFilterItems().add(new FilterItemInfo("tenancyBill.id",this.editData.getId()));
+		view.setFilter(filter);
+		SelectorItemCollection updatesic=new SelectorItemCollection();
+		updatesic.add("isUpdateXHTenancyBill");
+		updatesic.add("xhCustomer");
+		updatesic.add("xhCustomerNum");
+		updatesic.add("xhRoomArea");
+		updatesic.add("sysCustomer");
+		updatesic.add("sysCustomerNum");
+		
+		SelectorItemCollection sic=new SelectorItemCollection();
+		sic.add("*");
+		sic.add("CU.*");
+		sic.add("room.*");
+		sic.add("customer.*");
+		sic.add("xhCustomer.*");
+		sic.add("xhRoomEntry.*");
+		sic.add("xhRoomEntry.xhRoom.*");
+		sic.add("payListEntry.*");
+		sic.add("payListEntry.moneyDefine.*");
+		sic.add("tenancyBill.*");
+		sic.add("tenancyBill.creator.*");
+		
+		view.setSelector(sic);
+		XHTenancyBillCollection col=XHTenancyBillFactory.getRemoteInstance().getXHTenancyBillCollection(view);
+		if(col.size()>0){
+			XHTenancyBillInfo xhInfo=col.get(0);
+			xhInfo.setXhCustomer((XHCustomerInfo) this.prmtXHCustomer.getValue());
+			
+			xhInfo.getXhRoomEntry().clear();
+			BigDecimal xhRoomArea=FDCHelper.ZERO;
+			for(int i=0;i<this.tblXHRoom.getRowCount();i++){
+				TenancyXHRoomEntryInfo entry=(TenancyXHRoomEntryInfo) this.tblXHRoom.getRow(i).getUserObject();
+				entry.setXhRoom((XHRoomInfo) this.tblXHRoom.getRow(i).getCell("room").getValue());
+				
+				xhRoomArea=FDCHelper.add(xhRoomArea, this.tblXHRoom.getRow(i).getCell("area").getValue());
+				xhInfo.getXhRoomEntry().add(entry);
+			}
+			XHTenancyBillFactory.getRemoteInstance().save(xhInfo);
+			
+			TenancyBillInfo uInfo=new TenancyBillInfo();
+			uInfo.setId(this.editData.getId());
+			uInfo.setIsUpdateXHTenancyBill(true);
+			uInfo.setXhRoomArea(xhRoomArea);
+			if(this.prmtXHCustomer.getValue()!=null){
+				uInfo.setXhCustomer(((XHCustomerInfo)this.prmtXHCustomer.getValue()).getName());
+				uInfo.setXhCustomerNum(((XHCustomerInfo)this.prmtXHCustomer.getValue()).getNumber());
+			}else{
+				uInfo.setXhCustomer(null);
+				uInfo.setXhCustomerNum(null);
+			}
+			if(this.editData.getTenCustomerList().size()>0&&this.editData.getTenCustomerList().get(0).getFdcCustomer()!=null
+					&&this.editData.getTenCustomerList().get(0).getFdcCustomer().getSysCustomer()!=null){
+				CustomerInfo cus=this.editData.getTenCustomerList().get(0).getFdcCustomer().getSysCustomer();
+				uInfo.setSysCustomerNum(cus.getNumber());
+				uInfo.setSysCustomer(cus.getName());
+			}else{
+				uInfo.setSysCustomerNum(null);
+				uInfo.setSysCustomer(null);
+			}
+			TenancyBillFactory.getRemoteInstance().updatePartial(uInfo, updatesic);
+			
+			MsgBox.showInfo("更新成功！");
+		}
+	}
+
+	private void loadXHTenancyBill() throws BOSException{
+		EntityViewInfo view=new EntityViewInfo();
+		FilterInfo filter=new FilterInfo();
+		filter.getFilterItems().add(new FilterItemInfo("tenancyBill.id",this.editData.getId()));
+		view.setFilter(filter);
+		SelectorItemCollection sic=new SelectorItemCollection();
+		sic.add("*");
+		sic.add("CU.*");
+		sic.add("room.*");
+		sic.add("customer.*");
+		sic.add("xhCustomer.*");
+		sic.add("xhRoomEntry.*");
+		sic.add("xhRoomEntry.xhRoom.*");
+		sic.add("payListEntry.*");
+		sic.add("payListEntry.moneyDefine.*");
+		sic.add("tenancyBill.*");
+		sic.add("creator.*");
+		sic.add("auditor.*");		
+		view.setSelector(sic);
+		XHTenancyBillCollection col=XHTenancyBillFactory.getRemoteInstance().getXHTenancyBillCollection(view);
+		if(col.size()>0){
+			XHTenancyBillInfo xhInfo=col.get(0);
+			this.cbXHContractState.setSelectedItem(xhInfo.getTenancyState());
+			this.cbXHContractType.setSelectedItem(xhInfo.getTenancyType());
+			this.txtXHCreator.setText(xhInfo.getCreator().getName());
+			if(xhInfo.getCustomer()!=null){
+				this.txtXHCustomer.setText(xhInfo.getCustomer().getName());
+			}
+			if(xhInfo.getXhCustomer()!=null){
+				this.txtXHCustomerNumber.setText(xhInfo.getXhCustomer().getNumber());
+				this.prmtXHCustomer.setValue(xhInfo.getXhCustomer());
+			}
+			this.txtXHFreeRemark.setText(xhInfo.getFreeRemark());
+			this.txtXHIncreasedRemark.setText(xhInfo.getIncreasedRemark());
+			this.txtXHLeaseCount.setValue(xhInfo.getLeaseCount());
+			this.txtXHNumber.setText(xhInfo.getNumber());
+			if(xhInfo.getRoom()!=null){
+				this.txtXHRoom.setText(xhInfo.getRoom().getName());
+				this.txtXHRoomArea.setValue(xhInfo.getRoom().getTenancyArea());
+			}
+			this.pkXHAuditTime.setValue(xhInfo.getAuditTime());
+			this.pkXHCreateTime.setValue(xhInfo.getCreateTime());
+			this.pkXHQuitRoomDate.setValue(xhInfo.getQuitRoomDate());
+			this.pkXHStartDate.setValue(xhInfo.getStartDate());
+			this.pkXHEndDate.setValue(xhInfo.getEndDate());
+			this.pkXHTenancyDate.setValue(xhInfo.getTenancyDate());
+			for(int i=0;i<xhInfo.getXhRoomEntry().size();i++){
+				IRow row=this.tblXHRoom.addRow();
+				row.setUserObject(xhInfo.getXhRoomEntry().get(i));
+				row.getCell("room").setValue(xhInfo.getXhRoomEntry().get(i).getXhRoom());
+				row.getCell("area").setValue(xhInfo.getXhRoomEntry().get(i).getXhRoom().getArea());
+				row.getCell("isSale").setValue(xhInfo.getXhRoomEntry().get(i).getXhRoom().getIsSale());
+			}
+			CRMClientHelper.getFootRow(this.tblXHRoom, new String[] { "area"});
+			
+	        KDTFootManager footRowManager = this.tblXHRoom.getFootManager();
+	        IRow footRow = footRowManager.getFootRow(0);
+			if(footRow.getCell("area").getValue()==null||(footRow.getCell("area").getValue()!=null&&((BigDecimal)footRow.getCell("area").getValue()).compareTo(this.txtXHRoomArea.getBigDecimalValue()==null?FDCHelper.ZERO:this.txtXHRoomArea.getBigDecimalValue())!=0)){
+				footRow.getCell("area").getStyleAttributes().setBackground(Color.red);
+			}
+			
+			TenancyXHRoomPayListEntryCollection payList=xhInfo.getPayListEntry();
+			CRMHelper.sortCollection(payList, "startDate", true);
+			
+			int days=0;
+			BigDecimal wyamount=FDCHelper.ZERO;
+			
+			for(int i=0;i<payList.size();i++){
+				if(payList.get(i).getMoneyDefine().getName().equals("租赁保证金")){
+					IRow row=this.tblBZJ.addRow();
+					row.setUserObject(payList.get(i));
+					row.getCell("moneyDefine").setValue(payList.get(i).getMoneyDefine());
+					row.getCell("appDate").setValue(payList.get(i).getAppDate());
+					row.getCell("appAmount").setValue(payList.get(i).getAppAmount());
+					row.getCell("actRevDate").setValue(payList.get(i).getActRevDate());
+					row.getCell("actRevAmount").setValue(payList.get(i).getAllRemainAmount());
+				}
+				if(payList.get(i).getMoneyDefine().getName().equals("租金")){
+					IRow row=this.tblZJ.addRow();
+					row.setUserObject(payList.get(i));
+					row.getCell("moneyDefine").setValue(payList.get(i).getMoneyDefine());
+					row.getCell("appDate").setValue(payList.get(i).getAppDate());
+					row.getCell("appAmount").setValue(payList.get(i).getAppAmount());
+					row.getCell("actRevDate").setValue(payList.get(i).getActRevDate());
+					row.getCell("actRevAmount").setValue(payList.get(i).getAllRemainAmount());
+					row.getCell("startDate").setValue(payList.get(i).getStartDate());
+					row.getCell("endDate").setValue(payList.get(i).getEndDate());
+				}
+				if(payList.get(i).getMoneyDefine().getName().indexOf("物业管理费")>=0||payList.get(i).getMoneyDefine().getName().equals("物业费")){
+					IRow row=this.tblWY.addRow();
+					row.setUserObject(payList.get(i));
+					row.getCell("moneyDefine").setValue(payList.get(i).getMoneyDefine());
+					row.getCell("appDate").setValue(payList.get(i).getAppDate());
+					row.getCell("appAmount").setValue(payList.get(i).getAppAmount());
+					row.getCell("actRevDate").setValue(payList.get(i).getActRevDate());
+					row.getCell("actRevAmount").setValue(payList.get(i).getAllRemainAmount());
+					row.getCell("startDate").setValue(payList.get(i).getStartDate());
+					row.getCell("endDate").setValue(payList.get(i).getEndDate());
+					
+					days=days+FDCDateHelper.getDiffDays(payList.get(i).getStartDate(), payList.get(i).getEndDate());
+					wyamount=FDCHelper.add(wyamount, payList.get(i).getAppAmount());
+				}
+			}
+			this.txtWYDayPrice.setDataType(BigDecimal.class);
+			this.txtWYDayPrice.setHorizontalAlignment(JTextField.RIGHT);
+			this.txtWYDayPrice.setPrecision(2);
+			NumberFormatter formatter = new NumberFormatter(new DecimalFormat("0.00"));
+			this.txtWYDayPrice.setDisplayFormatter(formatter);
+			
+			this.txtWYDays.setValue(days);
+			if(days!=0){
+				this.txtWYDayPrice.setValue(FDCHelper.divide(wyamount, days, 2, BigDecimal.ROUND_HALF_UP));
+			}
+			
+			CRMClientHelper.getFootRow(this.tblBZJ, new String[] { "appAmount",
+					"actRevAmount"});
+			
+			CRMClientHelper.getFootRow(this.tblZJ, new String[] { "appAmount",
+					"actRevAmount"});
+			
+			CRMClientHelper.getFootRow(this.tblWY, new String[] { "appAmount",
+			"actRevAmount"});
+			
+			this.tblXHRoom.setEditable(true);
+			this.tblXHRoom.getColumn("area").getStyleAttributes().setLocked(true);
+			this.tblXHRoom.getColumn("isSale").getStyleAttributes().setLocked(true);
+			this.prmtXHCustomer.setAccessAuthority(CtrlCommonConstant.AUTHORITY_COMMON);
+			this.prmtXHCustomer.setEnabled(true);
+			if(!SysContext.getSysContext().getCurrentUserInfo().getNumber().equals("900002")){
+				this.btnUpdateXHTenancyBill.setVisible(false);
+				tabbedPaneContract.remove(this.panelXHTenancyBill);
+			}
+		}else{
+			this.btnUpdateXHTenancyBill.setVisible(false);
+			tabbedPaneContract.remove(this.panelXHTenancyBill);
+		}
+		this.btnUpdateXHTenancyBill.setIcon(this.btnAdjust.getIcon());
+	}
 	
 //	private void fillDataToRow(TenPriceEntryInfo entry, IRow r) {
 //		
@@ -1064,7 +1357,170 @@ public class TenancyBillEditUI extends AbstractTenancyBillEditUI implements
 		if (!saleOrg.isIsBizUnit()) {
 			this.actionEdit.setEnabled(false);
 		}
+		this.tblBZJ.checkParsed();
+		this.tblZJ.checkParsed();
+		this.tblWY.checkParsed();
+		this.tblXHRoom.checkParsed();
+		KDWorkButton btnAddRowinfo = new KDWorkButton();
+		KDWorkButton btnDeleteRowinfo = new KDWorkButton();
 
+		this.actionALine.putValue("SmallIcon", EASResource.getIcon("imgTbtn_addline"));
+		btnAddRowinfo = (KDWorkButton) this.kDContainer6.add(this.actionALine);
+		btnAddRowinfo.setText("新增行");
+		btnAddRowinfo.setSize(new Dimension(140, 19));
+
+		this.actionRLine.putValue("SmallIcon", EASResource.getIcon("imgTbtn_deleteline"));
+		btnDeleteRowinfo = (KDWorkButton) this.kDContainer6.add(this.actionRLine);
+		btnDeleteRowinfo.setText("删除行");
+		btnDeleteRowinfo.setSize(new Dimension(140, 19));
+		
+		KDBizPromptBox f7Box = new KDBizPromptBox(); 
+		KDTDefaultCellEditor f7Editor = new KDTDefaultCellEditor(f7Box);
+		f7Box.setDisplayFormat("$name$");
+		f7Box.setEditFormat("$number$");
+		f7Box.setCommitFormat("$number$");
+		f7Box.setQueryInfo("com.kingdee.eas.fdc.tenancy.app.XHRoomQuery");
+		f7Box.addSelectorListener(new SelectorListener() {
+			public void willShow(SelectorEvent e) {
+				KDBizPromptBox f7 = (KDBizPromptBox) e.getSource();
+				f7.getQueryAgent().setDefaultFilterInfo(null);
+				f7.getQueryAgent().setHasCUDefaultFilter(false);
+				f7.getQueryAgent().resetRuntimeEntityView();
+				EntityViewInfo view = new EntityViewInfo();
+				FilterInfo filter = new FilterInfo();
+				String sellProjectId = editData.getSellProject().getId().toString();
+				filter.getFilterItems().add(
+						new FilterItemInfo("sellProject.id.id", sellProjectId));
+				view.setFilter(filter);
+				f7.setEntityViewInfo(view);
+			}
+		});
+		f7Editor = new KDTDefaultCellEditor(f7Box);
+		this.tblXHRoom.getColumn("room").setEditor(f7Editor);
+		
+		KDComboBox combo = new KDComboBox();
+        for(int i = 0; i < YesOrNoEnum.getEnumList().size(); i++){
+        	combo.addItem(YesOrNoEnum.getEnumList().get(i));
+        }
+        KDTDefaultCellEditor comboEditor = new KDTDefaultCellEditor(combo);
+		this.tblXHRoom.getColumn("isSale").setEditor(comboEditor);
+		
+		String formatString = "yyyy-MM-dd";
+		this.tblBZJ.getColumn("appDate").getStyleAttributes().setNumberFormat(formatString);
+		this.tblBZJ.getColumn("actRevDate").getStyleAttributes().setNumberFormat(formatString);
+		
+		this.tblZJ.getColumn("appDate").getStyleAttributes().setNumberFormat(formatString);
+		this.tblZJ.getColumn("actRevDate").getStyleAttributes().setNumberFormat(formatString);
+		
+		this.tblZJ.getColumn("startDate").getStyleAttributes().setNumberFormat(formatString);
+		this.tblZJ.getColumn("endDate").getStyleAttributes().setNumberFormat(formatString);
+		
+		this.tblWY.getColumn("appDate").getStyleAttributes().setNumberFormat(formatString);
+		this.tblWY.getColumn("actRevDate").getStyleAttributes().setNumberFormat(formatString);
+		
+		this.tblWY.getColumn("startDate").getStyleAttributes().setNumberFormat(formatString);
+		this.tblWY.getColumn("endDate").getStyleAttributes().setNumberFormat(formatString);
+		
+		KDDatePicker pk = new KDDatePicker();
+		KDTDefaultCellEditor dateEditor = new KDTDefaultCellEditor(pk);
+		this.tblBZJ.getColumn("appDate").setEditor(dateEditor);
+		this.tblBZJ.getColumn("actRevDate").setEditor(dateEditor);
+		
+		this.tblZJ.getColumn("appDate").setEditor(dateEditor);
+		this.tblZJ.getColumn("actRevDate").setEditor(dateEditor);
+		
+		this.tblZJ.getColumn("startDate").setEditor(dateEditor);
+		this.tblZJ.getColumn("endDate").setEditor(dateEditor);
+		
+		this.tblWY.getColumn("appDate").setEditor(dateEditor);
+		this.tblWY.getColumn("actRevDate").setEditor(dateEditor);
+		
+		this.tblWY.getColumn("startDate").setEditor(dateEditor);
+		this.tblWY.getColumn("endDate").setEditor(dateEditor);
+		
+		KDFormattedTextField amount = new KDFormattedTextField();
+		amount.setDataType(KDFormattedTextField.BIGDECIMAL_TYPE);
+		amount.setDataVerifierType(KDFormattedTextField.NO_VERIFIER);
+		amount.setNegatived(true);
+		amount.setPrecision(2);
+		KDTDefaultCellEditor amountEditor = new KDTDefaultCellEditor(amount);
+		
+		this.tblXHRoom.getColumn("area").setEditor(amountEditor);
+		this.tblXHRoom.getColumn("area").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+		this.tblXHRoom.getColumn("area").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.getAlignment("right"));
+		
+		this.tblBZJ.getColumn("appAmount").setEditor(amountEditor);
+		this.tblBZJ.getColumn("appAmount").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+		this.tblBZJ.getColumn("appAmount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.getAlignment("right"));
+		
+		this.tblBZJ.getColumn("actRevAmount").setEditor(amountEditor);
+		this.tblBZJ.getColumn("actRevAmount").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+		this.tblBZJ.getColumn("actRevAmount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.getAlignment("right"));
+		
+		this.tblZJ.getColumn("appAmount").setEditor(amountEditor);
+		this.tblZJ.getColumn("appAmount").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+		this.tblZJ.getColumn("appAmount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.getAlignment("right"));
+		
+		this.tblZJ.getColumn("actRevAmount").setEditor(amountEditor);
+		this.tblZJ.getColumn("actRevAmount").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+		this.tblZJ.getColumn("actRevAmount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.getAlignment("right"));
+		
+		this.tblWY.getColumn("appAmount").setEditor(amountEditor);
+		this.tblWY.getColumn("appAmount").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+		this.tblWY.getColumn("appAmount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.getAlignment("right"));
+		
+		this.tblWY.getColumn("actRevAmount").setEditor(amountEditor);
+		this.tblWY.getColumn("actRevAmount").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+		this.tblWY.getColumn("actRevAmount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.getAlignment("right"));
+		
+		f7Box = new KDBizPromptBox();
+		f7Box.setDisplayFormat("$name$");
+		f7Box.setEditFormat("$number$");
+		f7Box.setCommitFormat("$number$");
+		f7Box.setQueryInfo("com.kingdee.eas.fdc.sellhouse.app.MoneyDefineQuery");
+		EntityViewInfo view = new EntityViewInfo();
+		FilterInfo filter = new FilterInfo();
+		
+		filter.getFilterItems().add(new FilterItemInfo("name", "租赁保证金"));
+		view.setFilter(filter);
+		f7Box.setEntityViewInfo(view);
+		f7Editor = new KDTDefaultCellEditor(f7Box);
+		this.tblBZJ.getColumn("moneyDefine").setEditor(f7Editor);
+		
+		f7Box = new KDBizPromptBox();
+		f7Box.setDisplayFormat("$name$");
+		f7Box.setEditFormat("$number$");
+		f7Box.setCommitFormat("$number$");
+		f7Box.setQueryInfo("com.kingdee.eas.fdc.sellhouse.app.MoneyDefineQuery");
+		view = new EntityViewInfo();
+		filter = new FilterInfo();
+		
+		filter.getFilterItems().add(new FilterItemInfo("name", "租金"));
+		view.setFilter(filter);
+		f7Box.setEntityViewInfo(view);
+		f7Editor = new KDTDefaultCellEditor(f7Box);
+		this.tblZJ.getColumn("moneyDefine").setEditor(f7Editor);
+		
+		f7Box = new KDBizPromptBox();
+		f7Box.setDisplayFormat("$name$");
+		f7Box.setEditFormat("$number$");
+		f7Box.setCommitFormat("$number$");
+		f7Box.setQueryInfo("com.kingdee.eas.fdc.sellhouse.app.MoneyDefineQuery");
+		view = new EntityViewInfo();
+		filter = new FilterInfo();
+		
+		filter.getFilterItems().add(new FilterItemInfo("name", "物业管理费",CompareType.LIKE));
+		view.setFilter(filter);
+		f7Box.setEntityViewInfo(view);
+		f7Editor = new KDTDefaultCellEditor(f7Box);
+		this.tblWY.getColumn("moneyDefine").setEditor(f7Editor);
+		
+		this.txtXHRoomArea.setDataType(BigDecimal.class);
+		this.txtXHRoomArea.setHorizontalAlignment(JTextField.RIGHT);
+		this.txtXHRoomArea.setPrecision(2);
+		NumberFormatter formatter = new NumberFormatter(new DecimalFormat("0.00"));
+		this.txtXHRoomArea.setDisplayFormatter(formatter);
+		
 		initControl();
 		initRoomTable();
 		initAttachResTable();
@@ -1209,7 +1665,7 @@ public class TenancyBillEditUI extends AbstractTenancyBillEditUI implements
 		f7Customer.setDisplayFormat("$name$");
 		f7Customer.setEditFormat("$number$");
 		f7Customer.setCommitFormat("$number$");
-		ICellEditor f7Editor = new KDTDefaultCellEditor(f7Customer);
+		f7Editor = new KDTDefaultCellEditor(f7Customer);
 		this.tblCustomer.getColumn(C_CUS_CUSTOMER).setEditor(f7Editor);
 
 		this.actionAddCollectProtocol.setVisible(false);
@@ -1314,6 +1770,8 @@ public class TenancyBillEditUI extends AbstractTenancyBillEditUI implements
 	        });
 		 
 		 this.tblTenPrice.setEnabled(false);
+		 
+		 this.pkFristLeaseDate.setRequired(true);
 	}
 	protected void cbConRentType_itemStateChanged(ItemEvent e) throws Exception {
 		if(ConRentTypeEnum.ZJ.equals(this.cbConRentType.getSelectedItem())){
@@ -3252,7 +3710,7 @@ public class TenancyBillEditUI extends AbstractTenancyBillEditUI implements
 				: (Date) this.pkEndDate.getValue();
 		
        if(startDate !=null && endDate != null){
-    	   int  dayDiff = FDCDateHelper.getDiffDays(startDate, endDate)+1;
+    	   int  dayDiff = FDCDateHelper.getDiffDays(startDate, endDate);
     	   this.txtMaxLease.setText(dayDiff+"");
     	   this.txtMaxLease.setHorizontalAlignment(11);
        }
@@ -3300,6 +3758,9 @@ public class TenancyBillEditUI extends AbstractTenancyBillEditUI implements
 			 }
 			 
 			 this.txtMaxFreeDay.setText(diffDay+"");
+			 this.txtMaxFreeDay.setHorizontalAlignment(11);
+		 }else{
+			 this.txtMaxFreeDay.setText(0+"");
 			 this.txtMaxFreeDay.setHorizontalAlignment(11);
 		 }
 		 //显示保证金信息
@@ -5773,8 +6234,8 @@ public class TenancyBillEditUI extends AbstractTenancyBillEditUI implements
 			}
 			
 			if(!isOk){
-				FDCMsgBox.showError("合同基准租金核准信息失败，详细信息请查看汇总页签的核准 信息。");
-				SysUtil.abort();
+//				FDCMsgBox.showError("合同基准租金核准信息失败，详细信息请查看汇总页签的核准 信息。");
+//				SysUtil.abort();
 			}
 		}
 		
@@ -6193,6 +6654,10 @@ public class TenancyBillEditUI extends AbstractTenancyBillEditUI implements
 		}
 		if(this.txtTenPrice.isRequired()&&this.txtTenPrice.getBigDecimalValue()==null){
 			MsgBox.showInfo(this, "佣金单价不能为空！");
+			this.abort();
+		}
+		if(this.pkFristLeaseDate.getValue()==null){
+			MsgBox.showInfo(this, "首期应收日期不能为空！");
 			this.abort();
 		}
 		if (this.tblRoom.getRowCount() == 0
@@ -7556,8 +8021,9 @@ public class TenancyBillEditUI extends AbstractTenancyBillEditUI implements
 		tenancyBill.setChargeDateType(oldTenancyBill.getChargeDateType());
 		tenancyBill.setChargeOffsetDays(oldTenancyBill.getChargeOffsetDays());
 		tenancyBill.setPayeeBank(oldTenancyBill.getPayeeBank());
-		tenancyBill.setIsFreeContract(oldTenancyBill.isIsFreeContract());
-		tenancyBill.setFristRevDate(oldTenancyBill.getFristRevDate());
+//		tenancyBill.setIsFreeContract(oldTenancyBill.isIsFreeContract());
+//		tenancyBill.setFristRevDate(oldTenancyBill.getFristRevDate());
+		tenancyBill.setFristRevDate(null);
 		tenancyBill.setOrgUnit(oldTenancyBill.getOrgUnit());
 		tenancyBill.setSecondRevDate(oldTenancyBill.getSecondRevDate());
 
@@ -8164,6 +8630,8 @@ public class TenancyBillEditUI extends AbstractTenancyBillEditUI implements
 		sels.add("occurred");
 		sels.add("depositAmount");
 		
+
+		sels.add("tenCustomerList.fdcCustomer.sysCustomer.*");
 		return sels;
 	}
 

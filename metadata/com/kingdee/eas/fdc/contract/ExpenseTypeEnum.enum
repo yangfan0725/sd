@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.contract</package>
+    <name>ExpenseTypeEnum</name>
+    <alias>bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].alias</alias>
+    <description>bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.fdc.contract.ExpenseTypeEnum</className>
+    <enumDataType>STRING</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>ZD</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[ZD].alias</alias>
+            <userDefined>true</userDefined>
+            <value>ZD</value>
+        </enumValue>
+        <enumValue>
+            <name>PX</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[PX].alias</alias>
+            <userDefined>true</userDefined>
+            <value>PX</value>
+        </enumValue>
+        <enumValue>
+            <name>GDZCCG</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[GDZCCG].alias</alias>
+            <userDefined>true</userDefined>
+            <value>GDZCCG</value>
+        </enumValue>
+        <enumValue>
+            <name>BGYPCG</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[BGYPCG].alias</alias>
+            <userDefined>true</userDefined>
+            <value>BGYPCG</value>
+        </enumValue>
+        <enumValue>
+            <name>DIRECT</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[DIRECT].alias</alias>
+            <userDefined>true</userDefined>
+            <value>DIRECT</value>
+        </enumValue>
+        <enumValue>
+            <name>CL</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[CL].alias</alias>
+            <userDefined>true</userDefined>
+            <value>CL</value>
+        </enumValue>
+        <enumValue>
+            <name>OTHER</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[OTHER].alias</alias>
+            <userDefined>true</userDefined>
+            <value>OTHER</value>
+        </enumValue>
+        <enumValue>
+            <name>LS</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[LS].alias</alias>
+            <userDefined>true</userDefined>
+            <value>LS</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="费用类型" />
+            <lang locale="zh_HK" value="費用類型" />
+            <lang locale="zh_TW" value="費用類型" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="费用类型" />
+            <lang locale="zh_HK" value="費用類型" />
+            <lang locale="zh_TW" value="費用類型" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[BGYPCG].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="办公用品采购" />
+            <lang locale="zh_HK" value="辦公用品採購" />
+            <lang locale="zh_TW" value="辦公用品採購" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[CL].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="车辆" />
+            <lang locale="zh_HK" value="車輛" />
+            <lang locale="zh_TW" value="車輛" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[DIRECT].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="直接报销" />
+            <lang locale="zh_HK" value="直接報銷" />
+            <lang locale="zh_TW" value="直接報銷" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[GDZCCG].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="固定资产采购" />
+            <lang locale="zh_HK" value="固定資產採購" />
+            <lang locale="zh_TW" value="固定資產採購" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[LS].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="历史合同付款申请" />
+            <lang locale="zh_HK" value="歷史合同付款申請" />
+            <lang locale="zh_TW" value="歷史合同付款申請" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[OTHER].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="其他" />
+            <lang locale="zh_HK" value="其他" />
+            <lang locale="zh_TW" value="其他" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[PX].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="培训" />
+            <lang locale="zh_HK" value="培訓" />
+            <lang locale="zh_TW" value="培訓" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].enumValues.enumValue[ZD].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="招待" />
+            <lang locale="zh_HK" value="招待" />
+            <lang locale="zh_TW" value="招待" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ExpenseTypeEnum].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

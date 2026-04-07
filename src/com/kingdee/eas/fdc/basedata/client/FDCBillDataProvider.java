@@ -1,7 +1,10 @@
 package com.kingdee.eas.fdc.basedata.client;
 
+import java.sql.Timestamp;
 import java.sql.Types;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -20,8 +23,13 @@ import com.kingdee.bos.metadata.entity.EntityViewInfo;
 import com.kingdee.bos.metadata.entity.FilterInfo;
 import com.kingdee.bos.metadata.entity.FilterItemInfo;
 import com.kingdee.bos.metadata.query.util.CompareType;
+import com.kingdee.bos.workflow.ProcessInstInfo;
+import com.kingdee.bos.workflow.service.ormrpc.EnactmentServiceFactory;
+import com.kingdee.bos.workflow.service.ormrpc.IEnactmentService;
+import com.kingdee.eas.cp.pem.web.utils.DateTimeFormatter;
 import com.kingdee.eas.fdc.basedata.FDCBillWFAuditUtil;
 import com.kingdee.eas.fdc.basedata.FDCBillWFFacadeFactory;
+import com.kingdee.eas.fdc.basedata.FDCSQLBuilder;
 import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.jdbc.rowset.impl.ColInfo;
 import com.kingdee.jdbc.rowset.impl.DynamicRowSet;
@@ -115,7 +123,77 @@ public abstract class FDCBillDataProvider implements BOSQueryDelegate {
 				auditList = (List)auditAllList.get(index-1);
 			}
 			
-			int ind=0;
+			
+			Map auditMap=new HashMap();
+			IEnactmentService service = EnactmentServiceFactory.createRemoteEnactService();
+			 ProcessInstInfo processInstInfo = null;
+			 ProcessInstInfo procInsts[] = service.getProcessInstanceByHoldedObjectId(billId);
+			 int i = 0;
+			 for(int n = procInsts.length; i < n; i++)
+				 if(procInsts[i].getState().startsWith("open"))
+					 processInstInfo = procInsts[i];
+			 if(processInstInfo == null){
+				 procInsts = service.getAllProcessInstancesByBizobjId(billId);
+				 if(procInsts!=null){
+					 if(procInsts.length==1){
+						 processInstInfo=procInsts[0];
+					 }else{
+						 Timestamp date=null;
+						 for(int k=0;k<procInsts.length;k++){
+							 if(procInsts[k].getState().equals("closed.completed")){
+								 if(date==null||procInsts[k].getCompleteTime().after(date)){
+									 date=procInsts[k].getCompleteTime();
+									 processInstInfo=procInsts[k];
+								 }
+							 }
+						 }
+					 }
+				 }
+			 }
+			 if(processInstInfo!=null){
+				 FDCSQLBuilder _builder = new FDCSQLBuilder();
+				 _builder.appendSql(" /*dialect*/ select a.FACTDEFNAME_L2 as AuditNodeName,TO_TIMESTAMP(TO_CHAR(a.FCREATEDTIME,'YYYY-MM-DD HH24:MI'),'YYYY-MM-DD HH24:MI') as CreateTime,b.fpersonusername_l2 as PersonName from T_WFR_ActInst a left join T_WFR_AssignDetail b on a.FACTINSTID=b.FACTINSTID where a.FPROCINSTID ='"+processInstInfo.getProcInstId()+"' ");
+				 _builder.appendSql(" and b.fbizFunction='MultiApproveUIFunction' and (CAST(b.FENDTIME  AS DATE) - CAST(b.FCREATEDTIME  AS DATE))<0.00002 and (CAST(a.FCOMLETETIME AS DATE) - CAST(a.FCREATEDTIME AS DATE))<=0.00002 order by a.FCREATEDTIME ");
+				IRowSet rowSet = _builder.executeQuery();
+				while(rowSet.next()){
+					List list=new ArrayList();
+					if(auditMap.get(rowSet.getString("CreateTime"))!=null){
+						list=(List) auditMap.get(rowSet.getString("CreateTime"));
+					}else{
+						auditMap.put(rowSet.getString("CreateTime"), list);
+					}
+					Map map=new HashMap();
+					map.put(FDCBillWFAuditUtil.PersonName, rowSet.getString("PersonName"));
+					map.put(FDCBillWFAuditUtil.CreateTime, rowSet.getString("CreateTime"));
+					map.put(FDCBillWFAuditUtil.AuditNodeName, rowSet.getString("AuditNodeName"));
+					map.put(FDCBillWFAuditUtil.IsPass, "同意");
+					map.put(FDCBillWFAuditUtil.Opinion, "自动审批");
+					list.add(map);
+				}
+			 }
+			 List newauditList = new ArrayList();
+			 newauditList.addAll(auditList);
+			 
+			 for(int k=newauditList.size()-1;k>=0;k--){
+				 Map auditInfo=(HashMap)newauditList.get(k);
+				 String input=(String) auditInfo.get(FDCBillWFAuditUtil.CreateTime);
+			     SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.S");
+			     Date date = inputFormat.parse(input);
+			     long timeInMillis = date.getTime();
+			     long minutesOnly = (timeInMillis / (60 * 1000)) * (60 * 1000);
+			     Date truncatedDate = new Date(minutesOnly);
+			     String time = inputFormat.format(truncatedDate);
+			     
+			     if(auditMap.get(time)!=null){
+					List list=(List) auditMap.get(time);
+					for(int j=0;j<list.size();j++){
+						Map map=(Map) list.get(j);
+						auditList.add(k+j+1, map);
+					}
+					auditMap.remove(time);
+				}
+		 	}
+			 int ind=0;
 			for(Iterator it = auditList.iterator();it.hasNext();){
 				Map auditInfo = (HashMap)it.next();
 				drs.moveToInsertRow();
@@ -124,6 +202,7 @@ public abstract class FDCBillDataProvider implements BOSQueryDelegate {
 					String iKey = (String)keys.next();
 					drs.updateString(iKey,(String)auditInfo.get(iKey));
 				}
+		        
 				drs.updateString(FDCBillWFAuditUtil.ID,String.valueOf(++ind));
 				drs.updateString(FDCBillWFAuditUtil.BillID,billId);
 				drs.insertRow();
@@ -153,7 +232,7 @@ public abstract class FDCBillDataProvider implements BOSQueryDelegate {
             filter.getFilterItems().add(new FilterItemInfo("id", billId, CompareType.EQUALS));
             ev.setFilter(filter);            
             exec.setObjectView(ev);
-            //System.out.println(exec.getSQL());
+            System.out.println(exec.getSQL());
             iRowSet = exec.executeQuery();	
             iRowSet.beforeFirst();
 		} catch (Exception e) {

@@ -1,0 +1,1776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.contract.app</package>
+    <name>FundTransfer</name>
+    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].alias</alias>
+    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].description</description>
+    <userDefined>true</userDefined>
+    <bosType>B0D6AB8B</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.fdc.contract.FundTransfer</businessImplName>
+    <businessControllerName>com.kingdee.eas.fdc.contract.app.FundTransferController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>exists</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].description</description>
+            <innerID>226d69c2-e66e-4658-b455-a1a60a93d86c</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>Boolean</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>exists</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].description</description>
+            <innerID>2c32fff0-a7d9-4d27-a153-cf26ff9f1f36</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>Boolean</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>filter</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].parameters.parameter[filter].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].parameters.parameter[filter].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.FilterInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>exists</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].description</description>
+            <innerID>d7b99ae3-721f-42f5-a610-61467bdd3588</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>Boolean</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].description</description>
+            <innerID>6389bbe1-83b2-4994-9a70-4506caf86bd5</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.FundTransfer</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].description</description>
+            <innerID>86f5269d-3d64-4b1e-916c-651981da872b</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.FundTransfer</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].description</description>
+            <innerID>3461e5a2-d1f7-457e-be21-60c685b4be3c</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.FundTransfer</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>addnew</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].description</description>
+            <innerID>3284f751-849c-4601-9bf4-296ba8340679</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.FundTransfer</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>addnew</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].description</description>
+            <innerID>8175fecd-05e0-4802-9bc9-ee50891333fb</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.FundTransfer</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>update</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[update].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[update].description</description>
+            <innerID>e914838e-c58a-482d-be0b-826a8dcbf1de</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[update].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[update].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[update].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[update].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.FundTransfer</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>updatePartial</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updatePartial].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updatePartial].description</description>
+            <innerID>9b679b2a-2d71-4c1f-bd88-5701ad833339</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updatePartial].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updatePartial].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.FundTransfer</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updatePartial].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updatePartial].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>updateBigObject</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updateBigObject].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updateBigObject].description</description>
+            <innerID>dcabf711-8786-4b5e-9c02-57827fd4a604</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updateBigObject].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updateBigObject].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updateBigObject].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updateBigObject].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.FundTransfer</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>delete</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].description</description>
+            <innerID>5bc62eb9-9282-492c-a1d1-9cba32c37430</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getPKList</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].description</description>
+            <innerID>e5428489-bb86-426b-ac8f-d82f5896c648</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getPKList</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].description</description>
+            <innerID>8cb50071-b07c-4183-a8d9-da7ddef883bb</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getPKList</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].description</description>
+            <innerID>54dc4623-e211-4874-b88f-a8285f484f0d</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>filter</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].parameters.parameter[filter].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].parameters.parameter[filter].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.FilterInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>sorter</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].parameters.parameter[sorter].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].parameters.parameter[sorter].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SorterItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].description</description>
+            <innerID>8af95202-5adb-4d33-a95c-fb0f2780aef6</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.FundTransfer</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].description</description>
+            <innerID>6d79cc44-2642-44c2-9581-d19278df38f2</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.FundTransfer</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].description</description>
+            <innerID>646aca0b-3e1d-4afa-980f-95df4f94045b</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.FundTransfer</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>delete</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].description</description>
+            <innerID>cfe765c6-8c2a-4fcf-8ef5-ec455efe2e3c</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>filter</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[filter].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[filter].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.FilterInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>delete</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].description</description>
+            <innerID>eddfb631-68d3-4527-9aab-88d6b49e734d</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>delete</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].description</description>
+            <innerID>1e5455b1-084f-4efd-88c8-fb4582ddb2f3</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>arrayPK</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[arrayPK].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[arrayPK].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK[]</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK />
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.fdc.basedata.app" />
+        <key name="name" value="FDCBill" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+        <key name="name" value="T_CON_FundTransfer" />
+    </table>
+    <properties>
+        <linkProperty>
+            <name>curProject</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[curProject].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[curProject].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FCurProjectId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_FundTransfer_CurProject_curProject" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>needDept</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[needDept].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[needDept].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FNeedDeptId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_FundTransfer_AdminOrgUnit_needDept" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>respPerson</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[respPerson].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[respPerson].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FRespPersonId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_FundTransfer_Person_respPerson" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>purpose</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[purpose].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[purpose].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>2000</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[purpose].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FPurpose" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>transferType</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[transferType].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[transferType].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.fdc.contract.TransferTypeEnum</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[transferType].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FTransferType" />
+            </mappingField>
+        </ownProperty>
+        <linkProperty>
+            <name>accountBank</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[accountBank].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[accountBank].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FAccountBankId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_FundTransfer_AccountBank_accountBank" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>transferAccount</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[transferAccount].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[transferAccount].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>200</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[transferAccount].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FTransferAccount" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>accountName</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[accountName].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[accountName].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>200</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[accountName].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FAccountName" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>accountCompany</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[accountCompany].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[accountCompany].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>200</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[accountCompany].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FAccountCompany" />
+            </mappingField>
+        </ownProperty>
+        <linkProperty>
+            <name>transferBank</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[transferBank].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[transferBank].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FTransferBankId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_FundTransfer_BankNum_transferBank" />
+            </relationship>
+        </linkProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <events>
+        <event>
+            <name>submitEvent</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>dfd2c083-00fa-1000-e000-001fc0a813e6</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="submit" />
+                        <key name="innerID" value="dfd2c083-00fa-1000-e000-001fc0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>a4f660db-1eac-432b-989d-24078923645bevfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>model</name>
+                        <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].formalParameters.formalParameter.parameter[model].alias</alias>
+                        <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].formalParameters.formalParameter.parameter[model].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.eas.fdc.contract.app.MarketProject</metadataRef>
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>setAudittingStatusEvent</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>3f3803ee-010e-1000-e000-00b3c0a813bc</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="setAudittingStatus" />
+                        <key name="innerID" value="3f3803ee-010e-1000-e000-00b3c0a813bc" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>e032c412-9c5d-4b90-b752-aada19c89206evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>id</name>
+                        <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].formalParameters.formalParameter.parameter[id].alias</alias>
+                        <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].formalParameters.formalParameter.parameter[id].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>setSubmitStatusEvent</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>c7ee8b4e-010f-1000-e000-0070c0a80e96</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="setSubmitStatus" />
+                        <key name="innerID" value="c7ee8b4e-010f-1000-e000-0070c0a80e96" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>2954e050-524c-4f85-95f6-3dd3a8a88ab8evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>id</name>
+                        <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].formalParameters.formalParameter.parameter[id].alias</alias>
+                        <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].formalParameters.formalParameter.parameter[id].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>auditEvent</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>3f3803ee-010e-1000-e000-00b0c0a813bc</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="audit" />
+                        <key name="innerID" value="3f3803ee-010e-1000-e000-00b0c0a813bc" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>4f1efa6a-c708-442b-b715-e2abf447de65evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>id</name>
+                        <alias>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].formalParameters.formalParameter.parameter[id].alias</alias>
+                        <description>entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].formalParameters.formalParameter.parameter[id].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+    </events>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="资金划转" />
+            <lang locale="zh_HK" value="資金劃轉" />
+            <lang locale="zh_TW" value="資金劃轉" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="资金划转" />
+            <lang locale="zh_HK" value="資金劃轉" />
+            <lang locale="zh_TW" value="資金劃轉" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审批" />
+            <lang locale="zh_HK" value="審批" />
+            <lang locale="zh_TW" value="審批" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].formalParameters.formalParameter.parameter[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="id" />
+            <lang locale="zh_HK" value="id" />
+            <lang locale="zh_TW" value="id" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[auditEvent].formalParameters.formalParameter.parameter[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="设置审批中" />
+            <lang locale="zh_HK" value="設置審批中" />
+            <lang locale="zh_TW" value="設置審批中" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].formalParameters.formalParameter.parameter[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="id" />
+            <lang locale="zh_HK" value="id" />
+            <lang locale="zh_TW" value="id" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setAudittingStatusEvent].formalParameters.formalParameter.parameter[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="设置提交" />
+            <lang locale="zh_HK" value="設置提交" />
+            <lang locale="zh_TW" value="設置提交" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].formalParameters.formalParameter.parameter[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="id" />
+            <lang locale="zh_HK" value="id" />
+            <lang locale="zh_TW" value="id" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[setSubmitStatusEvent].formalParameters.formalParameter.parameter[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="提交" />
+            <lang locale="zh_HK" value="提交" />
+            <lang locale="zh_TW" value="提交" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].formalParameters.formalParameter.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="model" />
+            <lang locale="zh_HK" value="model" />
+            <lang locale="zh_TW" value="model" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].events.event[submitEvent].formalParameters.formalParameter.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].extendedProperty.CRAddNoBreak">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].extendedProperty.CRDHMaintain">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].extendedProperty.CRDHRefuse">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].extendedProperty.CRNumberAddView">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].extendedProperty.CRNumberEdit">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].extendedProperty.OrgType">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.fdc.contract.client.FundTransferEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fdc.contract.client.FundTransferEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fdc.contract.client.FundTransferEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].extendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.fdc.contract.client.FundTransferListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fdc.contract.client.FundTransferListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fdc.contract.client.FundTransferListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].parameters.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[addnew].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[arrayPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[arrayPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[filter].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[filter].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[delete].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].parameters.parameter[filter].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].parameters.parameter[filter].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[exists].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].parameters.parameter[filter].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].parameters.parameter[filter].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].parameters.parameter[sorter].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getPKList].parameters.parameter[sorter].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updateBigObject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updateBigObject].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updateBigObject].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updateBigObject].parameters.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updateBigObject].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updateBigObject].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updatePartial].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updatePartial].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updatePartial].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updatePartial].parameters.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updatePartial].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[updatePartial].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[update].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[update].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[update].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[update].parameters.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[update].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].methods.method[update].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[accountBank].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="银行账号" />
+            <lang locale="zh_HK" value="銀行賬號" />
+            <lang locale="zh_TW" value="銀行賬號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[accountBank].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="银行账号" />
+            <lang locale="zh_HK" value="銀行賬號" />
+            <lang locale="zh_TW" value="銀行賬號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[curProject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目" />
+            <lang locale="zh_HK" value="工程項目" />
+            <lang locale="zh_TW" value="工程項目" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[curProject].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目" />
+            <lang locale="zh_HK" value="工程項目" />
+            <lang locale="zh_TW" value="工程項目" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[needDept].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="申请部门" />
+            <lang locale="zh_HK" value="申請部門" />
+            <lang locale="zh_TW" value="申請部門" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[needDept].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="申请部门" />
+            <lang locale="zh_HK" value="申請部門" />
+            <lang locale="zh_TW" value="申請部門" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[respPerson].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="经办人" />
+            <lang locale="zh_HK" value="經辦人" />
+            <lang locale="zh_TW" value="經辦人" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[respPerson].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="经办人" />
+            <lang locale="zh_HK" value="經辦人" />
+            <lang locale="zh_TW" value="經辦人" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[transferBank].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="开户银行" />
+            <lang locale="zh_HK" value="開戶銀行" />
+            <lang locale="zh_TW" value="開戶銀行" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.linkProperty[transferBank].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="开户银行" />
+            <lang locale="zh_HK" value="開戶銀行" />
+            <lang locale="zh_TW" value="開戶銀行" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[accountCompany].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款单位" />
+            <lang locale="zh_HK" value="收款單位" />
+            <lang locale="zh_TW" value="收款單位" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[accountCompany].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[accountCompany].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款单位" />
+            <lang locale="zh_HK" value="收款單位" />
+            <lang locale="zh_TW" value="收款單位" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[accountName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="账号名称" />
+            <lang locale="zh_HK" value="賬號名稱" />
+            <lang locale="zh_TW" value="賬號名稱" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[accountName].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[accountName].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="账号名称" />
+            <lang locale="zh_HK" value="賬號名稱" />
+            <lang locale="zh_TW" value="賬號名稱" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[purpose].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用途" />
+            <lang locale="zh_HK" value="用途" />
+            <lang locale="zh_TW" value="用途" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[purpose].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[purpose].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用途" />
+            <lang locale="zh_HK" value="用途" />
+            <lang locale="zh_TW" value="用途" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[transferAccount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="银行账号" />
+            <lang locale="zh_HK" value="銀行賬號" />
+            <lang locale="zh_TW" value="銀行賬號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[transferAccount].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[transferAccount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="银行账号" />
+            <lang locale="zh_HK" value="銀行賬號" />
+            <lang locale="zh_TW" value="銀行賬號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[transferType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="转出方式" />
+            <lang locale="zh_HK" value="轉出方式" />
+            <lang locale="zh_TW" value="轉出方式" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[transferType].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.FundTransfer].properties.ownProperty[transferType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="转出方式" />
+            <lang locale="zh_HK" value="轉出方式" />
+            <lang locale="zh_TW" value="轉出方式" />
+        </rs>
+    </resource>
+</entityObject>
+

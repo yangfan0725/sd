@@ -100,6 +100,19 @@
                 <key name="name" value="SurrenderReason" />
             </entityRef>
         </subEntity>
+        <subEntity>
+            <name>sellProject</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].subObjects.subEntity[sellProject].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="QuitTenancyPrintQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fdc.sellhouse.app" />
+                <key name="name" value="SellProject" />
+            </entityRef>
+        </subEntity>
     </subObjects>
     <units>
         <propertyUnit>
@@ -3419,6 +3432,130 @@
                 <key name="name" value="QuitTenancyPrintQuery" />
             </query>
         </queryField>
+        <propertyUnit>
+            <name>c4f9f787-41c3-422d-8932-10e0b530dc0a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].units.propertyUnit[c4f9f787-41c3-422d-8932-10e0b530dc0a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>333cfc71-2ee1-4324-ab55-6c31d9f32c50</key>
+                    <parentUnit>
+                        <key name="name" value="c4f9f787-41c3-422d-8932-10e0b530dc0a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="tenancyBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="sellProject" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="QuitTenancyPrintQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>da73d904-9c9b-40ab-a98d-533ce57d4749</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].units.propertyUnit[da73d904-9c9b-40ab-a98d-533ce57d4749].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>9dbe7325-aed9-41a8-b1fb-e7639ea79978</key>
+                    <parentUnit>
+                        <key name="name" value="da73d904-9c9b-40ab-a98d-533ce57d4749" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="sellProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="QuitTenancyPrintQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>sellProject.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].units.queryField[sellProject.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>93392c18-e909-417e-9944-73626d56d553</key>
+                    <parentUnit>
+                        <key name="name" value="sellProject.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="sellProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="QuitTenancyPrintQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>sellProject.description</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].units.queryField[sellProject.description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>6eed4d79-5ea3-4d03-ad42-c3c440f5f352</key>
+                    <parentUnit>
+                        <key name="name" value="sellProject.description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="sellProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="QuitTenancyPrintQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -3610,6 +3747,36 @@
                 <key name="name" value="QuitTenancyPrintQuery" />
             </query>
         </join>
+        <join>
+            <name>dc6060ce-66ae-44d1-9ec1-689344a89e96</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="tenancyBill" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="sellProject" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>68b24853-4dcc-4609-b24b-3adbd6b7fdd2</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="c4f9f787-41c3-422d-8932-10e0b530dc0a" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="da73d904-9c9b-40ab-a98d-533ce57d4749" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="dc6060ce-66ae-44d1-9ec1-689344a89e96" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="QuitTenancyPrintQuery" />
+            </query>
+        </join>
     </joins>
     <resource>
         <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].alias">
@@ -3655,6 +3822,12 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].subObjects.subEntity[orgUnit].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].subObjects.subEntity[sellProject].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -3715,6 +3888,18 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].units.propertyUnit[be5c8e6b-9791-4735-a9d5-ff3356c0e855].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].units.propertyUnit[c4f9f787-41c3-422d-8932-10e0b530dc0a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].units.propertyUnit[da73d904-9c9b-40ab-a98d-533ce57d4749].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -3821,6 +4006,18 @@
             <lang locale="zh_CN" value="退租单类型" />
             <lang locale="zh_HK" value="退租單類型" />
             <lang locale="zh_TW" value="退租單類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].units.queryField[sellProject.description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="租赁项目描述" />
+            <lang locale="zh_HK" value="租賃項目描述" />
+            <lang locale="zh_TW" value="租賃項目描述" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].units.queryField[sellProject.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="租赁项目名称" />
+            <lang locale="zh_HK" value="租賃項目名稱" />
+            <lang locale="zh_TW" value="租賃項目名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.QuitTenancyPrintQuery].units.queryField[state].displayName">
             <lang locale="en_US" value="null" />

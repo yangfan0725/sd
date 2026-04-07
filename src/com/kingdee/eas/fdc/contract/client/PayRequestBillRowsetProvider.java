@@ -32,6 +32,7 @@ import com.kingdee.eas.base.multiapprove.MultiApproveFactory;
 import com.kingdee.eas.base.multiapprove.MultiApproveInfo;
 import com.kingdee.eas.basedata.org.CostCenterOrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.fdc.basedata.CurProjectFactory;
 import com.kingdee.eas.fdc.basedata.CurProjectInfo;
 import com.kingdee.eas.fdc.basedata.DeductTypeCollection;
 import com.kingdee.eas.fdc.basedata.DeductTypeFactory;
@@ -157,7 +158,7 @@ public class PayRequestBillRowsetProvider extends FDCBillDataProvider {
 			"accountView.longNumber",
 			"accountView.longName",
 			"agentCompany.name",
-			"payNo","appAmount"
+			"payNo","appAmount","curProject.description"
 	};
 
 	public static String printStringHelper(Object o) {
@@ -320,7 +321,7 @@ public class PayRequestBillRowsetProvider extends FDCBillDataProvider {
 		// 在此把数据传递给实现类，drs.updateString(key,value) key
 		// 指的是套打模板中定义的字段编码，Value指的是当前单据的属性值
 		String orgName=((CurProjectInfo)fdcBill.getCurProject()).getFullOrgUnit().getName();
-		String curProjectName = curProjectInfo.getDisplayName();		
+		String curProjectName = fdcBill.getCurProject().getDisplayName();		
 		//取出的数据要求只取项目名称
 		//2008-07-22
 		String projNameWithoutOrg = curProjectName.replace('_', '\\');
@@ -1235,6 +1236,10 @@ public class PayRequestBillRowsetProvider extends FDCBillDataProvider {
 				
 				drs.updateString("appAmount", printStringHelper(fdcBill.getAppAmount()));
 				
+				if(fdcBill.getCurProject()!=null){
+					drs.updateString("curProject.description", CurProjectFactory.getRemoteInstance().getCurProjectInfo(new ObjectUuidPK(fdcBill.getCurProject().getId())).getDescription());
+				}
+				
 				drs.insertRow();
 				
 			}else{
@@ -1314,6 +1319,10 @@ public class PayRequestBillRowsetProvider extends FDCBillDataProvider {
 				drs.updateString("payNo", payNo);
 				
 				drs.updateString("appAmount", printStringHelper(fdcBill.getAppAmount()));
+				
+				if(fdcBill.getCurProject()!=null){
+					drs.updateString("curProject.description", CurProjectFactory.getRemoteInstance().getCurProjectInfo(new ObjectUuidPK(fdcBill.getCurProject().getId())).getDescription());
+				}
 				
 				lstRealPaidAmt = drs.getString("lstRealPaidAmt");
 				drs.insertRow();

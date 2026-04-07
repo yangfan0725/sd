@@ -413,6 +413,104 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>FIsFund</name>
+            <alias>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsFund].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsFund].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsTrip</name>
+            <alias>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsTrip].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsTrip].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsExpense</name>
+            <alias>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsExpense].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsExpense].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsPurchase</name>
+            <alias>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsPurchase].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsPurchase].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsHide</name>
+            <alias>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsHide].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsHide].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FHideDay</name>
+            <alias>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FHideDay].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FHideDay].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsPurchaseApply</name>
+            <alias>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsPurchaseApply].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsPurchaseApply].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>PK_ContractType</name>
@@ -515,6 +613,16 @@
             <lang locale="zh_HK" value="客戶要求合同類型的長編碼能夠支持編碼規則屬性可選,但是這個長編碼是在框架的TreeBase實體中定義的,不能隨意修改,故同步一個字段來實現此功能" />
             <lang locale="zh_TW" value="客戶要求合同類型的長編碼能夠支持編碼規則屬性可選,但是這個長編碼是在框架的TreeBase實體中定義的,不能隨意修改,故同步一個字段來實現此功能" />
         </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FHideDay].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FHideDay].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="ID" />
@@ -561,6 +669,36 @@
             <lang locale="zh_HK" value="啟用或禁用狀態" />
             <lang locale="zh_TW" value="啟用或禁用狀態" />
         </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsExpense].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsExpense].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsFund].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsFund].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsHide].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsHide].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsLeaf].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否叶子节点" />
@@ -579,6 +717,26 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsMarket].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsPurchaseApply].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsPurchaseApply].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsPurchase].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsPurchase].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="" />
             <lang locale="zh_TW" value="null" />
@@ -609,6 +767,16 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsTA].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsTrip].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.basedata.app.T_FDC_ContractType].columns.column[FIsTrip].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="" />
             <lang locale="zh_TW" value="null" />

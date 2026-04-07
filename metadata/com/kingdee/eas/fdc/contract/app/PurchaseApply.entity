@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.contract.app</package>
+    <name>PurchaseApply</name>
+    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].alias</alias>
+    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].description</description>
+    <userDefined>true</userDefined>
+    <bosType>6FE3BC92</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.fdc.contract.PurchaseApply</businessImplName>
+    <businessControllerName>com.kingdee.eas.fdc.contract.app.PurchaseApplyController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>exists</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].description</description>
+            <innerID>6190a795-c868-4acf-8693-bf66af042d36</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>Boolean</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>exists</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].description</description>
+            <innerID>d5d5789b-bca5-42da-bdf0-07f349e29583</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>Boolean</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>filter</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].parameters.parameter[filter].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].parameters.parameter[filter].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.FilterInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>exists</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].description</description>
+            <innerID>59d3b8e4-4828-426e-b435-2d65ff0cd328</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>Boolean</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].description</description>
+            <innerID>9a69b9a3-7f55-4014-86fe-1bde368649da</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.PurchaseApply</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].description</description>
+            <innerID>2edab7ec-0320-41b1-a6d4-2cc5f97ee3f3</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.PurchaseApply</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].description</description>
+            <innerID>8007b90a-1d37-436e-9658-f47b80c8c269</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.PurchaseApply</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>addnew</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].description</description>
+            <innerID>8ae949d3-1cd8-44da-ba10-d36046863239</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.PurchaseApply</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>addnew</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].description</description>
+            <innerID>f1a5bb88-608e-46ca-beec-871808ec9b6a</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.PurchaseApply</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>update</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[update].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[update].description</description>
+            <innerID>6000c692-7128-4ed8-b014-153b8cd24127</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[update].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[update].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[update].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[update].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.PurchaseApply</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>updatePartial</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updatePartial].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updatePartial].description</description>
+            <innerID>3003f8ec-4af7-4dee-bd80-b7f931cd4dcb</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updatePartial].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updatePartial].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.PurchaseApply</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updatePartial].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updatePartial].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>updateBigObject</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updateBigObject].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updateBigObject].description</description>
+            <innerID>54ed7673-12e5-4558-be44-361431d78421</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updateBigObject].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updateBigObject].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updateBigObject].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updateBigObject].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.PurchaseApply</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>delete</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].description</description>
+            <innerID>9770e0d7-bcd8-460e-a969-99a5c737eacf</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getPKList</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].description</description>
+            <innerID>ab9fc113-4004-4807-bf5e-65d2fca5d32c</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getPKList</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].description</description>
+            <innerID>c8906328-330a-47d9-b019-5bd6fbf29550</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getPKList</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].description</description>
+            <innerID>4ac5375a-fcc3-4b1b-9b9d-a0455250a6a1</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>filter</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].parameters.parameter[filter].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].parameters.parameter[filter].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.FilterInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>sorter</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].parameters.parameter[sorter].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].parameters.parameter[sorter].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SorterItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].description</description>
+            <innerID>302a58ce-af17-4bb4-b628-76e251ff5107</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.PurchaseApply</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].description</description>
+            <innerID>09a2ea8f-502d-4e8a-9058-b7b082d5a06a</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.PurchaseApply</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].description</description>
+            <innerID>fb8a58a9-b044-48dd-915b-d63075313b6e</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.PurchaseApply</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>delete</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].description</description>
+            <innerID>0726daf4-9043-41d3-b5cc-459df2ea8523</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>filter</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[filter].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[filter].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.FilterInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>delete</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].description</description>
+            <innerID>6b2ff468-71df-4038-9c10-a9d04eb0c68a</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>delete</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].description</description>
+            <innerID>d3f5bcaa-9eda-42ae-992d-9b3d7cdf8483</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>arrayPK</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[arrayPK].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[arrayPK].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK[]</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK />
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.fdc.basedata.app" />
+        <key name="name" value="FDCBill" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+        <key name="name" value="T_CON_PurchaseApply" />
+    </table>
+    <properties>
+        <linkProperty>
+            <name>curProject</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[curProject].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[curProject].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FCurProjectId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_PurchaseApply_CurProject_curProject" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>inviteType</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[inviteType].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[inviteType].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FInviteTypeId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_PurchaseApply_InviteType_inviteType" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>purchaseMode</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[purchaseMode].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[purchaseMode].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FPurchaseModeId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_PurchaseApply_InvitePurchasemode_purchaseMode" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>needDept</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[needDept].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[needDept].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FNeedDeptId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_PurchaseApply_AdminOrgUnit_needDept" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>respPerson</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[respPerson].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[respPerson].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FRespPersonId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_PurchaseApply_Person_respPerson" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>purpose</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[purpose].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[purpose].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>2000</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[purpose].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FPurpose" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>belong</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[belong].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[belong].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.fdc.contract.PurchaseBelongEnum</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[belong].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FBelong" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>purchaseType</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[purchaseType].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[purchaseType].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.fdc.contract.PurchaseTypeEnum</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[purchaseType].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FPurchaseType" />
+            </mappingField>
+        </ownProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <events>
+        <event>
+            <name>submitEvent</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>dfd2c083-00fa-1000-e000-001fc0a813e6</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="submit" />
+                        <key name="innerID" value="dfd2c083-00fa-1000-e000-001fc0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>a4f660db-1eac-432b-989d-24078923645bevfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>model</name>
+                        <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].formalParameters.formalParameter.parameter[model].alias</alias>
+                        <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].formalParameters.formalParameter.parameter[model].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.eas.fdc.contract.app.MarketProject</metadataRef>
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>setAudittingStatusEvent</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>3f3803ee-010e-1000-e000-00b3c0a813bc</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="setAudittingStatus" />
+                        <key name="innerID" value="3f3803ee-010e-1000-e000-00b3c0a813bc" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>e032c412-9c5d-4b90-b752-aada19c89206evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>id</name>
+                        <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].formalParameters.formalParameter.parameter[id].alias</alias>
+                        <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].formalParameters.formalParameter.parameter[id].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>setSubmitStatusEvent</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>c7ee8b4e-010f-1000-e000-0070c0a80e96</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="setSubmitStatus" />
+                        <key name="innerID" value="c7ee8b4e-010f-1000-e000-0070c0a80e96" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>2954e050-524c-4f85-95f6-3dd3a8a88ab8evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>id</name>
+                        <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].formalParameters.formalParameter.parameter[id].alias</alias>
+                        <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].formalParameters.formalParameter.parameter[id].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>auditEvent</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>3f3803ee-010e-1000-e000-00b0c0a813bc</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="audit" />
+                        <key name="innerID" value="3f3803ee-010e-1000-e000-00b0c0a813bc" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>4f1efa6a-c708-442b-b715-e2abf447de65evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>id</name>
+                        <alias>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].formalParameters.formalParameter.parameter[id].alias</alias>
+                        <description>entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].formalParameters.formalParameter.parameter[id].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+    </events>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="购置申请" />
+            <lang locale="zh_HK" value="購置申請" />
+            <lang locale="zh_TW" value="購置申請" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="购置申请" />
+            <lang locale="zh_HK" value="購置申請" />
+            <lang locale="zh_TW" value="購置申請" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审批" />
+            <lang locale="zh_HK" value="審批" />
+            <lang locale="zh_TW" value="審批" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].formalParameters.formalParameter.parameter[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="id" />
+            <lang locale="zh_HK" value="id" />
+            <lang locale="zh_TW" value="id" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[auditEvent].formalParameters.formalParameter.parameter[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="设置审批中" />
+            <lang locale="zh_HK" value="設置審批中" />
+            <lang locale="zh_TW" value="設置審批中" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].formalParameters.formalParameter.parameter[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="id" />
+            <lang locale="zh_HK" value="id" />
+            <lang locale="zh_TW" value="id" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setAudittingStatusEvent].formalParameters.formalParameter.parameter[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="设置提交" />
+            <lang locale="zh_HK" value="設置提交" />
+            <lang locale="zh_TW" value="設置提交" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].formalParameters.formalParameter.parameter[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="id" />
+            <lang locale="zh_HK" value="id" />
+            <lang locale="zh_TW" value="id" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[setSubmitStatusEvent].formalParameters.formalParameter.parameter[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="提交" />
+            <lang locale="zh_HK" value="提交" />
+            <lang locale="zh_TW" value="提交" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].formalParameters.formalParameter.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="model" />
+            <lang locale="zh_HK" value="model" />
+            <lang locale="zh_TW" value="model" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].events.event[submitEvent].formalParameters.formalParameter.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].extendedProperty.CRAddNoBreak">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].extendedProperty.CRDHMaintain">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].extendedProperty.CRDHRefuse">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].extendedProperty.CRNumberAddView">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].extendedProperty.CRNumberEdit">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].extendedProperty.OrgType">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.fdc.contract.client.PurchaseApplyEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fdc.contract.client.PurchaseApplyEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fdc.contract.client.PurchaseApplyEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].extendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.fdc.contract.client.PurchaseApplyListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fdc.contract.client.PurchaseApplyListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fdc.contract.client.PurchaseApplyListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].parameters.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[addnew].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[arrayPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[arrayPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[filter].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[filter].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[delete].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].parameters.parameter[filter].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].parameters.parameter[filter].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[exists].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].parameters.parameter[filter].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].parameters.parameter[filter].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].parameters.parameter[sorter].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getPKList].parameters.parameter[sorter].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updateBigObject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updateBigObject].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updateBigObject].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updateBigObject].parameters.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updateBigObject].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updateBigObject].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updatePartial].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updatePartial].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updatePartial].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updatePartial].parameters.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updatePartial].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[updatePartial].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[update].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[update].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[update].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[update].parameters.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[update].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].methods.method[update].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[curProject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目" />
+            <lang locale="zh_HK" value="工程項目" />
+            <lang locale="zh_TW" value="工程項目" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[curProject].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目" />
+            <lang locale="zh_HK" value="工程項目" />
+            <lang locale="zh_TW" value="工程項目" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[inviteType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购类别" />
+            <lang locale="zh_HK" value="採購類別" />
+            <lang locale="zh_TW" value="採購類別" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[inviteType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购类别" />
+            <lang locale="zh_HK" value="採購類別" />
+            <lang locale="zh_TW" value="採購類別" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[needDept].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="需求部门" />
+            <lang locale="zh_HK" value="需求部門" />
+            <lang locale="zh_TW" value="需求部門" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[needDept].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="需求部门" />
+            <lang locale="zh_HK" value="需求部門" />
+            <lang locale="zh_TW" value="需求部門" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[purchaseMode].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购方式" />
+            <lang locale="zh_HK" value="採購方式" />
+            <lang locale="zh_TW" value="採購方式" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[purchaseMode].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购方式" />
+            <lang locale="zh_HK" value="採購方式" />
+            <lang locale="zh_TW" value="採購方式" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[respPerson].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="责任人" />
+            <lang locale="zh_HK" value="責任人" />
+            <lang locale="zh_TW" value="責任人" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.linkProperty[respPerson].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="责任人" />
+            <lang locale="zh_HK" value="責任人" />
+            <lang locale="zh_TW" value="責任人" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[belong].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购归属" />
+            <lang locale="zh_HK" value="採購歸屬" />
+            <lang locale="zh_TW" value="採購歸屬" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[belong].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[belong].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="belong" />
+            <lang locale="zh_HK" value="belong" />
+            <lang locale="zh_TW" value="belong" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[purchaseType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购方式" />
+            <lang locale="zh_HK" value="採購方式" />
+            <lang locale="zh_TW" value="採購方式" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[purchaseType].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[purchaseType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购方式" />
+            <lang locale="zh_HK" value="採購方式" />
+            <lang locale="zh_TW" value="採購方式" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[purpose].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购用途" />
+            <lang locale="zh_HK" value="採購用途" />
+            <lang locale="zh_TW" value="採購用途" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[purpose].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.PurchaseApply].properties.ownProperty[purpose].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购用途" />
+            <lang locale="zh_HK" value="採購用途" />
+            <lang locale="zh_TW" value="採購用途" />
+        </rs>
+    </resource>
+</entityObject>
+

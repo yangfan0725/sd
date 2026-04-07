@@ -5,6 +5,7 @@ import java.sql.SQLException;
 
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.ctrl.kdf.data.datasource.BOSQueryDataSource;
+import com.kingdee.bos.dao.ormapping.ObjectUuidPK;
 import com.kingdee.bos.dao.query.IQueryExecutor;
 import com.kingdee.bos.dao.query.QueryExecutorFactory;
 import com.kingdee.bos.metadata.IMetaDataPK;
@@ -45,6 +46,24 @@ public class ConSettlementPrintProvider extends FDCBillDataProvider {
 				EntityViewInfo ev = new EntityViewInfo();
 				FilterInfo filter = new FilterInfo();
 				filter.getFilterItems().add(new FilterItemInfo("boAttchAsso.boID",billId));
+				ev.setFilter(filter);
+				exec.setObjectView(ev);
+				iRowSet = exec.executeQuery();
+				iRowSet.beforeFirst();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return iRowSet;
+		}else if(ds.getID().equalsIgnoreCase("ContractBillQueryForPrint")){
+			IRowSet iRowSet = null;
+			try {
+				IQueryExecutor exec = QueryExecutorFactory
+						.getRemoteInstance(new MetaDataPK("com.kingdee.eas.fdc.contract.app.ContractBillQueryForPrint"));
+				exec.option().isAutoTranslateEnum = true;
+				EntityViewInfo ev = new EntityViewInfo();
+				FilterInfo filter = new FilterInfo();
+				ContractSettlementBillInfo info=ContractSettlementBillFactory.getRemoteInstance().getContractSettlementBillInfo(new ObjectUuidPK(billId));
+				filter.getFilterItems().add(new FilterItemInfo("id",info.getContractBill().getId()));
 				ev.setFilter(filter);
 				exec.setObjectView(ev);
 				iRowSet = exec.executeQuery();

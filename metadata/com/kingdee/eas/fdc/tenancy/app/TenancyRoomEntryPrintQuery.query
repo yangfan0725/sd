@@ -70,7 +70,7 @@
                 <key name="name" value="TenancyRoomEntryPrintQuery" />
             </query>
             <entityRef>
-                <key name="package" value="com.kingdee.eas.fdc.sales.app" />
+                <key name="package" value="com.kingdee.eas.fdc.sellhouse.app" />
                 <key name="name" value="RoomModel" />
             </entityRef>
         </subEntity>

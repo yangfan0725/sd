@@ -44,6 +44,7 @@ import com.kingdee.eas.common.client.UIFactoryName;
 import com.kingdee.eas.fdc.basecrm.client.CRMClientHelper;
 import com.kingdee.eas.fdc.basedata.FDCHelper;
 import com.kingdee.eas.fdc.basedata.MoneySysTypeEnum;
+import com.kingdee.eas.fdc.merch.common.KDTableHelper;
 import com.kingdee.eas.fdc.sellhouse.client.FDCTreeHelper;
 import com.kingdee.eas.fdc.sellhouse.client.SHEHelper;
 import com.kingdee.eas.fdc.tenancy.OtherBillReportFacadeFactory;
@@ -82,7 +83,7 @@ public class OtherBillReportUI extends AbstractOtherBillReportUI
 	}
 
 	protected CommRptBaseConditionUI getQueryDialogUserPanel() throws Exception {
-		return null;
+		return new OtherBillReportFilterUI();
 	}
 
 	protected ICommRptBase getRemoteInstance() throws BOSException {
@@ -102,7 +103,12 @@ public class OtherBillReportUI extends AbstractOtherBillReportUI
 		CRMClientHelper.changeTableNumberFormat(tblMain, new String[]{"amount","price","workload"});
 		CRMClientHelper.getFootRow(tblMain, new String[]{"amount"});
 		tblMain.getColumn("conName").getStyleAttributes().setFontColor(Color.BLUE);
-		mergerTable(tblMain,new String[]{"conId"},new String[]{"sellProject","build","room","contractNo","conNumber","conName","customer","startDate","endDate","leaseTime","dept","des","remark"});
+//		mergerTable(tblMain,new String[]{"conId"},new String[]{"sellProject","build","room","contractNo","conNumber","conName","customer","startDate","endDate","leaseTime","dept","des","remark"});
+		String[] fields=new String[tblMain.getColumnCount()];
+		for(int i=0;i<tblMain.getColumnCount();i++){
+			fields[i]=tblMain.getColumnKey(i);
+		}
+		KDTableHelper.setSortedColumn(tblMain,fields);
 	}
 	private void mergerTable(KDTable table,String coloum[],String mergeColoum[]){
 		int merger=0;
@@ -205,13 +211,13 @@ public class OtherBillReportUI extends AbstractOtherBillReportUI
 	}
 	public void onLoad() throws Exception {
 		isOnLoad=true;
-		setShowDialogOnLoad(false);
+		setShowDialogOnLoad(true);
 		tblMain.getStyleAttributes().setLocked(true);
 		super.onLoad();
 		tblMain.getSelectManager().setSelectMode(KDTSelectManager.MULTIPLE_CELL_SELECT);
 		this.actionPrint.setVisible(false);
 		this.actionPrintPreview.setVisible(false);
-		this.actionQuery.setVisible(false);
+//		this.actionQuery.setVisible(false);
 		buildTree();
 		isOnLoad=false;
 		this.refresh();

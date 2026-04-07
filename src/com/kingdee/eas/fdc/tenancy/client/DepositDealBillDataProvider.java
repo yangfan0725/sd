@@ -50,10 +50,10 @@ public class DepositDealBillDataProvider extends FDCBillDataProvider{
 	private IRowSet getTotalEntryRowSet() {
 		FDCSQLBuilder _builder = new FDCSQLBuilder();
 		_builder.appendSql(" select t.moneyDefine,isnull(sum(t.appAmount),0) appAmount,isnull(sum(t.actRevAmount),0) actRevAmount from(");
-		_builder.appendSql(" select md.fnumber mdNumber,md.fname_l2 moneyDefine,entry.fappAmount appAmount,isnull(entry.factRevAmount,0) actRevAmount from T_TEN_TenBillOtherPay entry left join T_SHE_MoneyDefine md on md.fid=entry.fmoneyDefineId");
+		_builder.appendSql(" select md.fnumber mdNumber,md.fname_l2 moneyDefine,entry.fappAmount appAmount,isnull(entry.factRevAmount,0)-isnull(entry.FHASREFUNDMENTAMOUNT,0) actRevAmount from T_TEN_TenBillOtherPay entry left join T_SHE_MoneyDefine md on md.fid=entry.fmoneyDefineId");
 		_builder.appendSql(" where entry.fheadId='"+tenId+"'");
-		_builder.appendSql(" union all select md.fnumber mdNumber,md.fname_l2 moneyDefine,entry.fappAmount appAmount,isnull(entry.factRevAmount,0) actRevAmount from T_TEN_TenancyRoomPayListEntry entry left join T_SHE_MoneyDefine md on md.fid=entry.fmoneyDefineId");
-		_builder.appendSql(" where entry.ftenBillId='"+tenId+"'");
+		_builder.appendSql(" union all select md.fnumber mdNumber,md.fname_l2 moneyDefine,entry.fappAmount appAmount,isnull(entry.factRevAmount,0)-isnull(entry.FHASREFUNDMENTAMOUNT,0) actRevAmount from T_TEN_TenancyRoomPayListEntry entry left join T_TEN_TENANCYROOMENTRY room on room.fid=entry.ftenroomid left join T_SHE_MoneyDefine md on md.fid=entry.fmoneyDefineId");
+		_builder.appendSql(" where room.ftenancyid='"+tenId+"'");
 		_builder.appendSql(" )t group by t.moneyDefine");
 		IRowSet rowSet=null;
 		try {
@@ -69,8 +69,8 @@ public class DepositDealBillDataProvider extends FDCBillDataProvider{
 	private IRowSet getEntryRowSet() {
 		FDCSQLBuilder _builder = new FDCSQLBuilder();
 		_builder.appendSql(" select t.moneyDefine,t.appAmount,t.actRevAmount,a.famount amount from T_TEN_DepositDealBillEntry a left join(");
-		_builder.appendSql(" select entry.fid srcId,md.fnumber mdNumber,md.fname_l2 moneyDefine,entry.fappAmount appAmount,isnull(entry.factRevAmount,0) actRevAmount from T_TEN_TenBillOtherPay entry left join T_SHE_MoneyDefine md on md.fid=entry.fmoneyDefineId");
-		_builder.appendSql(" union all select entry.fid srcId,md.fnumber mdNumber,md.fname_l2 moneyDefine,entry.fappAmount appAmount,isnull(entry.factRevAmount,0) actRevAmount from T_TEN_TenancyRoomPayListEntry entry left join T_SHE_MoneyDefine md on md.fid=entry.fmoneyDefineId");
+		_builder.appendSql(" select entry.fid srcId,md.fnumber mdNumber,md.fname_l2 moneyDefine,entry.fappAmount appAmount,isnull(entry.factRevAmount,0)-isnull(entry.FHASREFUNDMENTAMOUNT,0) actRevAmount from T_TEN_TenBillOtherPay entry left join T_SHE_MoneyDefine md on md.fid=entry.fmoneyDefineId");
+		_builder.appendSql(" union all select entry.fid srcId,md.fnumber mdNumber,md.fname_l2 moneyDefine,entry.fappAmount appAmount,isnull(entry.factRevAmount,0)-isnull(entry.FHASREFUNDMENTAMOUNT,0) actRevAmount from T_TEN_TenancyRoomPayListEntry entry left join T_SHE_MoneyDefine md on md.fid=entry.fmoneyDefineId");
 		_builder.appendSql(" )t on t.srcId=a.fsrcId where a.FHeadId='"+billId+"' order by a.fseq");
 		IRowSet rowSet=null;
 		try {

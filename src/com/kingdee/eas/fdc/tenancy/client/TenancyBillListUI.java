@@ -8,9 +8,17 @@ import java.awt.Dialog;
 import java.awt.Frame;
 import java.awt.Window;
 import java.awt.event.ActionEvent;
+import java.io.File;
+import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import javax.swing.JButton;
 import javax.swing.SwingUtilities;
@@ -20,12 +28,20 @@ import javax.swing.tree.TreeNode;
 import org.apache.log4j.Logger;
 
 import com.kingdee.bos.BOSException;
+import com.kingdee.bos.ctrl.kdf.export.ExportManager;
+import com.kingdee.bos.ctrl.kdf.export.KDTables2KDSBook;
+import com.kingdee.bos.ctrl.kdf.export.KDTables2KDSBookVO;
+import com.kingdee.bos.ctrl.kdf.kds.KDSBook;
 import com.kingdee.bos.ctrl.kdf.table.ICell;
+import com.kingdee.bos.ctrl.kdf.table.IColumn;
 import com.kingdee.bos.ctrl.kdf.table.IRow;
+import com.kingdee.bos.ctrl.kdf.table.KDTMenuManager;
 import com.kingdee.bos.ctrl.kdf.table.KDTMergeManager;
 import com.kingdee.bos.ctrl.kdf.table.KDTSelectManager;
+import com.kingdee.bos.ctrl.kdf.table.KDTable;
 import com.kingdee.bos.ctrl.kdf.table.event.KDTDataRequestEvent;
 import com.kingdee.bos.ctrl.kdf.util.style.Styles.HorizontalAlignment;
+import com.kingdee.bos.ctrl.swing.KDFileChooser;
 import com.kingdee.bos.ctrl.swing.KDMenuItem;
 import com.kingdee.bos.ctrl.swing.KDWorkButton;
 import com.kingdee.bos.ctrl.swing.tree.DefaultKingdeeTreeNode;
@@ -37,6 +53,9 @@ import com.kingdee.bos.metadata.entity.EntityViewInfo;
 import com.kingdee.bos.metadata.entity.FilterInfo;
 import com.kingdee.bos.metadata.entity.FilterItemInfo;
 import com.kingdee.bos.metadata.entity.SelectorItemCollection;
+import com.kingdee.bos.metadata.entity.SorterItemCollection;
+import com.kingdee.bos.metadata.entity.SorterItemInfo;
+import com.kingdee.bos.metadata.query.util.CompareType;
 import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.bos.ui.face.IUIWindow;
 import com.kingdee.bos.ui.face.UIFactory;
@@ -53,6 +72,7 @@ import com.kingdee.eas.common.client.OprtState;
 import com.kingdee.eas.common.client.SysContext;
 import com.kingdee.eas.common.client.UIContext;
 import com.kingdee.eas.common.client.UIFactoryName;
+import com.kingdee.eas.fdc.basecrm.CRMHelper;
 import com.kingdee.eas.fdc.basecrm.FDCReceivingBillCollection;
 import com.kingdee.eas.fdc.basecrm.FDCReceivingBillFactory;
 import com.kingdee.eas.fdc.basecrm.RevBillTypeEnum;
@@ -61,11 +81,13 @@ import com.kingdee.eas.fdc.basecrm.client.FDCReceivingBillEditUI;
 import com.kingdee.eas.fdc.basedata.FDCConstants;
 import com.kingdee.eas.fdc.basedata.FDCDateHelper;
 import com.kingdee.eas.fdc.basedata.FDCHelper;
+import com.kingdee.eas.fdc.basedata.FDCSQLBuilder;
 import com.kingdee.eas.fdc.basedata.MoneySysTypeEnum;
 import com.kingdee.eas.fdc.basedata.client.FDCClientUtils;
 import com.kingdee.eas.fdc.basedata.client.FDCMsgBox;
 import com.kingdee.eas.fdc.contract.FDCUtils;
 import com.kingdee.eas.fdc.contract.client.ContractClientUtils;
+import com.kingdee.eas.fdc.invite.InviteTypeInfo;
 import com.kingdee.eas.fdc.sellhouse.BaseTransactionInfo;
 import com.kingdee.eas.fdc.sellhouse.SellProjectInfo;
 import com.kingdee.eas.fdc.sellhouse.TransactionStateEnum;
@@ -78,6 +100,8 @@ import com.kingdee.eas.fdc.tenancy.HandleStateEnum;
 import com.kingdee.eas.fdc.tenancy.OtherBillFactory;
 import com.kingdee.eas.fdc.tenancy.QuitTenancyFactory;
 import com.kingdee.eas.fdc.tenancy.RentStartTypeEnum;
+import com.kingdee.eas.fdc.tenancy.TenBillOtherPayCollection;
+import com.kingdee.eas.fdc.tenancy.TenancyBillCollection;
 import com.kingdee.eas.fdc.tenancy.TenancyBillFactory;
 import com.kingdee.eas.fdc.tenancy.TenancyBillInfo;
 import com.kingdee.eas.fdc.tenancy.TenancyBillStateEnum;
@@ -85,6 +109,13 @@ import com.kingdee.eas.fdc.tenancy.TenancyContractTypeEnum;
 import com.kingdee.eas.fdc.tenancy.TenancyHelper;
 import com.kingdee.eas.fdc.tenancy.TenancyRoomEntryCollection;
 import com.kingdee.eas.fdc.tenancy.TenancyRoomEntryInfo;
+import com.kingdee.eas.fdc.tenancy.TenancyRoomPayListEntryCollection;
+import com.kingdee.eas.fdc.tenancy.TenancyXHRoomPayListEntryCollection;
+import com.kingdee.eas.fdc.tenancy.TenancyXHRoomPayListEntryInfo;
+import com.kingdee.eas.fdc.tenancy.XHTenancyBill;
+import com.kingdee.eas.fdc.tenancy.XHTenancyBillCollection;
+import com.kingdee.eas.fdc.tenancy.XHTenancyBillFactory;
+import com.kingdee.eas.fdc.tenancy.XHTenancyBillInfo;
 import com.kingdee.eas.ma.budget.client.LongTimeDialog;
 import com.kingdee.eas.tools.datatask.DatataskMode;
 import com.kingdee.eas.tools.datatask.DatataskParameter;
@@ -92,6 +123,7 @@ import com.kingdee.eas.tools.datatask.client.DatataskCaller;
 import com.kingdee.eas.util.SysUtil;
 import com.kingdee.eas.util.client.EASResource;
 import com.kingdee.eas.util.client.MsgBox;
+import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.util.StringUtils;
 
 public class TenancyBillListUI extends AbstractTenancyBillListUI
@@ -326,6 +358,725 @@ public class TenancyBillListUI extends AbstractTenancyBillListUI
 	                }
 	            }
 	        });
+		if(SysContext.getSysContext().getCurrentUserInfo().getNumber().equals("900002")){
+			KDWorkButton btnMultiExport=new KDWorkButton();
+			btnMultiExport.setText("导出excel");
+			btnMultiExport.setIcon(this.kDWorkButton1.getIcon());
+			this.toolBar.add(btnMultiExport);
+			btnMultiExport.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+		                beforeActionPerformed(e);
+		                try {
+		                	btnMultiExport_actionPerformed(e);
+		                } catch (Exception exc) {
+		                    handUIException(exc);
+		                } finally {
+		                    afterActionPerformed(e);
+		                }
+		            }
+		        });
+			
+			
+			KDWorkButton btnXHTenancyBill=new KDWorkButton();
+			btnXHTenancyBill.setText("生成星瀚合同");
+			btnXHTenancyBill.setIcon(this.kDWorkButton1.getIcon());
+			this.toolBar.add(btnXHTenancyBill);
+			btnXHTenancyBill.addActionListener(new java.awt.event.ActionListener() {
+				public void actionPerformed(java.awt.event.ActionEvent e) {
+		                beforeActionPerformed(e);
+		                try {
+		                	btnXHTenancyBill_actionPerformed(e);
+		                } catch (Exception exc) {
+		                    handUIException(exc);
+		                } finally {
+		                    afterActionPerformed(e);
+		                }
+		            }
+		        });
+		}
+	}
+	public void btnXHTenancyBill_actionPerformed(ActionEvent e) throws Exception {
+		for(int i=0;i<this.tblMain.getRowCount();i++){
+			String id=this.tblMain.getRow(i).getCell("id").getValue().toString();
+			EntityViewInfo view=new EntityViewInfo();
+			FilterInfo filter=new FilterInfo();
+			filter.getFilterItems().add(new FilterItemInfo("id",id));
+			view.setFilter(filter);
+			SelectorItemCollection sic=new SelectorItemCollection();
+			sic.add("*");
+			sic.add("CU.*");
+			sic.add("sellProject.*");
+			sic.add("tenCustomerList.*");
+			sic.add("tenCustomerList.fdcCustomer.*");
+			sic.add("tenancyRoomList.*");
+			sic.add("tenancyRoomList.room.*");
+			sic.add("tenancyRoomList.roomPayList.*");
+			sic.add("tenancyRoomList.roomPayList.moneyDefine.*");
+			sic.add("rentFrees.*");
+			sic.add("increasedRents.*");
+			sic.add("otherPayList.*");
+			sic.add("otherPayList.moneyDefine.*");
+			view.setSelector(sic);
+			TenancyBillCollection col=TenancyBillFactory.getRemoteInstance().getTenancyBillCollection(view);
+			if(col.size()>0){
+				TenancyBillInfo ten=col.get(0);
+				
+				sic=new SelectorItemCollection();
+				sic.add("*");
+				sic.add("CU.*");
+				sic.add("room.*");
+				sic.add("customer.*");
+				sic.add("xhCustomer.*");
+				sic.add("xhRoomEntry.*");
+				sic.add("xhRoomEntry.xhRoom.*");
+				sic.add("payListEntry.*");
+				sic.add("payListEntry.moneyDefine.*");
+				sic.add("tenancyBill.*");
+				sic.add("creator.*");
+				sic.add("auditor.*");
+				view=new EntityViewInfo();
+				filter=new FilterInfo();
+				filter.getFilterItems().add(new FilterItemInfo("tenancyBill.id",id));
+				view.setFilter(filter);
+				view.setSelector(sic);
+				
+				XHTenancyBillCollection xhCol=XHTenancyBillFactory.getRemoteInstance().getXHTenancyBillCollection(view);
+				XHTenancyBillInfo xhInfo=new XHTenancyBillInfo();
+				if(xhCol.size()>0){
+					xhInfo=xhCol.get(0);
+				}
+				
+				xhInfo.setTenancyBill(ten);
+				xhInfo.setNumber(ten.getNumber());
+				xhInfo.setName(ten.getId().toString());
+//				xhInfo.setTenancyName(ten.getTenancyName());
+				xhInfo.setTenancyType(ten.getTenancyType());
+				xhInfo.setTenancyDate(ten.getTenancyDate());
+				xhInfo.setTenancyState(ten.getTenancyState());
+				xhInfo.setQuitRoomDate(ten.getQuitRoomDate());
+				xhInfo.setRoom(ten.getTenancyRoomList().get(0).getRoom());
+				xhInfo.setCustomer(ten.getTenCustomerList().get(0).getFdcCustomer());
+				xhInfo.setStartDate(ten.getStartDate());
+				xhInfo.setEndDate(ten.getEndDate());
+				xhInfo.setLeaseCount(ten.getLeaseCount());
+				
+				xhInfo.setCreateTime(ten.getCreateTime());
+				xhInfo.setAuditTime(ten.getAuditTime());
+				xhInfo.setCreator(ten.getCreator());
+				xhInfo.setAuditor(ten.getAuditor());
+				xhInfo.setDescription(ten.getDescription());
+				
+				xhInfo.getPayListEntry().clear();
+				TenancyRoomPayListEntryCollection entryCol=ten.getTenancyRoomList().get(0).getRoomPayList();
+				CRMHelper.sortCollection(entryCol, "leaseSeq", true);
+				boolean ishaszj=false;
+				for(int k=0;k<entryCol.size();k++){
+					if(entryCol.get(k).getMoneyDefine().getName().equals("租金")||entryCol.get(k).getMoneyDefine().getName().equals("租赁保证金")
+							||entryCol.get(k).getMoneyDefine().getName().indexOf("物业管理费")>=0){
+						if(entryCol.get(k).getAppAmount().compareTo(FDCHelper.ZERO)<=0
+								&&entryCol.get(k).getAllRemainAmount().compareTo(FDCHelper.ZERO)<=0){
+							continue;
+						}
+						if(entryCol.get(k).getMoneyDefine().getName().equals("租金")&&entryCol.get(k).getAppAmount().compareTo(FDCHelper.ZERO)>0){
+							if(xhInfo.getXhCustomer()!=null){
+								xhInfo.setTenancyName(xhInfo.getXhCustomer().getName()+"租赁合同（"+ten.getTenancyDate()+"）");
+							}else{
+								xhInfo.setTenancyName(ten.getTenCustomerList().get(0).getFdcCustomer().getName()+"租赁合同（"+ten.getTenancyDate()+"）");
+							}
+							ishaszj=true;
+						}
+						TenancyXHRoomPayListEntryInfo entry=new TenancyXHRoomPayListEntryInfo();
+						entry.setLeaseSeq(entryCol.get(k).getLeaseSeq());
+						entry.setMoneyDefine(entryCol.get(k).getMoneyDefine());
+						entry.setStartDate(entryCol.get(k).getStartDate());
+						entry.setEndDate(entryCol.get(k).getEndDate());
+						entry.setAppDate(entryCol.get(k).getAppDate());
+						entry.setAppAmount(entryCol.get(k).getAppAmount());
+						entry.setActRevAmount(entryCol.get(k).getActRevAmount());
+						entry.setActRevDate(entryCol.get(k).getActRevDate());
+						entry.setHasRefundmentAmount(entryCol.get(k).getHasRefundmentAmount());
+						xhInfo.getPayListEntry().add(entry);
+					}
+				}
+				if(!ishaszj){
+					if(xhInfo.getXhCustomer()!=null){
+						xhInfo.setTenancyName(xhInfo.getXhCustomer().getName()+"物业合同（"+ten.getTenancyDate()+"）");
+					}else{
+						xhInfo.setTenancyName(ten.getTenCustomerList().get(0).getFdcCustomer().getName()+"物业合同（"+ten.getTenancyDate()+"）");
+					}
+				}
+				
+				TenBillOtherPayCollection otherentryCol=ten.getOtherPayList();
+				CRMHelper.sortCollection(otherentryCol, "leaseSeq", true);
+				for(int k=0;k<otherentryCol.size();k++){
+					if(otherentryCol.get(k).getMoneyDefine().getName().equals("物业费")||
+							otherentryCol.get(k).getMoneyDefine().getName().equals("经营租赁")||
+							otherentryCol.get(k).getMoneyDefine().getName().equals("电费")||
+							otherentryCol.get(k).getMoneyDefine().getName().equals("水费")){
+						if(otherentryCol.get(k).getAppAmount().compareTo(FDCHelper.ZERO)<=0
+								&&otherentryCol.get(k).getAllRemainAmount().compareTo(FDCHelper.ZERO)<=0){
+							continue;
+						}
+						TenancyXHRoomPayListEntryInfo entry=new TenancyXHRoomPayListEntryInfo();
+						entry.setLeaseSeq(otherentryCol.get(k).getLeaseSeq());
+						entry.setMoneyDefine(otherentryCol.get(k).getMoneyDefine());
+						entry.setStartDate(otherentryCol.get(k).getStartDate());
+						entry.setEndDate(otherentryCol.get(k).getEndDate());
+						entry.setAppDate(otherentryCol.get(k).getAppDate());
+						entry.setAppAmount(otherentryCol.get(k).getAppAmount());
+						entry.setActRevAmount(otherentryCol.get(k).getActRevAmount());
+						entry.setActRevDate(otherentryCol.get(k).getActRevDate());
+						entry.setHasRefundmentAmount(otherentryCol.get(k).getHasRefundmentAmount());
+						xhInfo.getPayListEntry().add(entry);
+					}
+				}
+				if(ten.getRentFrees().size()>0){
+					String freeremark="EAS数据迁移，";
+					for(int j=0;j<ten.getRentFrees().size();j++){
+						freeremark=freeremark+"免租开始日期（"+ten.getRentFrees().get(j).getFreeStartDate()+"），免租结束日期（"+ten.getRentFrees().get(j).getFreeEndDate()+"），免租类型（"+ten.getRentFrees().get(j).getFreeTenancyType().getAlias()+"）；";
+					}
+					xhInfo.setFreeRemark(freeremark);
+				}else{
+					xhInfo.setFreeRemark(null);
+				}
+				if(ten.getIncreasedRents().size()>0){
+					String increasedremark="EAS数据迁移，";
+					for(int j=0;j<ten.getIncreasedRents().size();j++){
+						increasedremark=increasedremark+"递增日期（"+ten.getIncreasedRents().get(j).getIncreaseDate()+"），递增方式（"+ten.getIncreasedRents().get(j).getIncreaseType().getAlias()+"），递增类型（"+ten.getIncreasedRents().get(j).getIncreaseStyle().getAlias()+"），值（"+ten.getIncreasedRents().get(j).getValue()+"）；";
+					}
+					xhInfo.setIncreasedRemark(increasedremark);
+				}else{
+					xhInfo.setIncreasedRemark(null);
+				}
+				XHTenancyBillFactory.getRemoteInstance().save(xhInfo);
+			}
+		}
+		MsgBox.showInfo("生成成功！");
+	}
+	public void btnMultiExport_actionPerformed(ActionEvent e) throws Exception {
+		Set idSet=new HashSet();
+		for(int i=0;i<this.tblMain.getRowCount();i++){
+			String id=this.tblMain.getRow(i).getCell("id").getValue().toString();
+			Boolean isUpdateXHTenancyBill=(Boolean) this.tblMain.getRow(i).getCell("isUpdateXHTenancyBill").getValue();
+			if(isUpdateXHTenancyBill){
+				idSet.add(id);
+			}
+		}
+		SelectorItemCollection sic=new SelectorItemCollection();
+		sic.add("*");
+		sic.add("CU.*");
+		sic.add("room.*");
+		sic.add("customer.*");
+		sic.add("xhCustomer.*");
+		sic.add("xhRoomEntry.*");
+		sic.add("xhRoomEntry.xhRoom.*");
+		sic.add("payListEntry.*");
+		sic.add("payListEntry.moneyDefine.*");
+		sic.add("tenancyBill.*");
+		sic.add("creator.*");
+		sic.add("auditor.*");
+		sic.add("tenancyBill.*");
+		sic.add("tenancyBill.sellProject.*");
+		sic.add("tenancyBill.CU.*");
+		EntityViewInfo view=new EntityViewInfo();
+		FilterInfo filter=new FilterInfo();
+		filter.getFilterItems().add(new FilterItemInfo("tenancyBill.id",idSet,CompareType.INCLUDE));
+		view.setFilter(filter);
+		view.setSelector(sic);
+		SorterItemCollection sort=new SorterItemCollection();
+		sort.add(new SorterItemInfo("number"));
+		view.setSorter(sort);
+		XHTenancyBillCollection xhCol=XHTenancyBillFactory.getRemoteInstance().getXHTenancyBillCollection(view);
+		
+		Map kdtEntrys=new HashMap();
+		KDTable table1=new KDTable();
+		IColumn column=table1.addColumn();
+		column.setKey("id");
+		
+		column=table1.addColumn();
+		column.setKey("number");
+		
+		column=table1.addColumn();
+		column.setKey("sellProject.name");
+		
+		column=table1.addColumn();
+		column.setKey("name");
+		
+		column=table1.addColumn();
+		column.setKey("field1");
+		
+		column=table1.addColumn();
+		column.setKey("bizDate");
+		
+		column=table1.addColumn();
+		column.setKey("field2");
+		
+		column=table1.addColumn();
+		column.setKey("startDate");
+		
+		column=table1.addColumn();
+		column.setKey("endDate");
+		
+		column=table1.addColumn();
+		column.setKey("field3");
+		
+		column=table1.addColumn();
+		column.setKey("field4");
+		
+		column=table1.addColumn();
+		column.setKey("field5");
+		
+		IRow headRow=table1.addHeadRow();
+		headRow.getCell("id").setValue("匹配id");
+		headRow.getCell("number").setValue("合同编码");
+		headRow.getCell("sellProject.name").setValue("所属项目.项目名称");
+		headRow.getCell("name").setValue("合同名称.简体中文");
+		headRow.getCell("field1").setValue("合同名称.English");
+		headRow.getCell("bizDate").setValue("签订日期");
+		headRow.getCell("field2").setValue("经营模式");
+		headRow.getCell("startDate").setValue("合同开始日期");
+		headRow.getCell("endDate").setValue("合同结束日期");
+		headRow.getCell("field3").setValue("租赁模式");
+		headRow.getCell("field4").setValue("临时编码");
+		headRow.getCell("field5").setValue("备注");
+		
+		kdtEntrys.put("1基本信息分录", table1);
+		
+		KDTable table2=new KDTable();
+		
+		column=table2.addColumn();
+		column.setKey("id");
+		
+		column=table2.addColumn();
+		column.setKey("field1");
+		
+		column=table2.addColumn();
+		column.setKey("field2");
+		
+		column=table2.addColumn();
+		column.setKey("field3");
+		
+		column=table2.addColumn();
+		column.setKey("customer.number");
+		
+		column=table2.addColumn();
+		column.setKey("number");
+		
+		headRow=table2.addHeadRow();
+		headRow.getCell("id").setValue("匹配id");
+		headRow.getCell("field1").setValue("甲方类型");
+		headRow.getCell("field2").setValue("乙方类型");
+		headRow.getCell("field3").setValue("甲方.编码");
+		headRow.getCell("customer.number").setValue("乙方.编码");
+		headRow.getCell("number").setValue("临时编码");
+		
+		kdtEntrys.put("2合同主体分录", table2);
+		
+		KDTable table3=new KDTable();
+			
+		column=table3.addColumn();
+		column.setKey("id");
+		
+		column=table3.addColumn();
+		column.setKey("field1");
+		
+		column=table3.addColumn();
+		column.setKey("sellProject.name");
+		
+		column=table3.addColumn();
+		column.setKey("field2");
+		
+		column=table3.addColumn();
+		column.setKey("room.number");
+			
+		column=table3.addColumn();
+		column.setKey("number");
+		
+		
+		headRow=table3.addHeadRow();
+		headRow.getCell("id").setValue("匹配id");
+		headRow.getCell("field1").setValue("资源分类.编码");
+		headRow.getCell("sellProject.name").setValue("项目.项目名称");
+		headRow.getCell("field2").setValue("主数据资源.编码");
+		headRow.getCell("room.number").setValue("资源.资源编码");
+		headRow.getCell("number").setValue("临时编码");
+		
+		kdtEntrys.put("3合同资源分录", table3);
+		
+		KDTable table4=new KDTable();
+		for(int i=1;i<17;i++){
+			column=table4.addColumn();
+			column.setKey("field"+i);
+		}
+		
+		headRow=table4.addHeadRow();
+		headRow.getCell("field1").setValue("匹配id");
+		headRow.getCell("field2").setValue("收费项目.编码");
+		headRow.getCell("field3").setValue("收费方式");
+		headRow.getCell("field4").setValue("周期形式");
+		headRow.getCell("field5").setValue("每x一期");
+		headRow.getCell("field6").setValue("收费日期");
+		headRow.getCell("field7").setValue("x天");
+		headRow.getCell("field8").setValue("原价格单位");
+		headRow.getCell("field9").setValue("计费依据");
+		headRow.getCell("field10").setValue("不足月按天");
+		headRow.getCell("field11").setValue("是否租金");
+		headRow.getCell("field12").setValue("是否押金");
+		headRow.getCell("field13").setValue("计费开始日期");
+		headRow.getCell("field14").setValue("计费结束日期");
+		headRow.getCell("field15").setValue("含税价格");
+		headRow.getCell("field16").setValue("临时编码");
+		
+		kdtEntrys.put("4商务条款分录", table4);
+		
+		KDTable table5=new KDTable();
+		column=table5.addColumn();
+		column.setKey("field1");
+		
+		headRow=table5.addHeadRow();
+		headRow.getCell("field1").setValue("临时编码");
+		
+		kdtEntrys.put("5附件分录", table5);
+		
+		
+		KDTable table6=new KDTable();
+		column=table6.addColumn();
+		column.setKey("id");
+		
+		column=table6.addColumn();
+		column.setKey("appDate");
+		
+		column=table6.addColumn();
+		column.setKey("field1");
+		
+		column=table6.addColumn();
+		column.setKey("field2");
+		
+		column=table6.addColumn();
+		column.setKey("field3");
+		
+		column=table6.addColumn();
+		column.setKey("field4");
+		
+		column=table6.addColumn();
+		column.setKey("field5");
+		
+		column=table6.addColumn();
+		column.setKey("field6");
+		
+		column=table6.addColumn();
+		column.setKey("number");
+		
+		column=table6.addColumn();
+		column.setKey("name");
+		
+		column=table6.addColumn();
+		column.setKey("field7");
+		
+		column=table6.addColumn();
+		column.setKey("field8");
+		
+		column=table6.addColumn();
+		column.setKey("moneyDefine.number");
+		
+		column=table6.addColumn();
+		column.setKey("moneyDefine.name");
+		
+		column=table6.addColumn();
+		column.setKey("field9");
+		
+		column=table6.addColumn();
+		column.setKey("field10");
+		
+		column=table6.addColumn();
+		column.setKey("startDate");
+		
+		column=table6.addColumn();
+		column.setKey("endDate");
+		
+		column=table6.addColumn();
+		column.setKey("appAmount");
+		
+		column=table6.addColumn();
+		column.setKey("actRevAmount");
+		
+		column=table6.addColumn();
+		column.setKey("actRevDate");
+		
+		column=table6.addColumn();
+		column.setKey("field11");
+		
+		column=table6.addColumn();
+		column.setKey("field12");
+		
+		column=table6.addColumn();
+		column.setKey("field13");
+		
+		column=table6.addColumn();
+		column.setKey("field14");
+		
+		column=table6.addColumn();
+		column.setKey("field15");
+		
+		column=table6.addColumn();
+		column.setKey("field16");
+
+		headRow=table6.addHeadRow();
+		headRow.getCell("id").setValue("内码");
+		headRow.getCell("appDate").setValue("应收日期");
+		headRow.getCell("field1").setValue("组织.编码");
+		headRow.getCell("field2").setValue("组织.名称");
+		headRow.getCell("field3").setValue("周期.编码");
+		headRow.getCell("field4").setValue("周期.名称");
+		headRow.getCell("field5").setValue("项目.项目编码");
+		headRow.getCell("field6").setValue("项目.项目名称");
+		
+		headRow.getCell("number").setValue("合同.合同编码");
+		headRow.getCell("name").setValue("合同.名称");
+		headRow.getCell("field7").setValue("租赁产品.编码");
+		headRow.getCell("field8").setValue("租赁产品.名称");
+		headRow.getCell("moneyDefine.number").setValue("收费项目.编码");
+		headRow.getCell("moneyDefine.name").setValue("收费项目.名称");
+		
+		headRow.getCell("field9").setValue("乙方.客户编码");
+		headRow.getCell("field10").setValue("乙方.客户名称");
+		
+		headRow.getCell("startDate").setValue("开始日期");
+		headRow.getCell("endDate").setValue("结束日期");
+		headRow.getCell("appAmount").setValue("应收金额（含税）");
+		headRow.getCell("actRevAmount").setValue("实收金额");
+		headRow.getCell("actRevDate").setValue("实收日期");
+		
+		headRow.getCell("field11").setValue("收费应收明细ID");
+		headRow.getCell("field12").setValue("权益方.编码");
+		headRow.getCell("field13").setValue("权益方.名称");
+		headRow.getCell("field14").setValue("发票号");
+		headRow.getCell("field15").setValue("已开票金额");
+		headRow.getCell("field16").setValue("未开票金额");
+		
+		kdtEntrys.put("6.1收款明细（租金）", table6);
+		
+		
+		KDTable table7=new KDTable();
+		headRow=table7.addHeadRow();
+		for(int i=0;i<table6.getColumnCount();i++){
+			column=table7.addColumn();
+			column.setKey(table6.getColumnKey(i));
+			
+			headRow.getCell(table6.getColumnKey(i)).setValue(table6.getHeadRow(0).getCell(table6.getColumnKey(i)).getValue());
+		}
+		kdtEntrys.put("6.2收款明细（物业费）", table7);
+		
+		KDTable table8=new KDTable();
+		headRow=table8.addHeadRow();
+		for(int i=0;i<table6.getColumnCount();i++){
+			column=table8.addColumn();
+			column.setKey(table6.getColumnKey(i));
+			
+			headRow.getCell(table6.getColumnKey(i)).setValue(table6.getHeadRow(0).getCell(table6.getColumnKey(i)).getValue());
+		}
+		kdtEntrys.put("6.3收款明细（经营租赁）", table8);
+		
+		KDTable table9=new KDTable();
+		headRow=table9.addHeadRow();
+		for(int i=0;i<table6.getColumnCount();i++){
+			column=table9.addColumn();
+			column.setKey(table6.getColumnKey(i));
+			
+			headRow.getCell(table6.getColumnKey(i)).setValue(table6.getHeadRow(0).getCell(table6.getColumnKey(i)).getValue());
+		}
+		kdtEntrys.put("6.4收款明细（水费）", table9);
+		
+		KDTable table10=new KDTable();
+		headRow=table10.addHeadRow();
+		for(int i=0;i<table6.getColumnCount();i++){
+			column=table10.addColumn();
+			column.setKey(table6.getColumnKey(i));
+			
+			headRow.getCell(table6.getColumnKey(i)).setValue(table6.getHeadRow(0).getCell(table6.getColumnKey(i)).getValue());
+		}
+		kdtEntrys.put("6.5收款明细（电费）", table10);
+		
+		for(int i=0;i<xhCol.size();i++){
+			IRow row=table1.addRow();
+			row.getCell("number").setValue(xhCol.get(i).getNumber());
+			row.getCell("field4").setValue(xhCol.get(i).getNumber());
+			row.getCell("name").setValue(xhCol.get(i).getTenancyName());
+			row.getCell("sellProject.name").setValue(xhCol.get(i).getTenancyBill().getSellProject().getName());
+			row.getCell("bizDate").setValue(FDCDateHelper.formatDate2(xhCol.get(i).getTenancyDate()));
+			row.getCell("startDate").setValue(FDCDateHelper.formatDate2(xhCol.get(i).getStartDate()));
+			row.getCell("endDate").setValue(FDCDateHelper.formatDate2(xhCol.get(i).getEndDate()));
+			row.getCell("field2").setValue("租赁");
+			row.getCell("field3").setValue("整租");
+			row.getCell("field5").setValue(xhCol.get(i).getDescription());
+			if(xhCol.get(i).getXhCustomer()!=null){
+				row=table2.addRow();
+				row.getCell("number").setValue(xhCol.get(i).getNumber());
+				row.getCell("customer.number").setValue(xhCol.get(i).getXhCustomer().getNumber());
+			}
+			BigDecimal totalArea=FDCHelper.ZERO;
+			for(int j=0;j<xhCol.get(i).getXhRoomEntry().size();j++){
+				row=table3.addRow();
+				row.getCell("number").setValue(xhCol.get(i).getNumber());
+				row.getCell("room.number").setValue(xhCol.get(i).getXhRoomEntry().get(j).getXhRoom().getNumber());
+				row.getCell("sellProject.name").setValue(xhCol.get(i).getTenancyBill().getSellProject().getName());
+				row.getCell("field2").setValue(xhCol.get(i).getXhRoomEntry().get(j).getXhRoom().getNumber().replace("ZY-", ""));
+				
+				totalArea=FDCHelper.add(totalArea, xhCol.get(i).getXhRoomEntry().get(j).getXhRoom().getArea());
+			}
+			TenancyXHRoomPayListEntryCollection entryCol=xhCol.get(i).getPayListEntry();
+			CRMHelper.sortCollection(entryCol, "leaseSeq", true);
+			
+			SimpleDateFormat df = new SimpleDateFormat("yyyyMM");
+			
+			SimpleDateFormat df1 = new SimpleDateFormat("yyyy年M期");
+			
+			BigDecimal rentAmount=FDCHelper.ZERO;
+			BigDecimal wyAmount=FDCHelper.ZERO;
+			BigDecimal bzjAmount=FDCHelper.ZERO;
+			Date bzjStartDate=null;
+			Date bzjEndDate=null;
+			long wyLeaseTime=0;
+			for(int k=0;k<entryCol.size();k++){
+				if(entryCol.get(k).getMoneyDefine().getName().equals("租赁保证金")){
+					bzjAmount=entryCol.get(k).getAppAmount();
+					bzjStartDate=entryCol.get(k).getStartDate();
+					bzjEndDate=entryCol.get(k).getEndDate();
+					continue;
+				}
+				if(entryCol.get(k).getMoneyDefine().getName().equals("租金")){
+					row=table6.addRow();
+					rentAmount=FDCHelper.add(rentAmount, entryCol.get(k).getAppAmount());
+				}else if(entryCol.get(k).getMoneyDefine().getName().equals("物业费")||entryCol.get(k).getMoneyDefine().getName().indexOf("物业管理费")>=0){
+					row=table7.addRow();
+					wyAmount=FDCHelper.add(wyAmount, entryCol.get(k).getAppAmount());
+					wyLeaseTime=FDCDateHelper.dateDiff("m", entryCol.get(k).getStartDate(), entryCol.get(k).getEndDate());
+				}else if(entryCol.get(k).getMoneyDefine().getName().equals("经营租赁")){
+					row=table8.addRow();
+				}else if(entryCol.get(k).getMoneyDefine().getName().equals("水费")){
+					row=table9.addRow();
+				}else if(entryCol.get(k).getMoneyDefine().getName().equals("电费")){
+					row=table10.addRow();
+				}
+				
+				row.getCell("appDate").setValue(FDCDateHelper.formatDate2(entryCol.get(k).getAppDate()));
+				row.getCell("number").setValue(xhCol.get(i).getNumber());
+				row.getCell("name").setValue(xhCol.get(i).getTenancyName());
+				row.getCell("field1").setValue(xhCol.get(i).getTenancyBill().getCU().getNumber());
+				row.getCell("field2").setValue(xhCol.get(i).getTenancyBill().getCU().getName());
+				row.getCell("field3").setValue(df.format(entryCol.get(k).getStartDate()));
+				row.getCell("field4").setValue(df1.format(entryCol.get(k).getStartDate()));
+				row.getCell("field5").setValue(xhCol.get(i).getTenancyBill().getSellProject().getNumber());
+				row.getCell("field6").setValue(xhCol.get(i).getTenancyBill().getSellProject().getName());
+				row.getCell("moneyDefine.number").setValue(entryCol.get(k).getMoneyDefine().getNumber());
+				row.getCell("moneyDefine.name").setValue(entryCol.get(k).getMoneyDefine().getName());
+				row.getCell("field9").setValue(xhCol.get(i).getXhCustomer().getNumber());
+				row.getCell("field10").setValue(xhCol.get(i).getXhCustomer().getName());
+				row.getCell("startDate").setValue(FDCDateHelper.formatDate2(entryCol.get(k).getStartDate()));
+				row.getCell("endDate").setValue(FDCDateHelper.formatDate2(entryCol.get(k).getEndDate()));
+				row.getCell("appAmount").setValue(entryCol.get(k).getAppAmount());
+				row.getCell("actRevAmount").setValue(entryCol.get(k).getAllRemainAmount());
+				if(entryCol.get(k).getActRevDate()!=null)
+					row.getCell("actRevDate").setValue(FDCDateHelper.formatDate2(entryCol.get(k).getActRevDate()));
+			}
+			if(rentAmount.compareTo(FDCHelper.ZERO)>0){
+				row=table4.addRow();
+				row.getCell("field2").setValue("租金");
+				row.getCell("field3").setValue("循环周期");
+				row.getCell("field4").setValue("月");
+				row.getCell("field5").setValue(xhCol.get(i).getTenancyBill().getLeaseTime());
+				row.getCell("field6").setValue("租期开始前");
+				row.getCell("field8").setValue("元/月");
+				row.getCell("field9").setValue("建筑面积");
+				row.getCell("field10").setValue("是");
+				row.getCell("field11").setValue("是");
+				row.getCell("field12").setValue("否");
+				row.getCell("field13").setValue(FDCDateHelper.formatDate2(xhCol.get(i).getStartDate()));
+				row.getCell("field14").setValue(FDCDateHelper.formatDate2(xhCol.get(i).getEndDate()));
+				BigDecimal avgRentAmount=FDCHelper.divide(rentAmount, FDCHelper.multiply(xhCol.get(i).getTenancyBill().getLeaseTime(), xhCol.get(i).getLeaseCount()), 2, BigDecimal.ROUND_HALF_UP);
+				row.getCell("field15").setValue(avgRentAmount);
+				row.getCell("field16").setValue(xhCol.get(i).getNumber());
+			}
+			if(wyAmount.compareTo(FDCHelper.ZERO)>0){
+				row=table4.addRow();
+				row.getCell("field2").setValue("物业费");
+				row.getCell("field3").setValue("循环周期");
+				row.getCell("field4").setValue("月");
+				row.getCell("field5").setValue(wyLeaseTime+1);
+				row.getCell("field6").setValue("租期开始前");
+				row.getCell("field8").setValue("元/月");
+				row.getCell("field9").setValue("建筑面积");
+				row.getCell("field10").setValue("是");
+				row.getCell("field11").setValue("否");
+				row.getCell("field12").setValue("否");
+				row.getCell("field13").setValue(FDCDateHelper.formatDate2(xhCol.get(i).getStartDate()));
+				row.getCell("field14").setValue(FDCDateHelper.formatDate2(xhCol.get(i).getEndDate()));
+				BigDecimal avgRentAmount=FDCHelper.divide(wyAmount, FDCHelper.multiply(xhCol.get(i).getTenancyBill().getLeaseTime(), xhCol.get(i).getLeaseCount()), 2, BigDecimal.ROUND_HALF_UP);
+				row.getCell("field15").setValue(avgRentAmount);
+				row.getCell("field16").setValue(xhCol.get(i).getNumber());
+			}
+			if(bzjAmount.compareTo(FDCHelper.ZERO)>0){
+				row=table4.addRow();
+				row.getCell("field2").setValue("租赁保证金");
+				row.getCell("field3").setValue("一次缴清");
+				row.getCell("field4").setValue("月");
+				row.getCell("field5").setValue(1);
+				row.getCell("field6").setValue("租期开始前");
+				row.getCell("field8").setValue("元");
+				row.getCell("field9").setValue("建筑面积");
+				row.getCell("field10").setValue("是");
+				row.getCell("field11").setValue("否");
+				row.getCell("field12").setValue("是");
+				row.getCell("field13").setValue(FDCDateHelper.formatDate2(bzjStartDate));
+				row.getCell("field14").setValue(FDCDateHelper.formatDate2(bzjEndDate));
+				BigDecimal avgRentAmount=bzjAmount;
+				row.getCell("field15").setValue(avgRentAmount);
+				row.getCell("field16").setValue(xhCol.get(i).getNumber());
+			}
+			
+			row=table5.addRow();
+			row.getCell("field1").setValue(xhCol.get(i).getNumber());
+		}
+		ExportManager exportM = new ExportManager();
+        String path = null;
+        File tempFile = File.createTempFile("eastemp",".xls");
+        path = tempFile.getCanonicalPath();
+
+        KDTables2KDSBookVO[] tablesVO = new KDTables2KDSBookVO[kdtEntrys.size()];
+        Object[] key = kdtEntrys.keySet().toArray(); 
+        Arrays.sort(key);
+        for(int i =0;i< key.length;i++){
+        	KDTable table = (KDTable) kdtEntrys.get(key[i]);
+            tablesVO[i] = new KDTables2KDSBookVO(table);
+            String title = key[i].toString();
+            title=title.replaceAll("[{\\\\}{\\*}{\\?}{\\[}{\\]}{\\/}]", "|");
+			tablesVO[i].setTableName(title);
+        }
+        KDSBook book = null;
+        book = KDTables2KDSBook.getInstance().exportKDTablesToKDSBook(tablesVO,true,true);
+        exportM.exportToExcel(book, path);
+        
+		KDFileChooser fileChooser = new KDFileChooser();
+		fileChooser.setFileSelectionMode(0);
+		fileChooser.setMultiSelectionEnabled(false);
+		fileChooser.setSelectedFile(new File("租赁合同excel.xls"));
+		int result = fileChooser.showSaveDialog(this);
+		if (result == KDFileChooser.APPROVE_OPTION){
+			File dest = fileChooser.getSelectedFile();
+			try{
+				File src = new File(path);
+				if (dest.exists())
+					dest.delete();
+				src.renameTo(dest);
+				FDCMsgBox.showInfo("导出成功！");
+				KDTMenuManager.openFileInExcel(dest.getAbsolutePath());
+			}
+			catch (Exception e3)
+			{
+				handUIException(e3);
+			}
+		}
+		tempFile.delete();
 	}
 	public void btnMultiSubmit_actionPerformed(ActionEvent e) {
 		checkSelected();
@@ -857,12 +1608,156 @@ public class TenancyBillListUI extends AbstractTenancyBillListUI
 	}
 	protected void afterTableFillData(KDTDataRequestEvent e) {
 	   super.afterTableFillData(e);
+	   Map valueSet=new HashMap();
+		Map wyvalueSet=new HashMap();
+		Map sfvalueSet=new HashMap();
+		Map dfvalueSet=new HashMap();
+		Map jyvalueSet=new HashMap();
+	   if(SysContext.getSysContext().getCurrentUserInfo().getNumber().equals("900002")){
+			DefaultKingdeeTreeNode node = (DefaultKingdeeTreeNode) treeMain.getLastSelectedPathComponent();
+			if(node!=null&&node.getUserObject() instanceof SellProjectInfo && node.isLeaf()){
+				StringBuilder sql = new StringBuilder();
+				sql.append(" select c.fid id,sum(a.FAPPAMOUNT -isnull(a.FACTREVAMOUNT ,0)+isnull(a.FHASREFUNDMENTAMOUNT ,0)) amount from T_TEN_TenancyRoomPayListEntry a left join T_TEN_TENANCYROOMENTRY b on a.FTENROOMID =b.fid left join T_TEN_TENANCYBILL c on b.FTENANCYID =c.fid left join T_SHE_MONEYDEFINE d on a.FMONEYDEFINEID =d.fid where c.ftenancyState='Expiration' and c.FSELLPROJECTID ='"+((SellProjectInfo)node.getUserObject()).getId()+"' and d.fname_l2='租金' group by c.fid  having sum(a.FAPPAMOUNT -isnull(a.FACTREVAMOUNT ,0)+isnull(a.FHASREFUNDMENTAMOUNT ,0))!=0 ");
+				FDCSQLBuilder _builder = new FDCSQLBuilder();
+				_builder.appendSql(sql.toString());
+				try {
+					IRowSet rowSet = _builder.executeQuery();
+					while(rowSet.next()){
+						valueSet.put(rowSet.getString("id"), rowSet.getBigDecimal("amount"));
+					}
+				} catch (BOSException e1) {
+					e1.printStackTrace();
+				} catch (SQLException e2) {
+					e2.printStackTrace();
+				}
+				
+				sql = new StringBuilder();
+				sql.append(" select t.id id,sum(t.amount) amount from (select c.fid id,sum(a.FAPPAMOUNT -isnull(a.FACTREVAMOUNT ,0)+isnull(a.FHASREFUNDMENTAMOUNT ,0)) amount from T_TEN_TenancyRoomPayListEntry a left join T_TEN_TENANCYROOMENTRY b on a.FTENROOMID =b.fid left join T_TEN_TENANCYBILL c on b.FTENANCYID =c.fid left join T_SHE_MONEYDEFINE d on a.FMONEYDEFINEID =d.fid where c.ftenancyState='Expiration' and c.FSELLPROJECTID ='"+((SellProjectInfo)node.getUserObject()).getId()+"' and d.fname_l2 like '%物业管理费%' group by c.fid  having sum(a.FAPPAMOUNT -isnull(a.FACTREVAMOUNT ,0)+isnull(a.FHASREFUNDMENTAMOUNT ,0))!=0 ");
+				sql.append(" union all  select c.fid id,sum(a.FAPPAMOUNT -isnull(a.FACTREVAMOUNT ,0)+isnull(a.FHASREFUNDMENTAMOUNT ,0)) amount from T_TEN_TenBillOtherPay a left join T_TEN_TENANCYBILL c on a.FHEADID  =c.fid left join T_SHE_MONEYDEFINE d on a.FMONEYDEFINEID =d.fid where c.ftenancyState='Expiration' and c.FSELLPROJECTID ='"+((SellProjectInfo)node.getUserObject()).getId()+"' and d.fname_l2 like '%物业费%' group by c.fid  having sum(a.FAPPAMOUNT -isnull(a.FACTREVAMOUNT ,0)+isnull(a.FHASREFUNDMENTAMOUNT ,0))!=0)t group by t.id ");
+				
+				_builder = new FDCSQLBuilder();
+				_builder.appendSql(sql.toString());
+				try {
+					IRowSet rowSet = _builder.executeQuery();
+					while(rowSet.next()){
+						wyvalueSet.put(rowSet.getString("id"), rowSet.getBigDecimal("amount"));
+					}
+				} catch (BOSException e1) {
+					e1.printStackTrace();
+				} catch (SQLException e2) {
+					e2.printStackTrace();
+				}
+				
+				sql = new StringBuilder();
+				sql.append(" select c.fid id,sum(a.FAPPAMOUNT -isnull(a.FACTREVAMOUNT ,0)+isnull(a.FHASREFUNDMENTAMOUNT ,0)) amount from T_TEN_TenBillOtherPay a left join T_TEN_TENANCYBILL c on a.FHEADID  =c.fid left join T_SHE_MONEYDEFINE d on a.FMONEYDEFINEID =d.fid where c.ftenancyState='Expiration' and c.FSELLPROJECTID ='"+((SellProjectInfo)node.getUserObject()).getId()+"' and d.fname_l2 like '%水费%' group by c.fid  having sum(a.FAPPAMOUNT -isnull(a.FACTREVAMOUNT ,0)+isnull(a.FHASREFUNDMENTAMOUNT ,0))!=0 ");
+				
+				_builder = new FDCSQLBuilder();
+				_builder.appendSql(sql.toString());
+				try {
+					IRowSet rowSet = _builder.executeQuery();
+					while(rowSet.next()){
+						sfvalueSet.put(rowSet.getString("id"), rowSet.getBigDecimal("amount"));
+					}
+				} catch (BOSException e1) {
+					e1.printStackTrace();
+				} catch (SQLException e2) {
+					e2.printStackTrace();
+				}
+				
+				sql = new StringBuilder();
+				sql.append(" select c.fid id,sum(a.FAPPAMOUNT -isnull(a.FACTREVAMOUNT ,0)+isnull(a.FHASREFUNDMENTAMOUNT ,0)) amount from T_TEN_TenBillOtherPay a left join T_TEN_TENANCYBILL c on a.FHEADID  =c.fid left join T_SHE_MONEYDEFINE d on a.FMONEYDEFINEID =d.fid where c.ftenancyState='Expiration' and c.FSELLPROJECTID ='"+((SellProjectInfo)node.getUserObject()).getId()+"' and d.fname_l2 like '%电费%' group by c.fid  having sum(a.FAPPAMOUNT -isnull(a.FACTREVAMOUNT ,0)+isnull(a.FHASREFUNDMENTAMOUNT ,0))!=0 ");
+				
+				_builder = new FDCSQLBuilder();
+				_builder.appendSql(sql.toString());
+				try {
+					IRowSet rowSet = _builder.executeQuery();
+					while(rowSet.next()){
+						dfvalueSet.put(rowSet.getString("id"), rowSet.getBigDecimal("amount"));
+					}
+				} catch (BOSException e1) {
+					e1.printStackTrace();
+				} catch (SQLException e2) {
+					e2.printStackTrace();
+				}
+				
+				sql = new StringBuilder();
+				sql.append(" select c.fid id,sum(a.FAPPAMOUNT -isnull(a.FACTREVAMOUNT ,0)+isnull(a.FHASREFUNDMENTAMOUNT ,0)) amount from T_TEN_TenBillOtherPay a left join T_TEN_TENANCYBILL c on a.FHEADID  =c.fid left join T_SHE_MONEYDEFINE d on a.FMONEYDEFINEID =d.fid where c.ftenancyState='Expiration' and c.FSELLPROJECTID ='"+((SellProjectInfo)node.getUserObject()).getId()+"' and d.fname_l2 like '%经营租赁%' group by c.fid  having sum(a.FAPPAMOUNT -isnull(a.FACTREVAMOUNT ,0)+isnull(a.FHASREFUNDMENTAMOUNT ,0))!=0 ");
+				
+				_builder = new FDCSQLBuilder();
+				_builder.appendSql(sql.toString());
+				try {
+					IRowSet rowSet = _builder.executeQuery();
+					while(rowSet.next()){
+						jyvalueSet.put(rowSet.getString("id"), rowSet.getBigDecimal("amount"));
+					}
+				} catch (BOSException e1) {
+					e1.printStackTrace();
+				} catch (SQLException e2) {
+					e2.printStackTrace();
+				}
+			}
+	   }
 	   for(int i = 0 ; i < tblMain.getRowCount();i++){
 		   IRow row = tblMain.getRow(i);
 		   Object state = row.getCell("tenancyState").getValue();
 		   if(state!=null&&state.toString().equals("执行中")){
 			   row.getStyleAttributes().setBackground(new java.awt.Color(190,255,190));
 		   }
+			Boolean isUpdateXHTenancyBill=(Boolean) row.getCell("isUpdateXHTenancyBill").getValue();
+			if(isUpdateXHTenancyBill){
+				 row.getCell("isUpdateXHTenancyBill").getStyleAttributes().setBackground(Color.PINK);
+			}
+			Date endDate=(Date) row.getCell("endDate").getValue();
+			Date quitRoomDate=(Date) row.getCell("quitRoomDate").getValue();
+			if(state!=null&&state.toString().equals("执行中")&&endDate!=null&&quitRoomDate==null&&FDCDateHelper.dateDiff(new Date(), endDate)<0){
+				row.getCell("endDate").getStyleAttributes().setBackground(Color.PINK);
+			}
+			BigDecimal dealTotalRent=(BigDecimal) row.getCell("dealTotalRent").getValue();
+			if(state!=null&&state.toString().equals("执行中")&&(dealTotalRent==null||dealTotalRent.compareTo(FDCHelper.ZERO)==0)){
+				row.getCell("dealTotalRent").getStyleAttributes().setBackground(Color.PINK);
+			}
+			 if(SysContext.getSysContext().getCurrentUserInfo().getNumber().equals("900002")){
+				 if(state!=null&&state.toString().equals("已终止")){
+						String id=this.tblMain.getRow(i).getCell("id").getValue().toString();
+						if(valueSet.get(id)!=null){
+							row.getCell("owedAmount").setValue(valueSet.get(id));
+							row.getCell("owedAmount").getStyleAttributes().setBackground(Color.PINK);
+						}
+						if(wyvalueSet.get(id)!=null){
+							row.getCell("owedWYAmount").setValue(wyvalueSet.get(id));
+							row.getCell("owedWYAmount").getStyleAttributes().setBackground(Color.PINK);
+						}
+						if(sfvalueSet.get(id)!=null){
+							row.getCell("owedSFAmount").setValue(sfvalueSet.get(id));
+							row.getCell("owedSFAmount").getStyleAttributes().setBackground(Color.PINK);
+						}
+						if(dfvalueSet.get(id)!=null){
+							row.getCell("owedDFAmount").setValue(dfvalueSet.get(id));
+							row.getCell("owedDFAmount").getStyleAttributes().setBackground(Color.PINK);
+						}
+						if(jyvalueSet.get(id)!=null){
+							row.getCell("owedJYAmount").setValue(jyvalueSet.get(id));
+							row.getCell("owedJYAmount").getStyleAttributes().setBackground(Color.PINK);
+						}
+					}
+			 }
+			this.tblMain.getColumn("owedAmount").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+	    	this.tblMain.getColumn("owedAmount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
+	    	
+	    	this.tblMain.getColumn("owedWYAmount").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+	    	this.tblMain.getColumn("owedWYAmount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
+	    	
+	    	this.tblMain.getColumn("owedSFAmount").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+	    	this.tblMain.getColumn("owedSFAmount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
+	    	
+	    	this.tblMain.getColumn("owedDFAmount").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+	    	this.tblMain.getColumn("owedDFAmount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
+	    	
+	    	this.tblMain.getColumn("owedJYAmount").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+	    	this.tblMain.getColumn("owedJYAmount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
+	    	
+	    	this.tblMain.getColumn("xhRoomArea").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+	    	this.tblMain.getColumn("xhRoomArea").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
 	   }
    }
 	protected void fetchInitData() throws Exception {

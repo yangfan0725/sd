@@ -1,0 +1,1888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.contract.app</package>
+    <name>TripCostQuery</name>
+    <alias>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>TripCost</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[TripCost].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCost" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>creator</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[creator].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>auditor</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[auditor].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>dept</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[dept].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="AdminOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>person</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[person].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.person.app" />
+                <key name="name" value="Person" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>CU</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[CU].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CtrlUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>contractWFType</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[contractWFType].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="ContractWFType" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>curProject</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[curProject].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fdc.basedata.app" />
+                <key name="name" value="CurProject" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>4d7acb43-e63b-45dd-951b-9878910393c2</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[4d7acb43-e63b-45dd-951b-9878910393c2].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>77f015b9-c41f-463f-8baa-6902f998f8b3</key>
+                    <parentUnit>
+                        <key name="name" value="4d7acb43-e63b-45dd-951b-9878910393c2" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="creator" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>250c1b02-43fa-4132-af21-61a35df6fed8</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[250c1b02-43fa-4132-af21-61a35df6fed8].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>3d6158da-bc8f-4205-9327-45b8c1106903</key>
+                    <parentUnit>
+                        <key name="name" value="250c1b02-43fa-4132-af21-61a35df6fed8" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>fee2b87c-2333-4188-9807-c60cfa548abd</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[fee2b87c-2333-4188-9807-c60cfa548abd].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a93a31fa-45a8-49ba-924c-22d7cf5cc8b5</key>
+                    <parentUnit>
+                        <key name="name" value="fee2b87c-2333-4188-9807-c60cfa548abd" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="auditor" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>f09f327f-80e6-4276-873f-389702a6ba5d</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[f09f327f-80e6-4276-873f-389702a6ba5d].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0b52ae98-c781-4577-aa96-5e6c368cebcc</key>
+                    <parentUnit>
+                        <key name="name" value="f09f327f-80e6-4276-873f-389702a6ba5d" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="auditor" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>726c4d6e-99ff-4906-a658-8de16141273c</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>state</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[state].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>51332f1c-6671-4928-8890-b1abfc68b9e1</key>
+                    <parentUnit>
+                        <key name="name" value="state" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="state" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>contractWFType.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[contractWFType.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1e007d9f-4a4a-43ff-9d26-af961e60e56f</key>
+                    <parentUnit>
+                        <key name="name" value="contractWFType.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="contractWFType" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizDate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[bizDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b5622e00-d93a-4d24-8877-51759b7e9d3d</key>
+                    <parentUnit>
+                        <key name="name" value="bizDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>dept.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[dept.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7602899b-b738-4210-b4ac-1aa85ea6f683</key>
+                    <parentUnit>
+                        <key name="name" value="dept.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="dept" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>person.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[person.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>491959c2-0843-4c10-95ff-8f3dd147c781</key>
+                    <parentUnit>
+                        <key name="name" value="person.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="person" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>fromDate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[fromDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e722a2d7-5f6d-4a06-92e0-032a9e5157b1</key>
+                    <parentUnit>
+                        <key name="name" value="fromDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="fromDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>toDate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[toDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1368e7bb-01ce-47b0-afed-f49000b656c0</key>
+                    <parentUnit>
+                        <key name="name" value="toDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="toDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>day</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[day].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Int</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7168992f-763c-4a6e-84e4-01e2ccc2d57a</key>
+                    <parentUnit>
+                        <key name="name" value="day" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="day" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>place</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[place].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4c024347-8110-4d46-80ab-99f0c65d69da</key>
+                    <parentUnit>
+                        <key name="name" value="place" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="place" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>purpose</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[purpose].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d143bc47-36b8-4547-959a-8fa630a77321</key>
+                    <parentUnit>
+                        <key name="name" value="purpose" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="purpose" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>transport</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[transport].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7bf85ed9-7219-4121-99f0-53342b7c73fd</key>
+                    <parentUnit>
+                        <key name="name" value="transport" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="transport" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>amount</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[amount].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>4454aa55-68bc-470a-a393-110e9b52e2b2</key>
+                    <parentUnit>
+                        <key name="name" value="amount" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="amount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>creator.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[creator.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>a2d53a9c-0a53-41bd-93da-968d2eac5b97</key>
+                    <parentUnit>
+                        <key name="name" value="creator.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>auditor.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[auditor.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>96364394-8721-465c-a0a0-233e95cc08eb</key>
+                    <parentUnit>
+                        <key name="name" value="auditor.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="auditor" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>createTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[createTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d8dcb2bf-15fa-411d-81ee-754abf0fa1c3</key>
+                    <parentUnit>
+                        <key name="name" value="createTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="createTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>auditTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[auditTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b4a915c2-0cf3-40df-8dc6-a6b03af9aa71</key>
+                    <parentUnit>
+                        <key name="name" value="auditTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="auditTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ee90ccb6-4d80-4b40-a23d-a35e9ccb3c2a</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>679e8148-eb50-4a9c-80e4-9026e524c5b3</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[679e8148-eb50-4a9c-80e4-9026e524c5b3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>823b4324-2516-486a-99c9-a2246395c53b</key>
+                    <parentUnit>
+                        <key name="name" value="679e8148-eb50-4a9c-80e4-9026e524c5b3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="dept" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>a8d97bd3-e818-45b8-a8c1-09732886a0b3</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[a8d97bd3-e818-45b8-a8c1-09732886a0b3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>579dea04-85c1-460a-9a54-0fe365123095</key>
+                    <parentUnit>
+                        <key name="name" value="a8d97bd3-e818-45b8-a8c1-09732886a0b3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="dept" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>09d770b0-abb3-4221-85b6-1dfdfdf54783</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[09d770b0-abb3-4221-85b6-1dfdfdf54783].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>f514b016-c099-49d0-a0e7-c980a38b487e</key>
+                    <parentUnit>
+                        <key name="name" value="09d770b0-abb3-4221-85b6-1dfdfdf54783" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="person" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>c9bed2ba-4e64-45d4-92ec-486c465fd5db</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[c9bed2ba-4e64-45d4-92ec-486c465fd5db].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0b36ba15-48bd-449d-8698-29bb9986626e</key>
+                    <parentUnit>
+                        <key name="name" value="c9bed2ba-4e64-45d4-92ec-486c465fd5db" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="person" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>ee7c589d-6460-496e-9b14-afc791daef9d</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[ee7c589d-6460-496e-9b14-afc791daef9d].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>69fa8633-b70e-474c-aa44-522715dbe9e4</key>
+                    <parentUnit>
+                        <key name="name" value="ee7c589d-6460-496e-9b14-afc791daef9d" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="CU" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>560dc858-6424-44d1-8991-75b04d3ebbc5</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[560dc858-6424-44d1-8991-75b04d3ebbc5].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a884ef25-df82-4472-8db5-39c43515522c</key>
+                    <parentUnit>
+                        <key name="name" value="560dc858-6424-44d1-8991-75b04d3ebbc5" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CU" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>CU.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[CU.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>3bfd4c89-06ac-4de0-91ea-45d03e451b7a</key>
+                    <parentUnit>
+                        <key name="name" value="CU.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CU" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>54ba0340-3af9-4dc5-a69d-d38a28ec95b3</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[54ba0340-3af9-4dc5-a69d-d38a28ec95b3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>197a1288-f715-40c2-a20d-37ce259869de</key>
+                    <parentUnit>
+                        <key name="name" value="54ba0340-3af9-4dc5-a69d-d38a28ec95b3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="contractWFType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>c5df032a-58c6-4063-be74-09c346b4eed4</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[c5df032a-58c6-4063-be74-09c346b4eed4].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>b2f15afa-2f9a-4dae-ad84-2dd5eb5d388f</key>
+                    <parentUnit>
+                        <key name="name" value="c5df032a-58c6-4063-be74-09c346b4eed4" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="contractWFType" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>8ecc4a50-20ed-40ff-8c12-62ebe947faa7</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[8ecc4a50-20ed-40ff-8c12-62ebe947faa7].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>65ba70fd-c8ca-4b5f-a4e5-4f2998abcf7a</key>
+                    <parentUnit>
+                        <key name="name" value="8ecc4a50-20ed-40ff-8c12-62ebe947faa7" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="TripCost" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="curProject" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>aa2eb008-de45-45eb-b9de-dba1c95bca57</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[aa2eb008-de45-45eb-b9de-dba1c95bca57].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>fcbda6aa-852e-4481-aba7-33c8e53265fd</key>
+                    <parentUnit>
+                        <key name="name" value="aa2eb008-de45-45eb-b9de-dba1c95bca57" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="curProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>curProject.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[curProject.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b1d22516-93fb-4d32-9bd8-105cc12330be</key>
+                    <parentUnit>
+                        <key name="name" value="curProject.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="curProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>curProject.description</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[curProject.description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ed5a34b7-227f-46cb-bfe4-5551dd613ab2</key>
+                    <parentUnit>
+                        <key name="name" value="curProject.description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="curProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+            <key name="name" value="TripCostQuery" />
+        </query>
+    </defaultFilter>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>a307ca13-d407-410b-a7cb-80588a7a8209</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="TripCost" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="creator" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>c93a01d8-65ef-4159-9aba-0b8159bca58a</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="4d7acb43-e63b-45dd-951b-9878910393c2" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="250c1b02-43fa-4132-af21-61a35df6fed8" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="a307ca13-d407-410b-a7cb-80588a7a8209" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </join>
+        <join>
+            <name>27db90cb-d033-4eb5-b449-0c1c9c93adac</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="TripCost" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="auditor" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>ddd9ca82-f34d-4019-9103-be0389645176</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="fee2b87c-2333-4188-9807-c60cfa548abd" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="f09f327f-80e6-4276-873f-389702a6ba5d" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="27db90cb-d033-4eb5-b449-0c1c9c93adac" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </join>
+        <join>
+            <name>9dd0367b-8e5a-48c7-86c1-f4bc5cedbff2</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="TripCost" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="dept" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>2e71d531-4e41-4078-b3ec-84071d7bdc88</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="679e8148-eb50-4a9c-80e4-9026e524c5b3" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="a8d97bd3-e818-45b8-a8c1-09732886a0b3" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="9dd0367b-8e5a-48c7-86c1-f4bc5cedbff2" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </join>
+        <join>
+            <name>fef8bea7-79fb-4e1c-8b4c-498d9c248824</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="TripCost" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="person" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>faec2779-fb12-4184-91ca-f63c320b89a5</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="09d770b0-abb3-4221-85b6-1dfdfdf54783" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="c9bed2ba-4e64-45d4-92ec-486c465fd5db" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="fef8bea7-79fb-4e1c-8b4c-498d9c248824" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </join>
+        <join>
+            <name>c1d3cccc-6744-4fc3-b0c1-1b3998e527bb</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="TripCost" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="CU" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>2fe200d6-e681-465e-a2bb-f008335d8d3d</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="ee7c589d-6460-496e-9b14-afc791daef9d" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="560dc858-6424-44d1-8991-75b04d3ebbc5" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="c1d3cccc-6744-4fc3-b0c1-1b3998e527bb" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </join>
+        <join>
+            <name>cc677c74-0cf0-44f5-942a-120ececd7deb</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="TripCost" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="contractWFType" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>487ddbee-a463-4d58-9ed5-cb8a765dc639</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="54ba0340-3af9-4dc5-a69d-d38a28ec95b3" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="c5df032a-58c6-4063-be74-09c346b4eed4" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="cc677c74-0cf0-44f5-942a-120ececd7deb" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </join>
+        <join>
+            <name>9c3bb187-0792-4431-928e-0ef8cb3e684f</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="TripCost" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="curProject" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>b6a6c5c3-767f-4634-8a71-442aeccbafa2</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="8ecc4a50-20ed-40ff-8c12-62ebe947faa7" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="aa2eb008-de45-45eb-b9de-dba1c95bca57" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="9c3bb187-0792-4431-928e-0ef8cb3e684f" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="TripCostQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差报销查询" />
+            <lang locale="zh_HK" value="出差報銷查詢" />
+            <lang locale="zh_TW" value="出差報銷查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差报销查询" />
+            <lang locale="zh_HK" value="出差報銷查詢" />
+            <lang locale="zh_TW" value="出差報銷查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[CU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[TripCost].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[auditor].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[contractWFType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[creator].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[curProject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[dept].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].subObjects.subEntity[person].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[09d770b0-abb3-4221-85b6-1dfdfdf54783].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[250c1b02-43fa-4132-af21-61a35df6fed8].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[4d7acb43-e63b-45dd-951b-9878910393c2].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[54ba0340-3af9-4dc5-a69d-d38a28ec95b3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[560dc858-6424-44d1-8991-75b04d3ebbc5].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[679e8148-eb50-4a9c-80e4-9026e524c5b3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[8ecc4a50-20ed-40ff-8c12-62ebe947faa7].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[a8d97bd3-e818-45b8-a8c1-09732886a0b3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[aa2eb008-de45-45eb-b9de-dba1c95bca57].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[c5df032a-58c6-4063-be74-09c346b4eed4].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[c9bed2ba-4e64-45d4-92ec-486c465fd5db].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[ee7c589d-6460-496e-9b14-afc791daef9d].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[f09f327f-80e6-4276-873f-389702a6ba5d].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.propertyUnit[fee2b87c-2333-4188-9807-c60cfa548abd].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[CU.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[CU.name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[amount].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="报销金额" />
+            <lang locale="zh_HK" value="報銷金額" />
+            <lang locale="zh_TW" value="報銷金額" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[amount].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[amount].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[auditTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审批日期" />
+            <lang locale="zh_HK" value="審批日期" />
+            <lang locale="zh_TW" value="審批日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[auditTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[auditTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[auditor.name].displayName">
+            <lang locale="en_US" value="用户别名" />
+            <lang locale="zh_CN" value="审批人" />
+            <lang locale="zh_HK" value="審批人" />
+            <lang locale="zh_TW" value="審批人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[auditor.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[auditor.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[bizDate].displayName">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="报销日期" />
+            <lang locale="zh_HK" value="報銷日期" />
+            <lang locale="zh_TW" value="報銷日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[bizDate].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[bizDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[contractWFType.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差流程类型" />
+            <lang locale="zh_HK" value="出差流程類型" />
+            <lang locale="zh_TW" value="出差流程類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[contractWFType.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[contractWFType.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[createTime].displayName">
+            <lang locale="en_US" value="createTime" />
+            <lang locale="zh_CN" value="创建日期" />
+            <lang locale="zh_HK" value="創建日期" />
+            <lang locale="zh_TW" value="創建日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[createTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[creator.name].displayName">
+            <lang locale="en_US" value="用户别名" />
+            <lang locale="zh_CN" value="制单人" />
+            <lang locale="zh_HK" value="制單人" />
+            <lang locale="zh_TW" value="制單人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[creator.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[creator.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[curProject.description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目描述" />
+            <lang locale="zh_HK" value="工程項目描述" />
+            <lang locale="zh_TW" value="工程項目描述" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[curProject.description].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[curProject.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目" />
+            <lang locale="zh_HK" value="工程項目" />
+            <lang locale="zh_TW" value="工程項目" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[curProject.name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[day].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差天数" />
+            <lang locale="zh_HK" value="出差天數" />
+            <lang locale="zh_TW" value="出差天數" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[day].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[day].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[dept.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="报销部门" />
+            <lang locale="zh_HK" value="報銷部門" />
+            <lang locale="zh_TW" value="報銷部門" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[dept.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[dept.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[fromDate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差日期从" />
+            <lang locale="zh_HK" value="出差日期從" />
+            <lang locale="zh_TW" value="出差日期從" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[fromDate].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[fromDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[person.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="报销人" />
+            <lang locale="zh_HK" value="報銷人" />
+            <lang locale="zh_TW" value="報銷人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[person.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[person.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[place].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差地点" />
+            <lang locale="zh_HK" value="出差地點" />
+            <lang locale="zh_TW" value="出差地點" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[place].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[place].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[purpose].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差事由" />
+            <lang locale="zh_HK" value="出差事由" />
+            <lang locale="zh_TW" value="出差事由" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[purpose].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[purpose].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[state].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="状态" />
+            <lang locale="zh_HK" value="狀態" />
+            <lang locale="zh_TW" value="狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[state].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[state].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[toDate].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差日期至" />
+            <lang locale="zh_HK" value="出差日期至" />
+            <lang locale="zh_TW" value="出差日期至" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[toDate].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[toDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[transport].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="交通工具" />
+            <lang locale="zh_HK" value="交通工具" />
+            <lang locale="zh_TW" value="交通工具" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[transport].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.TripCostQuery].units.queryField[transport].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</joinQuery>
+

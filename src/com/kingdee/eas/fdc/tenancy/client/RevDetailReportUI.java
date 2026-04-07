@@ -61,6 +61,8 @@ import com.kingdee.eas.fdc.basedata.FDCDateHelper;
 import com.kingdee.eas.fdc.basedata.FDCHelper;
 import com.kingdee.eas.fdc.basedata.FDCSQLBuilder;
 import com.kingdee.eas.fdc.basedata.MoneySysTypeEnum;
+import com.kingdee.eas.fdc.contract.MarketProjectSourceEnum;
+import com.kingdee.eas.fdc.sellhouse.InvoiceTypeEnum;
 import com.kingdee.eas.fdc.sellhouse.client.CustomerEditUI;
 import com.kingdee.eas.fdc.sellhouse.client.FDCTreeHelper;
 import com.kingdee.eas.fdc.sellhouse.client.SHEHelper;
@@ -69,6 +71,7 @@ import com.kingdee.eas.fdc.sellhouse.report.PaymentReportUI;
 import com.kingdee.eas.fdc.sellhouse.report.SaleScheduleReportFacadeFactory;
 import com.kingdee.eas.fdc.sellhouse.report.SaleScheduleReportFilterUI;
 import com.kingdee.eas.fdc.tenancy.RevDetailReportFacadeFactory;
+import com.kingdee.eas.fdc.tenancy.TenancyBillStateEnum;
 import com.kingdee.eas.framework.*;
 import com.kingdee.eas.framework.report.ICommRptBase;
 import com.kingdee.eas.framework.report.client.CommRptBaseConditionUI;
@@ -137,7 +140,7 @@ public class RevDetailReportUI extends AbstractRevDetailReportUI
 			}
 		});
 		this.tblMain.getColumn("accountRate").setRenderer(render_scale);
-		mergerTable(tblMain,new String[]{"conId"},new String[]{"sellProject","build","room","buildArea","tenancyArea","conNumber","conName","customer","startDate","endDate","freeDays","dealTotal","dealPrice","roomPrice","remainingDays"});
+		mergerTable(tblMain,new String[]{"conId"},new String[]{"tenancyState","sellProject","build","room","buildArea","tenancyArea","conNumber","conName","customer","startDate","endDate","freeDays","dealTotal","dealPrice","roomPrice","remainingDays"});
 	}
 	public void tableDataRequest(KDTDataRequestEvent kdtdatarequestevent) {
 		if(isQuery) return;
@@ -173,10 +176,10 @@ public class RevDetailReportUI extends AbstractRevDetailReportUI
          	         while(rs.next()){
 	                   	 if(params.getBoolean("isNeedTotal")&&  conId!=null&&!conId.equals(rs.getString("conId")) ){
 	                   		IRow totalrow=tblMain.addRow();
-	                   		for(int i=0;i<18;i++){
+	                   		for(int i=0;i<19;i++){
 	                   			totalrow.getCell(i).setValue(tblMain.getRow(totalrow.getRowIndex()-1).getCell(i).getValue());
 	                   		}
-	                   		totalrow.getCell(18).setValue("小计");
+	                   		totalrow.getCell(19).setValue("小计");
 	                   		totalrow.getStyleAttributes().setBackground(FDCHelper.KDTABLE_TOTAL_BG_COLOR);
 	                   		totalrowMap.put(conId, totalrow);
 	                   	 }
@@ -187,16 +190,21 @@ public class RevDetailReportUI extends AbstractRevDetailReportUI
 	                   	 
 	                   	 int remainingDays=(int) FDCDateHelper.dateDiff("d", (Date) params.getObject("toRDDate"), (Date)row.getCell("endDate").getValue());
 	                   	 row.getCell("remainingDays").setValue(remainingDays<0?0:remainingDays);
+	                   	 if(row.getCell("tenancyState").getValue().toString().equals("Executing")){
+	                   		row.getCell("tenancyState").getStyleAttributes().setBackground(new java.awt.Color(190,255,190));
+	                   	 }
 	                   	 rowMap.put(rs.getString("conId")+rs.getString("mdId"), row);
          	         }
          	         if(tblMain.getRowCount()>0 ){
-         	        	 IRow lastTotalrow=tblMain.addRow();
-	   	           		 for(int i=0;i<18;i++){
-	   	           			 lastTotalrow.getCell(i).setValue(tblMain.getRow(lastTotalrow.getRowIndex()-1).getCell(i).getValue());
-	   	           		 }
-	   	           		 lastTotalrow.getCell(18).setValue("小计");
-	   	           		 lastTotalrow.getStyleAttributes().setBackground(FDCHelper.KDTABLE_TOTAL_BG_COLOR);
-	   	           		 totalrowMap.put(conId, lastTotalrow);
+         	        	 if(params.getBoolean("isNeedTotal")&&  conId!=null){
+         	        		IRow lastTotalrow=tblMain.addRow();
+	   	   	           		 for(int i=0;i<19;i++){
+	   	   	           			 lastTotalrow.getCell(i).setValue(tblMain.getRow(lastTotalrow.getRowIndex()-1).getCell(i).getValue());
+	   	   	           		 }
+	   	   	           		 lastTotalrow.getCell(19).setValue("小计");
+	   	   	           		 lastTotalrow.getStyleAttributes().setBackground(FDCHelper.KDTABLE_TOTAL_BG_COLOR);
+	   	   	           		 totalrowMap.put(conId, lastTotalrow);
+         	        	 }
          	         }
                	 
          	         RptRowSet appdaters = (RptRowSet)((RptParams)result).getObject("appdaters");
@@ -432,6 +440,20 @@ public class RevDetailReportUI extends AbstractRevDetailReportUI
         	        		footRow.getCell(year+"Y"+month+"M"+"overdueDays").getStyleAttributes().setNumberFormat("#,##0;-#,##0");
         	        	 }
         	         }
+        	         
+        	         tblMain.getColumn("tenancyState").setRenderer(new ObjectValueRender(){
+         				public String getText(Object obj) {
+         					if(obj instanceof String){
+         						String info = (String)obj;
+         						if(TenancyBillStateEnum.getEnum(info)==null){
+         							return "";
+         						}else{
+         							return TenancyBillStateEnum.getEnum(info).getAlias();
+         						}
+         					}
+         					return super.getText(obj);
+         				}
+         			});
         	         
          	         tblMain.setRefresh(true);
          	         if(rs.getRowCount() > 0){

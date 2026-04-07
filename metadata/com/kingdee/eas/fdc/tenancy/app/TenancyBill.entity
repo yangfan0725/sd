@@ -2084,6 +2084,126 @@
                 <key name="name" value="FTenancyBillType" />
             </mappingField>
         </ownProperty>
+        <ownProperty>
+            <name>isUpdateXHTenancyBill</name>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[isUpdateXHTenancyBill].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[isUpdateXHTenancyBill].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Boolean</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[isUpdateXHTenancyBill].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FIsUpdateXHTenancyBill" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>xhCustomer</name>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhCustomer].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhCustomer].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>200</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhCustomer].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FXhCustomer" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>xhRoomArea</name>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhRoomArea].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhRoomArea].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>BigDecimal</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>13</length>
+            <precision>28</precision>
+            <decimalDigits>10</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhRoomArea].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FXhRoomArea" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>xhCustomerNum</name>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhCustomerNum].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhCustomerNum].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>200</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhCustomerNum].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FXhCustomerNum" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>sysCustomerNum</name>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[sysCustomerNum].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[sysCustomerNum].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>200</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[sysCustomerNum].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FSysCustomerNum" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>sysCustomer</name>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[sysCustomer].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[sysCustomer].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>200</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[sysCustomer].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FSysCustomer" />
+            </mappingField>
+        </ownProperty>
     </properties>
     <logicalKey>
         <name>id</name>
@@ -4323,6 +4443,24 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[isUpdateXHTenancyBill].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否更新星瀚合同" />
+            <lang locale="zh_HK" value="是否更新星瀚合同" />
+            <lang locale="zh_TW" value="是否更新星瀚合同" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[isUpdateXHTenancyBill].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[isUpdateXHTenancyBill].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否更新星瀚合同" />
+            <lang locale="zh_HK" value="是否更新星瀚合同" />
+            <lang locale="zh_TW" value="是否更新星瀚合同" />
+        </rs>
         <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[lateFeeAmount].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="滞纳金" />
@@ -4734,6 +4872,42 @@
             <lang locale="zh_HK" value="起始日期" />
             <lang locale="zh_TW" value="起始日期" />
         </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[sysCustomerNum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="主数据编码" />
+            <lang locale="zh_HK" value="主數據編碼" />
+            <lang locale="zh_TW" value="主數據編碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[sysCustomerNum].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[sysCustomerNum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="主数据编码" />
+            <lang locale="zh_HK" value="主數據編碼" />
+            <lang locale="zh_TW" value="主數據編碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[sysCustomer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="主数据客户" />
+            <lang locale="zh_HK" value="主數據客戶" />
+            <lang locale="zh_TW" value="主數據客戶" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[sysCustomer].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[sysCustomer].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="主数据客户" />
+            <lang locale="zh_HK" value="主數據客戶" />
+            <lang locale="zh_TW" value="主數據客戶" />
+        </rs>
         <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[tenAttachesDes].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="租赁配套资源" />
@@ -4985,6 +5159,60 @@
             <lang locale="zh_CN" value="周期性费用取整" />
             <lang locale="zh_HK" value="週期性費用取整" />
             <lang locale="zh_TW" value="週期性費用取整" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhCustomerNum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="星瀚客户编码" />
+            <lang locale="zh_HK" value="星瀚客戶編碼" />
+            <lang locale="zh_TW" value="星瀚客戶編碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhCustomerNum].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhCustomerNum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="星瀚客户编码" />
+            <lang locale="zh_HK" value="星瀚客戶編碼" />
+            <lang locale="zh_TW" value="星瀚客戶編碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhCustomer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="星瀚客户" />
+            <lang locale="zh_HK" value="星瀚客戶" />
+            <lang locale="zh_TW" value="星瀚客戶" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhCustomer].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhCustomer].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="星瀚客户" />
+            <lang locale="zh_HK" value="星瀚客戶" />
+            <lang locale="zh_TW" value="星瀚客戶" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhRoomArea].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="星瀚房源面积" />
+            <lang locale="zh_HK" value="星瀚房源面積" />
+            <lang locale="zh_TW" value="星瀚房源面積" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhRoomArea].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyBill].properties.ownProperty[xhRoomArea].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="星瀚房源面积" />
+            <lang locale="zh_HK" value="星瀚房源面積" />
+            <lang locale="zh_TW" value="星瀚房源面積" />
         </rs>
     </resource>
 </entityObject>

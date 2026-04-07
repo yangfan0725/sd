@@ -1,0 +1,1981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.contract.app</package>
+    <name>PurchaseDocumentQuery</name>
+    <alias>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>PurchaseDocument</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[PurchaseDocument].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocument" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>respPerson</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[respPerson].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.person.app" />
+                <key name="name" value="Person" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>creator</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[creator].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>needDept</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[needDept].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="AdminOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>auditor</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[auditor].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>purchaseMode</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[purchaseMode].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="ContractWFType" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>inviteType</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[inviteType].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fdc.basedata.app" />
+                <key name="name" value="ContractType" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>CU</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[CU].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CtrlUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>curProject</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[curProject].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fdc.basedata.app" />
+                <key name="name" value="CurProject" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>c2b6042d-fcd8-4112-9578-a054bc22db1d</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[c2b6042d-fcd8-4112-9578-a054bc22db1d].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>01e9ff07-162c-452e-8e3f-4ba8746780b5</key>
+                    <parentUnit>
+                        <key name="name" value="c2b6042d-fcd8-4112-9578-a054bc22db1d" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="respPerson" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>7e722d47-2d1d-4da9-b271-9ae598932277</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[7e722d47-2d1d-4da9-b271-9ae598932277].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>feab53d3-3df1-4d58-9158-3f2b1bfafa89</key>
+                    <parentUnit>
+                        <key name="name" value="7e722d47-2d1d-4da9-b271-9ae598932277" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="respPerson" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>a2c859cc-1fe8-4254-979c-d4f9c7c08b6a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[a2c859cc-1fe8-4254-979c-d4f9c7c08b6a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>7b89237d-6661-423c-80b3-1bb81b2a3e60</key>
+                    <parentUnit>
+                        <key name="name" value="a2c859cc-1fe8-4254-979c-d4f9c7c08b6a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="creator" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>c34c04b0-04be-4701-bee3-8fbb36cb174c</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[c34c04b0-04be-4701-bee3-8fbb36cb174c].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>c34a59b9-6308-4076-9b2f-05bbc385e27d</key>
+                    <parentUnit>
+                        <key name="name" value="c34c04b0-04be-4701-bee3-8fbb36cb174c" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>71af1372-70fa-4613-9bb0-d82d744f4b4f</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[71af1372-70fa-4613-9bb0-d82d744f4b4f].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>7b4cbe56-0a58-4df4-814f-b17dd7c31ca7</key>
+                    <parentUnit>
+                        <key name="name" value="71af1372-70fa-4613-9bb0-d82d744f4b4f" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="needDept" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>fad379ea-690d-46a3-9264-b5ddb9786176</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[fad379ea-690d-46a3-9264-b5ddb9786176].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>cd9fc860-47f9-4526-83d2-e2fd6cdd9eda</key>
+                    <parentUnit>
+                        <key name="name" value="fad379ea-690d-46a3-9264-b5ddb9786176" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="needDept" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>5c2b764e-add8-4b50-88bb-07869283485f</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[5c2b764e-add8-4b50-88bb-07869283485f].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>2f3a789d-90cc-4d54-a3a9-a04f1f828d8b</key>
+                    <parentUnit>
+                        <key name="name" value="5c2b764e-add8-4b50-88bb-07869283485f" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="auditor" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>f9792a42-52c7-40ac-8c9b-534e7ed62ca6</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[f9792a42-52c7-40ac-8c9b-534e7ed62ca6].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>767c5bfc-591e-440e-84c2-8a4340890107</key>
+                    <parentUnit>
+                        <key name="name" value="f9792a42-52c7-40ac-8c9b-534e7ed62ca6" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="auditor" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7f2caad3-c316-436b-b294-2364182128f9</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>75c840cd-604c-48a8-8849-b6b7d740ca4a</key>
+                    <parentUnit>
+                        <key name="name" value="name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizDate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[bizDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>04ecbeed-d04e-4293-b572-cf6ea6c28567</key>
+                    <parentUnit>
+                        <key name="name" value="bizDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>state</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[state].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>269d1b15-3aaf-4582-8957-1f54d279c056</key>
+                    <parentUnit>
+                        <key name="name" value="state" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="state" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>inviteType.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[inviteType.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>94fecef1-24ed-41ba-bc3a-c83337cc88cc</key>
+                    <parentUnit>
+                        <key name="name" value="inviteType.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="inviteType" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>purchaseMode.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[purchaseMode.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>55777dff-3e60-4e16-8e44-352a3c94d060</key>
+                    <parentUnit>
+                        <key name="name" value="purchaseMode.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="purchaseMode" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>belong</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[belong].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d1b9c124-59a5-48ce-b87a-7ce944028d1b</key>
+                    <parentUnit>
+                        <key name="name" value="belong" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="belong" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>amount</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[amount].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b558c056-8710-4c8b-b56a-e45557acce40</key>
+                    <parentUnit>
+                        <key name="name" value="amount" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="amount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>needDept.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[needDept.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9eb09a3f-4144-4c9a-9200-45d3610fec61</key>
+                    <parentUnit>
+                        <key name="name" value="needDept.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="needDept" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>respPerson.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[respPerson.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9547859c-a005-4cbb-a1fb-081c5b878d2d</key>
+                    <parentUnit>
+                        <key name="name" value="respPerson.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="respPerson" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>purpose</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[purpose].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7d2a063d-8afc-47d9-8903-5bb55c252756</key>
+                    <parentUnit>
+                        <key name="name" value="purpose" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="purpose" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>creator.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[creator.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>1c41dfee-f7d9-4d17-9836-236dc10353f9</key>
+                    <parentUnit>
+                        <key name="name" value="creator.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>auditor.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[auditor.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9c2c3592-cea1-4830-9345-29479d3ae2a4</key>
+                    <parentUnit>
+                        <key name="name" value="auditor.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="auditor" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>createTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[createTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d5b98f2c-024f-4eaf-a366-d94e1bbfcdfe</key>
+                    <parentUnit>
+                        <key name="name" value="createTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="createTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>auditTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[auditTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>2846c085-2cce-4b41-8dc0-3ccec21ba10d</key>
+                    <parentUnit>
+                        <key name="name" value="auditTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="auditTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>923e3bec-7932-4898-875a-73f211de0532</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>500aa489-e499-45ea-85c4-6f55b2eb4a13</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[500aa489-e499-45ea-85c4-6f55b2eb4a13].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0c9dd21f-41b5-4f02-9ea1-c58a8b8e3e15</key>
+                    <parentUnit>
+                        <key name="name" value="500aa489-e499-45ea-85c4-6f55b2eb4a13" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="purchaseMode" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>b4ff714c-4011-487c-8ece-4701bd84e6ec</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[b4ff714c-4011-487c-8ece-4701bd84e6ec].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>fa199764-84e3-4bea-aa1e-16a234f0ecbb</key>
+                    <parentUnit>
+                        <key name="name" value="b4ff714c-4011-487c-8ece-4701bd84e6ec" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="purchaseMode" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>f3c1e9a5-9f66-4b78-ae87-220b7fc82303</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[f3c1e9a5-9f66-4b78-ae87-220b7fc82303].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>44a5549b-7d88-4a2b-8388-34a19265b0b2</key>
+                    <parentUnit>
+                        <key name="name" value="f3c1e9a5-9f66-4b78-ae87-220b7fc82303" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="inviteType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>543f1282-4b6f-4bbd-88c4-1e2988a0b4f3</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[543f1282-4b6f-4bbd-88c4-1e2988a0b4f3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>64d0886c-28e6-4788-8e5f-3eac3df8f2eb</key>
+                    <parentUnit>
+                        <key name="name" value="543f1282-4b6f-4bbd-88c4-1e2988a0b4f3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="inviteType" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>f2a73e80-6bb0-4fa2-abbb-aa558c8851c3</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[f2a73e80-6bb0-4fa2-abbb-aa558c8851c3].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>6a5cab91-199f-48cf-a8aa-b8cff918f948</key>
+                    <parentUnit>
+                        <key name="name" value="f2a73e80-6bb0-4fa2-abbb-aa558c8851c3" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="CU" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>396df5d3-9720-4558-ba64-51c4034fa05e</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[396df5d3-9720-4558-ba64-51c4034fa05e].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>95fd4f27-a494-4c28-ac3e-f2bd89b3bb68</key>
+                    <parentUnit>
+                        <key name="name" value="396df5d3-9720-4558-ba64-51c4034fa05e" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CU" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>CU.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[CU.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e56c427e-057f-4442-be89-f42bc6e7c940</key>
+                    <parentUnit>
+                        <key name="name" value="CU.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CU" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>da1fce3a-c869-4d0c-87f7-1cfb3e01fc7c</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[da1fce3a-c869-4d0c-87f7-1cfb3e01fc7c].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>d2dcd060-2eec-40fb-b0c6-d30ffc09c949</key>
+                    <parentUnit>
+                        <key name="name" value="da1fce3a-c869-4d0c-87f7-1cfb3e01fc7c" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="curProject" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>63562a59-c24b-435f-9026-8287e6223818</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[63562a59-c24b-435f-9026-8287e6223818].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>b055b6df-47db-4536-8ca0-c89d6f7d1141</key>
+                    <parentUnit>
+                        <key name="name" value="63562a59-c24b-435f-9026-8287e6223818" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="curProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>curProject.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[curProject.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d401907d-236c-4641-8740-d10778b946fa</key>
+                    <parentUnit>
+                        <key name="name" value="curProject.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="curProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>curProject.description</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[curProject.description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e97d58f8-d00c-434d-a82a-288cca48a400</key>
+                    <parentUnit>
+                        <key name="name" value="curProject.description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="curProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>purchaseType</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[purchaseType].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>eb1fca09-e3b6-4aa8-8542-575fad5036b0</key>
+                    <parentUnit>
+                        <key name="name" value="purchaseType" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PurchaseDocument" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="purchaseType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+            <key name="name" value="PurchaseDocumentQuery" />
+        </query>
+    </defaultFilter>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>cb9ae9c8-7fe9-4b6c-8e9e-1ee372242e1f</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PurchaseDocument" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="respPerson" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>32e00844-c887-4f4f-b7da-f136944155f8</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="c2b6042d-fcd8-4112-9578-a054bc22db1d" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="7e722d47-2d1d-4da9-b271-9ae598932277" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="cb9ae9c8-7fe9-4b6c-8e9e-1ee372242e1f" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </join>
+        <join>
+            <name>6274b89d-3ccf-417a-9bb8-4d96432cff25</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PurchaseDocument" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="creator" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>8eb8500a-c432-4820-8991-33c149d2889b</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="a2c859cc-1fe8-4254-979c-d4f9c7c08b6a" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="c34c04b0-04be-4701-bee3-8fbb36cb174c" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="6274b89d-3ccf-417a-9bb8-4d96432cff25" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </join>
+        <join>
+            <name>d9e64edf-3047-44cf-aa10-b312916fabbf</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PurchaseDocument" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="needDept" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>fd9d34e2-fb13-4e03-a03f-5e57ca9a78a7</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="71af1372-70fa-4613-9bb0-d82d744f4b4f" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="fad379ea-690d-46a3-9264-b5ddb9786176" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="d9e64edf-3047-44cf-aa10-b312916fabbf" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </join>
+        <join>
+            <name>1bb3d5e0-674e-4d67-bc06-2b4dd7da7a7b</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PurchaseDocument" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="auditor" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>a9b7b34a-b038-4a63-9df7-ea794e4de21a</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="5c2b764e-add8-4b50-88bb-07869283485f" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="f9792a42-52c7-40ac-8c9b-534e7ed62ca6" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="1bb3d5e0-674e-4d67-bc06-2b4dd7da7a7b" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </join>
+        <join>
+            <name>313f7ec1-8d9c-44dc-be77-95e45454a466</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PurchaseDocument" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="purchaseMode" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>de19139b-86c8-4e07-874e-96fee90eda83</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="500aa489-e499-45ea-85c4-6f55b2eb4a13" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="b4ff714c-4011-487c-8ece-4701bd84e6ec" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="313f7ec1-8d9c-44dc-be77-95e45454a466" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </join>
+        <join>
+            <name>5781ef2d-647d-4f84-97cc-e92ef111dc4e</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PurchaseDocument" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="inviteType" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>43b04f5c-f8f8-49b1-a558-ceb9bc517cfa</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="f3c1e9a5-9f66-4b78-ae87-220b7fc82303" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="543f1282-4b6f-4bbd-88c4-1e2988a0b4f3" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="5781ef2d-647d-4f84-97cc-e92ef111dc4e" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </join>
+        <join>
+            <name>6d6efa90-d7a1-47e4-a1af-2c76d518ef32</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PurchaseDocument" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="CU" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>c69e8417-9567-4f9d-a158-c7a9ca66c82d</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="f2a73e80-6bb0-4fa2-abbb-aa558c8851c3" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="396df5d3-9720-4558-ba64-51c4034fa05e" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="6d6efa90-d7a1-47e4-a1af-2c76d518ef32" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </join>
+        <join>
+            <name>c36cf6cc-2471-493c-b454-9d92b51cb472</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="PurchaseDocument" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="curProject" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>5fedb7fe-e4d7-4d9a-8a63-6daf9656a69c</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="da1fce3a-c869-4d0c-87f7-1cfb3e01fc7c" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="63562a59-c24b-435f-9026-8287e6223818" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="c36cf6cc-2471-493c-b454-9d92b51cb472" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="PurchaseDocumentQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="招标文件查询" />
+            <lang locale="zh_HK" value="招標文件查詢" />
+            <lang locale="zh_TW" value="招標文件查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="招标文件查询" />
+            <lang locale="zh_HK" value="招標文件查詢" />
+            <lang locale="zh_TW" value="招標文件查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[CU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[PurchaseDocument].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[auditor].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[creator].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[curProject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[inviteType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[needDept].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[purchaseMode].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].subObjects.subEntity[respPerson].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[396df5d3-9720-4558-ba64-51c4034fa05e].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[500aa489-e499-45ea-85c4-6f55b2eb4a13].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[543f1282-4b6f-4bbd-88c4-1e2988a0b4f3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[5c2b764e-add8-4b50-88bb-07869283485f].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[63562a59-c24b-435f-9026-8287e6223818].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[71af1372-70fa-4613-9bb0-d82d744f4b4f].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[7e722d47-2d1d-4da9-b271-9ae598932277].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[a2c859cc-1fe8-4254-979c-d4f9c7c08b6a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[b4ff714c-4011-487c-8ece-4701bd84e6ec].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[c2b6042d-fcd8-4112-9578-a054bc22db1d].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[c34c04b0-04be-4701-bee3-8fbb36cb174c].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[da1fce3a-c869-4d0c-87f7-1cfb3e01fc7c].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[f2a73e80-6bb0-4fa2-abbb-aa558c8851c3].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[f3c1e9a5-9f66-4b78-ae87-220b7fc82303].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[f9792a42-52c7-40ac-8c9b-534e7ed62ca6].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.propertyUnit[fad379ea-690d-46a3-9264-b5ddb9786176].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[CU.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[CU.name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[amount].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="预算金额" />
+            <lang locale="zh_HK" value="預算金額" />
+            <lang locale="zh_TW" value="預算金額" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[amount].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[amount].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[auditTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审批日期" />
+            <lang locale="zh_HK" value="審批日期" />
+            <lang locale="zh_TW" value="審批日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[auditTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[auditTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[auditor.name].displayName">
+            <lang locale="en_US" value="用户别名" />
+            <lang locale="zh_CN" value="审批人" />
+            <lang locale="zh_HK" value="審批人" />
+            <lang locale="zh_TW" value="審批人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[auditor.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[auditor.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[belong].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购归属" />
+            <lang locale="zh_HK" value="採購歸屬" />
+            <lang locale="zh_TW" value="採購歸屬" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[belong].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[belong].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[bizDate].displayName">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="申请日期" />
+            <lang locale="zh_HK" value="申請日期" />
+            <lang locale="zh_TW" value="申請日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[bizDate].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[bizDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[createTime].displayName">
+            <lang locale="en_US" value="createTime" />
+            <lang locale="zh_CN" value="创建日期" />
+            <lang locale="zh_HK" value="創建日期" />
+            <lang locale="zh_TW" value="創建日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[createTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[creator.name].displayName">
+            <lang locale="en_US" value="用户别名" />
+            <lang locale="zh_CN" value="制单人" />
+            <lang locale="zh_HK" value="制單人" />
+            <lang locale="zh_TW" value="制單人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[creator.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[creator.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[curProject.description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目描述" />
+            <lang locale="zh_HK" value="工程項目描述" />
+            <lang locale="zh_TW" value="工程項目描述" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[curProject.description].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[curProject.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目" />
+            <lang locale="zh_HK" value="工程項目" />
+            <lang locale="zh_TW" value="工程項目" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[curProject.name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[inviteType.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购类别" />
+            <lang locale="zh_HK" value="採購類別" />
+            <lang locale="zh_TW" value="採購類別" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[inviteType.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[inviteType.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购内容" />
+            <lang locale="zh_HK" value="採購內容" />
+            <lang locale="zh_TW" value="採購內容" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[needDept.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="需求部门" />
+            <lang locale="zh_HK" value="需求部門" />
+            <lang locale="zh_TW" value="需求部門" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[needDept.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[needDept.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[purchaseMode.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购方式" />
+            <lang locale="zh_HK" value="採購方式" />
+            <lang locale="zh_TW" value="採購方式" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[purchaseMode.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[purchaseMode.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[purchaseType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购方式" />
+            <lang locale="zh_HK" value="採購方式" />
+            <lang locale="zh_TW" value="採購方式" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[purchaseType].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[purpose].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="招标文件内容" />
+            <lang locale="zh_HK" value="招標文件內容" />
+            <lang locale="zh_TW" value="招標文件內容" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[purpose].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[purpose].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[respPerson.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="责任人" />
+            <lang locale="zh_HK" value="責任人" />
+            <lang locale="zh_TW" value="責任人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[respPerson.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[respPerson.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[state].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="状态" />
+            <lang locale="zh_HK" value="狀態" />
+            <lang locale="zh_TW" value="狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[state].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.PurchaseDocumentQuery].units.queryField[state].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</joinQuery>
+

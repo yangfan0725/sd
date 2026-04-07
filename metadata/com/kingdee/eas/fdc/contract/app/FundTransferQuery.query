@@ -1,0 +1,2033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.contract.app</package>
+    <name>FundTransferQuery</name>
+    <alias>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>FundTransfer</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[FundTransfer].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransfer" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>respPerson</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[respPerson].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.person.app" />
+                <key name="name" value="Person" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>needDept</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[needDept].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="AdminOrgUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>creator</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[creator].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>auditor</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[auditor].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="User" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>transferBank</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[transferBank].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="BankNum" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>paymentBill</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[paymentBill].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fi.cas.app" />
+                <key name="name" value="PaymentBill" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>CU</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[CU].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CtrlUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>curProject</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[curProject].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fdc.basedata.app" />
+                <key name="name" value="CurProject" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>6502f3e4-3796-41c0-af66-d69027c7395c</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[6502f3e4-3796-41c0-af66-d69027c7395c].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>4d12ac73-cf8c-4d00-9369-f2ecef7e6ed9</key>
+                    <parentUnit>
+                        <key name="name" value="6502f3e4-3796-41c0-af66-d69027c7395c" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="respPerson" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>f70aeb1d-cb0a-4efe-aeee-def2bc1dd518</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[f70aeb1d-cb0a-4efe-aeee-def2bc1dd518].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>ae279b41-af1a-4c9e-b758-175b551058ec</key>
+                    <parentUnit>
+                        <key name="name" value="f70aeb1d-cb0a-4efe-aeee-def2bc1dd518" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="respPerson" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>7afd1c14-a503-4cb4-9186-3883311f0e35</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[7afd1c14-a503-4cb4-9186-3883311f0e35].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a5439255-9600-4aac-a1c3-d20504c308fa</key>
+                    <parentUnit>
+                        <key name="name" value="7afd1c14-a503-4cb4-9186-3883311f0e35" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="needDept" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>7c30ab8e-610d-4f0b-948c-eb03f611c97a</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[7c30ab8e-610d-4f0b-948c-eb03f611c97a].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>bfe6f323-9f37-4db5-b90c-3b546bdb09e9</key>
+                    <parentUnit>
+                        <key name="name" value="7c30ab8e-610d-4f0b-948c-eb03f611c97a" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="needDept" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>ebde6f12-39b7-4d49-8c85-66e0753e0762</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[ebde6f12-39b7-4d49-8c85-66e0753e0762].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>cfb1fddf-9159-4257-8e19-9d1bb442385a</key>
+                    <parentUnit>
+                        <key name="name" value="ebde6f12-39b7-4d49-8c85-66e0753e0762" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="creator" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>0fdaacaa-2ed6-436b-9c49-539c59d8c745</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[0fdaacaa-2ed6-436b-9c49-539c59d8c745].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>85ae8ec1-f0d0-4ea3-8b0c-b84efb3cca7f</key>
+                    <parentUnit>
+                        <key name="name" value="0fdaacaa-2ed6-436b-9c49-539c59d8c745" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>03244129-0985-4f82-ba63-6b0afe7d259e</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[03244129-0985-4f82-ba63-6b0afe7d259e].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>1e696645-ae6b-4a97-95cf-b0a265c898a9</key>
+                    <parentUnit>
+                        <key name="name" value="03244129-0985-4f82-ba63-6b0afe7d259e" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="auditor" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>2d6ee4dd-5c7d-4f2e-b037-e3c84b00853d</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[2d6ee4dd-5c7d-4f2e-b037-e3c84b00853d].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>d8f06de7-5f6d-4ddd-aee6-c7c5c22fe9b6</key>
+                    <parentUnit>
+                        <key name="name" value="2d6ee4dd-5c7d-4f2e-b037-e3c84b00853d" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="auditor" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>0a8a0067-d22d-4a46-8110-9bbe1b5556db</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>e0c620c6-e114-434f-be9b-2f784faaa7fb</key>
+                    <parentUnit>
+                        <key name="name" value="name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>bizDate</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[bizDate].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>368da755-f072-4e38-9abd-22710d0c8647</key>
+                    <parentUnit>
+                        <key name="name" value="bizDate" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="bizDate" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>state</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[state].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>fad0414a-1871-4620-a90b-1d8e3b33e153</key>
+                    <parentUnit>
+                        <key name="name" value="state" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="state" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>isPay</name>
+            <userDefined>true</userDefined>
+            <formulaString>case when #0 = 15 then true else false end</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[isPay].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Boolean</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>bd5cba8b-3719-4536-b10a-9cc657a7720b</key>
+                    <parentUnit>
+                        <key name="name" value="isPay" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="paymentBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="billStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>needDept.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[needDept.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b37f7393-bd49-4a76-a758-b71c6ebe0554</key>
+                    <parentUnit>
+                        <key name="name" value="needDept.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="needDept" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>respPerson.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[respPerson.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5dc6c63b-6c31-4c48-b7d6-1c99713f20a3</key>
+                    <parentUnit>
+                        <key name="name" value="respPerson.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="respPerson" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>transferType</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[transferType].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5a5921b1-38eb-4dbb-a79c-0fe540476575</key>
+                    <parentUnit>
+                        <key name="name" value="transferType" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="transferType" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>accountCompany</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[accountCompany].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b4d79a4b-4e35-44c6-bbfa-395550cf94ad</key>
+                    <parentUnit>
+                        <key name="name" value="accountCompany" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="accountCompany" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>transferBank.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[transferBank.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>41d82776-bcdd-4e21-8c1f-ce19e847f573</key>
+                    <parentUnit>
+                        <key name="name" value="transferBank.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="transferBank" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>transferAccount</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[transferAccount].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>913ee508-c0dc-404e-929e-5ac2cb2c5910</key>
+                    <parentUnit>
+                        <key name="name" value="transferAccount" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="transferAccount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>amount</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[amount].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>527948bb-bb5c-45b9-8d9f-7b41d5021f31</key>
+                    <parentUnit>
+                        <key name="name" value="amount" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="amount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>purpose</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[purpose].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>ad6e37ba-5790-4988-8cbc-33826c8eb684</key>
+                    <parentUnit>
+                        <key name="name" value="purpose" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="purpose" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>creator.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[creator.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5751153d-32df-487d-a442-265256e84bca</key>
+                    <parentUnit>
+                        <key name="name" value="creator.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="creator" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>auditor.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[auditor.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c6f3390d-358f-4c5c-b501-2d8757ea73fa</key>
+                    <parentUnit>
+                        <key name="name" value="auditor.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="auditor" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>createTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[createTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d7e16dc2-2f0d-4170-8824-7226eb53a5cb</key>
+                    <parentUnit>
+                        <key name="name" value="createTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="createTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>auditTime</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[auditTime].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Date</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>9c10f6e7-1dd0-4029-bcd5-6bdf0af97360</key>
+                    <parentUnit>
+                        <key name="name" value="auditTime" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="auditTime" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c3fdff14-8f6a-4b01-a1b3-84ae7d1659b9</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>7ca105b1-be81-4d60-89ca-8885cfc187da</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[7ca105b1-be81-4d60-89ca-8885cfc187da].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a515842c-079d-450d-8adb-0d523859c5ad</key>
+                    <parentUnit>
+                        <key name="name" value="7ca105b1-be81-4d60-89ca-8885cfc187da" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="transferBank" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>cd566d3b-a2ff-4920-8597-0cc6ad7971a8</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[cd566d3b-a2ff-4920-8597-0cc6ad7971a8].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>8c01f1d0-3481-47c8-b899-591b1ff66fbc</key>
+                    <parentUnit>
+                        <key name="name" value="cd566d3b-a2ff-4920-8597-0cc6ad7971a8" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="transferBank" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>c1e63714-1ea2-49a7-bfce-7727267a6248</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[c1e63714-1ea2-49a7-bfce-7727267a6248].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>d7bbb711-a885-483e-a4ff-625a50bbb2dc</key>
+                    <parentUnit>
+                        <key name="name" value="c1e63714-1ea2-49a7-bfce-7727267a6248" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>71950200-f5f6-4c4a-8ca0-b20df703d7dc</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[71950200-f5f6-4c4a-8ca0-b20df703d7dc].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f2a5e9d9-64b3-453a-b5bf-e5f6e54b5426</key>
+                    <parentUnit>
+                        <key name="name" value="71950200-f5f6-4c4a-8ca0-b20df703d7dc" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="paymentBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="sourceBillId" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>99dd8093-1226-4343-aa74-ac0525b21201</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[99dd8093-1226-4343-aa74-ac0525b21201].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>5fbe794e-d717-410b-8c2f-ab1fafe5c953</key>
+                    <parentUnit>
+                        <key name="name" value="99dd8093-1226-4343-aa74-ac0525b21201" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="CU" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>a74da3d4-cef5-4caf-a410-27f39db76e1c</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[a74da3d4-cef5-4caf-a410-27f39db76e1c].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>398cc8bc-629a-434c-9e83-8f5f81fcbf8d</key>
+                    <parentUnit>
+                        <key name="name" value="a74da3d4-cef5-4caf-a410-27f39db76e1c" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CU" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>CU.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[CU.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>32adbcd9-d2bb-4bac-bed6-9fdf2080326c</key>
+                    <parentUnit>
+                        <key name="name" value="CU.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CU" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>6740d802-3043-4880-ae5d-462eb2152c84</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[6740d802-3043-4880-ae5d-462eb2152c84].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>99611af0-66a5-49f6-bc36-45f471fdd417</key>
+                    <parentUnit>
+                        <key name="name" value="6740d802-3043-4880-ae5d-462eb2152c84" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="FundTransfer" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="curProject" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>d427007e-c4e2-4d97-9e33-60d5d96c0a35</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[d427007e-c4e2-4d97-9e33-60d5d96c0a35].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>1e5aa082-0fb0-4072-ae0b-2a9f97e5bcf8</key>
+                    <parentUnit>
+                        <key name="name" value="d427007e-c4e2-4d97-9e33-60d5d96c0a35" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="curProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>curProject.name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[curProject.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>21aed4b7-9b7a-4276-b461-4d6bf87af43e</key>
+                    <parentUnit>
+                        <key name="name" value="curProject.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="curProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>curProject.description</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[curProject.description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>44aabb9b-ee22-4cf4-b966-9bf9644ead95</key>
+                    <parentUnit>
+                        <key name="name" value="curProject.description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="curProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+            <key name="name" value="FundTransferQuery" />
+        </query>
+    </defaultFilter>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>9b5765d8-f96c-4e52-b047-6396f5c09530</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="FundTransfer" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="respPerson" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>d30abe71-ccc8-46a9-8773-27bfd4a1c3a0</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="6502f3e4-3796-41c0-af66-d69027c7395c" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="f70aeb1d-cb0a-4efe-aeee-def2bc1dd518" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="9b5765d8-f96c-4e52-b047-6396f5c09530" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </join>
+        <join>
+            <name>19692011-08b2-445d-99c9-d6c5e4ec62f6</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="FundTransfer" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="needDept" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>7f8f6506-67f3-4096-a3ea-2897a632c805</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="7afd1c14-a503-4cb4-9186-3883311f0e35" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="7c30ab8e-610d-4f0b-948c-eb03f611c97a" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="19692011-08b2-445d-99c9-d6c5e4ec62f6" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </join>
+        <join>
+            <name>176c5082-cade-4eb7-91b8-947c52d7b306</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="FundTransfer" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="creator" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>22c2c0c9-5434-498a-ac6d-c5bd85bd7302</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="ebde6f12-39b7-4d49-8c85-66e0753e0762" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="0fdaacaa-2ed6-436b-9c49-539c59d8c745" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="176c5082-cade-4eb7-91b8-947c52d7b306" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </join>
+        <join>
+            <name>c0dac202-e774-43bc-a920-8c1ee1ae6efd</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="FundTransfer" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="auditor" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>f24b5b35-642a-4db0-924e-7a961b1eae3c</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="03244129-0985-4f82-ba63-6b0afe7d259e" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="2d6ee4dd-5c7d-4f2e-b037-e3c84b00853d" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="c0dac202-e774-43bc-a920-8c1ee1ae6efd" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </join>
+        <join>
+            <name>53fa0462-939a-4dce-9d00-760780c6b517</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="FundTransfer" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="transferBank" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>a8db6449-5cd8-4f32-8afe-8fecec563a4f</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="7ca105b1-be81-4d60-89ca-8885cfc187da" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="cd566d3b-a2ff-4920-8597-0cc6ad7971a8" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="53fa0462-939a-4dce-9d00-760780c6b517" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </join>
+        <join>
+            <name>1a6f0cf1-2e86-4285-94f2-134d6b311ee3</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="FundTransfer" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="paymentBill" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>12716223-bbac-4f63-8f00-c066a1650db4</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="c1e63714-1ea2-49a7-bfce-7727267a6248" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="71950200-f5f6-4c4a-8ca0-b20df703d7dc" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="1a6f0cf1-2e86-4285-94f2-134d6b311ee3" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </join>
+        <join>
+            <name>d1aec5df-819c-4722-9d8e-01645101c6b9</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="FundTransfer" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="CU" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>5fe4e068-0756-4cfe-a26e-7af7591f1503</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="99dd8093-1226-4343-aa74-ac0525b21201" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="a74da3d4-cef5-4caf-a410-27f39db76e1c" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="d1aec5df-819c-4722-9d8e-01645101c6b9" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </join>
+        <join>
+            <name>625c46d4-7020-49f2-a001-818a3e589b8c</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="FundTransfer" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="curProject" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>ebe6a2db-9380-4eb0-8cd2-3c4965eee265</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="6740d802-3043-4880-ae5d-462eb2152c84" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="d427007e-c4e2-4d97-9e33-60d5d96c0a35" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="625c46d4-7020-49f2-a001-818a3e589b8c" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="FundTransferQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="资金划转查询" />
+            <lang locale="zh_HK" value="資金劃轉查詢" />
+            <lang locale="zh_TW" value="資金劃轉查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="资金划转查询" />
+            <lang locale="zh_HK" value="資金劃轉查詢" />
+            <lang locale="zh_TW" value="資金劃轉查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[CU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[FundTransfer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[auditor].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[creator].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[curProject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[needDept].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[paymentBill].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[respPerson].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].subObjects.subEntity[transferBank].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[03244129-0985-4f82-ba63-6b0afe7d259e].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[0fdaacaa-2ed6-436b-9c49-539c59d8c745].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[2d6ee4dd-5c7d-4f2e-b037-e3c84b00853d].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[6502f3e4-3796-41c0-af66-d69027c7395c].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[6740d802-3043-4880-ae5d-462eb2152c84].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[71950200-f5f6-4c4a-8ca0-b20df703d7dc].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[7afd1c14-a503-4cb4-9186-3883311f0e35].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[7c30ab8e-610d-4f0b-948c-eb03f611c97a].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[7ca105b1-be81-4d60-89ca-8885cfc187da].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[99dd8093-1226-4343-aa74-ac0525b21201].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[a74da3d4-cef5-4caf-a410-27f39db76e1c].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[c1e63714-1ea2-49a7-bfce-7727267a6248].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[cd566d3b-a2ff-4920-8597-0cc6ad7971a8].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[d427007e-c4e2-4d97-9e33-60d5d96c0a35].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[ebde6f12-39b7-4d49-8c85-66e0753e0762].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.propertyUnit[f70aeb1d-cb0a-4efe-aeee-def2bc1dd518].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[CU.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[CU.name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[accountCompany].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款单位" />
+            <lang locale="zh_HK" value="收款單位" />
+            <lang locale="zh_TW" value="收款單位" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[accountCompany].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[accountCompany].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[amount].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合计金额（元）" />
+            <lang locale="zh_HK" value="合計金額（元）" />
+            <lang locale="zh_TW" value="合計金額（元）" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[amount].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[amount].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[auditTime].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审批日期" />
+            <lang locale="zh_HK" value="審批日期" />
+            <lang locale="zh_TW" value="審批日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[auditTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[auditTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[auditor.name].displayName">
+            <lang locale="en_US" value="用户别名" />
+            <lang locale="zh_CN" value="审批人" />
+            <lang locale="zh_HK" value="審批人" />
+            <lang locale="zh_TW" value="審批人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[auditor.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[auditor.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[bizDate].displayName">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[bizDate].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[bizDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[createTime].displayName">
+            <lang locale="en_US" value="createTime" />
+            <lang locale="zh_CN" value="创建日期" />
+            <lang locale="zh_HK" value="創建日期" />
+            <lang locale="zh_TW" value="創建日期" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[createTime].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[creator.name].displayName">
+            <lang locale="en_US" value="用户别名" />
+            <lang locale="zh_CN" value="制单人" />
+            <lang locale="zh_HK" value="制單人" />
+            <lang locale="zh_TW" value="制單人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[creator.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[creator.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[curProject.description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目描述" />
+            <lang locale="zh_HK" value="工程項目描述" />
+            <lang locale="zh_TW" value="工程項目描述" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[curProject.description].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[curProject.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目" />
+            <lang locale="zh_HK" value="工程項目" />
+            <lang locale="zh_TW" value="工程項目" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[curProject.name].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[isPay].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否付款" />
+            <lang locale="zh_HK" value="是否付款" />
+            <lang locale="zh_TW" value="是否付款" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[isPay].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[isPay].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据名称" />
+            <lang locale="zh_HK" value="單據名稱" />
+            <lang locale="zh_TW" value="單據名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[needDept.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="申请部门" />
+            <lang locale="zh_HK" value="申請部門" />
+            <lang locale="zh_TW" value="申請部門" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[needDept.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[needDept.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[purpose].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="用途" />
+            <lang locale="zh_HK" value="用途" />
+            <lang locale="zh_TW" value="用途" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[purpose].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[purpose].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[respPerson.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="经办人" />
+            <lang locale="zh_HK" value="經辦人" />
+            <lang locale="zh_TW" value="經辦人" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[respPerson.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[respPerson.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[state].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="状态" />
+            <lang locale="zh_HK" value="狀態" />
+            <lang locale="zh_TW" value="狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[state].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[state].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[transferAccount].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="银行账号" />
+            <lang locale="zh_HK" value="銀行賬號" />
+            <lang locale="zh_TW" value="銀行賬號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[transferAccount].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[transferAccount].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[transferBank.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="开户银行" />
+            <lang locale="zh_HK" value="開戶銀行" />
+            <lang locale="zh_TW" value="開戶銀行" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[transferBank.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[transferBank.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[transferType].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="转出方式" />
+            <lang locale="zh_HK" value="轉出方式" />
+            <lang locale="zh_TW" value="轉出方式" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[transferType].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.FundTransferQuery].units.queryField[transferType].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</joinQuery>
+

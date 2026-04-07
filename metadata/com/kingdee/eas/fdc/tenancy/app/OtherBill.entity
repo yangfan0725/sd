@@ -328,6 +328,26 @@
                 <key name="name" value="FDes" />
             </mappingField>
         </ownProperty>
+        <ownProperty>
+            <name>type</name>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.OtherBill].properties.ownProperty[type].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.OtherBill].properties.ownProperty[type].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.fdc.tenancy.OtherBillTypeEnum</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.tenancy.app.OtherBill].properties.ownProperty[type].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FType" />
+            </mappingField>
+        </ownProperty>
     </properties>
     <logicalKey>
         <name>id</name>
@@ -1365,6 +1385,24 @@
             <lang locale="zh_CN" value="开始日期" />
             <lang locale="zh_HK" value="開始日期" />
             <lang locale="zh_TW" value="開始日期" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.OtherBill].properties.ownProperty[type].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合同类型" />
+            <lang locale="zh_HK" value="合同類型" />
+            <lang locale="zh_TW" value="合同類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.OtherBill].properties.ownProperty[type].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.OtherBill].properties.ownProperty[type].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合同类型" />
+            <lang locale="zh_HK" value="合同類型" />
+            <lang locale="zh_TW" value="合同類型" />
         </rs>
     </resource>
 </entityObject>

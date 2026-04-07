@@ -47,8 +47,12 @@ public abstract class AbstractTenancyRevListUI extends com.kingdee.eas.fdc.basec
 {
     private static final Logger logger = CoreUIObject.getLogger(AbstractTenancyRevListUI.class);
     protected com.kingdee.bos.ctrl.swing.KDCheckBox cbIsAll;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer1;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer2;
     protected com.kingdee.bos.ctrl.swing.KDSplitPane kDSplitPane1;
     protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtTenancy;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkAuditDate;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkAuditDateTo;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnUpdateSubject;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnCreateBill;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnTDPrint;
@@ -141,8 +145,12 @@ public abstract class AbstractTenancyRevListUI extends com.kingdee.eas.fdc.basec
         getActionManager().registerAction("actionRefundment", actionRefundment);
          this.actionRefundment.addService(new com.kingdee.eas.framework.client.service.PermissionService());
         this.cbIsAll = new com.kingdee.bos.ctrl.swing.KDCheckBox();
+        this.kDLabelContainer1 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer2 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.kDSplitPane1 = new com.kingdee.bos.ctrl.swing.KDSplitPane();
         this.kdtTenancy = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.pkAuditDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.pkAuditDateTo = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.btnUpdateSubject = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnCreateBill = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnTDPrint = new com.kingdee.bos.ctrl.swing.KDWorkButton();
@@ -151,8 +159,12 @@ public abstract class AbstractTenancyRevListUI extends com.kingdee.eas.fdc.basec
         this.menuItemBatchReceieving = new com.kingdee.bos.ctrl.swing.KDMenuItem();
         this.menuItemUpdateSubject = new com.kingdee.bos.ctrl.swing.KDMenuItem();
         this.cbIsAll.setName("cbIsAll");
+        this.kDLabelContainer1.setName("kDLabelContainer1");
+        this.kDLabelContainer2.setName("kDLabelContainer2");
         this.kDSplitPane1.setName("kDSplitPane1");
         this.kdtTenancy.setName("kdtTenancy");
+        this.pkAuditDate.setName("pkAuditDate");
+        this.pkAuditDateTo.setName("pkAuditDateTo");
         this.btnUpdateSubject.setName("btnUpdateSubject");
         this.btnCreateBill.setName("btnCreateBill");
         this.btnTDPrint.setName("btnTDPrint");
@@ -184,6 +196,14 @@ public abstract class AbstractTenancyRevListUI extends com.kingdee.eas.fdc.basec
                 }
             }
         });
+        // kDLabelContainer1		
+        this.kDLabelContainer1.setBoundLabelText(resHelper.getString("kDLabelContainer1.boundLabelText"));		
+        this.kDLabelContainer1.setBoundLabelLength(100);		
+        this.kDLabelContainer1.setBoundLabelUnderline(true);
+        // kDLabelContainer2		
+        this.kDLabelContainer2.setBoundLabelText(resHelper.getString("kDLabelContainer2.boundLabelText"));		
+        this.kDLabelContainer2.setBoundLabelLength(100);		
+        this.kDLabelContainer2.setBoundLabelUnderline(true);
         // kDSplitPane1		
         this.kDSplitPane1.setOrientation(0);		
         this.kDSplitPane1.setDividerLocation(350);
@@ -214,6 +234,8 @@ public abstract class AbstractTenancyRevListUI extends com.kingdee.eas.fdc.basec
 
         
 
+        // pkAuditDate
+        // pkAuditDateTo
         // btnUpdateSubject
         this.btnUpdateSubject.setAction((IItemAction)ActionProxyFactory.getProxy(actionUpdateSubject, new Class[] { IItemAction.class }, getServiceContext()));		
         this.btnUpdateSubject.setText(resHelper.getString("btnUpdateSubject.text"));		
@@ -275,6 +297,10 @@ public abstract class AbstractTenancyRevListUI extends com.kingdee.eas.fdc.basec
         this.add(pnlMain, new KDLayout.Constraints(8, 25, 993, 595, KDLayout.Constraints.ANCHOR_CENTRE | KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
         cbIsAll.setBounds(new Rectangle(219, 4, 140, 19));
         this.add(cbIsAll, new KDLayout.Constraints(219, 4, 140, 19, 0));
+        kDLabelContainer1.setBounds(new Rectangle(365, 3, 270, 19));
+        this.add(kDLabelContainer1, new KDLayout.Constraints(365, 3, 270, 19, 0));
+        kDLabelContainer2.setBounds(new Rectangle(650, 3, 270, 19));
+        this.add(kDLabelContainer2, new KDLayout.Constraints(650, 3, 270, 19, 0));
         //pnlMain
         pnlMain.add(treeView, "left");
         pnlMain.add(kDSplitPane1, "right");
@@ -283,6 +309,10 @@ public abstract class AbstractTenancyRevListUI extends com.kingdee.eas.fdc.basec
         //kDSplitPane1
         kDSplitPane1.add(tblMain, "bottom");
         kDSplitPane1.add(kdtTenancy, "top");
+        //kDLabelContainer1
+        kDLabelContainer1.setBoundEditor(pkAuditDate);
+        //kDLabelContainer2
+        kDLabelContainer2.setBoundEditor(pkAuditDateTo);
 
     }
 

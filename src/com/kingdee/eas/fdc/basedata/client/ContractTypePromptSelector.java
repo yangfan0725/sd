@@ -5,6 +5,13 @@ import com.kingdee.bos.ui.face.*;
 import com.kingdee.eas.common.client.*;
 import com.kingdee.eas.fdc.contract.client.ContractBillEditUI;
 import com.kingdee.eas.fdc.contract.client.ContractBillReceiveEditUI;
+import com.kingdee.eas.fdc.contract.client.ExpenseApplyEditUI;
+import com.kingdee.eas.fdc.contract.client.ExpenseCostEditUI;
+import com.kingdee.eas.fdc.contract.client.FundContractEditUI;
+import com.kingdee.eas.fdc.contract.client.PurchaseApplyEditUI;
+import com.kingdee.eas.fdc.contract.client.PurchaseDocumentEditUI;
+import com.kingdee.eas.fdc.contract.client.TripApplyEditUI;
+import com.kingdee.eas.fdc.contract.client.TripCostEditUI;
 import com.kingdee.eas.fdc.contract.programming.client.ProgrammingEditUI;
 import com.kingdee.eas.util.client.ExceptionHandler;
 public class ContractTypePromptSelector
@@ -47,6 +54,26 @@ public class ContractTypePromptSelector
 					context.put("isReceive", Boolean.TRUE);
 				}else{
 					context.put("isReceive", Boolean.FALSE);
+				}
+				if(ui instanceof PurchaseApplyEditUI || ui instanceof PurchaseDocumentEditUI){
+					context.put("isPurchase", Boolean.TRUE);
+				}else{
+					context.put("isPurchase", Boolean.FALSE);
+				}
+				if(ui instanceof FundContractEditUI){
+					context.put("isFund", Boolean.TRUE);
+				}else{
+					context.put("isFund", Boolean.FALSE);
+				}
+				if(ui instanceof TripApplyEditUI || ui instanceof TripCostEditUI){
+					context.put("isTrip", Boolean.TRUE);
+				}else{
+					context.put("isTrip", Boolean.FALSE);
+				}
+				if(ui instanceof ExpenseApplyEditUI || ui instanceof ExpenseCostEditUI){
+					context.put("isExpense", Boolean.TRUE);
+				}else{
+					context.put("isExpense", Boolean.FALSE);
 				}
 					/*  42*/            
 

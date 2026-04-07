@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uiObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.tenancy.client</package>
+    <name>XHRoomEditUI</name>
+    <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].alias</alias>
+    <description>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].description</description>
+    <userDefined>true</userDefined>
+    <releasePackage>com.kingdee.eas.fdc.tenancy.client</releasePackage>
+    <releaseClass>XHRoomEditUI</releaseClass>
+    <title>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].title</title>
+    <uitype />
+    <defaultbutton />
+    <bizUnitPK />
+    <parent>
+        <key name="package" value="com.kingdee.eas.fdc.basedata.client" />
+        <key name="name" value="FDCBaseDataEditUI" />
+    </parent>
+    <components>
+        <component>
+            <name>CoreUI</name>
+            <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[CoreUI].alias</alias>
+            <userDefined>false</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDPanel</classType>
+            <isContainer>true</isContainer>
+            <constraints>10,10,300,120</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+        </component>
+        <component>
+            <name>contNumber</name>
+            <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contNumber].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>11,8,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contNumber].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contNumber].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contNumber].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>contName</name>
+            <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contName].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>11,37,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contName].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contName].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contName].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>false</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>contArea</name>
+            <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contArea].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>11,66,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contArea].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contArea].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contArea].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>contIsSale</name>
+            <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contIsSale].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>11,95,270,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contIsSale].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contIsSale].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contIsSale].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>txtNumber</name>
+            <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[txtNumber].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <parent>
+                <key name="name" value="contNumber" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>text</propertyName>
+                    <propertyType>java.lang.String</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>number</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType />
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>txtName</name>
+            <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[txtName].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <parent>
+                <key name="name" value="contName" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>_multiLangItem</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>name</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType />
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>txtArea</name>
+            <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[txtArea].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDFormattedTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>dataType</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[txtArea].properties.property[dataType].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>precision</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[txtArea].properties.property[precision].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contArea" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>value</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>area</bindingField>
+                    <fieldType>java.math.BigDecimal</fieldType>
+                    <accessType />
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>cbIsSale</name>
+            <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[cbIsSale].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDComboBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>items</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[cbIsSale].properties.property[items].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contIsSale" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>selectedItem</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>isSale</bindingField>
+                    <fieldType>com.kingdee.eas.fdc.contract.app.YesOrNoEnum</fieldType>
+                    <accessType />
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+    </components>
+    <dataObjects>
+        <dataObject>
+            <name>editData</name>
+            <type>com.kingdee.eas.fdc.tenancy.app.XHRoom</type>
+            <objectType>enty</objectType>
+            <herited>true</herited>
+            <userDefined>false</userDefined>
+        </dataObject>
+    </dataObjects>
+    <actions>
+        <action>
+            <instanceName>actionALine</instanceName>
+            <className>ActionALine</className>
+            <name>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionALine].name</name>
+            <enabled>true</enabled>
+            <actionPerformed />
+            <beforeActionPerformed />
+            <afterActionPerformed />
+            <finallyActionPerformed />
+            <actionCommandKey />
+            <acceleratorKey />
+            <mnemonicKey />
+            <smallIcon>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionALine].smallIcon</smallIcon>
+            <shortDescription>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionALine].shortDescription</shortDescription>
+            <longDescription>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionALine].longDescription</longDescription>
+            <isBindWorkFlow>false</isBindWorkFlow>
+            <herited>false</herited>
+            <daemonRun>false</daemonRun>
+            <actionExtendProperty />
+            <services>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;root&gt;&lt;service class="com.kingdee.eas.framework.client.service.PermissionService" /&gt;&lt;/root&gt;</services>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <oprtIntent />
+            <nextUI />
+            <isUIPNavigator>false</isUIPNavigator>
+            <isBatchAction>false</isBatchAction>
+            <isEntryAction>false</isEntryAction>
+            <batchMethodName />
+        </action>
+        <action>
+            <instanceName>actionILine</instanceName>
+            <className>ActionILine</className>
+            <name>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionILine].name</name>
+            <enabled>true</enabled>
+            <actionPerformed />
+            <beforeActionPerformed />
+            <afterActionPerformed />
+            <finallyActionPerformed />
+            <actionCommandKey />
+            <acceleratorKey />
+            <mnemonicKey />
+            <smallIcon>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionILine].smallIcon</smallIcon>
+            <shortDescription>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionILine].shortDescription</shortDescription>
+            <longDescription>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionILine].longDescription</longDescription>
+            <isBindWorkFlow>false</isBindWorkFlow>
+            <herited>false</herited>
+            <daemonRun>false</daemonRun>
+            <actionExtendProperty />
+            <services>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;root&gt;&lt;service class="com.kingdee.eas.framework.client.service.PermissionService" /&gt;&lt;/root&gt;</services>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <oprtIntent />
+            <nextUI />
+            <isUIPNavigator>false</isUIPNavigator>
+            <isBatchAction>false</isBatchAction>
+            <isEntryAction>false</isEntryAction>
+            <batchMethodName />
+        </action>
+        <action>
+            <instanceName>actionRLine</instanceName>
+            <className>ActionRLine</className>
+            <name>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionRLine].name</name>
+            <enabled>true</enabled>
+            <actionPerformed />
+            <beforeActionPerformed />
+            <afterActionPerformed />
+            <finallyActionPerformed />
+            <actionCommandKey />
+            <acceleratorKey />
+            <mnemonicKey />
+            <smallIcon>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionRLine].smallIcon</smallIcon>
+            <shortDescription>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionRLine].shortDescription</shortDescription>
+            <longDescription>uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionRLine].longDescription</longDescription>
+            <isBindWorkFlow>false</isBindWorkFlow>
+            <herited>false</herited>
+            <daemonRun>false</daemonRun>
+            <actionExtendProperty />
+            <services>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;root&gt;&lt;service class="com.kingdee.eas.framework.client.service.PermissionService" /&gt;&lt;/root&gt;</services>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <oprtIntent />
+            <nextUI />
+            <isUIPNavigator>false</isUIPNavigator>
+            <isBatchAction>false</isBatchAction>
+            <isEntryAction>false</isEntryAction>
+            <batchMethodName />
+        </action>
+    </actions>
+    <resource>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionALine].longDescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionALine].name">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionALine].shortDescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionALine].smallIcon">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionILine].longDescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionILine].name">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionILine].shortDescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionILine].smallIcon">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionRLine].longDescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionRLine].name">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionRLine].shortDescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].actions.action[actionRLine].smallIcon">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="星瀚房间" />
+            <lang locale="zh_HK" value="星瀚房間" />
+            <lang locale="zh_TW" value="星瀚房間" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[CoreUI].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[cbIsSale].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[cbIsSale].properties.property[items].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="[Enum]com.kingdee.eas.fdc.contract.app.YesOrNoEnum" />
+            <lang locale="zh_HK" value="[Enum]com.kingdee.eas.fdc.contract.app.YesOrNoEnum" />
+            <lang locale="zh_TW" value="[Enum]com.kingdee.eas.fdc.contract.app.YesOrNoEnum" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contArea].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contArea].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contArea].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="面积" />
+            <lang locale="zh_HK" value="面積" />
+            <lang locale="zh_TW" value="面積" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contArea].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contIsSale].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contIsSale].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contIsSale].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否已售" />
+            <lang locale="zh_HK" value="是否已售" />
+            <lang locale="zh_TW" value="是否已售" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contIsSale].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contName].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contName].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contName].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contNumber].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contNumber].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[contNumber].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[txtArea].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[txtArea].properties.property[dataType].value">
+            <lang locale="en_US" value="1" />
+            <lang locale="zh_CN" value="1" />
+            <lang locale="zh_HK" value="1" />
+            <lang locale="zh_TW" value="1" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[txtArea].properties.property[precision].value">
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_CN" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[txtName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].components.component[txtNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="供应商职员构成" />
+            <lang locale="zh_HK" value="供應商職員構成" />
+            <lang locale="zh_TW" value="供應商職員構成" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.XHRoomEditUI].title">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="星瀚房间" />
+            <lang locale="zh_HK" value="星瀚房間" />
+            <lang locale="zh_TW" value="星瀚房間" />
+        </rs>
+    </resource>
+</uiObject>
+

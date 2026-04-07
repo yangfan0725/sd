@@ -1,0 +1,1814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.contract.app</package>
+    <name>TripApply</name>
+    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].alias</alias>
+    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].description</description>
+    <userDefined>true</userDefined>
+    <bosType>AAF0BE6E</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.fdc.contract.TripApply</businessImplName>
+    <businessControllerName>com.kingdee.eas.fdc.contract.app.TripApplyController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>exists</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].description</description>
+            <innerID>29f9b710-6341-414d-9c73-632ef4f0f95b</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>Boolean</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>exists</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].description</description>
+            <innerID>c04eba48-a87e-4432-8d59-2a0141a0a323</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>Boolean</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>filter</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].parameters.parameter[filter].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].parameters.parameter[filter].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.FilterInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>exists</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].description</description>
+            <innerID>557484cb-839c-4454-983e-58c912d10e33</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>Boolean</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].description</description>
+            <innerID>fe91bc8a-07a1-4b9f-aacb-25e71d6ceed9</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.TripApply</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].description</description>
+            <innerID>65d3ef96-5372-45a7-aad3-9a91bb9c020b</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.TripApply</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].description</description>
+            <innerID>d43911e6-ff72-4436-aa37-c9b8e227a0c6</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.TripApply</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>addnew</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].description</description>
+            <innerID>ae3d0e36-72f7-4347-b7c4-f7ab1a345449</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.TripApply</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>addnew</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].description</description>
+            <innerID>c98dbff2-7d7c-42fd-ae46-2be9cdd5c99c</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.TripApply</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>update</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[update].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[update].description</description>
+            <innerID>de1484df-4b7a-449a-910e-b3e281bf2604</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[update].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[update].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[update].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[update].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.TripApply</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>updatePartial</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updatePartial].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updatePartial].description</description>
+            <innerID>240dae94-0822-4ac7-83e1-cc03a0a75882</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updatePartial].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updatePartial].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.TripApply</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updatePartial].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updatePartial].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>updateBigObject</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updateBigObject].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updateBigObject].description</description>
+            <innerID>0ef7a4cf-d7b1-4be2-9a43-484ec52010c3</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updateBigObject].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updateBigObject].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updateBigObject].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updateBigObject].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.fdc.contract.app.TripApply</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>delete</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].description</description>
+            <innerID>7ae278c9-2e89-41d3-a6c4-27be0a025044</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getPKList</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].description</description>
+            <innerID>54a4544e-b837-4205-ac22-656a0613655a</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getPKList</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].description</description>
+            <innerID>86f3681a-cdf9-41fe-8b78-412f50e00190</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getPKList</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].description</description>
+            <innerID>34b03a6e-80ef-4450-9269-43e1519ef9a4</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>filter</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].parameters.parameter[filter].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].parameters.parameter[filter].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.FilterInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>sorter</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].parameters.parameter[sorter].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].parameters.parameter[sorter].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SorterItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].description</description>
+            <innerID>237d2935-289f-4d16-b4ae-7a5e8249291d</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.TripApply</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].description</description>
+            <innerID>f4d073bc-b66e-485f-b1f5-0894a09f4e04</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.TripApply</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].description</description>
+            <innerID>a357a329-32fe-415b-9a77-5e9efcb409d7</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.contract.app.TripApply</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>delete</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].description</description>
+            <innerID>005a4735-0b59-45ea-a6ed-f8d14d72cab1</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>filter</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[filter].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[filter].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.FilterInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>delete</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].description</description>
+            <innerID>9c923d81-bca5-4e99-85d2-e91356d6664c</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>com.kingdee.bos.dao.IObjectPK[]</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>delete</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].description</description>
+            <innerID>a88fc7f6-b9a5-4496-9b53-700303e9e1f6</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Required</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>arrayPK</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[arrayPK].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[arrayPK].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK[]</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK />
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.fdc.basedata.app" />
+        <key name="name" value="FDCBill" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+        <key name="name" value="T_CON_TripApply" />
+    </table>
+    <properties>
+        <linkProperty>
+            <name>curProject</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[curProject].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[curProject].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FCurProjectId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_TripApply_CurProject_curProject" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>purpose</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[purpose].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[purpose].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>2000</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[purpose].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FPurpose" />
+            </mappingField>
+        </ownProperty>
+        <linkProperty>
+            <name>contractType</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[contractType].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[contractType].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FContractTypeId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_TripApply_ContractType_contractType" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>fromDate</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[fromDate].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[fromDate].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Date</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[fromDate].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FFromDate" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>toDate</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[toDate].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[toDate].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Date</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[toDate].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FToDate" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>day</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[day].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[day].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Integer</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>4</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[day].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FDay" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>place</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[place].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[place].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>200</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[place].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FPlace" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>transport</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[transport].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[transport].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>200</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[transport].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FTransport" />
+            </mappingField>
+        </ownProperty>
+        <linkProperty>
+            <name>person</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[person].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[person].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FPersonId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_TripApply_Person_respPerson" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>dept</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[dept].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[dept].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FDeptId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_TripApply_AdminOrgUnit_needDept" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>contractWFType</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[contractWFType].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[contractWFType].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FContractWFTypeId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_TripApply_ContractWFType_contractWFType" />
+            </relationship>
+        </linkProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <events>
+        <event>
+            <name>submitEvent</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>dfd2c083-00fa-1000-e000-001fc0a813e6</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="submit" />
+                        <key name="innerID" value="dfd2c083-00fa-1000-e000-001fc0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>a4f660db-1eac-432b-989d-24078923645bevfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>model</name>
+                        <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].formalParameters.formalParameter.parameter[model].alias</alias>
+                        <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].formalParameters.formalParameter.parameter[model].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.eas.fdc.contract.app.MarketProject</metadataRef>
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>setAudittingStatusEvent</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>3f3803ee-010e-1000-e000-00b3c0a813bc</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="setAudittingStatus" />
+                        <key name="innerID" value="3f3803ee-010e-1000-e000-00b3c0a813bc" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>e032c412-9c5d-4b90-b752-aada19c89206evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>id</name>
+                        <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].formalParameters.formalParameter.parameter[id].alias</alias>
+                        <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].formalParameters.formalParameter.parameter[id].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>setSubmitStatusEvent</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>c7ee8b4e-010f-1000-e000-0070c0a80e96</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="setSubmitStatus" />
+                        <key name="innerID" value="c7ee8b4e-010f-1000-e000-0070c0a80e96" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>2954e050-524c-4f85-95f6-3dd3a8a88ab8evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>id</name>
+                        <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].formalParameters.formalParameter.parameter[id].alias</alias>
+                        <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].formalParameters.formalParameter.parameter[id].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>auditEvent</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>3f3803ee-010e-1000-e000-00b0c0a813bc</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="audit" />
+                        <key name="innerID" value="3f3803ee-010e-1000-e000-00b0c0a813bc" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID />
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>4f1efa6a-c708-442b-b715-e2abf447de65evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>id</name>
+                        <alias>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].formalParameters.formalParameter.parameter[id].alias</alias>
+                        <description>entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].formalParameters.formalParameter.parameter[id].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+    </events>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差申请" />
+            <lang locale="zh_HK" value="出差申請" />
+            <lang locale="zh_TW" value="出差申請" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差申请" />
+            <lang locale="zh_HK" value="出差申請" />
+            <lang locale="zh_TW" value="出差申請" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审批" />
+            <lang locale="zh_HK" value="審批" />
+            <lang locale="zh_TW" value="審批" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b0c0a813bc].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].formalParameters.formalParameter.parameter[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="id" />
+            <lang locale="zh_HK" value="id" />
+            <lang locale="zh_TW" value="id" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[auditEvent].formalParameters.formalParameter.parameter[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="设置审批中" />
+            <lang locale="zh_HK" value="設置審批中" />
+            <lang locale="zh_TW" value="設置審批中" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].eventMethods.eventMethod[3f3803ee-010e-1000-e000-00b3c0a813bc].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].formalParameters.formalParameter.parameter[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="id" />
+            <lang locale="zh_HK" value="id" />
+            <lang locale="zh_TW" value="id" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setAudittingStatusEvent].formalParameters.formalParameter.parameter[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="设置提交" />
+            <lang locale="zh_HK" value="設置提交" />
+            <lang locale="zh_TW" value="設置提交" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].eventMethods.eventMethod[c7ee8b4e-010f-1000-e000-0070c0a80e96].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].formalParameters.formalParameter.parameter[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="id" />
+            <lang locale="zh_HK" value="id" />
+            <lang locale="zh_TW" value="id" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[setSubmitStatusEvent].formalParameters.formalParameter.parameter[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="提交" />
+            <lang locale="zh_HK" value="提交" />
+            <lang locale="zh_TW" value="提交" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].formalParameters.formalParameter.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="model" />
+            <lang locale="zh_HK" value="model" />
+            <lang locale="zh_TW" value="model" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].events.event[submitEvent].formalParameters.formalParameter.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].extendedProperty.CRAddNoBreak">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].extendedProperty.CRDHMaintain">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].extendedProperty.CRDHRefuse">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].extendedProperty.CRNumberAddView">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].extendedProperty.CRNumberEdit">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].extendedProperty.OrgType">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.fdc.contract.client.TripApplyEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fdc.contract.client.TripApplyEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fdc.contract.client.TripApplyEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].extendedProperty.genBusinessImplCode">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.fdc.contract.client.TripApplyListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.fdc.contract.client.TripApplyListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.fdc.contract.client.TripApplyListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].parameters.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[addnew].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[arrayPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[arrayPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[filter].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[filter].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[delete].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].parameters.parameter[filter].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].parameters.parameter[filter].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[exists].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].parameters.parameter[filter].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].parameters.parameter[filter].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].parameters.parameter[sorter].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getPKList].parameters.parameter[sorter].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updateBigObject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updateBigObject].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updateBigObject].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updateBigObject].parameters.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updateBigObject].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updateBigObject].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updatePartial].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updatePartial].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updatePartial].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updatePartial].parameters.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updatePartial].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[updatePartial].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[update].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[update].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[update].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[update].parameters.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[update].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].methods.method[update].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[contractType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合同类型" />
+            <lang locale="zh_HK" value="合同類型" />
+            <lang locale="zh_TW" value="合同類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[contractType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合同类型" />
+            <lang locale="zh_HK" value="合同類型" />
+            <lang locale="zh_TW" value="合同類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[contractWFType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差流程类型" />
+            <lang locale="zh_HK" value="出差流程類型" />
+            <lang locale="zh_TW" value="出差流程類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[contractWFType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差流程类型" />
+            <lang locale="zh_HK" value="出差流程類型" />
+            <lang locale="zh_TW" value="出差流程類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[curProject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目" />
+            <lang locale="zh_HK" value="工程項目" />
+            <lang locale="zh_TW" value="工程項目" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[curProject].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目" />
+            <lang locale="zh_HK" value="工程項目" />
+            <lang locale="zh_TW" value="工程項目" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[dept].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="申请部门" />
+            <lang locale="zh_HK" value="申請部門" />
+            <lang locale="zh_TW" value="申請部門" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[dept].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="申请部门" />
+            <lang locale="zh_HK" value="申請部門" />
+            <lang locale="zh_TW" value="申請部門" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[person].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="申请人" />
+            <lang locale="zh_HK" value="申請人" />
+            <lang locale="zh_TW" value="申請人" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.linkProperty[person].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="申请人" />
+            <lang locale="zh_HK" value="申請人" />
+            <lang locale="zh_TW" value="申請人" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[day].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差天数" />
+            <lang locale="zh_HK" value="出差天數" />
+            <lang locale="zh_TW" value="出差天數" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[day].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[day].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差天数" />
+            <lang locale="zh_HK" value="出差天數" />
+            <lang locale="zh_TW" value="出差天數" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[fromDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差日期" />
+            <lang locale="zh_HK" value="出差日期" />
+            <lang locale="zh_TW" value="出差日期" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[fromDate].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[fromDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差日期" />
+            <lang locale="zh_HK" value="出差日期" />
+            <lang locale="zh_TW" value="出差日期" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[place].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差地点" />
+            <lang locale="zh_HK" value="出差地點" />
+            <lang locale="zh_TW" value="出差地點" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[place].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[place].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差地点" />
+            <lang locale="zh_HK" value="出差地點" />
+            <lang locale="zh_TW" value="出差地點" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[purpose].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差事由" />
+            <lang locale="zh_HK" value="出差事由" />
+            <lang locale="zh_TW" value="出差事由" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[purpose].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[purpose].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差事由" />
+            <lang locale="zh_HK" value="出差事由" />
+            <lang locale="zh_TW" value="出差事由" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[toDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差日期" />
+            <lang locale="zh_HK" value="出差日期" />
+            <lang locale="zh_TW" value="出差日期" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[toDate].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[toDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差日期" />
+            <lang locale="zh_HK" value="出差日期" />
+            <lang locale="zh_TW" value="出差日期" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[transport].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="交通工具" />
+            <lang locale="zh_HK" value="交通工具" />
+            <lang locale="zh_TW" value="交通工具" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[transport].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.TripApply].properties.ownProperty[transport].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="交通工具" />
+            <lang locale="zh_HK" value="交通工具" />
+            <lang locale="zh_TW" value="交通工具" />
+        </rs>
+    </resource>
+</entityObject>
+

@@ -230,6 +230,18 @@ public class ContractDetailFullInfoUI extends AbstractContractDetailFullInfoUI {
 			String projId = editData.getCurProject().getId().toString();
 			CurProjectInfo curProjectInfo = FDCClientUtils.getProjectInfoForDisp(projId);
 			
+			String desc="";
+			try {
+				desc = CurProjectFactory.getRemoteInstance().getCurProjectInfo(new ObjectUuidPK(editData.getCurProject().getId())).getDescription();
+			} catch (EASBizException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (BOSException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			txtProjDesc.setText(desc);
+			
 			txtProj.setText(curProjectInfo.getDisplayName());
 			
 			FullOrgUnitInfo costOrg = FDCClientUtils.getCostOrgByProj(projId);
@@ -564,10 +576,24 @@ public class ContractDetailFullInfoUI extends AbstractContractDetailFullInfoUI {
 		sic.add(new SelectorItemInfo("marketEntry.*"));
 		
 		sic.add(new SelectorItemInfo("yzEntry.*"));
-		 sic.add(new SelectorItemInfo("jzType"));
-	        sic.add(new SelectorItemInfo("jzStartDate"));
-	        sic.add(new SelectorItemInfo("jzEndDate"));
-	        sic.add(new SelectorItemInfo("rateEntry.*"));
+		sic.add(new SelectorItemInfo("jzType"));
+		sic.add(new SelectorItemInfo("jzStartDate"));
+        sic.add(new SelectorItemInfo("jzEndDate"));
+        sic.add(new SelectorItemInfo("rateEntry.*"));
+	        
+        sic.add(new SelectorItemInfo("purchaseApply.*"));
+        sic.add(new SelectorItemInfo("contractBillReceive.*"));
+        sic.add(new SelectorItemInfo("connectedTransaction"));
+        
+        sic.add(new SelectorItemInfo("taEntry.*"));
+        sic.add(new SelectorItemInfo("lxNum.*"));
+        
+        sic.add(new SelectorItemInfo("startDate"));
+        sic.add(new SelectorItemInfo("endDate"));
+        sic.add(new SelectorItemInfo("bankAccount"));
+        sic.add(new SelectorItemInfo("taxerQua")); 
+        sic.add(new SelectorItemInfo("taxerNum"));
+        sic.add(new SelectorItemInfo("bank"));
 		return sic;
 	}
 	//Regiester control's property binding.

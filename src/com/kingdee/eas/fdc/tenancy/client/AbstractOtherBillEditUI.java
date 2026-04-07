@@ -66,6 +66,7 @@ public abstract class AbstractOtherBillEditUI extends com.kingdee.eas.fdc.tenanc
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contContractNo;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contDept;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contDes;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contType;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtCompany;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtRoom;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtCustomer;
@@ -89,6 +90,7 @@ public abstract class AbstractOtherBillEditUI extends com.kingdee.eas.fdc.tenanc
     protected com.kingdee.bos.ctrl.swing.KDTextField txtContractNo;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtDept;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtDes;
+    protected com.kingdee.bos.ctrl.swing.KDComboBox cbType;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton adjustTaxRate;
     protected com.kingdee.eas.fdc.tenancy.OtherBillInfo editData = null;
     protected ActionAdjustTaxRate actionAdjustTaxRate = null;
@@ -153,6 +155,7 @@ public abstract class AbstractOtherBillEditUI extends com.kingdee.eas.fdc.tenanc
         this.contContractNo = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contDept = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contDes = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.txtCompany = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtRoom = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtCustomer = new com.kingdee.bos.ctrl.swing.KDTextField();
@@ -176,6 +179,7 @@ public abstract class AbstractOtherBillEditUI extends com.kingdee.eas.fdc.tenanc
         this.txtContractNo = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.prmtDept = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.txtDes = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.cbType = new com.kingdee.bos.ctrl.swing.KDComboBox();
         this.adjustTaxRate = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.contCompany.setName("contCompany");
         this.contRoom.setName("contRoom");
@@ -197,6 +201,7 @@ public abstract class AbstractOtherBillEditUI extends com.kingdee.eas.fdc.tenanc
         this.contContractNo.setName("contContractNo");
         this.contDept.setName("contDept");
         this.contDes.setName("contDes");
+        this.contType.setName("contType");
         this.txtCompany.setName("txtCompany");
         this.txtRoom.setName("txtRoom");
         this.txtCustomer.setName("txtCustomer");
@@ -220,6 +225,7 @@ public abstract class AbstractOtherBillEditUI extends com.kingdee.eas.fdc.tenanc
         this.txtContractNo.setName("txtContractNo");
         this.prmtDept.setName("prmtDept");
         this.txtDes.setName("txtDes");
+        this.cbType.setName("cbType");
         this.adjustTaxRate.setName("adjustTaxRate");
         // CoreUI		
         this.btnPageSetup.setVisible(false);		
@@ -377,6 +383,10 @@ public abstract class AbstractOtherBillEditUI extends com.kingdee.eas.fdc.tenanc
         this.contDes.setBoundLabelUnderline(true);		
         this.contDes.setVisible(true);		
         this.contDes.setBoundLabelAlignment(7);
+        // contType		
+        this.contType.setBoundLabelText(resHelper.getString("contType.boundLabelText"));		
+        this.contType.setBoundLabelLength(100);		
+        this.contType.setBoundLabelUnderline(true);
         // txtCompany		
         this.txtCompany.setEnabled(false);
         // txtRoom		
@@ -407,7 +417,7 @@ public abstract class AbstractOtherBillEditUI extends com.kingdee.eas.fdc.tenanc
         
 
         // kdtEntry
-		String kdtEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol3\"><c:Protection locked=\"true\" /></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"moneyDefine\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"-1\" /><t:Column t:key=\"amount\" t:width=\"120\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"5\" /><t:Column t:key=\"rate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"2\" t:styleID=\"sCol2\" /><t:Column t:key=\"amountNoTax\" t:width=\"120\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" t:styleID=\"sCol3\" /><t:Column t:key=\"price\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"4\" /><t:Column t:key=\"workload\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"5\" /><t:Column t:key=\"description\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"6\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header1\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{moneyDefine}</t:Cell><t:Cell>$Resource{amount}</t:Cell><t:Cell>$Resource{rate}</t:Cell><t:Cell>$Resource{amountNoTax}</t:Cell><t:Cell>$Resource{price}</t:Cell><t:Cell>$Resource{workload}</t:Cell><t:Cell>$Resource{description}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String kdtEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol2\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol3\"><c:Protection locked=\"true\" /></c:Style><c:Style id=\"sCol4\"><c:Protection locked=\"true\" /></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"moneyDefine\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"-1\" /><t:Column t:key=\"amount\" t:width=\"120\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"true\" t:index=\"5\" /><t:Column t:key=\"totalAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"2\" t:styleID=\"sCol2\" /><t:Column t:key=\"rate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" t:styleID=\"sCol3\" /><t:Column t:key=\"amountNoTax\" t:width=\"120\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"4\" t:styleID=\"sCol4\" /><t:Column t:key=\"price\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"5\" /><t:Column t:key=\"workload\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"6\" /><t:Column t:key=\"description\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"7\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header1\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{moneyDefine}</t:Cell><t:Cell>$Resource{amount}</t:Cell><t:Cell>$Resource{totalAmount}</t:Cell><t:Cell>$Resource{rate}</t:Cell><t:Cell>$Resource{amountNoTax}</t:Cell><t:Cell>$Resource{price}</t:Cell><t:Cell>$Resource{workload}</t:Cell><t:Cell>$Resource{description}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.kdtEntry.setFormatXml(resHelper.translateString("kdtEntry",kdtEntryStrXML));
         this.kdtEntry.addKDTEditListener(new com.kingdee.bos.ctrl.kdf.table.event.KDTEditAdapter() {
@@ -420,7 +430,7 @@ public abstract class AbstractOtherBillEditUI extends com.kingdee.eas.fdc.tenanc
             }
         });
 
-                this.kdtEntry.putBindContents("editData",new String[] {"moneyDefine","amount","moneyDefine.rate","","price","workload","description"});
+                this.kdtEntry.putBindContents("editData",new String[] {"moneyDefine","amount","totalAmount","moneyDefine.rate","","price","workload","description"});
 
 
         // txtName		
@@ -482,6 +492,9 @@ public abstract class AbstractOtherBillEditUI extends com.kingdee.eas.fdc.tenanc
         this.txtDes.setHorizontalAlignment(2);		
         this.txtDes.setMaxLength(50);		
         this.txtDes.setEnabled(true);
+        // cbType		
+        this.cbType.setRequired(true);		
+        this.cbType.addItems(EnumUtils.getEnumList("com.kingdee.eas.fdc.tenancy.OtherBillTypeEnum").toArray());
         // adjustTaxRate
         this.adjustTaxRate.setAction((IItemAction)ActionProxyFactory.getProxy(actionAdjustTaxRate, new Class[] { IItemAction.class }, getServiceContext()));		
         this.adjustTaxRate.setText(resHelper.getString("adjustTaxRate.text"));		
@@ -525,8 +538,8 @@ public abstract class AbstractOtherBillEditUI extends com.kingdee.eas.fdc.tenanc
         this.add(contSellProject, new KDLayout.Constraints(367, 10, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contNumber.setBounds(new Rectangle(733, 10, 270, 19));
         this.add(contNumber, new KDLayout.Constraints(733, 10, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contSaleMan.setBounds(new Rectangle(367, 54, 270, 19));
-        this.add(contSaleMan, new KDLayout.Constraints(367, 54, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contSaleMan.setBounds(new Rectangle(720, 144, 270, 19));
+        this.add(contSaleMan, new KDLayout.Constraints(720, 144, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         panel.setBounds(new Rectangle(10, 220, 994, 354));
         this.add(panel, new KDLayout.Constraints(10, 220, 994, 354, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM_SCALE | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
         contName.setBounds(new Rectangle(733, 32, 270, 19));
@@ -553,6 +566,8 @@ public abstract class AbstractOtherBillEditUI extends com.kingdee.eas.fdc.tenanc
         this.add(contDept, new KDLayout.Constraints(733, 54, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contDes.setBounds(new Rectangle(733, 98, 270, 19));
         this.add(contDes, new KDLayout.Constraints(733, 98, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contType.setBounds(new Rectangle(367, 54, 270, 19));
+        this.add(contType, new KDLayout.Constraints(367, 54, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         //contCompany
         contCompany.setBoundEditor(txtCompany);
         //contRoom
@@ -598,6 +613,8 @@ contEntry.getContentPane().setLayout(new BorderLayout(0, 0));        contEntry.g
         contDept.setBoundEditor(prmtDept);
         //contDes
         contDes.setBoundEditor(txtDes);
+        //contType
+        contType.setBoundEditor(cbType);
 
     }
 
@@ -790,6 +807,7 @@ contEntry.getContentPane().setLayout(new BorderLayout(0, 0));        contEntry.g
 		dataBinder.registerBinding("entry.price", java.math.BigDecimal.class, this.kdtEntry, "price.text");
 		dataBinder.registerBinding("entry.workload", java.math.BigDecimal.class, this.kdtEntry, "workload.text");
 		dataBinder.registerBinding("entry.moneyDefine.rate", java.math.BigDecimal.class, this.kdtEntry, "rate.text");
+		dataBinder.registerBinding("entry.totalAmount", java.math.BigDecimal.class, this.kdtEntry, "totalAmount.text");
 		dataBinder.registerBinding("name", String.class, this.txtName, "text");
 		dataBinder.registerBinding("description", String.class, this.txtDescription, "text");
 		dataBinder.registerBinding("creator", com.kingdee.eas.base.permission.UserInfo.class, this.prmtCreator, "data");
@@ -801,7 +819,8 @@ contEntry.getContentPane().setLayout(new BorderLayout(0, 0));        contEntry.g
 		dataBinder.registerBinding("leaseTime", int.class, this.spinLeaseTime, "value");
 		dataBinder.registerBinding("contractNo", String.class, this.txtContractNo, "text");
 		dataBinder.registerBinding("dept", com.kingdee.eas.basedata.org.AdminOrgUnitInfo.class, this.prmtDept, "data");
-		dataBinder.registerBinding("des", String.class, this.txtDes, "text");		
+		dataBinder.registerBinding("des", String.class, this.txtDes, "text");
+		dataBinder.registerBinding("type", com.kingdee.eas.fdc.tenancy.OtherBillTypeEnum.class, this.cbType, "selectedItem");		
 	}
 	//Regiester UI State
 	private void registerUIState(){		
@@ -875,6 +894,7 @@ contEntry.getContentPane().setLayout(new BorderLayout(0, 0));        contEntry.g
 		getValidateHelper().registerBindProperty("entry.price", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("entry.workload", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("entry.moneyDefine.rate", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("entry.totalAmount", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("name", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("description", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("creator", ValidateHelper.ON_SAVE);    
@@ -886,7 +906,8 @@ contEntry.getContentPane().setLayout(new BorderLayout(0, 0));        contEntry.g
 		getValidateHelper().registerBindProperty("leaseTime", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("contractNo", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("dept", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("des", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("des", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("type", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -970,6 +991,7 @@ contEntry.getContentPane().setLayout(new BorderLayout(0, 0));        contEntry.g
     	sic.add(new SelectorItemInfo("entry.price"));
     	sic.add(new SelectorItemInfo("entry.workload"));
     	sic.add(new SelectorItemInfo("entry.moneyDefine.rate"));
+    	sic.add(new SelectorItemInfo("entry.totalAmount"));
         sic.add(new SelectorItemInfo("name"));
         sic.add(new SelectorItemInfo("description"));
 		if(selectorAll.equalsIgnoreCase("true"))
@@ -1006,6 +1028,7 @@ contEntry.getContentPane().setLayout(new BorderLayout(0, 0));        contEntry.g
         	sic.add(new SelectorItemInfo("dept.name"));
 		}
         sic.add(new SelectorItemInfo("des"));
+        sic.add(new SelectorItemInfo("type"));
         return sic;
     }        
     	

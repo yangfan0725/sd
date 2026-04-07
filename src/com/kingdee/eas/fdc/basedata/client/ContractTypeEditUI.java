@@ -388,7 +388,7 @@ txtLongNumber.addKeyListener(new KeyListener() {
 /* <-MISALIGNED-> */ /* 387*/        prmtEntry.setEntityViewInfo(view);
 /* <-MISALIGNED-> */ /* 388*/        prmtContractWFTypeEntry.setEntityViewInfo(view);
             
-									cbIsRelateReceive.setVisible(false);
+//									cbIsRelateReceive.setVisible(false);
             }
             private void setBtnStatus()
             {

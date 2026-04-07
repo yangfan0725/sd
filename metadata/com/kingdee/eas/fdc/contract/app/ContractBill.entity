@@ -2669,6 +2669,51 @@
                 <key name="name" value="FConnectedTransaction" />
             </mappingField>
         </ownProperty>
+        <linkProperty>
+            <name>purchaseApply</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.linkProperty[purchaseApply].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.linkProperty[purchaseApply].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FPurchaseApplyId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_ContractBill_PurchaseApply_purchaseApply" />
+            </relationship>
+        </linkProperty>
+        <linkProperty>
+            <name>mDeveloperEntry</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.linkProperty[mDeveloperEntry].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.linkProperty[mDeveloperEntry].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="R_ContractBill_ContractMDeveloperEntry_mDeveloperEntry" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>center</name>
+            <alias>entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.ownProperty[center].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.ownProperty[center].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>250</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.ownProperty[center].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FCenter" />
+            </mappingField>
+        </ownProperty>
     </properties>
     <logicalKey>
         <name>id</name>
@@ -4997,6 +5042,18 @@
             <lang locale="zh_HK" value="聯行號" />
             <lang locale="zh_TW" value="聯行號" />
         </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.linkProperty[mDeveloperEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="多甲方协议" />
+            <lang locale="zh_HK" value="多甲方協議" />
+            <lang locale="zh_TW" value="多甲方協議" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.linkProperty[mDeveloperEntry].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="多甲方协议" />
+            <lang locale="zh_HK" value="多甲方協議" />
+            <lang locale="zh_TW" value="多甲方協議" />
+        </rs>
         <rs key="entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.linkProperty[mainContract].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="战略主合同" />
@@ -5271,6 +5328,18 @@
             <lang locale="zh_CN" value="合约规划" />
             <lang locale="zh_HK" value="合約規劃" />
             <lang locale="zh_TW" value="合約規劃" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.linkProperty[purchaseApply].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购申请" />
+            <lang locale="zh_HK" value="採購申請" />
+            <lang locale="zh_TW" value="採購申請" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.linkProperty[purchaseApply].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购申请" />
+            <lang locale="zh_HK" value="採購申請" />
+            <lang locale="zh_TW" value="採購申請" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.linkProperty[rateEntry].alias">
             <lang locale="en_US" value="null" />
@@ -5570,6 +5639,24 @@
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.ownProperty[center].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="管理中心" />
+            <lang locale="zh_HK" value="管理中心" />
+            <lang locale="zh_TW" value="管理中心" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.ownProperty[center].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.ownProperty[center].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.fdc.contract.app.ContractBill].properties.ownProperty[chgPercForWarn].alias">
             <lang locale="en_US" value="null" />

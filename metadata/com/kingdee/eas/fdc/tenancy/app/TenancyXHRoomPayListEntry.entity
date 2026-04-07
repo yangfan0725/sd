@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.tenancy.app</package>
+    <name>TenancyXHRoomPayListEntry</name>
+    <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].alias</alias>
+    <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].description</description>
+    <userDefined>true</userDefined>
+    <bosType>BD7F53AE</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.fdc.tenancy.TenancyXHRoomPayListEntry</businessImplName>
+    <businessControllerName>com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntryController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].description</description>
+            <innerID>95216627-3990-462a-9c10-ede176620670</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].description</description>
+            <innerID>bda06710-b69c-4f94-9a72-b96cade02282</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].description</description>
+            <innerID>4a57880e-c4bb-453c-b249-5004a4ff86ac</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].description</description>
+            <innerID>c294d6ae-6787-42ba-aeba-2fc1d57eccb9</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].description</description>
+            <innerID>8a483419-25c6-434f-9802-af7dc2224529</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].description</description>
+            <innerID>7b88a5a2-15dd-4a8a-8927-f3c05b3f48bd</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK />
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.fdc.basecrm.app" />
+        <key name="name" value="RevList" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+        <key name="name" value="T_TEN_TenancyXHRoomPListEntry" />
+    </table>
+    <properties>
+        <linkProperty>
+            <name>head</name>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.linkProperty[head].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.linkProperty[head].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="FHeadId" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="R_XHTenancyBill_TenancyXHRoomPayListEntry_payListEntry" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>leaseSeq</name>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[leaseSeq].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[leaseSeq].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Integer</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[leaseSeq].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FLeaseSeq" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>startDate</name>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[startDate].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[startDate].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Date</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[startDate].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FStartDate" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>endDate</name>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[endDate].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[endDate].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Date</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>0</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[endDate].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FEndDate" />
+            </mappingField>
+        </ownProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <defaultView>
+        <name />
+        <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultViewalias</alias>
+        <description>entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultViewdescription</description>
+        <filter>
+            <maskString />
+        </filter>
+    </defaultView>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="房间付款计划分录" />
+            <lang locale="zh_HK" value="房間付款計畫分錄" />
+            <lang locale="zh_TW" value="房間付款計畫分錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultView.filterextendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultView.filterextendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultView.filterextendedProperty.defaultF7Query">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultView.filterextendedProperty.editUI">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultView.filterextendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultView.filterextendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultView.filterextendedProperty.listUI">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultViewalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultViewdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultViewextendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultViewextendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultViewextendedProperty.defaultF7Query">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultViewextendedProperty.editUI">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultViewextendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultViewextendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].defaultViewextendedProperty.listUI">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="房间付款计划分录" />
+            <lang locale="zh_HK" value="房間付款計畫分錄" />
+            <lang locale="zh_TW" value="房間付款計畫分錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].extendedProperty.editUI">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].extendedProperty.listUI">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].logicalKey[id].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].logicalKey[id].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].logicalKey[id].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].logicalKey[id].extendedProperty.editUI">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].logicalKey[id].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].logicalKey[id].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].logicalKey[id].extendedProperty.listUI">
+            <lang locale="en_US" value="-" />
+            <lang locale="zh_CN" value="-" />
+            <lang locale="zh_TW" value="-" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.linkProperty[head].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="头" />
+            <lang locale="zh_HK" value="頭" />
+            <lang locale="zh_TW" value="頭" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.linkProperty[head].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="头" />
+            <lang locale="zh_HK" value="頭" />
+            <lang locale="zh_TW" value="頭" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[endDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结束日期" />
+            <lang locale="zh_HK" value="結束日期" />
+            <lang locale="zh_TW" value="結束日期" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[endDate].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[endDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结束日期" />
+            <lang locale="zh_HK" value="結束日期" />
+            <lang locale="zh_TW" value="結束日期" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[leaseSeq].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="租期序号" />
+            <lang locale="zh_HK" value="租期序號" />
+            <lang locale="zh_TW" value="租期序號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[leaseSeq].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[leaseSeq].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="租期序号" />
+            <lang locale="zh_HK" value="租期序號" />
+            <lang locale="zh_TW" value="租期序號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[startDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="开始日期" />
+            <lang locale="zh_HK" value="開始日期" />
+            <lang locale="zh_TW" value="開始日期" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[startDate].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.TenancyXHRoomPayListEntry].properties.ownProperty[startDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="开始日期" />
+            <lang locale="zh_HK" value="開始日期" />
+            <lang locale="zh_TW" value="開始日期" />
+        </rs>
+    </resource>
+</entityObject>
+

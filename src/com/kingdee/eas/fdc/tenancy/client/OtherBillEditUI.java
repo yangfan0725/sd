@@ -246,7 +246,7 @@ public class OtherBillEditUI extends AbstractOtherBillEditUI implements TenancyB
 			}
 		}
 		
-		CRMClientHelper.getFootRow(this.kdtEntry, new String[]{"price","workload","amount"});
+		CRMClientHelper.getFootRow(this.kdtEntry, new String[]{"price","workload","amount","totalAmount"});
 		
 		setOprtState(this.oprtState);
 		attachListeners();
@@ -256,6 +256,7 @@ public class OtherBillEditUI extends AbstractOtherBillEditUI implements TenancyB
     {
 		TenancyRoomEntryCollection tenancyRooms = this.editData.getTenancyBill().getTenancyRoomList();
 		this.editData.getPayEntry().clear();
+		Map amountMap=new HashMap();
 		if(tenancyRooms.size()>0){
 			CRMHelper.sortCollection(tenancyRooms, "seq", true);
 			for(int i=0;i<tenancyRooms.get(0).getRoomPayList().size();i++){
@@ -269,7 +270,18 @@ public class OtherBillEditUI extends AbstractOtherBillEditUI implements TenancyB
 				otherEntry.setLeaseSeq(entry.getLeaseSeq());
 				otherEntry.setMoneyDefine(entry.getMoneyDefine());
 				
+				if(amountMap.containsKey(entry.getMoneyDefine().getId())){
+					amountMap.put(entry.getMoneyDefine().getId(), FDCHelper.add(amountMap.get(entry.getMoneyDefine().getId()), entry.getAppAmount()));
+				}else{
+					amountMap.put(entry.getMoneyDefine().getId(), entry.getAppAmount());
+				}
 				this.editData.getPayEntry().add(otherEntry);
+			}
+		}
+		for(int i=0;i<this.kdtEntry.getRowCount();i++){
+			MoneyDefineInfo md=(MoneyDefineInfo) this.kdtEntry.getRow(i).getCell("moneyDefine").getValue();
+			if(md!=null){
+				this.kdtEntry.getRow(i).getCell("totalAmount").setValue(amountMap.get(md.getId()));
 			}
 		}
         super.storeFields();
@@ -394,6 +406,10 @@ public class OtherBillEditUI extends AbstractOtherBillEditUI implements TenancyB
 		this.kdtEntry.getColumn("amount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
 		this.kdtEntry.getColumn("amount").getStyleAttributes().setNumberFormat(FDCHelper.getNumberFtm(2));
 		
+		this.kdtEntry.getColumn("totalAmount").setEditor(numberEditor);
+		this.kdtEntry.getColumn("totalAmount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
+		this.kdtEntry.getColumn("totalAmount").getStyleAttributes().setNumberFormat(FDCHelper.getNumberFtm(2));
+		
 		this.kdtEntry.getColumn("price").setEditor(numberEditor);
 		this.kdtEntry.getColumn("price").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
 		this.kdtEntry.getColumn("price").getStyleAttributes().setNumberFormat(FDCHelper.getNumberFtm(2));
@@ -434,6 +450,8 @@ public class OtherBillEditUI extends AbstractOtherBillEditUI implements TenancyB
 		this.actionPrintPreview.setEnabled(true);
 		
 		this.contDes.setVisible(false);
+		
+		this.contSaleMan.setVisible(false);
 	}
 	public void setOprtState(String oprtType) {
 		super.setOprtState(oprtType);
@@ -531,7 +549,7 @@ public class OtherBillEditUI extends AbstractOtherBillEditUI implements TenancyB
 				this.kdtEntry.getRow(e.getRowIndex()).getCell("amountNoTax").setValue(null);
 			}
 		}
-		CRMClientHelper.getFootRow(this.kdtEntry, new String[]{"price","workload","amount"});
+		CRMClientHelper.getFootRow(this.kdtEntry, new String[]{"price","workload","amount","totalAmount"});
 	}
 	protected void pkStartDate_dataChanged(DataChangeEvent e) throws Exception {
 		Date startDate = (Date) this.pkStartDate.getValue();
@@ -1284,6 +1302,8 @@ public class OtherBillEditUI extends AbstractOtherBillEditUI implements TenancyB
 		FDCClientVerifyHelper.verifyEmpty(this, this.prmtDept);
 		FDCClientVerifyHelper.verifyEmpty(this, this.pkStartDate);
 		FDCClientVerifyHelper.verifyEmpty(this, this.pkEndDate);
+		
+		FDCClientVerifyHelper.verifyEmpty(this, this.cbType);
 		
 		Date startDate = (Date) this.pkStartDate.getValue();
 		Date endDate = (Date) this.pkEndDate.getValue();

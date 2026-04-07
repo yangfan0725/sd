@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.contract</package>
+    <name>BusinessTypeEnum</name>
+    <alias>bizEnum[com.kingdee.eas.fdc.contract.BusinessTypeEnum].alias</alias>
+    <description>bizEnum[com.kingdee.eas.fdc.contract.BusinessTypeEnum].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.fdc.contract.BusinessTypeEnum</className>
+    <enumDataType>STRING</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>GW</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.BusinessTypeEnum].enumValues.enumValue[GW].alias</alias>
+            <userDefined>true</userDefined>
+            <value>GW</value>
+        </enumValue>
+        <enumValue>
+            <name>SW</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.BusinessTypeEnum].enumValues.enumValue[SW].alias</alias>
+            <userDefined>true</userDefined>
+            <value>SW</value>
+        </enumValue>
+        <enumValue>
+            <name>PT</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.BusinessTypeEnum].enumValues.enumValue[PT].alias</alias>
+            <userDefined>true</userDefined>
+            <value>PT</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.BusinessTypeEnum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务招待类型" />
+            <lang locale="zh_HK" value="業務招待類型" />
+            <lang locale="zh_TW" value="業務招待類型" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.BusinessTypeEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务招待类型" />
+            <lang locale="zh_HK" value="業務招待類型" />
+            <lang locale="zh_TW" value="業務招待類型" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.BusinessTypeEnum].enumValues.enumValue[GW].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公务招待" />
+            <lang locale="zh_HK" value="公務招待" />
+            <lang locale="zh_TW" value="公務招待" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.BusinessTypeEnum].enumValues.enumValue[PT].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="普通招待" />
+            <lang locale="zh_HK" value="普通招待" />
+            <lang locale="zh_TW" value="普通招待" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.BusinessTypeEnum].enumValues.enumValue[SW].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="商务招待" />
+            <lang locale="zh_HK" value="商務招待" />
+            <lang locale="zh_TW" value="商務招待" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.BusinessTypeEnum].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

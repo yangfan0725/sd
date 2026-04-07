@@ -70,6 +70,90 @@
             </eventBindings>
         </component>
         <component>
+            <name>kDLabelContainer1</name>
+            <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer1].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>365,3,270,19,0</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer1].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer1].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer1].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>kDLabelContainer2</name>
+            <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer2].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>650,3,270,19,0</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer2].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer2].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer2].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
             <name>kDSplitPane1</name>
             <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDSplitPane1].alias</alias>
             <userDefined>true</userDefined>
@@ -446,6 +530,44 @@
                     <userDefined>true</userDefined>
                 </eventBinding>
             </eventBindings>
+        </component>
+        <component>
+            <name>pkAuditDate</name>
+            <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[pkAuditDate].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDDatePicker</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <parent>
+                <key name="name" value="kDLabelContainer1" />
+            </parent>
+        </component>
+        <component>
+            <name>pkAuditDateTo</name>
+            <alias>uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[pkAuditDateTo].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDDatePicker</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <parent>
+                <key name="name" value="kDLabelContainer2" />
+            </parent>
         </component>
         <component>
             <name>btnAddNew</name>
@@ -2240,6 +2362,54 @@
             <lang locale="zh_HK" value="包含已終止合同" />
             <lang locale="zh_TW" value="包含已終止合同" />
         </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer1].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer1].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer1].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审批日期" />
+            <lang locale="zh_HK" value="審批日期" />
+            <lang locale="zh_TW" value="審批日期" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer1].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer2].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer2].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer2].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="至" />
+            <lang locale="zh_HK" value="至" />
+            <lang locale="zh_TW" value="至" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDLabelContainer2].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[kDSeparator1].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -2383,6 +2553,18 @@
             <lang locale="zh_CN" value="科目维护" />
             <lang locale="zh_HK" value="科目維護" />
             <lang locale="zh_TW" value="科目維護" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[pkAuditDateTo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[pkAuditDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.fdc.tenancy.client.TenancyRevListUI].components.component[pnlMain].alias">
             <lang locale="en_US" value="null" />

@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataTable xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.contract.app</package>
+    <name>T_CON_TripCost</name>
+    <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].alias</alias>
+    <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].description</description>
+    <userDefined>true</userDefined>
+    <bizUnitPK />
+    <columns>
+        <column>
+            <name>FCurProjectId</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FCurProjectId].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FCurProjectId].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FPurpose</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPurpose].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPurpose].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>2000</length>
+            <scale>0</scale>
+            <precision>2000</precision>
+        </column>
+        <column>
+            <name>FFromDate</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FFromDate].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FFromDate].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FToDate</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FToDate].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FToDate].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FDay</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FDay].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FDay].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>4</precision>
+        </column>
+        <column>
+            <name>FPlace</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPlace].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPlace].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>200</length>
+            <scale>0</scale>
+            <precision>200</precision>
+        </column>
+        <column>
+            <name>FTransport</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FTransport].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FTransport].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>200</length>
+            <scale>0</scale>
+            <precision>200</precision>
+        </column>
+        <column>
+            <name>FTripApplyId</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FTripApplyId].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FTripApplyId].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FOrgUnitID</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FOrgUnitID].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FOrgUnitID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FState</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FState].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FState].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>100</precision>
+        </column>
+        <column>
+            <name>FName</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FName].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FName].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FOriginalAmount</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FOriginalAmount].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FOriginalAmount].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>13</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>FAmount</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FAmount].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FAmount].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>13</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>FAuditTime</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FAuditTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FAuditTime].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FBookedDate</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FBookedDate].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FBookedDate].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FPeriodId</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPeriodId].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPeriodId].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FIsRespite</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FIsRespite].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FIsRespite].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>1</precision>
+        </column>
+        <column>
+            <name>FNumber</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FNumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FNumber].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>200</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FBizDate</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FBizDate].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FBizDate].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FHandlerID</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FHandlerID].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FHandlerID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FDescription</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FDescription].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FDescription].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>200</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FHasEffected</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FHasEffected].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FHasEffected].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>1</length>
+            <scale>0</scale>
+            <precision>1</precision>
+        </column>
+        <column>
+            <name>FAuditorID</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FAuditorID].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FAuditorID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSourceBillID</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FSourceBillID].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FSourceBillID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSourceFunction</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FSourceFunction].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FSourceFunction].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>80</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCreatorID</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FCreatorID].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FCreatorID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FCreateTime</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FCreateTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FCreateTime].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FLastUpdateUserID</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FLastUpdateUserID].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FLastUpdateUserID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FLastUpdateTime</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FLastUpdateTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FLastUpdateTime].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>DATETIME</sqlType>
+            <length>8</length>
+            <scale>0</scale>
+            <precision>8</precision>
+        </column>
+        <column>
+            <name>FControlUnitID</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FControlUnitID].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FControlUnitID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FID</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FID].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>false</isNullable>
+            <defaultValue>''</defaultValue>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>44</precision>
+        </column>
+        <column>
+            <name>FPersonId</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPersonId].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPersonId].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FDeptId</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FDeptId].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FDeptId].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FContractWFTypeId</name>
+            <alias>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FContractWFTypeId].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FContractWFTypeId].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+    </columns>
+    <primaryKey>
+        <name>PK_TripCost</name>
+        <userDefined>true</userDefined>
+        <primaryKeyColumns>
+            <primaryKeyColumn>
+                <indexID>0</indexID>
+                <sortType>ASC</sortType>
+                <column>
+                    <key name="name" value="FID" />
+                </column>
+            </primaryKeyColumn>
+        </primaryKeyColumns>
+    </primaryKey>
+    <foreignKeys>
+        <foreignKey>
+            <name>CFK_CON_TripCostRt</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FCreatorID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_CON_TripCostAU</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FLastUpdateUserID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_CON_TripCostCU</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.org" />
+                <key name="name" value="T_ORG_CtrlUnit" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FControlUnitID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_CON_TripCostAn</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FHandlerID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_CON_TripCostUd</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.base.permission.app" />
+                <key name="name" value="T_PM_User" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FAuditorID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_CON_TripCostRU</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.org" />
+                <key name="name" value="T_ORG_BaseUnit" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FOrgUnitID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_CON_TripCostEr</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.assistant" />
+                <key name="name" value="T_BD_Period" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FPeriodId" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_CON_TripCostUP</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.fdc.basedata.app" />
+                <key name="name" value="T_FDC_CurProject" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FCurProjectId" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+        <foreignKey>
+            <name>CFK_CON_TripCostRA</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="T_CON_TripApply" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="FTripApplyId" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
+    </foreignKeys>
+    <resource>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差报销" />
+            <lang locale="zh_HK" value="出差報銷" />
+            <lang locale="zh_TW" value="出差報銷" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FAmount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="本位币金额" />
+            <lang locale="zh_HK" value="本位幣金額" />
+            <lang locale="zh_TW" value="本位幣金額" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FAmount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FAuditTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审批时间" />
+            <lang locale="zh_HK" value="審批時間" />
+            <lang locale="zh_TW" value="審批時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FAuditTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FAuditorID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FAuditorID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核人" />
+            <lang locale="zh_HK" value="審核人" />
+            <lang locale="zh_TW" value="審核人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FBizDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FBizDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务日期" />
+            <lang locale="zh_HK" value="業務日期" />
+            <lang locale="zh_TW" value="業務日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FBookedDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务记录日期" />
+            <lang locale="zh_HK" value="業務記錄日期" />
+            <lang locale="zh_TW" value="業務記錄日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FBookedDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="该日期用来计算所在的期间" />
+            <lang locale="zh_HK" value="該日期用來計算所在的期間" />
+            <lang locale="zh_TW" value="該日期用來計算所在的期間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FContractWFTypeId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FContractWFTypeId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FControlUnitID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FControlUnitID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单元" />
+            <lang locale="zh_HK" value="控制單元" />
+            <lang locale="zh_TW" value="控制單元" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FCreateTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FCreateTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建时间" />
+            <lang locale="zh_HK" value="創建時間" />
+            <lang locale="zh_TW" value="創建時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FCreatorID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FCreatorID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建者" />
+            <lang locale="zh_HK" value="創建者" />
+            <lang locale="zh_TW" value="創建者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FCurProjectId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FCurProjectId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目" />
+            <lang locale="zh_HK" value="工程項目" />
+            <lang locale="zh_TW" value="工程項目" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FDay].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差天数" />
+            <lang locale="zh_HK" value="出差天數" />
+            <lang locale="zh_TW" value="出差天數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FDay].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差天数" />
+            <lang locale="zh_HK" value="出差天數" />
+            <lang locale="zh_TW" value="出差天數" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FDeptId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FDeptId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FDescription].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="zh_HK" value="參考信息" />
+            <lang locale="zh_TW" value="參考信息" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FDescription].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="参考信息" />
+            <lang locale="zh_HK" value="參考信息" />
+            <lang locale="zh_TW" value="參考信息" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FFromDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差日期" />
+            <lang locale="zh_HK" value="出差日期" />
+            <lang locale="zh_TW" value="出差日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FFromDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差日期" />
+            <lang locale="zh_HK" value="出差日期" />
+            <lang locale="zh_TW" value="出差日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FHandlerID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FHandlerID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="经手人" />
+            <lang locale="zh_HK" value="經手人" />
+            <lang locale="zh_TW" value="經手人" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FHasEffected].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否曾经生效" />
+            <lang locale="zh_HK" value="是否曾經生效" />
+            <lang locale="zh_TW" value="是否曾經生效" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FHasEffected].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否曾经生效" />
+            <lang locale="zh_HK" value="是否曾經生效" />
+            <lang locale="zh_TW" value="是否曾經生效" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FIsRespite].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否暂缓" />
+            <lang locale="zh_HK" value="是否暫緩" />
+            <lang locale="zh_TW" value="是否暫緩" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FIsRespite].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否暂缓" />
+            <lang locale="zh_HK" value="是否暫緩" />
+            <lang locale="zh_TW" value="是否暫緩" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FLastUpdateTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FLastUpdateTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改时间" />
+            <lang locale="zh_HK" value="最後修改時間" />
+            <lang locale="zh_TW" value="最後修改時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FLastUpdateUserID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FLastUpdateUserID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="最后修改者" />
+            <lang locale="zh_HK" value="最後修改者" />
+            <lang locale="zh_TW" value="最後修改者" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FName].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FName].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
+            <lang locale="zh_HK" value="單據編號" />
+            <lang locale="zh_TW" value="單據編號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FOrgUnitID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FOrgUnitID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FOriginalAmount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原币金额" />
+            <lang locale="zh_HK" value="原幣金額" />
+            <lang locale="zh_TW" value="原幣金額" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FOriginalAmount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPeriodId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPeriodId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPersonId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPersonId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPlace].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差地点" />
+            <lang locale="zh_HK" value="出差地點" />
+            <lang locale="zh_TW" value="出差地點" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPlace].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差地点" />
+            <lang locale="zh_HK" value="出差地點" />
+            <lang locale="zh_TW" value="出差地點" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPurpose].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差事由" />
+            <lang locale="zh_HK" value="出差事由" />
+            <lang locale="zh_TW" value="出差事由" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FPurpose].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差事由" />
+            <lang locale="zh_HK" value="出差事由" />
+            <lang locale="zh_TW" value="出差事由" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FSourceBillID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原始单据ID" />
+            <lang locale="zh_HK" value="原始單據ID" />
+            <lang locale="zh_TW" value="原始單據ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FSourceBillID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原始单据ID" />
+            <lang locale="zh_HK" value="原始單據ID" />
+            <lang locale="zh_TW" value="原始單據ID" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FSourceFunction].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="来源功能" />
+            <lang locale="zh_HK" value="來源功能" />
+            <lang locale="zh_TW" value="來源功能" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FSourceFunction].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="来源功能" />
+            <lang locale="zh_HK" value="來源功能" />
+            <lang locale="zh_TW" value="來源功能" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FState].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="状态" />
+            <lang locale="zh_HK" value="狀態" />
+            <lang locale="zh_TW" value="狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FState].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FToDate].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差日期" />
+            <lang locale="zh_HK" value="出差日期" />
+            <lang locale="zh_TW" value="出差日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FToDate].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差日期" />
+            <lang locale="zh_HK" value="出差日期" />
+            <lang locale="zh_TW" value="出差日期" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FTransport].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="交通工具" />
+            <lang locale="zh_HK" value="交通工具" />
+            <lang locale="zh_TW" value="交通工具" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FTransport].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="交通工具" />
+            <lang locale="zh_HK" value="交通工具" />
+            <lang locale="zh_TW" value="交通工具" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FTripApplyId].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].columns.column[FTripApplyId].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差申请" />
+            <lang locale="zh_HK" value="出差申請" />
+            <lang locale="zh_TW" value="出差申請" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.contract.app.T_CON_TripCost].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="出差报销" />
+            <lang locale="zh_HK" value="出差報銷" />
+            <lang locale="zh_TW" value="出差報銷" />
+        </rs>
+    </resource>
+</dataTable>
+

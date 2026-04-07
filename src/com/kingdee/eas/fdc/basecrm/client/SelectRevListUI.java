@@ -505,10 +505,21 @@ public class SelectRevListUI extends AbstractSelectRevListUI
 			setColValue(row, COL_DESC, revListInfo.getDesc());
 			
 			BigDecimal rev=FDCHelper.ZERO;
+			BigDecimal refundment=FDCHelper.ZERO;
 			if(revListInfo.getActRevAmount()!=null){
 				rev=revListInfo.getActRevAmount();
 			}
-			if(revListInfo.getAppAmount().compareTo(rev)==0){
+			if(revListInfo.getHasRefundmentAmount()!=null){
+				refundment=revListInfo.getHasRefundmentAmount();
+			}
+			boolean isHide=true;
+			if(this.getUIContext().get("isInvoice")!=null){
+				String isInvoice = this.getUIContext().get("isInvoice").toString();
+	        	if(isInvoice.equals("true")){
+	        		isHide=false;
+	        	}
+			}
+			if(isHide&&revListInfo.getAppAmount().compareTo(rev.subtract(refundment))==0){
 				row.getStyleAttributes().setHided(true);
 			}
 			setExpandColsValue(revListInfo, table, row);

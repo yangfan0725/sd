@@ -138,6 +138,14 @@ public abstract class AbstractContractDetailFullInfoUI extends com.kingdee.eas.f
                 this.kdtYZEntry.putBindContents("editData",new String[] {"name","type","admin","count","adminID","yzID"});
 
 
+		String kdtMDeveloperEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles /><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"landDeveloper\" t:width=\"120\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"center\" t:width=\"150\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"amount\" t:width=\"120\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"remark\" t:width=\"250\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header1\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{landDeveloper}</t:Cell><t:Cell>$Resource{center}</t:Cell><t:Cell>$Resource{amount}</t:Cell><t:Cell>$Resource{remark}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+
+        this.kdtMDeveloperEntry.addKDTEditListener(new com.kingdee.bos.ctrl.kdf.table.event.KDTEditAdapter() {
+        });
+
+                this.kdtMDeveloperEntry.putBindContents("editData",new String[] {"landDeveloper","center","amount","remark"});
+
+
         this.chkIsPartAMaterialCon.addMouseListener(new java.awt.event.MouseAdapter() {
         });
         this.chkCostSplit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -223,16 +231,16 @@ this.setLayout(new BorderLayout(0, 0));
         mainPanel.add(contamount, new KDLayout.Constraints(366, 137, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contlandDeveloper.setBounds(new Rectangle(7, 75, 470, 19));
         mainPanel.add(contlandDeveloper, new KDLayout.Constraints(7, 75, 470, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contcontractType.setBounds(new Rectangle(7, 31, 470, 19));
-        mainPanel.add(contcontractType, new KDLayout.Constraints(7, 31, 470, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contcontractPropert.setBounds(new Rectangle(773, 53, 230, 19));
-        mainPanel.add(contcontractPropert, new KDLayout.Constraints(773, 53, 230, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contcontractType.setBounds(new Rectangle(7, 31, 233, 19));
+        mainPanel.add(contcontractType, new KDLayout.Constraints(7, 31, 233, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contcontractPropert.setBounds(new Rectangle(243, 31, 233, 19));
+        mainPanel.add(contcontractPropert, new KDLayout.Constraints(243, 31, 233, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contpartB.setBounds(new Rectangle(531, 75, 472, 19));
         mainPanel.add(contpartB, new KDLayout.Constraints(531, 75, 472, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contpartC.setBounds(new Rectangle(7, 97, 470, 19));
         mainPanel.add(contpartC, new KDLayout.Constraints(7, 97, 470, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contcontractName.setBounds(new Rectangle(7, 53, 471, 19));
-        mainPanel.add(contcontractName, new KDLayout.Constraints(7, 53, 471, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contcontractName.setBounds(new Rectangle(7, 53, 233, 19));
+        mainPanel.add(contcontractName, new KDLayout.Constraints(7, 53, 233, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         kDTabbedPane1.setBounds(new Rectangle(5, 664, 994, 271));
         mainPanel.add(kDTabbedPane1, new KDLayout.Constraints(5, 664, 994, 271, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM_SCALE | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
         contExRate.setBounds(new Rectangle(9, 159, 276, 19));
@@ -247,16 +255,16 @@ this.setLayout(new BorderLayout(0, 0));
         mainPanel.add(contRespPerson, new KDLayout.Constraints(9, 270, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contCreator.setBounds(new Rectangle(9, 314, 276, 19));
         mainPanel.add(contCreator, new KDLayout.Constraints(9, 314, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contOrg.setBounds(new Rectangle(7, 9, 470, 19));
-        mainPanel.add(contOrg, new KDLayout.Constraints(7, 9, 470, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contProj.setBounds(new Rectangle(531, 9, 238, 19));
-        mainPanel.add(contProj, new KDLayout.Constraints(531, 9, 238, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contOrg.setBounds(new Rectangle(7, 9, 233, 19));
+        mainPanel.add(contOrg, new KDLayout.Constraints(7, 9, 233, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contProj.setBounds(new Rectangle(243, 9, 233, 19));
+        mainPanel.add(contProj, new KDLayout.Constraints(243, 9, 233, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contGrtRate.setBounds(new Rectangle(366, 181, 276, 19));
         mainPanel.add(contGrtRate, new KDLayout.Constraints(366, 181, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contIsPartAMaterialCon.setBounds(new Rectangle(9, 181, 276, 19));
         mainPanel.add(contIsPartAMaterialCon, new KDLayout.Constraints(9, 181, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        conContrarctRule.setBounds(new Rectangle(531, 31, 472, 19));
-        mainPanel.add(conContrarctRule, new KDLayout.Constraints(531, 31, 472, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        conContrarctRule.setBounds(new Rectangle(531, 31, 238, 19));
+        mainPanel.add(conContrarctRule, new KDLayout.Constraints(531, 31, 238, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contOrgAmtBig.setBounds(new Rectangle(366, 159, 276, 19));
         mainPanel.add(contOrgAmtBig, new KDLayout.Constraints(366, 159, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contAmtBig.setBounds(new Rectangle(720, 159, 276, 19));
@@ -265,10 +273,10 @@ this.setLayout(new BorderLayout(0, 0));
         mainPanel.add(kDLabelContainer1, new KDLayout.Constraints(9, 203, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contCreateOrg.setBounds(new Rectangle(366, 314, 276, 19));
         mainPanel.add(contCreateOrg, new KDLayout.Constraints(366, 314, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contDes.setBounds(new Rectangle(9, 338, 989, 45));
-        mainPanel.add(contDes, new KDLayout.Constraints(9, 338, 989, 45, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
-        kDPanel1.setBounds(new Rectangle(870, 445, 130, 122));
-        mainPanel.add(kDPanel1, new KDLayout.Constraints(870, 445, 130, 122, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contDes.setBounds(new Rectangle(9, 358, 989, 45));
+        mainPanel.add(contDes, new KDLayout.Constraints(9, 358, 989, 45, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDPanel1.setBounds(new Rectangle(870, 460, 130, 111));
+        mainPanel.add(kDPanel1, new KDLayout.Constraints(870, 460, 130, 111, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contRespDept.setBounds(new Rectangle(9, 292, 276, 19));
         mainPanel.add(contRespDept, new KDLayout.Constraints(9, 292, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contsignDate.setBounds(new Rectangle(896, 383, 223, 19));
@@ -279,10 +287,10 @@ this.setLayout(new BorderLayout(0, 0));
         mainPanel.add(contcontractSource, new KDLayout.Constraints(9, 248, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contContractWFType.setBounds(new Rectangle(366, 270, 276, 19));
         mainPanel.add(contContractWFType, new KDLayout.Constraints(366, 270, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contAttachment.setBounds(new Rectangle(6, 445, 854, 122));
-        mainPanel.add(contAttachment, new KDLayout.Constraints(6, 445, 854, 122, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contMode.setBounds(new Rectangle(7, 390, 993, 50));
-        mainPanel.add(contMode, new KDLayout.Constraints(7, 390, 993, 50, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contAttachment.setBounds(new Rectangle(6, 458, 854, 114));
+        mainPanel.add(contAttachment, new KDLayout.Constraints(6, 458, 854, 114, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contMode.setBounds(new Rectangle(7, 406, 993, 51));
+        mainPanel.add(contMode, new KDLayout.Constraints(7, 406, 993, 51, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
         contSrcAmount.setBounds(new Rectangle(720, 181, 276, 19));
         mainPanel.add(contSrcAmount, new KDLayout.Constraints(720, 181, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contInviteType.setBounds(new Rectangle(366, 248, 276, 19));
@@ -303,14 +311,24 @@ this.setLayout(new BorderLayout(0, 0));
         mainPanel.add(contStartDate, new KDLayout.Constraints(720, 248, 178, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contEndDate.setBounds(new Rectangle(903, 248, 93, 19));
         mainPanel.add(contEndDate, new KDLayout.Constraints(903, 248, 93, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contTAEntry.setBounds(new Rectangle(531, 53, 238, 19));
-        mainPanel.add(contTAEntry, new KDLayout.Constraints(531, 53, 238, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contTAEntry.setBounds(new Rectangle(243, 53, 233, 19));
+        mainPanel.add(contTAEntry, new KDLayout.Constraints(243, 53, 233, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contMarketProject.setBounds(new Rectangle(531, 97, 238, 19));
         mainPanel.add(contMarketProject, new KDLayout.Constraints(531, 97, 238, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contMpCostAccount.setBounds(new Rectangle(773, 97, 230, 19));
         mainPanel.add(contMpCostAccount, new KDLayout.Constraints(773, 97, 230, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contchgPercForWarn.setBounds(new Rectangle(720, 203, 276, 19));
         mainPanel.add(contchgPercForWarn, new KDLayout.Constraints(720, 203, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contContractBillReceive.setBounds(new Rectangle(773, 31, 230, 19));
+        mainPanel.add(contContractBillReceive, new KDLayout.Constraints(773, 31, 230, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contConnectedTransaction.setBounds(new Rectangle(9, 336, 276, 19));
+        mainPanel.add(contConnectedTransaction, new KDLayout.Constraints(9, 336, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contProjDesc.setBounds(new Rectangle(531, 9, 238, 19));
+        mainPanel.add(contProjDesc, new KDLayout.Constraints(531, 9, 238, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contPurchaseApply.setBounds(new Rectangle(531, 53, 238, 19));
+        mainPanel.add(contPurchaseApply, new KDLayout.Constraints(531, 53, 238, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        btnViewPurchaseApply.setBounds(new Rectangle(773, 53, 230, 19));
+        mainPanel.add(btnViewPurchaseApply, new KDLayout.Constraints(773, 53, 230, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contSplitState.setBounds(new Rectangle(8, 940, 270, 19));
         mainPanel.add(contSplitState, new KDLayout.Constraints(8, 940, 270, 19, KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contSettleState.setBounds(new Rectangle(341, 940, 270, 19));
@@ -344,6 +362,7 @@ this.setLayout(new BorderLayout(0, 0));
         kDTabbedPane1.add(kDContainer3, resHelper.getString("kDContainer3.constraints"));
         kDTabbedPane1.add(kDContainer4, resHelper.getString("kDContainer4.constraints"));
         kDTabbedPane1.add(kDContainer5, resHelper.getString("kDContainer5.constraints"));
+        kDTabbedPane1.add(kDContainer6, resHelper.getString("kDContainer6.constraints"));
         //pnlInviteInfo
         pnlInviteInfo.setLayout(null);        contRemark.setBounds(new Rectangle(8, 88, 270, 19));
         pnlInviteInfo.add(contRemark, null);
@@ -501,6 +520,8 @@ kDContainer3.getContentPane().setLayout(new BorderLayout(0, 0));        kDContai
         contJzEndDate.setBoundEditor(pkJzEndDate);
         //kDContainer5
 kDContainer5.getContentPane().setLayout(new BorderLayout(0, 0));        kDContainer5.getContentPane().add(kdtYZEntry, BorderLayout.CENTER);
+        //kDContainer6
+kDContainer6.getContentPane().setLayout(new BorderLayout(0, 0));        kDContainer6.getContentPane().add(kdtMDeveloperEntry, BorderLayout.CENTER);
         //contExRate
         contExRate.setBoundEditor(txtExRate);
         //contLocalAmount
@@ -537,7 +558,7 @@ kDContainer5.getContentPane().setLayout(new BorderLayout(0, 0));        kDContai
         kDScrollPane2.getViewport().add(txtDes, null);
         //kDPanel1
         kDPanel1.setLayout(new KDLayout());
-        kDPanel1.putClientProperty("OriginalBounds", new Rectangle(870, 445, 130, 122));        chkIsOpen.setBounds(new Rectangle(134, 12, 129, 19));
+        kDPanel1.putClientProperty("OriginalBounds", new Rectangle(870, 460, 130, 111));        chkIsOpen.setBounds(new Rectangle(134, 12, 129, 19));
         kDPanel1.add(chkIsOpen, new KDLayout.Constraints(134, 12, 129, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         chkIsStandardContract.setBounds(new Rectangle(12, 13, 101, 19));
         kDPanel1.add(chkIsStandardContract, new KDLayout.Constraints(12, 13, 101, 19, 0));
@@ -611,6 +632,14 @@ contMode.getContentPane().setLayout(new BorderLayout(0, 0));        contMode.get
         contMpCostAccount.setBoundEditor(prmtMpCostAccount);
         //contchgPercForWarn
         contchgPercForWarn.setBoundEditor(txtchgPercForWarn);
+        //contContractBillReceive
+        contContractBillReceive.setBoundEditor(prmtContractBillReceive);
+        //contConnectedTransaction
+        contConnectedTransaction.setBoundEditor(cbConnectedTransaction);
+        //contProjDesc
+        contProjDesc.setBoundEditor(txtProjDesc);
+        //contPurchaseApply
+        contPurchaseApply.setBoundEditor(prmtPurchaseApply);
         //contSplitState
         contSplitState.setBoundEditor(txtSplitState);
         //contSettleState
@@ -964,6 +993,11 @@ contPayItem.getContentPane().setLayout(new BorderLayout(0, 0));        contPayIt
 		getValidateHelper().registerBindProperty("yzEntry.count", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("yzEntry.adminID", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("yzEntry.yzID", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("mDeveloperEntry", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("mDeveloperEntry.landDeveloper", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("mDeveloperEntry.center", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("mDeveloperEntry.amount", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("mDeveloperEntry.remark", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("exRate", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("amount", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("grtAmount", ValidateHelper.ON_SAVE);    
@@ -1000,6 +1034,9 @@ contPayItem.getContentPane().setLayout(new BorderLayout(0, 0));        contPayIt
 		getValidateHelper().registerBindProperty("marketProject", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("mpCostAccount", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("chgPercForWarn", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("contractBillReceive", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("connectedTransaction", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("purchaseApply", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("payItems", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("payItems.payItemDate", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("payItems.payCondition", ValidateHelper.ON_SAVE);    

@@ -83,6 +83,17 @@ public class AbstractOtherBillEntryInfo extends com.kingdee.eas.framework.CoreBi
     {
         setBigDecimal("workload", item);
     }
+    /**
+     * Object:款项明细's 收取总额property 
+     */
+    public java.math.BigDecimal getTotalAmount()
+    {
+        return getBigDecimal("totalAmount");
+    }
+    public void setTotalAmount(java.math.BigDecimal item)
+    {
+        setBigDecimal("totalAmount", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("220E0964");

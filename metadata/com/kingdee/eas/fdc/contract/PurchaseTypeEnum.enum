@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.contract</package>
+    <name>PurchaseTypeEnum</name>
+    <alias>bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].alias</alias>
+    <description>bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.fdc.contract.PurchaseTypeEnum</className>
+    <enumDataType>STRING</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>GKZB</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[GKZB].alias</alias>
+            <userDefined>true</userDefined>
+            <value>GKZB</value>
+        </enumValue>
+        <enumValue>
+            <name>YQZB</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[YQZB].alias</alias>
+            <userDefined>true</userDefined>
+            <value>YQZB</value>
+        </enumValue>
+        <enumValue>
+            <name>JZXTP</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[JZXTP].alias</alias>
+            <userDefined>true</userDefined>
+            <value>JZXTP</value>
+        </enumValue>
+        <enumValue>
+            <name>JZXCS</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[JZXCS].alias</alias>
+            <userDefined>true</userDefined>
+            <value>JZXCS</value>
+        </enumValue>
+        <enumValue>
+            <name>XJ</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[XJ].alias</alias>
+            <userDefined>true</userDefined>
+            <value>XJ</value>
+        </enumValue>
+        <enumValue>
+            <name>DYLYCG</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[DYLYCG].alias</alias>
+            <userDefined>true</userDefined>
+            <value>DYLYCG</value>
+        </enumValue>
+        <enumValue>
+            <name>ZJCG</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[ZJCG].alias</alias>
+            <userDefined>true</userDefined>
+            <value>ZJCG</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购类别" />
+            <lang locale="zh_HK" value="採購類別" />
+            <lang locale="zh_TW" value="採購類別" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购类别" />
+            <lang locale="zh_HK" value="採購類別" />
+            <lang locale="zh_TW" value="採購類別" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[DYLYCG].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单一来源采购" />
+            <lang locale="zh_HK" value="單一來源採購" />
+            <lang locale="zh_TW" value="單一來源採購" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[GKZB].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公开招标" />
+            <lang locale="zh_HK" value="公開招標" />
+            <lang locale="zh_TW" value="公開招標" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[JZXCS].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="竞争性磋商" />
+            <lang locale="zh_HK" value="競爭性磋商" />
+            <lang locale="zh_TW" value="競爭性磋商" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[JZXTP].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="竞争性谈判" />
+            <lang locale="zh_HK" value="競爭性談判" />
+            <lang locale="zh_TW" value="競爭性談判" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[XJ].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="询价" />
+            <lang locale="zh_HK" value="詢價" />
+            <lang locale="zh_TW" value="詢價" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[YQZB].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="邀请招标" />
+            <lang locale="zh_HK" value="邀請招標" />
+            <lang locale="zh_TW" value="邀請招標" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].enumValues.enumValue[ZJCG].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="直接采购" />
+            <lang locale="zh_HK" value="直接採購" />
+            <lang locale="zh_TW" value="直接採購" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseTypeEnum].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

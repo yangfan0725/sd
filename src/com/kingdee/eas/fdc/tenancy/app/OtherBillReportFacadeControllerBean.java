@@ -85,7 +85,49 @@ public class OtherBillReportFacadeControllerBean extends AbstractOtherBillReport
 	}
     protected RptParams _query(Context ctx, RptParams params, int from, int len) throws BOSException, EASBizException{
     	String sellProject = (String) params.getObject("sellProject");
-    	
+    	StringBuffer room =null;
+	    if(params.getObject("room")!=null){
+	    	room=new StringBuffer();
+	    	Object[] roomObject = (Object[])params.getObject("room");
+        	for(int i=0;i<roomObject.length;i++){
+        		if(roomObject[i]==null) continue;
+            	if(i==0){
+            		room.append("'"+((RoomInfo)roomObject[i]).getId().toString()+"'");
+            	}else{
+            		room.append(",'"+((RoomInfo)roomObject[i]).getId().toString()+"'");
+            	}
+            }
+	    }
+	    StringBuffer customer =null;
+	    if(params.getObject("customer")!=null){
+	    	customer=new StringBuffer();
+	    	Object[] customerObject = (Object[])params.getObject("customer");
+        	for(int i=0;i<customerObject.length;i++){
+        		if(customerObject[i]==null) continue;
+            	if(i==0){
+            		customer.append("'"+((FDCCustomerInfo)customerObject[i]).getId().toString()+"'");
+            	}else{
+            		customer.append(",'"+((FDCCustomerInfo)customerObject[i]).getId().toString()+"'");
+            	}
+            }
+	    }
+	    StringBuffer moneyDefine =null;
+	    if(params.getObject("moneyDefine")!=null){
+	    	moneyDefine=new StringBuffer();
+	    	Object[] moneyDefineObject = (Object[])params.getObject("moneyDefine");
+        	for(int i=0;i<moneyDefineObject.length;i++){
+        		if(moneyDefineObject[i]==null) continue;
+            	if(i==0){
+            		moneyDefine.append("'"+((MoneyDefineInfo)moneyDefineObject[i]).getId().toString()+"'");
+            	}else{
+            		moneyDefine.append(",'"+((MoneyDefineInfo)moneyDefineObject[i]).getId().toString()+"'");
+            	}
+            }
+	    }
+	    Date startFromDate = (Date)params.getObject("startFromDate");
+    	Date startToDate =   (Date)params.getObject("startToDate");
+    	Date endFromDate = (Date)params.getObject("endFromDate");
+     	Date endToDate =   (Date)params.getObject("endToDate");
     	StringBuffer sb=new StringBuffer();
     	sb.append(" select other.fid conId,sp.fname_l2 sellProject,build.fname_l2 build,con.ftenRoomsDes room,");
     	sb.append(" other.fnumber conNumber,other.fcontractNo contractNo,other.fname conName,con.ftencustomerDes customer,other.fstartDate startDate,other.fendDate endDate,");
@@ -98,7 +140,28 @@ public class OtherBillReportFacadeControllerBean extends AbstractOtherBillReport
     	}else{
     		sb.append(" and sp.fid in('null')");
     	}
-    	sb.append(" order by other.fnumber,md.fnumber");
+    	if(room!=null&&!"".equals(room.toString())){
+    		sb.append(" and room.fid in("+room+")");
+    	}
+    	if(customer!=null&&!"".equals(customer.toString())){
+    		sb.append(" and EXISTS(select ftenancyBillId from T_TEN_TenancyCustomerEntry where ffdccustomerid in("+customer+") and con.fid=ftenancyBillId)");
+    	}
+    	if(moneyDefine!=null&&!"".equals(moneyDefine.toString())){
+    		sb.append(" and md.fid in("+moneyDefine+")");
+    	}
+    	if(startFromDate!=null){
+    		sb.append(" and other.fstartDate>={ts '" + FDCConstants.FORMAT_TIME.format(FDCDateHelper.getSQLBegin(startFromDate))+ "'}");
+		}
+		if(startToDate!=null){
+			sb.append(" and other.fstartDate<{ts '"+FDCConstants.FORMAT_TIME.format(FDCDateHelper.getSQLEnd(startToDate))+ "'}");
+		}
+		if(endFromDate!=null){
+    		sb.append(" and other.fendDate>={ts '" + FDCConstants.FORMAT_TIME.format(FDCDateHelper.getSQLBegin(endFromDate))+ "'}");
+		}
+		if(endToDate!=null){
+			sb.append(" and other.fendDate<{ts '"+FDCConstants.FORMAT_TIME.format(FDCDateHelper.getSQLEnd(endToDate))+ "'}");
+		}
+    	sb.append(" order by other.fstartDate");
     	RptRowSet rs = executeQuery(sb.toString(), null, ctx);
 		params.setObject("rs", rs);
 		return params;

@@ -3007,6 +3007,9 @@ public class ContractBillReceiveEditUI extends AbstractContractBillReceiveEditUI
 		
 		contractPropert.removeItem(ContractPropertyEnum.THREE_PARTY);
 		contractPropert.removeItem(ContractPropertyEnum.STRATEGY);
+		
+		this.prmtcontractType.setAccessAuthority(CtrlCommonConstant.AUTHORITY_COMMON);
+		this.prmtcontractType.setEnabled(false);
 	}
 	
 	@Override
@@ -3665,7 +3668,7 @@ public class ContractBillReceiveEditUI extends AbstractContractBillReceiveEditUI
 	public void setOprtState(String oprtType) {
 		super.setOprtState(oprtType);
 		if (STATUS_ADDNEW.equals(oprtType)) {
-			prmtcontractType.setEnabled(true);
+//			prmtcontractType.setEnabled(true);
 			actionSplit.setEnabled(false);
 		} else {
 			if (this.editData != null) {
@@ -3825,7 +3828,7 @@ public class ContractBillReceiveEditUI extends AbstractContractBillReceiveEditUI
 				//				prmtcontractType.setEnabled(false);
 				actionSplit.setEnabled(true);
 			} else {
-				prmtcontractType.setEnabled(true);
+//				prmtcontractType.setEnabled(true);
 				actionSplit.setEnabled(false);
 			}
 		}
@@ -4361,7 +4364,7 @@ public class ContractBillReceiveEditUI extends AbstractContractBillReceiveEditUI
 
 	public void actionAddNew_actionPerformed(ActionEvent e) throws Exception {
 		super.actionAddNew_actionPerformed(e);
-		prmtcontractType.setEnabled(true);
+//		prmtcontractType.setEnabled(true);
 		kDDateCreateTime.setEnabled(false);
 		comboCurrency.setEnabled(true);
 		prmtModel.setEnabled(true);
@@ -4394,7 +4397,7 @@ public class ContractBillReceiveEditUI extends AbstractContractBillReceiveEditUI
 				//				prmtcontractType.setEnabled(false);
 				actionSplit.setEnabled(true);
 			} else {
-				prmtcontractType.setEnabled(true);
+//				prmtcontractType.setEnabled(true);
 				//				actionSplit.setEnabled(true);
 			}
 		}

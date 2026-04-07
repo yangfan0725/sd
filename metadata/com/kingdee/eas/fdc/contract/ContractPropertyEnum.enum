@@ -66,9 +66,9 @@
         </rs>
         <rs key="bizEnum[com.kingdee.eas.fdc.contract.ContractPropertyEnum].enumValues.enumValue[STRATEGY].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="战略协议" />
-            <lang locale="zh_HK" value="戰略協議" />
-            <lang locale="zh_TW" value="戰略協議" />
+            <lang locale="zh_CN" value="多甲方协议" />
+            <lang locale="zh_HK" value="多甲方協議" />
+            <lang locale="zh_TW" value="多甲方協議" />
         </rs>
         <rs key="bizEnum[com.kingdee.eas.fdc.contract.ContractPropertyEnum].enumValues.enumValue[SUPPLY].alias">
             <lang locale="en_US" value="null" />

@@ -208,6 +208,83 @@ public class AbstractContractTypeInfo extends com.kingdee.eas.framework.TreeBase
     {
         setBoolean("isRelateReceive", item);
     }
+    /**
+     * Object:合同类型's 是否资金类合同property 
+     */
+    public boolean isIsFund()
+    {
+        return getBoolean("isFund");
+    }
+    public void setIsFund(boolean item)
+    {
+        setBoolean("isFund", item);
+    }
+    /**
+     * Object:合同类型's 是否差旅类合同property 
+     */
+    public boolean isIsTrip()
+    {
+        return getBoolean("isTrip");
+    }
+    public void setIsTrip(boolean item)
+    {
+        setBoolean("isTrip", item);
+    }
+    /**
+     * Object:合同类型's 是否费用类合同property 
+     */
+    public boolean isIsExpense()
+    {
+        return getBoolean("isExpense");
+    }
+    public void setIsExpense(boolean item)
+    {
+        setBoolean("isExpense", item);
+    }
+    /**
+     * Object:合同类型's 是否采购类property 
+     */
+    public boolean isIsPurchase()
+    {
+        return getBoolean("isPurchase");
+    }
+    public void setIsPurchase(boolean item)
+    {
+        setBoolean("isPurchase", item);
+    }
+    /**
+     * Object:合同类型's 对应付款申请已付款后隐藏property 
+     */
+    public boolean isIsHide()
+    {
+        return getBoolean("isHide");
+    }
+    public void setIsHide(boolean item)
+    {
+        setBoolean("isHide", item);
+    }
+    /**
+     * Object:合同类型's 天隐藏property 
+     */
+    public int getHideDay()
+    {
+        return getInt("hideDay");
+    }
+    public void setHideDay(int item)
+    {
+        setInt("hideDay", item);
+    }
+    /**
+     * Object:合同类型's 是否受控于购置申请property 
+     */
+    public boolean isIsPurchaseApply()
+    {
+        return getBoolean("isPurchaseApply");
+    }
+    public void setIsPurchaseApply(boolean item)
+    {
+        setBoolean("isPurchaseApply", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("B371775E");

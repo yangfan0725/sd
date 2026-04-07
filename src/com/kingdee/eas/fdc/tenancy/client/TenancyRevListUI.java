@@ -11,6 +11,7 @@ import java.awt.event.*;
 import java.io.IOException;
 import java.text.MessageFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -88,6 +89,7 @@ import com.kingdee.eas.fdc.basecrm.RevBillTypeEnum;
 import com.kingdee.eas.fdc.basecrm.RevBizTypeEnum;
 import com.kingdee.eas.fdc.basecrm.client.CRMClientHelper;
 import com.kingdee.eas.fdc.basecrm.client.FDCReceivingBillEditUI;
+import com.kingdee.eas.fdc.basedata.FDCDateHelper;
 import com.kingdee.eas.fdc.basedata.FDCHelper;
 import com.kingdee.eas.fdc.basedata.MoneySysTypeEnum;
 import com.kingdee.eas.fdc.basedata.client.FDCClientUtils;
@@ -215,6 +217,11 @@ public class TenancyRevListUI extends AbstractTenancyRevListUI
 		KDTableHelper.setSortedColumn(this.kdtTenancy,fields);
 		
 		this.tblMain.getDataRequestManager().setDataRequestMode(KDTDataRequestManager.REAL_MODE);
+		Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.YEAR, -1); // Äê·Ý¼õ 1
+        Date lastYearToday = calendar.getTime();
+        this.pkAuditDate.setValue(lastYearToday);
+		this.pkAuditDateTo.setValue(new Date());
 	}
     protected void afterTableFillData(KDTDataRequestEvent e) {
 		super.afterTableFillData(e);
@@ -569,34 +576,45 @@ public class TenancyRevListUI extends AbstractTenancyRevListUI
 		DefaultKingdeeTreeNode node = (DefaultKingdeeTreeNode) treeMain.getLastSelectedPathComponent();
 		EntityViewInfo vi = new EntityViewInfo();
 		FilterInfo filter = new FilterInfo();
-//		filter.getFilterItems().add(new FilterItemInfo("tenancyState",TenancyBillStateEnum.AUDITED_VALUE));
-		filter.getFilterItems().add(new FilterItemInfo("tenancyState",TenancyBillStateEnum.EXECUTING_VALUE));
-		filter.getFilterItems().add(new FilterItemInfo("tenancyState",TenancyBillStateEnum.CONTINUETENANCYING_VALUE));
-		filter.getFilterItems().add(new FilterItemInfo("tenancyState",TenancyBillStateEnum.QuitTenancying));
 		if(this.cbIsAll.isSelected()){
-			filter.getFilterItems().add(new FilterItemInfo("tenancyState",TenancyBillStateEnum.EXPIRATION_VALUE));
+			filter.getFilterItems().add(new FilterItemInfo("tenancyState","'Executing','ContinueTenancying','QuitTenancying','Expiration'",CompareType.INNER));
+		}else{
+			filter.getFilterItems().add(new FilterItemInfo("tenancyState","'Executing','ContinueTenancying','QuitTenancying'",CompareType.INNER));
 		}
+////		filter.getFilterItems().add(new FilterItemInfo("tenancyState",TenancyBillStateEnum.AUDITED_VALUE));
+//		filter.getFilterItems().add(new FilterItemInfo("tenancyState",TenancyBillStateEnum.EXECUTING_VALUE));
+//		filter.getFilterItems().add(new FilterItemInfo("tenancyState",TenancyBillStateEnum.CONTINUETENANCYING_VALUE));
+//		filter.getFilterItems().add(new FilterItemInfo("tenancyState",TenancyBillStateEnum.QUITTENANCYING_VALUE));
+//		if(this.cbIsAll.isSelected()){
+//			filter.getFilterItems().add(new FilterItemInfo("tenancyState",TenancyBillStateEnum.EXPIRATION_VALUE));
+//		}
 		if (node != null  &&  node.getUserObject() instanceof SellProjectInfo) {
 			SellProjectInfo pro = (SellProjectInfo) node.getUserObject();
 			filter.getFilterItems().add(new FilterItemInfo("sellProject.id", pro.getId().toString()));
 		} else {
 			filter.getFilterItems().add(new FilterItemInfo("id", null));
 		}
-		if(this.cbIsAll.isSelected()){
-			filter.setMaskString("(#0 or #1 or #2 or #3) and #4");
-		}else{
-			filter.setMaskString("(#0 or #1 or #2) and #3");
+		if(this.pkAuditDate.getValue()!=null){
+			filter.getFilterItems().add(new FilterItemInfo("auditTime", this.pkAuditDate.getValue(),CompareType.GREATER_EQUALS));
 		}
+		if(this.pkAuditDateTo.getValue()!=null){
+			filter.getFilterItems().add(new FilterItemInfo("auditTime", this.pkAuditDateTo.getValue(),CompareType.LESS_EQUALS));
+		}
+//		if(this.cbIsAll.isSelected()){
+//			filter.setMaskString("(#0 or #1 or #2 or #3) and #4");
+//		}else{
+//			filter.setMaskString("(#0 or #1 or #2) and #3");
+//		}
 		vi.setFilter(filter);
 		SorterItemCollection sort=new SorterItemCollection();
 		sort.add(new SorterItemInfo("name"));
 		vi.setSorter(sort);
 		SelectorItemCollection sels =new SelectorItemCollection();
 		sels.add("*");
-		sels.add("oldTenancyBill.*");
-		sels.add("tenancyAdviser.*");
-		sels.add("creator.*");
-		sels.add("agency.*");
+		sels.add("oldTenancyBill.tenancyName");
+		sels.add("tenancyAdviser.name");
+		sels.add("creator.name");
+		sels.add("agency.name");
 		vi.setSelector(sels);
 		try {
 			TenancyBillCollection tencol = TenancyBillFactory.getRemoteInstance().getTenancyBillCollection(vi);

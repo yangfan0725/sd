@@ -21,6 +21,7 @@ public class AbstractContractBillInfo extends com.kingdee.eas.fdc.basedata.FDCBi
         put("rateEntry", new com.kingdee.eas.fdc.contract.ContractBillRateEntryCollection());
         put("contractPlan", new com.kingdee.eas.fdc.contract.ContractBillContractPlanCollection());
         put("entrys", new com.kingdee.eas.fdc.contract.ContractBillEntryCollection());
+        put("mDeveloperEntry", new com.kingdee.eas.fdc.contract.ContractMDeveloperEntryCollection());
         put("marketEntry", new com.kingdee.eas.fdc.contract.ContractMarketEntryCollection());
         put("payItems", new com.kingdee.eas.fdc.contract.ContractPayItemCollection());
     }
@@ -1299,6 +1300,35 @@ public class AbstractContractBillInfo extends com.kingdee.eas.fdc.basedata.FDCBi
 		if (item != null) {
         setString("connectedTransaction", item.getValue());
 		}
+    }
+    /**
+     * Object: 合同单据 's 采购申请 property 
+     */
+    public com.kingdee.eas.fdc.contract.PurchaseApplyInfo getPurchaseApply()
+    {
+        return (com.kingdee.eas.fdc.contract.PurchaseApplyInfo)get("purchaseApply");
+    }
+    public void setPurchaseApply(com.kingdee.eas.fdc.contract.PurchaseApplyInfo item)
+    {
+        put("purchaseApply", item);
+    }
+    /**
+     * Object: 合同单据 's 多甲方协议 property 
+     */
+    public com.kingdee.eas.fdc.contract.ContractMDeveloperEntryCollection getMDeveloperEntry()
+    {
+        return (com.kingdee.eas.fdc.contract.ContractMDeveloperEntryCollection)get("mDeveloperEntry");
+    }
+    /**
+     * Object:合同单据's 管理中心property 
+     */
+    public String getCenter()
+    {
+        return getString("center");
+    }
+    public void setCenter(String item)
+    {
+        setString("center", item);
     }
     public BOSObjectType getBOSType()
     {

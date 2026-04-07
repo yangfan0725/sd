@@ -62,6 +62,7 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
     protected com.kingdee.bos.ctrl.swing.KDPanel panelLiquidated;
     protected com.kingdee.bos.ctrl.swing.KDPanel kDPaneLongContract;
     protected com.kingdee.bos.ctrl.swing.KDPanel panelCommissionSetting;
+    protected com.kingdee.bos.ctrl.swing.KDPanel panelXHTenancyBill;
     protected com.kingdee.bos.ctrl.swing.KDPanel contTotalNew;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contTenancyCustNew;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contFreeFeeInfo;
@@ -300,6 +301,59 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
     protected com.kingdee.bos.ctrl.swing.KDComboBox comboEnhanceType;
     protected com.kingdee.bos.ctrl.kdf.table.KDTable tblStepCalculateSetting;
     protected com.kingdee.bos.ctrl.kdf.table.KDTable tblBusinessIncome;
+    protected com.kingdee.bos.ctrl.swing.KDLabel kDLabel1;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer9;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer10;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer11;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer12;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer13;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer14;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer15;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer16;
+    protected com.kingdee.bos.ctrl.swing.KDLabel kDLabel2;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer17;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer18;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer19;
+    protected com.kingdee.bos.ctrl.swing.KDLabel kDLabel3;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer20;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer21;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer22;
+    protected com.kingdee.bos.ctrl.swing.KDLabel kDLabel4;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer23;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer24;
+    protected com.kingdee.bos.ctrl.swing.KDContainer kDContainer6;
+    protected com.kingdee.bos.ctrl.swing.KDLabel kDLabel5;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer25;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer26;
+    protected com.kingdee.bos.ctrl.swing.KDLabel kDLabel6;
+    protected com.kingdee.bos.ctrl.kdf.table.KDTable tblWY;
+    protected com.kingdee.bos.ctrl.swing.KDLabel kDLabel7;
+    protected com.kingdee.bos.ctrl.kdf.table.KDTable tblBZJ;
+    protected com.kingdee.bos.ctrl.kdf.table.KDTable tblZJ;
+    protected com.kingdee.bos.ctrl.swing.KDLabel kDLabel8;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer27;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer28;
+    protected com.kingdee.bos.ctrl.swing.KDComboBox cbXHContractState;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkXHQuitRoomDate;
+    protected com.kingdee.bos.ctrl.swing.KDComboBox cbXHContractType;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkXHTenancyDate;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtXHNumber;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtXHCreator;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkXHCreateTime;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkXHAuditTime;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkXHStartDate;
+    protected com.kingdee.bos.ctrl.swing.KDDatePicker pkXHEndDate;
+    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtXHLeaseCount;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtXHCustomer;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtXHCustomer;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtXHCustomerNumber;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtXHRoom;
+    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtXHRoomArea;
+    protected com.kingdee.bos.ctrl.kdf.table.KDTable tblXHRoom;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtXHFreeRemark;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtXHIncreasedRemark;
+    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtWYDays;
+    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtWYDayPrice;
     protected com.kingdee.bos.ctrl.swing.KDPanel panelAttachRes;
     protected com.kingdee.bos.ctrl.kdf.table.KDTable tblAttachRes;
     protected com.kingdee.bos.ctrl.swing.KDPanel panelAttachResInfo;
@@ -313,6 +367,7 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnCarryForward;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnCollectProtocol;
     protected com.kingdee.bos.ctrl.swing.KDWorkButton btnUpdateTenPrice;
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton btnUpdateXHTenancyBill;
     protected com.kingdee.bos.ctrl.swing.KDMenuItem menuItemCarryForward;
     protected com.kingdee.eas.fdc.tenancy.TenancyBillInfo editData = null;
     protected ActionCarryForward actionCarryForward = null;
@@ -324,6 +379,9 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
     protected ActionAdust actionAdjust = null;
     protected ActionSelectTenPrice actionSelectTenPrice = null;
     protected ActionUpdateTenPrice actionUpdateTenPrice = null;
+    protected ActionUpdateXHTenancyBill actionUpdateXHTenancyBill = null;
+    protected ActionALine actionALine = null;
+    protected ActionRLine actionRLine = null;
     /**
      * output class constructor
      */
@@ -437,6 +495,18 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
         this.actionUpdateTenPrice = new ActionUpdateTenPrice(this);
         getActionManager().registerAction("actionUpdateTenPrice", actionUpdateTenPrice);
          this.actionUpdateTenPrice.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionUpdateXHTenancyBill
+        this.actionUpdateXHTenancyBill = new ActionUpdateXHTenancyBill(this);
+        getActionManager().registerAction("actionUpdateXHTenancyBill", actionUpdateXHTenancyBill);
+         this.actionUpdateXHTenancyBill.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionALine
+        this.actionALine = new ActionALine(this);
+        getActionManager().registerAction("actionALine", actionALine);
+         this.actionALine.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionRLine
+        this.actionRLine = new ActionRLine(this);
+        getActionManager().registerAction("actionRLine", actionRLine);
+         this.actionRLine.addService(new com.kingdee.eas.framework.client.service.PermissionService());
         this.kDScrollPane3 = new com.kingdee.bos.ctrl.swing.KDScrollPane();
         this.kDPanel4 = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.tabbedPaneContract = new com.kingdee.bos.ctrl.swing.KDTabbedPane();
@@ -453,6 +523,7 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
         this.panelLiquidated = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.kDPaneLongContract = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.panelCommissionSetting = new com.kingdee.bos.ctrl.swing.KDPanel();
+        this.panelXHTenancyBill = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.contTotalNew = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.contTenancyCustNew = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contFreeFeeInfo = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
@@ -691,6 +762,59 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
         this.comboEnhanceType = new com.kingdee.bos.ctrl.swing.KDComboBox();
         this.tblStepCalculateSetting = new com.kingdee.bos.ctrl.kdf.table.KDTable();
         this.tblBusinessIncome = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.kDLabel1 = new com.kingdee.bos.ctrl.swing.KDLabel();
+        this.kDLabelContainer9 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer10 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer11 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer12 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer13 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer14 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer15 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer16 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabel2 = new com.kingdee.bos.ctrl.swing.KDLabel();
+        this.kDLabelContainer17 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer18 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer19 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabel3 = new com.kingdee.bos.ctrl.swing.KDLabel();
+        this.kDLabelContainer20 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer21 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer22 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabel4 = new com.kingdee.bos.ctrl.swing.KDLabel();
+        this.kDLabelContainer23 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer24 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDContainer6 = new com.kingdee.bos.ctrl.swing.KDContainer();
+        this.kDLabel5 = new com.kingdee.bos.ctrl.swing.KDLabel();
+        this.kDLabelContainer25 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer26 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabel6 = new com.kingdee.bos.ctrl.swing.KDLabel();
+        this.tblWY = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.kDLabel7 = new com.kingdee.bos.ctrl.swing.KDLabel();
+        this.tblBZJ = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.tblZJ = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.kDLabel8 = new com.kingdee.bos.ctrl.swing.KDLabel();
+        this.kDLabelContainer27 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.kDLabelContainer28 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.cbXHContractState = new com.kingdee.bos.ctrl.swing.KDComboBox();
+        this.pkXHQuitRoomDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.cbXHContractType = new com.kingdee.bos.ctrl.swing.KDComboBox();
+        this.pkXHTenancyDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.txtXHNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtXHCreator = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.pkXHCreateTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.pkXHAuditTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.pkXHStartDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.pkXHEndDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
+        this.txtXHLeaseCount = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
+        this.txtXHCustomer = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.prmtXHCustomer = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.txtXHCustomerNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtXHRoom = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtXHRoomArea = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
+        this.tblXHRoom = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.txtXHFreeRemark = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtXHIncreasedRemark = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtWYDays = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
+        this.txtWYDayPrice = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.panelAttachRes = new com.kingdee.bos.ctrl.swing.KDPanel();
         this.tblAttachRes = new com.kingdee.bos.ctrl.kdf.table.KDTable();
         this.panelAttachResInfo = new com.kingdee.bos.ctrl.swing.KDPanel();
@@ -704,6 +828,7 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
         this.btnCarryForward = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnCollectProtocol = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.btnUpdateTenPrice = new com.kingdee.bos.ctrl.swing.KDWorkButton();
+        this.btnUpdateXHTenancyBill = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.menuItemCarryForward = new com.kingdee.bos.ctrl.swing.KDMenuItem();
         this.kDScrollPane3.setName("kDScrollPane3");
         this.kDPanel4.setName("kDPanel4");
@@ -721,6 +846,7 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
         this.panelLiquidated.setName("panelLiquidated");
         this.kDPaneLongContract.setName("kDPaneLongContract");
         this.panelCommissionSetting.setName("panelCommissionSetting");
+        this.panelXHTenancyBill.setName("panelXHTenancyBill");
         this.contTotalNew.setName("contTotalNew");
         this.contTenancyCustNew.setName("contTenancyCustNew");
         this.contFreeFeeInfo.setName("contFreeFeeInfo");
@@ -959,6 +1085,59 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
         this.comboEnhanceType.setName("comboEnhanceType");
         this.tblStepCalculateSetting.setName("tblStepCalculateSetting");
         this.tblBusinessIncome.setName("tblBusinessIncome");
+        this.kDLabel1.setName("kDLabel1");
+        this.kDLabelContainer9.setName("kDLabelContainer9");
+        this.kDLabelContainer10.setName("kDLabelContainer10");
+        this.kDLabelContainer11.setName("kDLabelContainer11");
+        this.kDLabelContainer12.setName("kDLabelContainer12");
+        this.kDLabelContainer13.setName("kDLabelContainer13");
+        this.kDLabelContainer14.setName("kDLabelContainer14");
+        this.kDLabelContainer15.setName("kDLabelContainer15");
+        this.kDLabelContainer16.setName("kDLabelContainer16");
+        this.kDLabel2.setName("kDLabel2");
+        this.kDLabelContainer17.setName("kDLabelContainer17");
+        this.kDLabelContainer18.setName("kDLabelContainer18");
+        this.kDLabelContainer19.setName("kDLabelContainer19");
+        this.kDLabel3.setName("kDLabel3");
+        this.kDLabelContainer20.setName("kDLabelContainer20");
+        this.kDLabelContainer21.setName("kDLabelContainer21");
+        this.kDLabelContainer22.setName("kDLabelContainer22");
+        this.kDLabel4.setName("kDLabel4");
+        this.kDLabelContainer23.setName("kDLabelContainer23");
+        this.kDLabelContainer24.setName("kDLabelContainer24");
+        this.kDContainer6.setName("kDContainer6");
+        this.kDLabel5.setName("kDLabel5");
+        this.kDLabelContainer25.setName("kDLabelContainer25");
+        this.kDLabelContainer26.setName("kDLabelContainer26");
+        this.kDLabel6.setName("kDLabel6");
+        this.tblWY.setName("tblWY");
+        this.kDLabel7.setName("kDLabel7");
+        this.tblBZJ.setName("tblBZJ");
+        this.tblZJ.setName("tblZJ");
+        this.kDLabel8.setName("kDLabel8");
+        this.kDLabelContainer27.setName("kDLabelContainer27");
+        this.kDLabelContainer28.setName("kDLabelContainer28");
+        this.cbXHContractState.setName("cbXHContractState");
+        this.pkXHQuitRoomDate.setName("pkXHQuitRoomDate");
+        this.cbXHContractType.setName("cbXHContractType");
+        this.pkXHTenancyDate.setName("pkXHTenancyDate");
+        this.txtXHNumber.setName("txtXHNumber");
+        this.txtXHCreator.setName("txtXHCreator");
+        this.pkXHCreateTime.setName("pkXHCreateTime");
+        this.pkXHAuditTime.setName("pkXHAuditTime");
+        this.pkXHStartDate.setName("pkXHStartDate");
+        this.pkXHEndDate.setName("pkXHEndDate");
+        this.txtXHLeaseCount.setName("txtXHLeaseCount");
+        this.txtXHCustomer.setName("txtXHCustomer");
+        this.prmtXHCustomer.setName("prmtXHCustomer");
+        this.txtXHCustomerNumber.setName("txtXHCustomerNumber");
+        this.txtXHRoom.setName("txtXHRoom");
+        this.txtXHRoomArea.setName("txtXHRoomArea");
+        this.tblXHRoom.setName("tblXHRoom");
+        this.txtXHFreeRemark.setName("txtXHFreeRemark");
+        this.txtXHIncreasedRemark.setName("txtXHIncreasedRemark");
+        this.txtWYDays.setName("txtWYDays");
+        this.txtWYDayPrice.setName("txtWYDayPrice");
         this.panelAttachRes.setName("panelAttachRes");
         this.tblAttachRes.setName("tblAttachRes");
         this.panelAttachResInfo.setName("panelAttachResInfo");
@@ -972,6 +1151,7 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
         this.btnCarryForward.setName("btnCarryForward");
         this.btnCollectProtocol.setName("btnCollectProtocol");
         this.btnUpdateTenPrice.setName("btnUpdateTenPrice");
+        this.btnUpdateXHTenancyBill.setName("btnUpdateXHTenancyBill");
         this.menuItemCarryForward.setName("menuItemCarryForward");
         // CoreUI		
         this.setPreferredSize(new Dimension(1013,1200));		
@@ -1015,6 +1195,7 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
         // kDPaneLongContract		
         this.kDPaneLongContract.setVisible(false);
         // panelCommissionSetting
+        // panelXHTenancyBill
         // contTotalNew
         // contTenancyCustNew		
         this.contTenancyCustNew.setBoundLabelText(resHelper.getString("contTenancyCustNew.boundLabelText"));		
@@ -2665,6 +2846,182 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
         
 
         this.tblBusinessIncome.checkParsed();
+        // kDLabel1		
+        this.kDLabel1.setText(resHelper.getString("kDLabel1.text"));
+        // kDLabelContainer9		
+        this.kDLabelContainer9.setBoundLabelText(resHelper.getString("kDLabelContainer9.boundLabelText"));		
+        this.kDLabelContainer9.setBoundLabelLength(100);		
+        this.kDLabelContainer9.setBoundLabelUnderline(true);
+        // kDLabelContainer10		
+        this.kDLabelContainer10.setBoundLabelText(resHelper.getString("kDLabelContainer10.boundLabelText"));		
+        this.kDLabelContainer10.setBoundLabelLength(100);		
+        this.kDLabelContainer10.setBoundLabelUnderline(true);
+        // kDLabelContainer11		
+        this.kDLabelContainer11.setBoundLabelText(resHelper.getString("kDLabelContainer11.boundLabelText"));		
+        this.kDLabelContainer11.setBoundLabelLength(100);		
+        this.kDLabelContainer11.setBoundLabelUnderline(true);
+        // kDLabelContainer12		
+        this.kDLabelContainer12.setBoundLabelText(resHelper.getString("kDLabelContainer12.boundLabelText"));		
+        this.kDLabelContainer12.setBoundLabelLength(100);		
+        this.kDLabelContainer12.setBoundLabelUnderline(true);
+        // kDLabelContainer13		
+        this.kDLabelContainer13.setBoundLabelText(resHelper.getString("kDLabelContainer13.boundLabelText"));		
+        this.kDLabelContainer13.setBoundLabelLength(100);		
+        this.kDLabelContainer13.setBoundLabelUnderline(true);
+        // kDLabelContainer14		
+        this.kDLabelContainer14.setBoundLabelText(resHelper.getString("kDLabelContainer14.boundLabelText"));		
+        this.kDLabelContainer14.setBoundLabelLength(100);		
+        this.kDLabelContainer14.setBoundLabelUnderline(true);
+        // kDLabelContainer15		
+        this.kDLabelContainer15.setBoundLabelText(resHelper.getString("kDLabelContainer15.boundLabelText"));		
+        this.kDLabelContainer15.setBoundLabelLength(100);		
+        this.kDLabelContainer15.setBoundLabelUnderline(true);
+        // kDLabelContainer16		
+        this.kDLabelContainer16.setBoundLabelText(resHelper.getString("kDLabelContainer16.boundLabelText"));		
+        this.kDLabelContainer16.setBoundLabelLength(100);		
+        this.kDLabelContainer16.setBoundLabelUnderline(true);
+        // kDLabel2		
+        this.kDLabel2.setText(resHelper.getString("kDLabel2.text"));
+        // kDLabelContainer17		
+        this.kDLabelContainer17.setBoundLabelText(resHelper.getString("kDLabelContainer17.boundLabelText"));		
+        this.kDLabelContainer17.setBoundLabelLength(100);		
+        this.kDLabelContainer17.setBoundLabelUnderline(true);
+        // kDLabelContainer18		
+        this.kDLabelContainer18.setBoundLabelText(resHelper.getString("kDLabelContainer18.boundLabelText"));		
+        this.kDLabelContainer18.setBoundLabelLength(100);		
+        this.kDLabelContainer18.setBoundLabelUnderline(true);
+        // kDLabelContainer19		
+        this.kDLabelContainer19.setBoundLabelText(resHelper.getString("kDLabelContainer19.boundLabelText"));		
+        this.kDLabelContainer19.setBoundLabelLength(100);		
+        this.kDLabelContainer19.setBoundLabelUnderline(true);
+        // kDLabel3		
+        this.kDLabel3.setText(resHelper.getString("kDLabel3.text"));
+        // kDLabelContainer20		
+        this.kDLabelContainer20.setBoundLabelText(resHelper.getString("kDLabelContainer20.boundLabelText"));		
+        this.kDLabelContainer20.setBoundLabelLength(100);		
+        this.kDLabelContainer20.setBoundLabelUnderline(true);
+        // kDLabelContainer21		
+        this.kDLabelContainer21.setBoundLabelText(resHelper.getString("kDLabelContainer21.boundLabelText"));		
+        this.kDLabelContainer21.setBoundLabelLength(100);		
+        this.kDLabelContainer21.setBoundLabelUnderline(true);
+        // kDLabelContainer22		
+        this.kDLabelContainer22.setBoundLabelText(resHelper.getString("kDLabelContainer22.boundLabelText"));		
+        this.kDLabelContainer22.setBoundLabelLength(100);		
+        this.kDLabelContainer22.setBoundLabelUnderline(true);
+        // kDLabel4		
+        this.kDLabel4.setText(resHelper.getString("kDLabel4.text"));
+        // kDLabelContainer23		
+        this.kDLabelContainer23.setBoundLabelText(resHelper.getString("kDLabelContainer23.boundLabelText"));		
+        this.kDLabelContainer23.setBoundLabelLength(100);		
+        this.kDLabelContainer23.setBoundLabelUnderline(true);
+        // kDLabelContainer24		
+        this.kDLabelContainer24.setBoundLabelText(resHelper.getString("kDLabelContainer24.boundLabelText"));		
+        this.kDLabelContainer24.setBoundLabelLength(100);		
+        this.kDLabelContainer24.setBoundLabelUnderline(true);
+        // kDContainer6
+        // kDLabel5		
+        this.kDLabel5.setText(resHelper.getString("kDLabel5.text"));
+        // kDLabelContainer25		
+        this.kDLabelContainer25.setBoundLabelText(resHelper.getString("kDLabelContainer25.boundLabelText"));		
+        this.kDLabelContainer25.setBoundLabelUnderline(true);		
+        this.kDLabelContainer25.setBoundLabelLength(100);
+        // kDLabelContainer26		
+        this.kDLabelContainer26.setBoundLabelText(resHelper.getString("kDLabelContainer26.boundLabelText"));		
+        this.kDLabelContainer26.setBoundLabelLength(100);		
+        this.kDLabelContainer26.setBoundLabelUnderline(true);
+        // kDLabel6		
+        this.kDLabel6.setText(resHelper.getString("kDLabel6.text"));
+        // tblWY
+		String tblWYStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles /><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"moneyDefine\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"0\" /><t:Column t:key=\"startDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"1\" /><t:Column t:key=\"endDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"2\" /><t:Column t:key=\"appDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" /><t:Column t:key=\"appAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"4\" /><t:Column t:key=\"actRevDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"5\" /><t:Column t:key=\"actRevAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"6\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header1\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{moneyDefine}</t:Cell><t:Cell>$Resource{startDate}</t:Cell><t:Cell>$Resource{endDate}</t:Cell><t:Cell>$Resource{appDate}</t:Cell><t:Cell>$Resource{appAmount}</t:Cell><t:Cell>$Resource{actRevDate}</t:Cell><t:Cell>$Resource{actRevAmount}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		
+        this.tblWY.setFormatXml(resHelper.translateString("tblWY",tblWYStrXML));
+
+        
+
+        this.tblWY.checkParsed();
+        // kDLabel7		
+        this.kDLabel7.setText(resHelper.getString("kDLabel7.text"));
+        // tblBZJ
+		String tblBZJStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles /><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"moneyDefine\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"0\" /><t:Column t:key=\"appDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"1\" /><t:Column t:key=\"appAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"actRevDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"actRevAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header1\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{moneyDefine}</t:Cell><t:Cell>$Resource{appDate}</t:Cell><t:Cell>$Resource{appAmount}</t:Cell><t:Cell>$Resource{actRevDate}</t:Cell><t:Cell>$Resource{actRevAmount}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		
+        this.tblBZJ.setFormatXml(resHelper.translateString("tblBZJ",tblBZJStrXML));
+
+        
+
+        this.tblBZJ.checkParsed();
+        // tblZJ
+		String tblZJStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles /><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"moneyDefine\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"0\" /><t:Column t:key=\"startDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"1\" /><t:Column t:key=\"endDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"2\" /><t:Column t:key=\"appDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" /><t:Column t:key=\"appAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"4\" /><t:Column t:key=\"actRevDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"5\" /><t:Column t:key=\"actRevAmount\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"6\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header1\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{moneyDefine}</t:Cell><t:Cell>$Resource{startDate}</t:Cell><t:Cell>$Resource{endDate}</t:Cell><t:Cell>$Resource{appDate}</t:Cell><t:Cell>$Resource{appAmount}</t:Cell><t:Cell>$Resource{actRevDate}</t:Cell><t:Cell>$Resource{actRevAmount}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		
+        this.tblZJ.setFormatXml(resHelper.translateString("tblZJ",tblZJStrXML));
+
+        
+
+        this.tblZJ.checkParsed();
+        // kDLabel8		
+        this.kDLabel8.setText(resHelper.getString("kDLabel8.text"));
+        // kDLabelContainer27		
+        this.kDLabelContainer27.setBoundLabelText(resHelper.getString("kDLabelContainer27.boundLabelText"));		
+        this.kDLabelContainer27.setBoundLabelLength(100);		
+        this.kDLabelContainer27.setBoundLabelUnderline(true);
+        // kDLabelContainer28		
+        this.kDLabelContainer28.setBoundLabelText(resHelper.getString("kDLabelContainer28.boundLabelText"));		
+        this.kDLabelContainer28.setBoundLabelLength(100);		
+        this.kDLabelContainer28.setBoundLabelUnderline(true);
+        // cbXHContractState		
+        this.cbXHContractState.addItems(EnumUtils.getEnumList("com.kingdee.eas.fdc.tenancy.TenancyBillStateEnum").toArray());
+        // pkXHQuitRoomDate
+        // cbXHContractType		
+        this.cbXHContractType.addItems(EnumUtils.getEnumList("com.kingdee.eas.fdc.tenancy.TenancyContractTypeEnum").toArray());
+        // pkXHTenancyDate
+        // txtXHNumber
+        // txtXHCreator
+        // pkXHCreateTime
+        // pkXHAuditTime
+        // pkXHStartDate
+        // pkXHEndDate
+        // txtXHLeaseCount
+        // txtXHCustomer
+        // prmtXHCustomer		
+        this.prmtXHCustomer.setQueryInfo("com.kingdee.eas.fdc.tenancy.app.XHCustomerQuery");		
+        this.prmtXHCustomer.setDisplayFormat("$name$");		
+        this.prmtXHCustomer.setEditFormat("$name$");		
+        this.prmtXHCustomer.setCommitFormat("$name$");
+        this.prmtXHCustomer.addDataChangeListener(new com.kingdee.bos.ctrl.swing.event.DataChangeListener() {
+            public void dataChanged(com.kingdee.bos.ctrl.swing.event.DataChangeEvent e) {
+                try {
+                    prmtXHCustomer_dataChanged(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                }
+            }
+        });
+        // txtXHCustomerNumber
+        // txtXHRoom
+        // txtXHRoomArea
+        // tblXHRoom
+		String tblXHRoomStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles /><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"room\" t:width=\"350\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"area\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"isSale\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header1\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{room}</t:Cell><t:Cell>$Resource{area}</t:Cell><t:Cell>$Resource{isSale}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		
+        this.tblXHRoom.setFormatXml(resHelper.translateString("tblXHRoom",tblXHRoomStrXML));
+        this.tblXHRoom.addKDTEditListener(new com.kingdee.bos.ctrl.kdf.table.event.KDTEditAdapter() {
+            public void editStopped(com.kingdee.bos.ctrl.kdf.table.event.KDTEditEvent e) {
+                try {
+                    tblXHRoom_editStopped(e);
+                } catch(Exception exc) {
+                    handUIException(exc);
+                }
+            }
+        });
+
+        
+
+        this.tblXHRoom.checkParsed();
+        // txtXHFreeRemark
+        // txtXHIncreasedRemark
+        // txtWYDays		
+        this.txtWYDays.setEnabled(false);
+        // txtWYDayPrice		
+        this.txtWYDayPrice.setEnabled(false);
         // panelAttachRes
         // tblAttachRes
 		String tblAttachResStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles /><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"attach\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"0\" /><t:Column t:key=\"attachResType\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"1\" /><t:Column t:key=\"attachResName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"2\" /><t:Column t:key=\"attachResDes\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"3\" /><t:Column t:key=\"standardRent\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"4\" /><t:Column t:key=\"standardRentType\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"5\" /><t:Column t:key=\"flagAtTerm\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"11\" /><t:Column t:key=\"des\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"12\" /><t:Column t:key=\"actDeliverDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"13\" /><t:Column t:key=\"actQuitDate\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"14\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{attach}</t:Cell><t:Cell>$Resource{attachResType}</t:Cell><t:Cell>$Resource{attachResName}</t:Cell><t:Cell>$Resource{attachResDes}</t:Cell><t:Cell>$Resource{standardRent}</t:Cell><t:Cell>$Resource{standardRentType}</t:Cell><t:Cell>$Resource{flagAtTerm}</t:Cell><t:Cell>$Resource{des}</t:Cell><t:Cell>$Resource{actDeliverDate}</t:Cell><t:Cell>$Resource{actQuitDate}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot> ";
@@ -2759,6 +3116,9 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
         // btnUpdateTenPrice
         this.btnUpdateTenPrice.setAction((IItemAction)ActionProxyFactory.getProxy(actionUpdateTenPrice, new Class[] { IItemAction.class }, getServiceContext()));		
         this.btnUpdateTenPrice.setText(resHelper.getString("btnUpdateTenPrice.text"));
+        // btnUpdateXHTenancyBill
+        this.btnUpdateXHTenancyBill.setAction((IItemAction)ActionProxyFactory.getProxy(actionUpdateXHTenancyBill, new Class[] { IItemAction.class }, getServiceContext()));		
+        this.btnUpdateXHTenancyBill.setText(resHelper.getString("btnUpdateXHTenancyBill.text"));
         // menuItemCarryForward
         this.menuItemCarryForward.setAction((IItemAction)ActionProxyFactory.getProxy(actionCarryForward, new Class[] { IItemAction.class }, getServiceContext()));		
         this.menuItemCarryForward.setText(resHelper.getString("menuItemCarryForward.text"));		
@@ -2815,6 +3175,7 @@ public abstract class AbstractTenancyBillEditUI extends com.kingdee.eas.fdc.tena
         tabbedPaneContract.add(panelLiquidated, resHelper.getString("panelLiquidated.constraints"));
         tabbedPaneContract.add(kDPaneLongContract, resHelper.getString("kDPaneLongContract.constraints"));
         tabbedPaneContract.add(panelCommissionSetting, resHelper.getString("panelCommissionSetting.constraints"));
+        tabbedPaneContract.add(panelXHTenancyBill, resHelper.getString("panelXHTenancyBill.constraints"));
         //panelTotal
 panelTotal.getContentPane().setLayout(new BorderLayout(0, 0));        panelTotal.getContentPane().add(contTotalNew, BorderLayout.CENTER);
         //contTotalNew
@@ -3315,6 +3676,114 @@ panelProperty.setLayout(new BorderLayout(0, 0));        panelProperty.add(tabMid
         kDScrollPane1.getViewport().add(tblStepCalculateSetting, null);
         //kDContainer1
 kDContainer1.getContentPane().setLayout(new BorderLayout(0, 0));        kDContainer1.getContentPane().add(tblBusinessIncome, BorderLayout.CENTER);
+        //panelXHTenancyBill
+        panelXHTenancyBill.setLayout(new KDLayout());
+        panelXHTenancyBill.putClientProperty("OriginalBounds", new Rectangle(0, 0, 1005, 687));        kDLabel1.setBounds(new Rectangle(1, 1, 100, 19));
+        panelXHTenancyBill.add(kDLabel1, new KDLayout.Constraints(1, 1, 100, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer9.setBounds(new Rectangle(5, 18, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer9, new KDLayout.Constraints(5, 18, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer10.setBounds(new Rectangle(361, 18, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer10, new KDLayout.Constraints(361, 18, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer11.setBounds(new Rectangle(5, 40, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer11, new KDLayout.Constraints(5, 40, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer12.setBounds(new Rectangle(361, 40, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer12, new KDLayout.Constraints(361, 40, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer13.setBounds(new Rectangle(717, 40, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer13, new KDLayout.Constraints(717, 40, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDLabelContainer14.setBounds(new Rectangle(5, 62, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer14, new KDLayout.Constraints(5, 62, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer15.setBounds(new Rectangle(361, 62, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer15, new KDLayout.Constraints(361, 62, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer16.setBounds(new Rectangle(717, 62, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer16, new KDLayout.Constraints(717, 62, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDLabel2.setBounds(new Rectangle(1, 87, 100, 19));
+        panelXHTenancyBill.add(kDLabel2, new KDLayout.Constraints(1, 87, 100, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer17.setBounds(new Rectangle(5, 106, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer17, new KDLayout.Constraints(5, 106, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer18.setBounds(new Rectangle(361, 106, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer18, new KDLayout.Constraints(361, 106, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer19.setBounds(new Rectangle(717, 106, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer19, new KDLayout.Constraints(717, 106, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDLabel3.setBounds(new Rectangle(1, 133, 100, 19));
+        panelXHTenancyBill.add(kDLabel3, new KDLayout.Constraints(1, 133, 100, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer20.setBounds(new Rectangle(5, 154, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer20, new KDLayout.Constraints(5, 154, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer21.setBounds(new Rectangle(6, 176, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer21, new KDLayout.Constraints(6, 176, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer22.setBounds(new Rectangle(361, 176, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer22, new KDLayout.Constraints(361, 176, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabel4.setBounds(new Rectangle(1, 201, 100, 19));
+        panelXHTenancyBill.add(kDLabel4, new KDLayout.Constraints(1, 201, 100, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer23.setBounds(new Rectangle(5, 224, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer23, new KDLayout.Constraints(5, 224, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer24.setBounds(new Rectangle(361, 224, 270, 19));
+        panelXHTenancyBill.add(kDLabelContainer24, new KDLayout.Constraints(361, 224, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDContainer6.setBounds(new Rectangle(5, 246, 628, 146));
+        panelXHTenancyBill.add(kDContainer6, new KDLayout.Constraints(5, 246, 628, 146, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabel5.setBounds(new Rectangle(3, 394, 100, 19));
+        panelXHTenancyBill.add(kDLabel5, new KDLayout.Constraints(3, 394, 100, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer25.setBounds(new Rectangle(6, 413, 981, 19));
+        panelXHTenancyBill.add(kDLabelContainer25, new KDLayout.Constraints(6, 413, 981, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDLabelContainer26.setBounds(new Rectangle(6, 435, 981, 19));
+        panelXHTenancyBill.add(kDLabelContainer26, new KDLayout.Constraints(6, 435, 981, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDLabel6.setBounds(new Rectangle(3, 458, 100, 19));
+        panelXHTenancyBill.add(kDLabel6, new KDLayout.Constraints(3, 458, 100, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        tblWY.setBounds(new Rectangle(496, 583, 487, 103));
+        panelXHTenancyBill.add(tblWY, new KDLayout.Constraints(496, 583, 487, 103, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDLabel7.setBounds(new Rectangle(3, 561, 100, 19));
+        panelXHTenancyBill.add(kDLabel7, new KDLayout.Constraints(3, 561, 100, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        tblBZJ.setBounds(new Rectangle(4, 480, 924, 78));
+        panelXHTenancyBill.add(tblBZJ, new KDLayout.Constraints(4, 480, 924, 78, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        tblZJ.setBounds(new Rectangle(3, 581, 486, 103));
+        panelXHTenancyBill.add(tblZJ, new KDLayout.Constraints(3, 581, 486, 103, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabel8.setBounds(new Rectangle(496, 561, 68, 19));
+        panelXHTenancyBill.add(kDLabel8, new KDLayout.Constraints(496, 561, 68, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer27.setBounds(new Rectangle(575, 561, 168, 19));
+        panelXHTenancyBill.add(kDLabelContainer27, new KDLayout.Constraints(575, 561, 168, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        kDLabelContainer28.setBounds(new Rectangle(761, 561, 221, 19));
+        panelXHTenancyBill.add(kDLabelContainer28, new KDLayout.Constraints(761, 561, 221, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        //kDLabelContainer9
+        kDLabelContainer9.setBoundEditor(cbXHContractState);
+        //kDLabelContainer10
+        kDLabelContainer10.setBoundEditor(pkXHQuitRoomDate);
+        //kDLabelContainer11
+        kDLabelContainer11.setBoundEditor(cbXHContractType);
+        //kDLabelContainer12
+        kDLabelContainer12.setBoundEditor(pkXHTenancyDate);
+        //kDLabelContainer13
+        kDLabelContainer13.setBoundEditor(txtXHNumber);
+        //kDLabelContainer14
+        kDLabelContainer14.setBoundEditor(txtXHCreator);
+        //kDLabelContainer15
+        kDLabelContainer15.setBoundEditor(pkXHCreateTime);
+        //kDLabelContainer16
+        kDLabelContainer16.setBoundEditor(pkXHAuditTime);
+        //kDLabelContainer17
+        kDLabelContainer17.setBoundEditor(pkXHStartDate);
+        //kDLabelContainer18
+        kDLabelContainer18.setBoundEditor(pkXHEndDate);
+        //kDLabelContainer19
+        kDLabelContainer19.setBoundEditor(txtXHLeaseCount);
+        //kDLabelContainer20
+        kDLabelContainer20.setBoundEditor(txtXHCustomer);
+        //kDLabelContainer21
+        kDLabelContainer21.setBoundEditor(prmtXHCustomer);
+        //kDLabelContainer22
+        kDLabelContainer22.setBoundEditor(txtXHCustomerNumber);
+        //kDLabelContainer23
+        kDLabelContainer23.setBoundEditor(txtXHRoom);
+        //kDLabelContainer24
+        kDLabelContainer24.setBoundEditor(txtXHRoomArea);
+        //kDContainer6
+kDContainer6.getContentPane().setLayout(new BorderLayout(0, 0));        kDContainer6.getContentPane().add(tblXHRoom, BorderLayout.CENTER);
+        //kDLabelContainer25
+        kDLabelContainer25.setBoundEditor(txtXHFreeRemark);
+        //kDLabelContainer26
+        kDLabelContainer26.setBoundEditor(txtXHIncreasedRemark);
+        //kDLabelContainer27
+        kDLabelContainer27.setBoundEditor(txtWYDays);
+        //kDLabelContainer28
+        kDLabelContainer28.setBoundEditor(txtWYDayPrice);
         //tabbedPaneRoom
         tabbedPaneRoom.add(panelAttachRes, resHelper.getString("panelAttachRes.constraints"));
         //panelAttachRes
@@ -3511,6 +3980,7 @@ panelAttachRes.setLayout(new BorderLayout(0, 0));        panelAttachRes.add(tblA
         this.toolBar.add(btnCarryForward);
         this.toolBar.add(btnCollectProtocol);
         this.toolBar.add(btnUpdateTenPrice);
+        this.toolBar.add(btnUpdateXHTenancyBill);
 
 
     }
@@ -4257,6 +4727,20 @@ panelAttachRes.setLayout(new BorderLayout(0, 0));        panelAttachRes.add(tblA
     }
 
     /**
+     * output prmtXHCustomer_dataChanged method
+     */
+    protected void prmtXHCustomer_dataChanged(com.kingdee.bos.ctrl.swing.event.DataChangeEvent e) throws Exception
+    {
+    }
+
+    /**
+     * output tblXHRoom_editStopped method
+     */
+    protected void tblXHRoom_editStopped(com.kingdee.bos.ctrl.kdf.table.event.KDTEditEvent e) throws Exception
+    {
+    }
+
+    /**
      * output tblAttachRes_editStopped method
      */
     protected void tblAttachRes_editStopped(com.kingdee.bos.ctrl.kdf.table.event.KDTEditEvent e) throws Exception
@@ -4557,6 +5041,30 @@ panelAttachRes.setLayout(new BorderLayout(0, 0));        panelAttachRes.add(tblA
     public void actionUpdateTenPrice_actionPerformed(ActionEvent e) throws Exception
     {
     }
+    	
+
+    /**
+     * output actionUpdateXHTenancyBill_actionPerformed method
+     */
+    public void actionUpdateXHTenancyBill_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
+    	
+
+    /**
+     * output actionALine_actionPerformed method
+     */
+    public void actionALine_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
+    	
+
+    /**
+     * output actionRLine_actionPerformed method
+     */
+    public void actionRLine_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
 	public RequestContext prepareActionSubmit(IItemAction itemAction) throws Exception {
 			RequestContext request = super.prepareActionSubmit(itemAction);		
 		if (request != null) {
@@ -4698,6 +5206,39 @@ panelAttachRes.setLayout(new BorderLayout(0, 0));        panelAttachRes.add(tblA
     }
 	
 	public boolean isPrepareActionUpdateTenPrice() {
+    	return false;
+    }
+	public RequestContext prepareActionUpdateXHTenancyBill(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionUpdateXHTenancyBill() {
+    	return false;
+    }
+	public RequestContext prepareActionALine(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionALine() {
+    	return false;
+    }
+	public RequestContext prepareActionRLine(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionRLine() {
     	return false;
     }
 
@@ -4968,6 +5509,96 @@ panelAttachRes.setLayout(new BorderLayout(0, 0));        panelAttachRes.add(tblA
         {
         	getUIContext().put("ORG.PK", getOrgPK(this));
             innerActionPerformed("eas", AbstractTenancyBillEditUI.this, "ActionUpdateTenPrice", "actionUpdateTenPrice_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionUpdateXHTenancyBill class
+     */     
+    protected class ActionUpdateXHTenancyBill extends ItemAction {     
+    
+        public ActionUpdateXHTenancyBill()
+        {
+            this(null);
+        }
+
+        public ActionUpdateXHTenancyBill(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionUpdateXHTenancyBill.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUpdateXHTenancyBill.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionUpdateXHTenancyBill.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractTenancyBillEditUI.this, "ActionUpdateXHTenancyBill", "actionUpdateXHTenancyBill_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionALine class
+     */     
+    protected class ActionALine extends ItemAction {     
+    
+        public ActionALine()
+        {
+            this(null);
+        }
+
+        public ActionALine(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionALine.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionALine.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionALine.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractTenancyBillEditUI.this, "ActionALine", "actionALine_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionRLine class
+     */     
+    protected class ActionRLine extends ItemAction {     
+    
+        public ActionRLine()
+        {
+            this(null);
+        }
+
+        public ActionRLine(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionRLine.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionRLine.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionRLine.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractTenancyBillEditUI.this, "ActionRLine", "actionRLine_actionPerformed", e);
         }
     }
 

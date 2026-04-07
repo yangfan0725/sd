@@ -1435,6 +1435,90 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>FIsUpdateXHTenancyBill</name>
+            <alias>dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FIsUpdateXHTenancyBill].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FIsUpdateXHTenancyBill].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>INT</sqlType>
+            <length>4</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FXhCustomer</name>
+            <alias>dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FXhCustomer].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FXhCustomer].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>200</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FXhRoomArea</name>
+            <alias>dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FXhRoomArea].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FXhRoomArea].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NUMERIC</sqlType>
+            <length>13</length>
+            <scale>10</scale>
+            <precision>28</precision>
+        </column>
+        <column>
+            <name>FXhCustomerNum</name>
+            <alias>dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FXhCustomerNum].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FXhCustomerNum].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>200</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSysCustomerNum</name>
+            <alias>dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FSysCustomerNum].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FSysCustomerNum].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>200</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>FSysCustomer</name>
+            <alias>dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FSysCustomer].alias</alias>
+            <description>dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FSysCustomer].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>200</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>PK_TenancyBill</name>
@@ -2025,6 +2109,16 @@
             <lang locale="zh_HK" value="週期性費用是否自動取整" />
             <lang locale="zh_TW" value="週期性費用是否自動取整" />
         </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FIsUpdateXHTenancyBill].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FIsUpdateXHTenancyBill].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FLastUpdateTime].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="最后修改时间" />
@@ -2479,6 +2573,26 @@
             <lang locale="zh_HK" value="單據狀態" />
             <lang locale="zh_TW" value="單據狀態" />
         </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FSysCustomerNum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FSysCustomerNum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FSysCustomer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FSysCustomer].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FTenAttachesDes].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="租赁配套资源" />
@@ -2653,6 +2767,36 @@
             <lang locale="zh_CN" value="取整类型" />
             <lang locale="zh_HK" value="取整類型" />
             <lang locale="zh_TW" value="取整類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FXhCustomerNum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FXhCustomerNum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FXhCustomer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FXhCustomer].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FXhRoomArea].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FXhRoomArea].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.fdc.tenancy.app.T_TEN_TenancyBill].columns.column[FtenancyStateDisplay].alias">
             <lang locale="en_US" value="null" />

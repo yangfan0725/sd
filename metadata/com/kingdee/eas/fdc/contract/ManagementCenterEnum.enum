@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.contract</package>
+    <name>ManagementCenterEnum</name>
+    <alias>bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].alias</alias>
+    <description>bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.fdc.contract.ManagementCenterEnum</className>
+    <enumDataType>STRING</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>SND01</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND01].alias</alias>
+            <userDefined>true</userDefined>
+            <value>SND01</value>
+        </enumValue>
+        <enumValue>
+            <name>SND02</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND02].alias</alias>
+            <userDefined>true</userDefined>
+            <value>SND02</value>
+        </enumValue>
+        <enumValue>
+            <name>SND03</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND03].alias</alias>
+            <userDefined>true</userDefined>
+            <value>SND03</value>
+        </enumValue>
+        <enumValue>
+            <name>SND04</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND04].alias</alias>
+            <userDefined>true</userDefined>
+            <value>SND04</value>
+        </enumValue>
+        <enumValue>
+            <name>SND05</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND05].alias</alias>
+            <userDefined>true</userDefined>
+            <value>SND05</value>
+        </enumValue>
+        <enumValue>
+            <name>SND06</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND06].alias</alias>
+            <userDefined>true</userDefined>
+            <value>SND06</value>
+        </enumValue>
+        <enumValue>
+            <name>SND07</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND07].alias</alias>
+            <userDefined>true</userDefined>
+            <value>SND07</value>
+        </enumValue>
+        <enumValue>
+            <name>SND08</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND08].alias</alias>
+            <userDefined>true</userDefined>
+            <value>SND08</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="管理中心" />
+            <lang locale="zh_HK" value="管理中心" />
+            <lang locale="zh_TW" value="管理中心" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="管理中心" />
+            <lang locale="zh_HK" value="管理中心" />
+            <lang locale="zh_TW" value="管理中心" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND01].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="苏高科本部" />
+            <lang locale="zh_HK" value="蘇高科本部" />
+            <lang locale="zh_TW" value="蘇高科本部" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND02].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="环保产业园管理中心" />
+            <lang locale="zh_HK" value="環保產業園管理中心" />
+            <lang locale="zh_TW" value="環保產業園管理中心" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND03].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创新中心管理中心" />
+            <lang locale="zh_HK" value="創新中心管理中心" />
+            <lang locale="zh_TW" value="創新中心管理中心" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND04].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="高新智泰产业园管理中心" />
+            <lang locale="zh_HK" value="高新智泰產業園管理中心" />
+            <lang locale="zh_TW" value="高新智泰產業園管理中心" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND05].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="狮山总部经济产业园管理中心" />
+            <lang locale="zh_HK" value="獅山總部經濟產業園管理中心" />
+            <lang locale="zh_TW" value="獅山總部經濟產業園管理中心" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND06].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="智汇高科管理中心" />
+            <lang locale="zh_HK" value="智彙高科管理中心" />
+            <lang locale="zh_TW" value="智彙高科管理中心" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND07].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="高新智造港管理中心" />
+            <lang locale="zh_HK" value="高新智造港管理中心" />
+            <lang locale="zh_TW" value="高新智造港管理中心" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].enumValues.enumValue[SND08].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="常熟智能制造创新园管理中心" />
+            <lang locale="zh_HK" value="常熟智能製造創新園管理中心" />
+            <lang locale="zh_TW" value="常熟智能製造創新園管理中心" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.ManagementCenterEnum].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

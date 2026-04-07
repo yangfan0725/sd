@@ -5211,6 +5211,37 @@
                 <key name="name" value="ChangeAuditForPrintQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>curProject.description</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[curProject.description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>c4d7bdc5-7c91-41d7-8808-fddc4aec007e</key>
+                    <parentUnit>
+                        <key name="name" value="curProject.description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="curProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="ChangeAuditForPrintQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -6045,1130 +6076,1136 @@
     </joins>
     <resource>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].alias">
-            <lang locale="zh_CN" value="变更审批单打印查询" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="变更审批单打印查询" />
             <lang locale="zh_HK" value="變更審批單列印查詢" />
             <lang locale="zh_TW" value="變更審批單列印查詢" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].description">
-            <lang locale="zh_CN" value="变更审批单打印查询" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="变更审批单打印查询" />
             <lang locale="zh_HK" value="變更審批單列印查詢" />
             <lang locale="zh_TW" value="變更審批單列印查詢" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].queryPK[QueryPK].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].queryPK[QueryPK].description">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[CU].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[ChangeAuditBill].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[Entrys1].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[NewSubObject1].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[NewSubObject].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[auditType].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[auditor].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[changeReason].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[conductDept].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[conductUnit].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[constrUnit].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[contractBill].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[copySupp1].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[copySupp].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[creator].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[curProject].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[curreny].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[designUnit].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[dutyOrg].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[entrys].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[invalidCostReason].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[jobType].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[mainSupp].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[orgUnit].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[period].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[reckonor].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[specialtyType].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].subObjects.subEntity[supplier].alias">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[005f04ff-02dd-433a-9b8d-adec76581931].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[0193437c-4d17-4930-94a3-3ebbcf95e28a].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[09fa68df-ad5c-447b-8a64-40abf3fd1562].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[0d4df066-4ee4-44d2-97aa-c53291ee00e8].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[17b88a92-1902-434d-bf41-fc4e6d8207a0].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[18f01776-91a5-4989-9969-9fc7ab7ed1c2].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[1a9c3eee-62f9-43d4-8e36-8d775a188ebc].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[1e833ccf-56ec-427b-8b7e-8849abf6adcc].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[258f37eb-09fc-49f4-a01a-b364e5fea42e].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[25cc484f-b110-41d0-8c06-6645ded86504].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[27930440-0740-469c-9d7e-4928f9f07de5].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[2b5b91e8-0175-4d13-b7dd-f13e9e08e0b5].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[2cf03399-8fd7-483e-adb0-421789a0f88b].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[4430d590-1e51-4bb2-a367-e2f9f5b36ada].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[4f02ce85-0a19-4f23-9a55-e202e4e2c563].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[4f2e9385-24df-4b30-abcf-e5576968d14e].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[5676ef06-b2b2-43bf-9bc4-3e506a7aa619].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[6156098e-7d0e-44e3-a9e4-e895e9f91878].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[652e0968-151f-46a9-88b2-a5d7fcaa6b1a].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[66d309b5-707d-4c8e-81b1-3ef78dfcbf6a].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[67718f6f-3a79-4bbb-b640-629e6eed49db].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[6a572ebd-95cf-405c-a4fa-3edd5918e16e].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[7692d695-6de1-4368-b3b6-10407ce783a8].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[77bc902c-84ff-4514-ab61-28b7975568b3].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[7b34df24-94d8-43ee-9d32-78af53ea607e].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[7c96d188-be0f-4d9a-b53b-228f9e8eabd9].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[834672f5-ada6-46f3-84fc-9b06cec0ff15].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[8b238384-7a11-4cd1-afc0-324e14941829].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[96a5547b-1193-442f-90e0-e8bcbd1de16f].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[96be75d2-b4e3-40ec-9c25-bb9710bb1c5d].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[a8c7da2a-bb55-4f2e-8d3f-5017ae19cd69].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[ac2667f7-8ff9-4b52-b54a-b4db143b9a5d].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[b24672df-b90b-41dc-b187-a12f153c52f1].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[bbf8a243-9969-4bee-80d9-0f6ba241766b].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[bfbd42e6-ba69-46b4-a36f-dcb2f1a7b090].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[c2a5887f-a144-49e6-a8cc-598998e6f35f].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[c381bc9a-9db1-4a1f-a7d1-ac88af50ad7c].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[c4d9ffb6-2dae-4e17-8483-8492aed2509c].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[c599d4a0-4b3e-4831-a653-636befe214c8].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[c5aad6eb-1bc9-4bfc-a7cc-434ff9d20cd2].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[c8a4cf3d-e0b6-488c-acc2-0acfd3c37e88].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[c8bf2b6e-c009-4ee1-a9cf-f4145dc692e2].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[c8d09626-8ddd-40da-ba28-f459343cd85b].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[c995a6d8-bdf5-4826-90b4-8cee07cc3e71].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[d12b4961-ed31-4bfe-aa7e-d20e638d8374].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[d47e3b34-ec92-49e7-8e9b-3a6db016a50d].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[da92260e-0f6d-45b0-a367-793e7c9b653e].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[dc3acda2-b9ef-41c9-9599-97ad7553e9b3].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[e1ac7e2f-851a-4ff4-af59-703049bc2228].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[e2d18586-3c0a-44a6-b96b-4d678d083b42].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[f26f8876-591e-4dfc-b5df-b29bd38e9c19].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[f4ae52c2-9868-46df-9721-169e6c0e5461].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[f7a0b61c-3b07-4747-b32b-4275120e790c].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[faddf357-9e30-467f-8756-6333c39cce10].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.propertyUnit[fc4e9e6e-270c-45be-ac4a-f9d9074ec509].displayName">
-            <lang locale="zh_CN" value="null" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[CU.name].displayName">
-            <lang locale="zh_CN" value="控制单元名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单元名称" />
             <lang locale="zh_HK" value="控制單元名稱" />
             <lang locale="zh_TW" value="控制單元名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[CU.number].displayName">
-            <lang locale="zh_CN" value="控制单元编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单元编码" />
             <lang locale="zh_HK" value="控制單元編碼" />
             <lang locale="zh_TW" value="控制單元編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[NewSubObject1.id].displayName">
-            <lang locale="zh_CN" value="总承包商ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="总承包商ID" />
             <lang locale="zh_HK" value="總承包商ID" />
             <lang locale="zh_TW" value="總承包商ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[NewSubObject1.name].displayName">
-            <lang locale="zh_CN" value="总承包商名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="总承包商名称" />
             <lang locale="zh_HK" value="總承包商名稱" />
             <lang locale="zh_TW" value="總承包商名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[NewSubObject1.number].displayName">
-            <lang locale="zh_CN" value="总承包商编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="总承包商编码" />
             <lang locale="zh_HK" value="總承包商編碼" />
             <lang locale="zh_TW" value="總承包商編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[amountA].displayName">
-            <lang locale="zh_CN" value="甲方承担费用" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="甲方承担费用" />
             <lang locale="zh_HK" value="甲方承擔費用" />
             <lang locale="zh_TW" value="甲方承擔費用" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[amountDutySupp].displayName">
-            <lang locale="zh_CN" value="责任单位承担费用" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="责任单位承担费用" />
             <lang locale="zh_HK" value="責任單位承擔費用" />
             <lang locale="zh_TW" value="責任單位承擔費用" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[auditTime].displayName">
-            <lang locale="zh_CN" value="审批时间" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审批时间" />
             <lang locale="zh_HK" value="審批時間" />
             <lang locale="zh_TW" value="審批時間" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[auditType.id].displayName">
-            <lang locale="zh_CN" value="变更类型ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="变更类型ID" />
             <lang locale="zh_HK" value="變更類型ID" />
             <lang locale="zh_TW" value="變更類型ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[auditType.name].displayName">
-            <lang locale="zh_CN" value="变更类型名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="变更类型名称" />
             <lang locale="zh_HK" value="變更類型名稱" />
             <lang locale="zh_TW" value="變更類型名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[auditType.number].displayName">
-            <lang locale="zh_CN" value="变更类型编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="变更类型编码" />
             <lang locale="zh_HK" value="變更類型編碼" />
             <lang locale="zh_TW" value="變更類型編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[auditor.id].displayName">
-            <lang locale="zh_CN" value="审批人ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审批人ID" />
             <lang locale="zh_HK" value="審批人ID" />
             <lang locale="zh_TW" value="審批人ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[auditor.name].displayName">
-            <lang locale="zh_CN" value="审批人用户实名" />
             <lang locale="en_US" value="用户别名" />
+            <lang locale="zh_CN" value="审批人用户实名" />
             <lang locale="zh_HK" value="審批人用戶實名" />
             <lang locale="zh_TW" value="審批人用戶實名" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[auditor.number].displayName">
-            <lang locale="zh_CN" value="审批人用户名" />
             <lang locale="en_US" value="用户名称" />
+            <lang locale="zh_CN" value="审批人用户名" />
             <lang locale="zh_HK" value="審批人用戶名" />
             <lang locale="zh_TW" value="審批人用戶名" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[bookedDate].displayName">
-            <lang locale="zh_CN" value="业务日期" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="业务日期" />
             <lang locale="zh_HK" value="業務日期" />
             <lang locale="zh_TW" value="業務日期" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[changeReason.id].displayName">
-            <lang locale="zh_CN" value="变更原因ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="变更原因ID" />
             <lang locale="zh_HK" value="變更原因ID" />
             <lang locale="zh_TW" value="變更原因ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[changeReason.name].displayName">
-            <lang locale="zh_CN" value="变更原因名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="变更原因名称" />
             <lang locale="zh_HK" value="變更原因名稱" />
             <lang locale="zh_TW" value="變更原因名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[changeReason.number].displayName">
-            <lang locale="zh_CN" value="变更原因编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="变更原因编码" />
             <lang locale="zh_HK" value="變更原因編碼" />
             <lang locale="zh_TW" value="變更原因編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[changeState].displayName">
-            <lang locale="zh_CN" value="单据状态" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据状态" />
             <lang locale="zh_HK" value="單據狀態" />
             <lang locale="zh_TW" value="單據狀態" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[changeSubject].displayName">
-            <lang locale="zh_CN" value="变更主题" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="变更主题" />
             <lang locale="zh_HK" value="變更主題" />
             <lang locale="zh_TW" value="變更主題" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[conductDept.id].displayName">
-            <lang locale="zh_CN" value="提出部门ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="提出部门ID" />
             <lang locale="zh_HK" value="提出部門ID" />
             <lang locale="zh_TW" value="提出部門ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[conductDept.name].displayName">
-            <lang locale="zh_CN" value="提出部门名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="提出部门名称" />
             <lang locale="zh_HK" value="提出部門名稱" />
             <lang locale="zh_TW" value="提出部門名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[conductDept.number].displayName">
-            <lang locale="zh_CN" value="提出部门编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="提出部门编码" />
             <lang locale="zh_HK" value="提出部門編碼" />
             <lang locale="zh_TW" value="提出部門編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[conductUnit.id].displayName">
-            <lang locale="zh_CN" value="提出单位ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="提出单位ID" />
             <lang locale="zh_HK" value="提出單位ID" />
             <lang locale="zh_TW" value="提出單位ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[conductUnit.name].displayName">
-            <lang locale="zh_CN" value="提出单位名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="提出单位名称" />
             <lang locale="zh_HK" value="提出單位名稱" />
             <lang locale="zh_TW" value="提出單位名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[conductUnit.number].displayName">
-            <lang locale="zh_CN" value="提出单位编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="提出单位编码" />
             <lang locale="zh_HK" value="提出單位編碼" />
             <lang locale="zh_TW" value="提出單位編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[constrSite].displayName">
-            <lang locale="zh_CN" value="施工部位 " />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="施工部位 " />
             <lang locale="zh_HK" value="施工部位 " />
             <lang locale="zh_TW" value="施工部位 " />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[constrUnit.id].displayName">
-            <lang locale="zh_CN" value="施工单位ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="施工单位ID" />
             <lang locale="zh_HK" value="施工單位ID" />
             <lang locale="zh_TW" value="施工單位ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[constrUnit.name].displayName">
-            <lang locale="zh_CN" value="施工单位名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="施工单位名称" />
             <lang locale="zh_HK" value="施工單位名稱" />
             <lang locale="zh_TW" value="施工單位名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[constrUnit.number].displayName">
-            <lang locale="zh_CN" value="施工单位编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="施工单位编码" />
             <lang locale="zh_HK" value="施工單位編碼" />
             <lang locale="zh_TW" value="施工單位編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[contractBill.id].displayName">
-            <lang locale="zh_CN" value="合同ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合同ID" />
             <lang locale="zh_HK" value="合同ID" />
             <lang locale="zh_TW" value="合同ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[contractBill.name].displayName">
-            <lang locale="zh_CN" value="合同名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合同名称" />
             <lang locale="zh_HK" value="合同名稱" />
             <lang locale="zh_TW" value="合同名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[contractBill.number].displayName">
-            <lang locale="zh_CN" value="合同编号" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合同编号" />
             <lang locale="zh_HK" value="合同編號" />
             <lang locale="zh_TW" value="合同編號" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[copySupp1.id].displayName">
-            <lang locale="zh_CN" value="抄送单位ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="抄送单位ID" />
             <lang locale="zh_HK" value="抄送單位ID" />
             <lang locale="zh_TW" value="抄送單位ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[copySupp1.name].displayName">
-            <lang locale="zh_CN" value="抄送单位名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="抄送单位名称" />
             <lang locale="zh_HK" value="抄送單位名稱" />
             <lang locale="zh_TW" value="抄送單位名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[copySupp1.number].displayName">
-            <lang locale="zh_CN" value="抄送单位编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="抄送单位编码" />
             <lang locale="zh_HK" value="抄送單位編碼" />
             <lang locale="zh_TW" value="抄送單位編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[costNouse].displayName">
-            <lang locale="zh_CN" value="涉及无效成本的金额" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="涉及无效成本的金额" />
             <lang locale="zh_HK" value="涉及無效成本的金額" />
             <lang locale="zh_TW" value="涉及無效成本的金額" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[createTime].displayName">
-            <lang locale="zh_CN" value="创建时间" />
             <lang locale="en_US" value="createTime" />
+            <lang locale="zh_CN" value="创建时间" />
             <lang locale="zh_HK" value="創建時間" />
             <lang locale="zh_TW" value="創建時間" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[creator.id].displayName">
-            <lang locale="zh_CN" value="创建人ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="创建人ID" />
             <lang locale="zh_HK" value="創建人ID" />
             <lang locale="zh_TW" value="創建人ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[creator.name].displayName">
-            <lang locale="zh_CN" value="创建人用户实名" />
             <lang locale="en_US" value="用户别名" />
+            <lang locale="zh_CN" value="创建人用户实名" />
             <lang locale="zh_HK" value="創建人用戶實名" />
             <lang locale="zh_TW" value="創建人用戶實名" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[creator.number].displayName">
-            <lang locale="zh_CN" value="创建人用户名" />
             <lang locale="en_US" value="用户名称" />
+            <lang locale="zh_CN" value="创建人用户名" />
             <lang locale="zh_HK" value="創建人用戶名" />
             <lang locale="zh_TW" value="創建人用戶名" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[curProject.id].displayName">
-            <lang locale="zh_CN" value="工程项目ID" />
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[curProject.description].displayName">
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目描述" />
+            <lang locale="zh_HK" value="工程項目描述" />
+            <lang locale="zh_TW" value="工程項目描述" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[curProject.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目ID" />
             <lang locale="zh_HK" value="工程項目ID" />
             <lang locale="zh_TW" value="工程項目ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[curProject.name].displayName">
-            <lang locale="zh_CN" value="工程项目名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目名称" />
             <lang locale="zh_HK" value="工程項目名稱" />
             <lang locale="zh_TW" value="工程項目名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[curProject.number].displayName">
-            <lang locale="zh_CN" value="工程项目编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程项目编码" />
             <lang locale="zh_HK" value="工程項目編碼" />
             <lang locale="zh_TW" value="工程項目編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[curreny.id].displayName">
-            <lang locale="zh_CN" value="币别ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="币别ID" />
             <lang locale="zh_HK" value="幣別ID" />
             <lang locale="zh_TW" value="幣別ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[curreny.name].displayName">
-            <lang locale="zh_CN" value="币别名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="币别名称" />
             <lang locale="zh_HK" value="幣別名稱" />
             <lang locale="zh_TW" value="幣別名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[curreny.number].displayName">
-            <lang locale="zh_CN" value="币别编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="币别编码" />
             <lang locale="zh_HK" value="幣別編碼" />
             <lang locale="zh_TW" value="幣別編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[designUnit.id].displayName">
-            <lang locale="zh_CN" value="设计单位ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="设计单位ID" />
             <lang locale="zh_HK" value="設計單位ID" />
             <lang locale="zh_TW" value="設計單位ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[designUnit.name].displayName">
-            <lang locale="zh_CN" value="设计单位名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="设计单位名称" />
             <lang locale="zh_HK" value="設計單位名稱" />
             <lang locale="zh_TW" value="設計單位名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[designUnit.number].displayName">
-            <lang locale="zh_CN" value="设计单位编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="设计单位编码" />
             <lang locale="zh_HK" value="設計單位編碼" />
             <lang locale="zh_TW" value="設計單位編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[dutyOrg.id].displayName">
-            <lang locale="zh_CN" value="责任归属部门ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="责任归属部门ID" />
             <lang locale="zh_HK" value="責任歸屬部門ID" />
             <lang locale="zh_TW" value="責任歸屬部門ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[dutyOrg.name].displayName">
-            <lang locale="zh_CN" value="责任归属部门名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="责任归属部门名称" />
             <lang locale="zh_HK" value="責任歸屬部門名稱" />
             <lang locale="zh_TW" value="責任歸屬部門名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[dutyOrg.number].displayName">
-            <lang locale="zh_CN" value="责任归属部门编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="责任归属部门编码" />
             <lang locale="zh_HK" value="責任歸屬部門編碼" />
             <lang locale="zh_TW" value="責任歸屬部門編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[entrys.changeContent].displayName">
-            <lang locale="zh_CN" value="变更内容" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="变更内容" />
             <lang locale="zh_HK" value="變更內容" />
             <lang locale="zh_TW" value="變更內容" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[entrys.effect].displayName">
-            <lang locale="zh_CN" value="对工程进度的影响" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对工程进度的影响" />
             <lang locale="zh_HK" value="對工程進度的影響" />
             <lang locale="zh_TW" value="對工程進度的影響" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[entrys.id].displayName">
-            <lang locale="zh_CN" value="变更内容ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="变更内容ID" />
             <lang locale="zh_HK" value="變更內容ID" />
             <lang locale="zh_TW" value="變更內容ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[entrys.isBack].displayName">
-            <lang locale="zh_CN" value="是否返工" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否返工" />
             <lang locale="zh_HK" value="是否返工" />
             <lang locale="zh_TW" value="是否返工" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[entrys.number].displayName">
-            <lang locale="zh_CN" value="变更内容编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="变更内容编码" />
             <lang locale="zh_HK" value="變更內容編碼" />
             <lang locale="zh_TW" value="變更內容編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[id].displayName">
-            <lang locale="zh_CN" value="ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
             <lang locale="zh_HK" value="ID" />
             <lang locale="zh_TW" value="ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[invalidCostReason.id].displayName">
-            <lang locale="zh_CN" value="无效成本原因ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="无效成本原因ID" />
             <lang locale="zh_HK" value="無效成本原因ID" />
             <lang locale="zh_TW" value="無效成本原因ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[invalidCostReason.name].displayName">
-            <lang locale="zh_CN" value="无效成本原因名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="无效成本原因名称" />
             <lang locale="zh_HK" value="無效成本原因名稱" />
             <lang locale="zh_TW" value="無效成本原因名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[invalidCostReason.number].displayName">
-            <lang locale="zh_CN" value="无效成本原因编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="无效成本原因编码" />
             <lang locale="zh_HK" value="無效成本原因編碼" />
             <lang locale="zh_TW" value="無效成本原因編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[isNoUse].displayName">
-            <lang locale="zh_CN" value="是否存在无效成本" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否存在无效成本" />
             <lang locale="zh_HK" value="是否存在無效成本" />
             <lang locale="zh_TW" value="是否存在無效成本" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[jobType.id].displayName">
-            <lang locale="zh_CN" value="承包类型ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="承包类型ID" />
             <lang locale="zh_HK" value="承包類型ID" />
             <lang locale="zh_TW" value="承包類型ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[jobType.name].displayName">
-            <lang locale="zh_CN" value="承包类型名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="承包类型名称" />
             <lang locale="zh_HK" value="承包類型名稱" />
             <lang locale="zh_TW" value="承包類型名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[jobType.number].displayName">
-            <lang locale="zh_CN" value="承包类型编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="承包类型编码" />
             <lang locale="zh_HK" value="承包類型編碼" />
             <lang locale="zh_TW" value="承包類型編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[mainSupp.id].displayName">
-            <lang locale="zh_CN" value="主送单位ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="主送单位ID" />
             <lang locale="zh_HK" value="主送單位ID" />
             <lang locale="zh_TW" value="主送單位ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[mainSupp.name].displayName">
-            <lang locale="zh_CN" value="主送单位名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="主送单位名称" />
             <lang locale="zh_HK" value="主送單位名稱" />
             <lang locale="zh_TW" value="主送單位名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[mainSupp.number].displayName">
-            <lang locale="zh_CN" value="主送单位编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="主送单位编码" />
             <lang locale="zh_HK" value="主送單位編碼" />
             <lang locale="zh_TW" value="主送單位編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[name].displayName">
-            <lang locale="zh_CN" value="单据名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据名称" />
             <lang locale="zh_HK" value="單據名稱" />
             <lang locale="zh_TW" value="單據名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[number].displayName">
-            <lang locale="zh_CN" value="单据编号" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据编号" />
             <lang locale="zh_HK" value="單據編號" />
             <lang locale="zh_TW" value="單據編號" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[offer].displayName">
-            <lang locale="zh_CN" value="提出方" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="提出方" />
             <lang locale="zh_HK" value="提出方" />
             <lang locale="zh_TW" value="提出方" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[orgUnit.displayName].displayName">
-            <lang locale="zh_CN" value="控制单位显示名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单位显示名称" />
             <lang locale="zh_HK" value="控制單位顯示名稱" />
             <lang locale="zh_TW" value="控制單位顯示名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[orgUnit.id].displayName">
-            <lang locale="zh_CN" value="组织ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="组织ID" />
             <lang locale="zh_HK" value="組織ID" />
             <lang locale="zh_TW" value="組織ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[orgUnit.name].displayName">
-            <lang locale="zh_CN" value="控制单位名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单位名称" />
             <lang locale="zh_HK" value="控制單位名稱" />
             <lang locale="zh_TW" value="控制單位名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[orgUnit.number].displayName">
-            <lang locale="zh_CN" value="控制单位编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="控制单位编码" />
             <lang locale="zh_HK" value="控制單位編碼" />
             <lang locale="zh_TW" value="控制單位編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[period.id].displayName">
-            <lang locale="zh_CN" value="变更期间ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="变更期间ID" />
             <lang locale="zh_HK" value="變更期間ID" />
             <lang locale="zh_TW" value="變更期間ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[period.number].displayName">
-            <lang locale="zh_CN" value="期间编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="期间编码" />
             <lang locale="zh_HK" value="期間編碼" />
             <lang locale="zh_TW" value="期間編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[period.periodNumber].displayName">
-            <lang locale="zh_CN" value="期间" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="期间" />
             <lang locale="zh_HK" value="期間" />
             <lang locale="zh_TW" value="期間" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[reaDesc].displayName">
-            <lang locale="zh_CN" value="原因说明" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原因说明" />
             <lang locale="zh_HK" value="原因說明" />
             <lang locale="zh_TW" value="原因說明" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[reckonor.id].displayName">
-            <lang locale="zh_CN" value="测算人ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="测算人ID" />
             <lang locale="zh_HK" value="測算人ID" />
             <lang locale="zh_TW" value="測算人ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[reckonor.name].displayName">
-            <lang locale="zh_CN" value="测算人" />
             <lang locale="en_US" value="用户别名" />
+            <lang locale="zh_CN" value="测算人" />
             <lang locale="zh_HK" value="測算人" />
             <lang locale="zh_TW" value="測算人" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[reckonor.number].displayName">
-            <lang locale="zh_CN" value="测算人编码" />
             <lang locale="en_US" value="用户名称" />
+            <lang locale="zh_CN" value="测算人编码" />
             <lang locale="zh_HK" value="測算人編碼" />
             <lang locale="zh_TW" value="測算人編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[specialtyType.id].displayName">
-            <lang locale="zh_CN" value="专业类型ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="专业类型ID" />
             <lang locale="zh_HK" value="專業類型ID" />
             <lang locale="zh_TW" value="專業類型ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[specialtyType.name].displayName">
-            <lang locale="zh_CN" value="专业类型名称" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="专业类型名称" />
             <lang locale="zh_HK" value="專業類型名稱" />
             <lang locale="zh_TW" value="專業類型名稱" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[specialtyType.number].displayName">
-            <lang locale="zh_CN" value="专业类型编码" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="专业类型编码" />
             <lang locale="zh_HK" value="專業類型編碼" />
             <lang locale="zh_TW" value="專業類型編碼" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[supplier.balanceType].displayName">
-            <lang locale="zh_CN" value="结算方式" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="结算方式" />
             <lang locale="zh_HK" value="結算方式" />
             <lang locale="zh_TW" value="結算方式" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[supplier.constructPrice].displayName">
-            <lang locale="zh_CN" value="施工方报审金额" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="施工方报审金额" />
             <lang locale="zh_HK" value="施工方報審金額" />
             <lang locale="zh_TW" value="施工方報審金額" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[supplier.costAmount].displayName">
-            <lang locale="zh_CN" value="成本测算金额" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本测算金额" />
             <lang locale="zh_HK" value="成本測算金額" />
             <lang locale="zh_TW" value="成本測算金額" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[supplier.costDescription].displayName">
-            <lang locale="zh_CN" value="成本测算说明" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本测算说明" />
             <lang locale="zh_HK" value="成本測算說明" />
             <lang locale="zh_TW" value="成本測算說明" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[supplier.deductAmount].displayName">
-            <lang locale="zh_CN" value="责任扣款金额" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="责任扣款金额" />
             <lang locale="zh_HK" value="責任扣款金額" />
             <lang locale="zh_TW" value="責任扣款金額" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[supplier.deductReason].displayName">
-            <lang locale="zh_CN" value="扣款原因" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="扣款原因" />
             <lang locale="zh_HK" value="扣款原因" />
             <lang locale="zh_TW" value="扣款原因" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[supplier.exRate].displayName">
-            <lang locale="zh_CN" value="汇率" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="汇率" />
             <lang locale="zh_HK" value="匯率" />
             <lang locale="zh_TW" value="匯率" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[supplier.id].displayName">
-            <lang locale="zh_CN" value="下发单位分录ID" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="下发单位分录ID" />
             <lang locale="zh_HK" value="下發單位分錄ID" />
             <lang locale="zh_TW" value="下發單位分錄ID" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[supplier.isDeduct].displayName">
-            <lang locale="zh_CN" value="是否责任扣款单位" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否责任扣款单位" />
             <lang locale="zh_HK" value="是否責任扣款單位" />
             <lang locale="zh_TW" value="是否責任扣款單位" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[supplier.isSureChangeAmt].displayName">
-            <lang locale="zh_CN" value="是否确认变更金额" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否确认变更金额" />
             <lang locale="zh_HK" value="是否確認變更金額" />
             <lang locale="zh_TW" value="是否確認變更金額" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[supplier.oriCostAmount].displayName">
-            <lang locale="zh_CN" value="成本测算金额" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本测算金额" />
             <lang locale="zh_HK" value="成本測算金額" />
             <lang locale="zh_TW" value="成本測算金額" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[supplier.oriDeductAmount].displayName">
-            <lang locale="zh_CN" value="责任扣款金额原币" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="责任扣款金额原币" />
             <lang locale="zh_HK" value="責任扣款金額原幣" />
             <lang locale="zh_TW" value="責任扣款金額原幣" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[supplier.originalContactNum].displayName">
-            <lang locale="zh_CN" value="原始联系单号" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="原始联系单号" />
             <lang locale="zh_HK" value="原始聯繫單號" />
             <lang locale="zh_TW" value="原始聯繫單號" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[totalCost].displayName">
-            <lang locale="zh_CN" value="成本测算金额汇总" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成本测算金额汇总" />
             <lang locale="zh_HK" value="成本測算金額匯總" />
             <lang locale="zh_TW" value="成本測算金額匯總" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ChangeAuditForPrintQuery].units.queryField[urgentDegree].displayName">
-            <lang locale="zh_CN" value="紧急程度" />
             <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="紧急程度" />
             <lang locale="zh_HK" value="緊急程度" />
             <lang locale="zh_TW" value="緊急程度" />
         </rs>

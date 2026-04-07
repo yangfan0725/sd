@@ -101,6 +101,9 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contchgPercForWarn;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contContractBillReceive;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contConnectedTransaction;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contProjDesc;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contPurchaseApply;
+    protected com.kingdee.bos.ctrl.swing.KDWorkButton btnViewPurchaseApply;
     protected com.kingdee.bos.ctrl.swing.KDDatePicker kDDateCreateTime;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtNumber;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtamount;
@@ -118,6 +121,7 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
     protected com.kingdee.bos.ctrl.swing.KDContainer kDContainer3;
     protected com.kingdee.bos.ctrl.swing.KDContainer kDContainer4;
     protected com.kingdee.bos.ctrl.swing.KDContainer kDContainer5;
+    protected com.kingdee.bos.ctrl.swing.KDContainer kDContainer6;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contRemark;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contCoopLevel;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contPriceType;
@@ -194,6 +198,7 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
     protected com.kingdee.bos.ctrl.swing.KDDatePicker pkJzStartDate;
     protected com.kingdee.bos.ctrl.swing.KDDatePicker pkJzEndDate;
     protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtYZEntry;
+    protected com.kingdee.bos.ctrl.kdf.table.KDTable kdtMDeveloperEntry;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtExRate;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtLocalAmount;
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtGrtAmount;
@@ -249,6 +254,8 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
     protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtchgPercForWarn;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtContractBillReceive;
     protected com.kingdee.bos.ctrl.swing.KDComboBox cbConnectedTransaction;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtProjDesc;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtPurchaseApply;
     protected com.kingdee.bos.ctrl.swing.KDContainer kDContainer1;
     protected com.kingdee.bos.ctrl.swing.KDSplitPane kDSplitPane1;
     protected com.kingdee.bos.ctrl.swing.KDContainer contPayItem;
@@ -299,6 +306,8 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
     protected ActionMRLine actionMRLine = null;
     protected ActionYZALine actionYZALine = null;
     protected ActionYZRLine actionYZRLine = null;
+    protected ActionMDALine actionMDALine = null;
+    protected ActionMDRLine actionMDRLine = null;
     /**
      * output class constructor
      */
@@ -471,6 +480,14 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
         this.actionYZRLine = new ActionYZRLine(this);
         getActionManager().registerAction("actionYZRLine", actionYZRLine);
          this.actionYZRLine.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionMDALine
+        this.actionMDALine = new ActionMDALine(this);
+        getActionManager().registerAction("actionMDALine", actionMDALine);
+         this.actionMDALine.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+        //actionMDRLine
+        this.actionMDRLine = new ActionMDRLine(this);
+        getActionManager().registerAction("actionMDRLine", actionMDRLine);
+         this.actionMDRLine.addService(new com.kingdee.eas.framework.client.service.PermissionService());
         this.kDScrollPane3 = new com.kingdee.bos.ctrl.swing.KDScrollPane();
         this.tabPanel = new com.kingdee.bos.ctrl.swing.KDTabbedPane();
         this.mainPanel = new com.kingdee.bos.ctrl.swing.KDPanel();
@@ -526,6 +543,9 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
         this.contchgPercForWarn = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contContractBillReceive = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contConnectedTransaction = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contProjDesc = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contPurchaseApply = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.btnViewPurchaseApply = new com.kingdee.bos.ctrl.swing.KDWorkButton();
         this.kDDateCreateTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.txtNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtamount = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
@@ -543,6 +563,7 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
         this.kDContainer3 = new com.kingdee.bos.ctrl.swing.KDContainer();
         this.kDContainer4 = new com.kingdee.bos.ctrl.swing.KDContainer();
         this.kDContainer5 = new com.kingdee.bos.ctrl.swing.KDContainer();
+        this.kDContainer6 = new com.kingdee.bos.ctrl.swing.KDContainer();
         this.contRemark = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contCoopLevel = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contPriceType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
@@ -619,6 +640,7 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
         this.pkJzStartDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.pkJzEndDate = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.kdtYZEntry = new com.kingdee.bos.ctrl.kdf.table.KDTable();
+        this.kdtMDeveloperEntry = new com.kingdee.bos.ctrl.kdf.table.KDTable();
         this.txtExRate = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtLocalAmount = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.txtGrtAmount = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
@@ -674,6 +696,8 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
         this.txtchgPercForWarn = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
         this.prmtContractBillReceive = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.cbConnectedTransaction = new com.kingdee.bos.ctrl.swing.KDComboBox();
+        this.txtProjDesc = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.prmtPurchaseApply = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDContainer1 = new com.kingdee.bos.ctrl.swing.KDContainer();
         this.kDSplitPane1 = new com.kingdee.bos.ctrl.swing.KDSplitPane();
         this.contPayItem = new com.kingdee.bos.ctrl.swing.KDContainer();
@@ -756,6 +780,9 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
         this.contchgPercForWarn.setName("contchgPercForWarn");
         this.contContractBillReceive.setName("contContractBillReceive");
         this.contConnectedTransaction.setName("contConnectedTransaction");
+        this.contProjDesc.setName("contProjDesc");
+        this.contPurchaseApply.setName("contPurchaseApply");
+        this.btnViewPurchaseApply.setName("btnViewPurchaseApply");
         this.kDDateCreateTime.setName("kDDateCreateTime");
         this.txtNumber.setName("txtNumber");
         this.txtamount.setName("txtamount");
@@ -773,6 +800,7 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
         this.kDContainer3.setName("kDContainer3");
         this.kDContainer4.setName("kDContainer4");
         this.kDContainer5.setName("kDContainer5");
+        this.kDContainer6.setName("kDContainer6");
         this.contRemark.setName("contRemark");
         this.contCoopLevel.setName("contCoopLevel");
         this.contPriceType.setName("contPriceType");
@@ -849,6 +877,7 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
         this.pkJzStartDate.setName("pkJzStartDate");
         this.pkJzEndDate.setName("pkJzEndDate");
         this.kdtYZEntry.setName("kdtYZEntry");
+        this.kdtMDeveloperEntry.setName("kdtMDeveloperEntry");
         this.txtExRate.setName("txtExRate");
         this.txtLocalAmount.setName("txtLocalAmount");
         this.txtGrtAmount.setName("txtGrtAmount");
@@ -904,6 +933,8 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
         this.txtchgPercForWarn.setName("txtchgPercForWarn");
         this.prmtContractBillReceive.setName("prmtContractBillReceive");
         this.cbConnectedTransaction.setName("cbConnectedTransaction");
+        this.txtProjDesc.setName("txtProjDesc");
+        this.prmtPurchaseApply.setName("prmtPurchaseApply");
         this.kDContainer1.setName("kDContainer1");
         this.kDSplitPane1.setName("kDSplitPane1");
         this.contPayItem.setName("contPayItem");
@@ -1190,6 +1221,28 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
         this.contConnectedTransaction.setBoundLabelText(resHelper.getString("contConnectedTransaction.boundLabelText"));		
         this.contConnectedTransaction.setBoundLabelLength(100);		
         this.contConnectedTransaction.setBoundLabelUnderline(true);
+        // contProjDesc		
+        this.contProjDesc.setBoundLabelText(resHelper.getString("contProjDesc.boundLabelText"));		
+        this.contProjDesc.setBoundLabelLength(100);		
+        this.contProjDesc.setBoundLabelUnderline(true);
+        // contPurchaseApply		
+        this.contPurchaseApply.setBoundLabelText(resHelper.getString("contPurchaseApply.boundLabelText"));		
+        this.contPurchaseApply.setBoundLabelLength(100);		
+        this.contPurchaseApply.setBoundLabelUnderline(true);
+        // btnViewPurchaseApply		
+        this.btnViewPurchaseApply.setText(resHelper.getString("btnViewPurchaseApply.text"));
+        this.btnViewPurchaseApply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                beforeActionPerformed(e);
+                try {
+                    btnViewPurchaseApply_actionPerformed(e);
+                } catch (Exception exc) {
+                    handUIException(exc);
+                } finally {
+                    afterActionPerformed(e);
+                }
+            }
+        });
         // kDDateCreateTime		
         this.kDDateCreateTime.setTimeEnabled(true);		
         this.kDDateCreateTime.setVisible(true);
@@ -1334,6 +1387,7 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
         // kDContainer3
         // kDContainer4
         // kDContainer5
+        // kDContainer6
         // contRemark		
         this.contRemark.setBoundLabelText(resHelper.getString("contRemark.boundLabelText"));		
         this.contRemark.setBoundLabelLength(100);		
@@ -1910,6 +1964,41 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
 
 
         this.kdtYZEntry.checkParsed();
+        // kdtMDeveloperEntry
+		String kdtMDeveloperEntryStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles /><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"landDeveloper\" t:width=\"120\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"center\" t:width=\"150\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"amount\" t:width=\"120\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"remark\" t:width=\"250\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header1\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{landDeveloper}</t:Cell><t:Cell>$Resource{center}</t:Cell><t:Cell>$Resource{amount}</t:Cell><t:Cell>$Resource{remark}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		
+        this.kdtMDeveloperEntry.setFormatXml(resHelper.translateString("kdtMDeveloperEntry",kdtMDeveloperEntryStrXML));
+        this.kdtMDeveloperEntry.addKDTEditListener(new com.kingdee.bos.ctrl.kdf.table.event.KDTEditAdapter() {
+            public void editStopped(com.kingdee.bos.ctrl.kdf.table.event.KDTEditEvent e) {
+                try {
+                    kdtMDeveloperEntry_editStopped(e);
+                } catch(Exception exc) {
+                    handUIException(exc);
+                }
+            }
+        });
+
+                this.kdtMDeveloperEntry.putBindContents("editData",new String[] {"landDeveloper","center","amount","remark"});
+
+
+        this.kdtMDeveloperEntry.checkParsed();
+        KDComboBox kdtMDeveloperEntry_center_ComboBox = new KDComboBox();
+        kdtMDeveloperEntry_center_ComboBox.setName("kdtMDeveloperEntry_center_ComboBox");
+        kdtMDeveloperEntry_center_ComboBox.setVisible(true);
+        kdtMDeveloperEntry_center_ComboBox.addItems(EnumUtils.getEnumList("com.kingdee.eas.fdc.contract.ManagementCenterEnum").toArray());
+        KDTDefaultCellEditor kdtMDeveloperEntry_center_CellEditor = new KDTDefaultCellEditor(kdtMDeveloperEntry_center_ComboBox);
+        this.kdtMDeveloperEntry.getColumn("center").setEditor(kdtMDeveloperEntry_center_CellEditor);
+        KDFormattedTextField kdtMDeveloperEntry_amount_TextField = new KDFormattedTextField();
+        kdtMDeveloperEntry_amount_TextField.setName("kdtMDeveloperEntry_amount_TextField");
+        kdtMDeveloperEntry_amount_TextField.setVisible(true);
+        kdtMDeveloperEntry_amount_TextField.setEditable(true);
+        kdtMDeveloperEntry_amount_TextField.setHorizontalAlignment(2);
+        kdtMDeveloperEntry_amount_TextField.setDataType(1);
+        	kdtMDeveloperEntry_amount_TextField.setMinimumValue(new java.math.BigDecimal("-999.9999999999"));
+        	kdtMDeveloperEntry_amount_TextField.setMaximumValue(new java.math.BigDecimal("999.9999999999"));
+        kdtMDeveloperEntry_amount_TextField.setPrecision(10);
+        KDTDefaultCellEditor kdtMDeveloperEntry_amount_CellEditor = new KDTDefaultCellEditor(kdtMDeveloperEntry_amount_TextField);
+        this.kdtMDeveloperEntry.getColumn("amount").setEditor(kdtMDeveloperEntry_amount_CellEditor);
         // txtExRate		
         this.txtExRate.setRequired(true);		
         this.txtExRate.setPrecision(10);		
@@ -2330,6 +2419,13 @@ public abstract class AbstractContractBillEditUI extends com.kingdee.eas.fdc.bas
         // cbConnectedTransaction		
         this.cbConnectedTransaction.addItems(EnumUtils.getEnumList("com.kingdee.eas.fdc.contract.app.YesOrNoEnum").toArray());		
         this.cbConnectedTransaction.setRequired(true);
+        // txtProjDesc		
+        this.txtProjDesc.setEditable(false);
+        // prmtPurchaseApply		
+        this.prmtPurchaseApply.setCommitFormat("$name$");		
+        this.prmtPurchaseApply.setDisplayFormat("$name$");		
+        this.prmtPurchaseApply.setEditFormat("$name$");		
+        this.prmtPurchaseApply.setQueryInfo("com.kingdee.eas.fdc.contract.app.PurchaseApplyQuery");
         // kDContainer1		
         this.kDContainer1.setEnableActive(false);
         // kDSplitPane1		
@@ -2627,16 +2723,16 @@ this.setLayout(new BorderLayout(0, 0));
         mainPanel.add(contamount, new KDLayout.Constraints(366, 141, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contlandDeveloper.setBounds(new Rectangle(7, 75, 470, 19));
         mainPanel.add(contlandDeveloper, new KDLayout.Constraints(7, 75, 470, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contcontractType.setBounds(new Rectangle(7, 31, 470, 19));
-        mainPanel.add(contcontractType, new KDLayout.Constraints(7, 31, 470, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contcontractPropert.setBounds(new Rectangle(773, 53, 230, 19));
-        mainPanel.add(contcontractPropert, new KDLayout.Constraints(773, 53, 230, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contcontractType.setBounds(new Rectangle(7, 31, 233, 19));
+        mainPanel.add(contcontractType, new KDLayout.Constraints(7, 31, 233, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contcontractPropert.setBounds(new Rectangle(243, 31, 233, 19));
+        mainPanel.add(contcontractPropert, new KDLayout.Constraints(243, 31, 233, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contpartB.setBounds(new Rectangle(531, 75, 472, 19));
         mainPanel.add(contpartB, new KDLayout.Constraints(531, 75, 472, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contpartC.setBounds(new Rectangle(7, 97, 470, 19));
         mainPanel.add(contpartC, new KDLayout.Constraints(7, 97, 470, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contcontractName.setBounds(new Rectangle(7, 53, 471, 19));
-        mainPanel.add(contcontractName, new KDLayout.Constraints(7, 53, 471, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contcontractName.setBounds(new Rectangle(7, 53, 233, 19));
+        mainPanel.add(contcontractName, new KDLayout.Constraints(7, 53, 233, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         kDTabbedPane1.setBounds(new Rectangle(7, 688, 1000, 274));
         mainPanel.add(kDTabbedPane1, new KDLayout.Constraints(7, 688, 1000, 274, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM_SCALE | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
         contExRate.setBounds(new Rectangle(7, 163, 276, 19));
@@ -2651,10 +2747,10 @@ this.setLayout(new BorderLayout(0, 0));
         mainPanel.add(contRespPerson, new KDLayout.Constraints(7, 267, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contCreator.setBounds(new Rectangle(7, 311, 276, 19));
         mainPanel.add(contCreator, new KDLayout.Constraints(7, 311, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contOrg.setBounds(new Rectangle(7, 9, 470, 19));
-        mainPanel.add(contOrg, new KDLayout.Constraints(7, 9, 470, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contProj.setBounds(new Rectangle(531, 9, 238, 19));
-        mainPanel.add(contProj, new KDLayout.Constraints(531, 9, 238, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contOrg.setBounds(new Rectangle(7, 9, 233, 19));
+        mainPanel.add(contOrg, new KDLayout.Constraints(7, 9, 233, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contProj.setBounds(new Rectangle(243, 9, 233, 19));
+        mainPanel.add(contProj, new KDLayout.Constraints(243, 9, 233, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contGrtRate.setBounds(new Rectangle(366, 185, 276, 19));
         mainPanel.add(contGrtRate, new KDLayout.Constraints(366, 185, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contIsPartAMaterialCon.setBounds(new Rectangle(7, 185, 276, 19));
@@ -2707,8 +2803,8 @@ this.setLayout(new BorderLayout(0, 0));
         mainPanel.add(contStartDate, new KDLayout.Constraints(725, 245, 178, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contEndDate.setBounds(new Rectangle(908, 245, 93, 19));
         mainPanel.add(contEndDate, new KDLayout.Constraints(908, 245, 93, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contTAEntry.setBounds(new Rectangle(531, 53, 238, 19));
-        mainPanel.add(contTAEntry, new KDLayout.Constraints(531, 53, 238, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contTAEntry.setBounds(new Rectangle(243, 53, 233, 19));
+        mainPanel.add(contTAEntry, new KDLayout.Constraints(243, 53, 233, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contMarketProject.setBounds(new Rectangle(531, 97, 238, 19));
         mainPanel.add(contMarketProject, new KDLayout.Constraints(531, 97, 238, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contMpCostAccount.setBounds(new Rectangle(773, 97, 230, 19));
@@ -2719,6 +2815,12 @@ this.setLayout(new BorderLayout(0, 0));
         mainPanel.add(contContractBillReceive, new KDLayout.Constraints(773, 31, 230, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contConnectedTransaction.setBounds(new Rectangle(7, 333, 276, 19));
         mainPanel.add(contConnectedTransaction, new KDLayout.Constraints(7, 333, 276, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contProjDesc.setBounds(new Rectangle(531, 9, 238, 19));
+        mainPanel.add(contProjDesc, new KDLayout.Constraints(531, 9, 238, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contPurchaseApply.setBounds(new Rectangle(531, 53, 238, 19));
+        mainPanel.add(contPurchaseApply, new KDLayout.Constraints(531, 53, 238, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        btnViewPurchaseApply.setBounds(new Rectangle(773, 53, 230, 19));
+        mainPanel.add(btnViewPurchaseApply, new KDLayout.Constraints(773, 53, 230, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         //contCreateTime
         contCreateTime.setBoundEditor(kDDateCreateTime);
         //contNumber
@@ -2746,6 +2848,7 @@ this.setLayout(new BorderLayout(0, 0));
         kDTabbedPane1.add(kDContainer3, resHelper.getString("kDContainer3.constraints"));
         kDTabbedPane1.add(kDContainer4, resHelper.getString("kDContainer4.constraints"));
         kDTabbedPane1.add(kDContainer5, resHelper.getString("kDContainer5.constraints"));
+        kDTabbedPane1.add(kDContainer6, resHelper.getString("kDContainer6.constraints"));
         //pnlInviteInfo
         pnlInviteInfo.setLayout(null);        contRemark.setBounds(new Rectangle(8, 88, 270, 19));
         pnlInviteInfo.add(contRemark, null);
@@ -2903,6 +3006,8 @@ kDContainer3.getContentPane().setLayout(new BorderLayout(0, 0));        kDContai
         contJzEndDate.setBoundEditor(pkJzEndDate);
         //kDContainer5
 kDContainer5.getContentPane().setLayout(new BorderLayout(0, 0));        kDContainer5.getContentPane().add(kdtYZEntry, BorderLayout.CENTER);
+        //kDContainer6
+kDContainer6.getContentPane().setLayout(new BorderLayout(0, 0));        kDContainer6.getContentPane().add(kdtMDeveloperEntry, BorderLayout.CENTER);
         //contExRate
         contExRate.setBoundEditor(txtExRate);
         //contLocalAmount
@@ -3017,6 +3122,10 @@ contMode.getContentPane().setLayout(new BorderLayout(0, 0));        contMode.get
         contContractBillReceive.setBoundEditor(prmtContractBillReceive);
         //contConnectedTransaction
         contConnectedTransaction.setBoundEditor(cbConnectedTransaction);
+        //contProjDesc
+        contProjDesc.setBoundEditor(txtProjDesc);
+        //contPurchaseApply
+        contPurchaseApply.setBoundEditor(prmtPurchaseApply);
         //ecoItemPanel
 ecoItemPanel.setLayout(new BorderLayout(0, 0));        ecoItemPanel.add(kDContainer1, BorderLayout.CENTER);
         //kDContainer1
@@ -3292,6 +3401,11 @@ contPayItem.getContentPane().setLayout(new BorderLayout(0, 0));        contPayIt
 		dataBinder.registerBinding("yzEntry.count", String.class, this.kdtYZEntry, "count.text");
 		dataBinder.registerBinding("yzEntry.adminID", String.class, this.kdtYZEntry, "adminID.text");
 		dataBinder.registerBinding("yzEntry.yzID", String.class, this.kdtYZEntry, "yzID.text");
+		dataBinder.registerBinding("mDeveloperEntry", com.kingdee.eas.fdc.contract.ContractMDeveloperEntryInfo.class, this.kdtMDeveloperEntry, "userObject");
+		dataBinder.registerBinding("mDeveloperEntry.landDeveloper", com.kingdee.eas.fdc.basedata.LandDeveloperInfo.class, this.kdtMDeveloperEntry, "landDeveloper.text");
+		dataBinder.registerBinding("mDeveloperEntry.center", com.kingdee.eas.fdc.contract.ManagementCenterEnum.class, this.kdtMDeveloperEntry, "center.text");
+		dataBinder.registerBinding("mDeveloperEntry.amount", java.math.BigDecimal.class, this.kdtMDeveloperEntry, "amount.text");
+		dataBinder.registerBinding("mDeveloperEntry.remark", String.class, this.kdtMDeveloperEntry, "remark.text");
 		dataBinder.registerBinding("exRate", java.math.BigDecimal.class, this.txtExRate, "value");
 		dataBinder.registerBinding("amount", java.math.BigDecimal.class, this.txtLocalAmount, "value");
 		dataBinder.registerBinding("grtAmount", java.math.BigDecimal.class, this.txtGrtAmount, "value");
@@ -3330,6 +3444,7 @@ contPayItem.getContentPane().setLayout(new BorderLayout(0, 0));        contPayIt
 		dataBinder.registerBinding("chgPercForWarn", java.math.BigDecimal.class, this.txtchgPercForWarn, "value");
 		dataBinder.registerBinding("contractBillReceive", com.kingdee.eas.fdc.contract.ContractBillReceiveInfo.class, this.prmtContractBillReceive, "data");
 		dataBinder.registerBinding("connectedTransaction", com.kingdee.eas.fdc.contract.app.YesOrNoEnum.class, this.cbConnectedTransaction, "selectedItem");
+		dataBinder.registerBinding("purchaseApply", com.kingdee.eas.fdc.contract.PurchaseApplyInfo.class, this.prmtPurchaseApply, "data");
 		dataBinder.registerBinding("payItems", com.kingdee.eas.fdc.contract.ContractPayItemInfo.class, this.tblEconItem, "userObject");
 		dataBinder.registerBinding("payItems.payItemDate", java.util.Date.class, this.tblEconItem, "date.text");
 		dataBinder.registerBinding("payItems.payCondition", String.class, this.tblEconItem, "payCondition.text");
@@ -3549,6 +3664,11 @@ contPayItem.getContentPane().setLayout(new BorderLayout(0, 0));        contPayIt
 		getValidateHelper().registerBindProperty("yzEntry.count", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("yzEntry.adminID", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("yzEntry.yzID", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("mDeveloperEntry", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("mDeveloperEntry.landDeveloper", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("mDeveloperEntry.center", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("mDeveloperEntry.amount", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("mDeveloperEntry.remark", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("exRate", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("amount", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("grtAmount", ValidateHelper.ON_SAVE);    
@@ -3587,6 +3707,7 @@ contPayItem.getContentPane().setLayout(new BorderLayout(0, 0));        contPayIt
 		getValidateHelper().registerBindProperty("chgPercForWarn", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("contractBillReceive", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("connectedTransaction", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("purchaseApply", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("payItems", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("payItems.payItemDate", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("payItems.payCondition", ValidateHelper.ON_SAVE);    
@@ -3631,6 +3752,13 @@ contPayItem.getContentPane().setLayout(new BorderLayout(0, 0));        contPayIt
 		            this.actionWorkFlowG.setVisible(false);
 		            this.actionWorkFlowG.setEnabled(false);
         }
+    }
+
+    /**
+     * output btnViewPurchaseApply_actionPerformed method
+     */
+    protected void btnViewPurchaseApply_actionPerformed(java.awt.event.ActionEvent e) throws Exception
+    {
     }
 
     /**
@@ -3763,6 +3891,13 @@ contPayItem.getContentPane().setLayout(new BorderLayout(0, 0));        contPayIt
      * output kdtYZEntry_editStopped method
      */
     protected void kdtYZEntry_editStopped(com.kingdee.bos.ctrl.kdf.table.event.KDTEditEvent e) throws Exception
+    {
+    }
+
+    /**
+     * output kdtMDeveloperEntry_editStopped method
+     */
+    protected void kdtMDeveloperEntry_editStopped(com.kingdee.bos.ctrl.kdf.table.event.KDTEditEvent e) throws Exception
     {
     }
 
@@ -4129,6 +4264,24 @@ contPayItem.getContentPane().setLayout(new BorderLayout(0, 0));        contPayIt
     	sic.add(new SelectorItemInfo("yzEntry.count"));
     	sic.add(new SelectorItemInfo("yzEntry.adminID"));
     	sic.add(new SelectorItemInfo("yzEntry.yzID"));
+		if(selectorAll.equalsIgnoreCase("true"))
+		{
+			sic.add(new SelectorItemInfo("mDeveloperEntry.*"));
+		}
+		else{
+		}
+		if(selectorAll.equalsIgnoreCase("true"))
+		{
+			sic.add(new SelectorItemInfo("mDeveloperEntry.landDeveloper.*"));
+		}
+		else{
+	    	sic.add(new SelectorItemInfo("mDeveloperEntry.landDeveloper.id"));
+			sic.add(new SelectorItemInfo("mDeveloperEntry.landDeveloper.name"));
+        	sic.add(new SelectorItemInfo("mDeveloperEntry.landDeveloper.number"));
+		}
+    	sic.add(new SelectorItemInfo("mDeveloperEntry.center"));
+    	sic.add(new SelectorItemInfo("mDeveloperEntry.amount"));
+    	sic.add(new SelectorItemInfo("mDeveloperEntry.remark"));
         sic.add(new SelectorItemInfo("exRate"));
         sic.add(new SelectorItemInfo("amount"));
         sic.add(new SelectorItemInfo("grtAmount"));
@@ -4278,6 +4431,15 @@ contPayItem.getContentPane().setLayout(new BorderLayout(0, 0));        contPayIt
         	sic.add(new SelectorItemInfo("contractBillReceive.name"));
 		}
         sic.add(new SelectorItemInfo("connectedTransaction"));
+		if(selectorAll.equalsIgnoreCase("true"))
+		{
+			sic.add(new SelectorItemInfo("purchaseApply.*"));
+		}
+		else{
+        	sic.add(new SelectorItemInfo("purchaseApply.id"));
+        	sic.add(new SelectorItemInfo("purchaseApply.number"));
+        	sic.add(new SelectorItemInfo("purchaseApply.name"));
+		}
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
 			sic.add(new SelectorItemInfo("payItems.*"));
@@ -4541,6 +4703,22 @@ contPayItem.getContentPane().setLayout(new BorderLayout(0, 0));        contPayIt
      * output actionYZRLine_actionPerformed method
      */
     public void actionYZRLine_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
+    	
+
+    /**
+     * output actionMDALine_actionPerformed method
+     */
+    public void actionMDALine_actionPerformed(ActionEvent e) throws Exception
+    {
+    }
+    	
+
+    /**
+     * output actionMDRLine_actionPerformed method
+     */
+    public void actionMDRLine_actionPerformed(ActionEvent e) throws Exception
     {
     }
 	public RequestContext prepareActionSubmit(IItemAction itemAction) throws Exception {
@@ -4827,6 +5005,28 @@ contPayItem.getContentPane().setLayout(new BorderLayout(0, 0));        contPayIt
     }
 	
 	public boolean isPrepareActionYZRLine() {
+    	return false;
+    }
+	public RequestContext prepareActionMDALine(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionMDALine() {
+    	return false;
+    }
+	public RequestContext prepareActionMDRLine(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionMDRLine() {
     	return false;
     }
 
@@ -5459,6 +5659,66 @@ contPayItem.getContentPane().setLayout(new BorderLayout(0, 0));        contPayIt
         {
         	getUIContext().put("ORG.PK", getOrgPK(this));
             innerActionPerformed("eas", AbstractContractBillEditUI.this, "ActionYZRLine", "actionYZRLine_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionMDALine class
+     */     
+    protected class ActionMDALine extends ItemAction {     
+    
+        public ActionMDALine()
+        {
+            this(null);
+        }
+
+        public ActionMDALine(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionMDALine.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionMDALine.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionMDALine.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractContractBillEditUI.this, "ActionMDALine", "actionMDALine_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionMDRLine class
+     */     
+    protected class ActionMDRLine extends ItemAction {     
+    
+        public ActionMDRLine()
+        {
+            this(null);
+        }
+
+        public ActionMDRLine(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionMDRLine.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionMDRLine.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionMDRLine.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractContractBillEditUI.this, "ActionMDRLine", "actionMDRLine_actionPerformed", e);
         }
     }
 

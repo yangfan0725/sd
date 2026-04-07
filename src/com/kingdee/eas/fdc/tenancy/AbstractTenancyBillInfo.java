@@ -1056,6 +1056,72 @@ public class AbstractTenancyBillInfo extends com.kingdee.eas.fdc.tenancy.TenBill
         setString("tenancyBillType", item.getValue());
 		}
     }
+    /**
+     * Object:K租赁合同's 是否更新星瀚合同property 
+     */
+    public boolean isIsUpdateXHTenancyBill()
+    {
+        return getBoolean("isUpdateXHTenancyBill");
+    }
+    public void setIsUpdateXHTenancyBill(boolean item)
+    {
+        setBoolean("isUpdateXHTenancyBill", item);
+    }
+    /**
+     * Object:K租赁合同's 星瀚客户property 
+     */
+    public String getXhCustomer()
+    {
+        return getString("xhCustomer");
+    }
+    public void setXhCustomer(String item)
+    {
+        setString("xhCustomer", item);
+    }
+    /**
+     * Object:K租赁合同's 星瀚房源面积property 
+     */
+    public java.math.BigDecimal getXhRoomArea()
+    {
+        return getBigDecimal("xhRoomArea");
+    }
+    public void setXhRoomArea(java.math.BigDecimal item)
+    {
+        setBigDecimal("xhRoomArea", item);
+    }
+    /**
+     * Object:K租赁合同's 星瀚客户编码property 
+     */
+    public String getXhCustomerNum()
+    {
+        return getString("xhCustomerNum");
+    }
+    public void setXhCustomerNum(String item)
+    {
+        setString("xhCustomerNum", item);
+    }
+    /**
+     * Object:K租赁合同's 主数据编码property 
+     */
+    public String getSysCustomerNum()
+    {
+        return getString("sysCustomerNum");
+    }
+    public void setSysCustomerNum(String item)
+    {
+        setString("sysCustomerNum", item);
+    }
+    /**
+     * Object:K租赁合同's 主数据客户property 
+     */
+    public String getSysCustomer()
+    {
+        return getString("sysCustomer");
+    }
+    public void setSysCustomer(String item)
+    {
+        setString("sysCustomer", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("7BA91DDE");

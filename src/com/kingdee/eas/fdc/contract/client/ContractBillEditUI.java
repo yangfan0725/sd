@@ -243,6 +243,7 @@ import com.kingdee.eas.fdc.contract.ContractEstimateChangeBillFactory;
 import com.kingdee.eas.fdc.contract.ContractEstimateChangeTypeEnum;
 import com.kingdee.eas.fdc.contract.ContractFacadeFactory;
 import com.kingdee.eas.fdc.contract.ContractInvoiceEntryInfo;
+import com.kingdee.eas.fdc.contract.ContractMDeveloperEntryInfo;
 import com.kingdee.eas.fdc.contract.ContractMarketEntryInfo;
 import com.kingdee.eas.fdc.contract.ContractModelFactory;
 import com.kingdee.eas.fdc.contract.ContractModelInfo;
@@ -259,12 +260,14 @@ import com.kingdee.eas.fdc.contract.FDCUtils;
 import com.kingdee.eas.fdc.contract.ForWriteMarkHelper;
 import com.kingdee.eas.fdc.contract.IContractBill;
 import com.kingdee.eas.fdc.contract.JZTypeEnum;
+import com.kingdee.eas.fdc.contract.ManagementCenterEnum;
 import com.kingdee.eas.fdc.contract.MarketProjectCollection;
 import com.kingdee.eas.fdc.contract.MarketProjectCostEntryCollection;
 import com.kingdee.eas.fdc.contract.MarketProjectCostEntryFactory;
 import com.kingdee.eas.fdc.contract.MarketProjectCostEntryInfo;
 import com.kingdee.eas.fdc.contract.MarketProjectFactory;
 import com.kingdee.eas.fdc.contract.MarketProjectInfo;
+import com.kingdee.eas.fdc.contract.PurchaseApplyInfo;
 import com.kingdee.eas.fdc.contract.app.MarketCostTypeEnum;
 import com.kingdee.eas.fdc.contract.app.OaUtil;
 import com.kingdee.eas.fdc.contract.programming.ProgrammingContractCollection;
@@ -540,6 +543,17 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 
 			//解决bug BT315446 注释代码 txtProj.setText(curProject.getDisplayName());
 			//txtProj.setText(curProject.getDisplayName());
+			String desc="";
+			try {
+				desc = CurProjectFactory.getRemoteInstance().getCurProjectInfo(new ObjectUuidPK(editData.getCurProject().getId())).getDescription();
+			} catch (EASBizException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (BOSException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			txtProjDesc.setText(desc);
 			txtProj.setText(editData.getCurProject().getDisplayName());
 
 			FullOrgUnitInfo costOrg = this.orgUnitInfo;
@@ -602,6 +616,7 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 				this.txtamount.setEnabled(true);
 			}else if (this.contractPropert.getSelectedItem() == ContractPropertyEnum.STRATEGY) {
 				this.txtamount.setEnabled(false);
+				this.prmtlandDeveloper.setEnabled(false);
 			}
 		}
 		
@@ -1260,6 +1275,10 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 
 		}
 		setProgAndAccountState((ContractTypeInfo) prmtcontractType.getValue(),(ContractPropertyEnum) contractPropert.getSelectedItem());
+		
+		if(ContractPropertyEnum.STRATEGY.equals(contractPropert.getSelectedItem())){
+			kDTabbedPane1.setSelectedComponent(this.kDContainer6);
+		}
 		super.contractPropert_itemStateChanged(e);
 
 	}
@@ -1528,6 +1547,17 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 					this.prmtpartB.setEnabled(true);
 				}
 			}
+			if(ct.isIsPurchaseApply()){
+				this.prmtPurchaseApply.setEnabled(true);
+				this.btnViewPurchaseApply.setEnabled(true);
+				if(ContractPropertyEnum.SUPPLY.equals(contractProp)){
+					this.prmtPurchaseApply.setEnabled(false);
+					this.btnViewPurchaseApply.setEnabled(false);
+				}
+			}else{
+				this.prmtPurchaseApply.setEnabled(false);
+				this.btnViewPurchaseApply.setEnabled(false);
+			}
 			String paramValue="true";
 			try {
 				paramValue = ParamControlFactory.getRemoteInstance().getParamValue(new ObjectUuidPK(SysContext.getSysContext().getCurrentOrgUnit().getId()), "YF_MARKETPROJECTCONTRACT");
@@ -1571,6 +1601,15 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 			}else{
 				this.prmtpartB.setEnabled(true);
 			}
+			
+			this.prmtPurchaseApply.setEnabled(false);
+			this.prmtPurchaseApply.setValue(null);
+			this.btnViewPurchaseApply.setEnabled(false);
+			if(ContractPropertyEnum.SUPPLY.equals(contractProp)){
+				this.prmtPurchaseApply.setEnabled(false);
+				this.btnViewPurchaseApply.setEnabled(false);
+			}
+			
 			this.prmtMarketProject.setEnabled(false);
 			this.prmtMarketProject.setRequired(false);
 			this.prmtMpCostAccount.setEnabled(false);
@@ -1774,8 +1813,24 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 			}else if (contractProp == ContractPropertyEnum.STRATEGY) {
 				this.costProperty.addItem(CostPropertyEnum.COMP_COMFIRM);
 				
-				this.txtamount.setValue(FDCHelper.ZERO);
+//				this.txtamount.setValue(FDCHelper.ZERO);
 				this.txtamount.setEnabled(false);
+				this.prmtlandDeveloper.setEnabled(false);
+			}
+		}
+		if(contractProp != ContractPropertyEnum.STRATEGY){
+			this.actionMDALine.setEnabled(false);
+			this.actionMDRLine.setEnabled(false);
+			this.kdtMDeveloperEntry.setEnabled(false);
+		}else{
+			if (this.getOprtState().equals(OprtState.VIEW)) {
+				this.actionMDALine.setEnabled(false);
+				this.actionMDRLine.setEnabled(false);
+				this.kdtMDeveloperEntry.setEnabled(false);
+			}else{
+				this.actionMDALine.setEnabled(true);
+				this.actionMDRLine.setEnabled(true);
+				this.kdtMDeveloperEntry.setEnabled(true);
 			}
 		}
 	}
@@ -2660,6 +2715,9 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 //			if(ContractTypeOrgTypeEnum.BIGRANGE.equals(info.getOrgType())||ContractTypeOrgTypeEnum.SMALLRANGE.equals(info.getOrgType())){
 //				this.cbOrgType.setEnabled(false);
 //			}
+			if(this.cbOrgType.getSelectedItem()==null)
+				this.cbOrgType.setSelectedItem(info.getOrgType());
+			
 			Set id = new HashSet();
 			for (int i = 0; i < info.getContractWFTypeEntry().size(); i++) {
 				if (info.getContractWFTypeEntry().get(i).getContractWFType() != null) {
@@ -2820,8 +2878,7 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 		view=new EntityViewInfo();
 		view.setFilter(filter);
 		this.prmtMpCostAccount.setEntityViewInfo(view);
-		
-		
+	
 		filter = new FilterInfo();
 		filterItems = filter.getFilterItems();
 		filterItems.add(new FilterItemInfo("isEnabled", Boolean.TRUE));
@@ -2829,6 +2886,25 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 		view=new EntityViewInfo();
 		view.setFilter(filter);
 		this.prmtLxNum.setEntityViewInfo(view);
+		
+		
+		filter = new FilterInfo();
+		filterItems = filter.getFilterItems();
+		filterItems.add(new FilterItemInfo("state", FDCBillStateEnum.AUDITTED_VALUE));
+		filterItems.add(new FilterItemInfo("curProject.id", editData.getCurProject().getId().toString()));
+		
+		ContractBillCollection cbCol=ContractBillFactory.getRemoteInstance().getContractBillCollection("select purchaseApply.id from where purchaseApply.id is not null and curProject.id='"+this.editData.getCurProject().getId()+"' and id!='"+this.editData.getId().toString()+"'");
+		Set xzId=new HashSet();
+		for(int i=0;i<cbCol.size();i++){
+			xzId.add(cbCol.get(i).getPurchaseApply().getId().toString());
+		}
+		if(xzId.size()>0){
+			filterItems.add(new FilterItemInfo("id", xzId,CompareType.NOTINCLUDE));
+		}
+		
+		view=new EntityViewInfo();
+		view.setFilter(filter);
+		this.prmtPurchaseApply.setEntityViewInfo(view);
 		
 		prmtInviteType.setRequired(false);
 		prmtInviteType.setEnabled(false);
@@ -2886,16 +2962,18 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 		this.actionAddNew.setVisible(false);
 		this.actionCopy.setVisible(false);
 		
-		view=new EntityViewInfo();
 		filter=new FilterInfo();
-		filter.getFilterItems().add(new FilterItemInfo("state",FDCBillStateEnum.AUDITTED_VALUE));
-		filter.getFilterItems().add(new FilterItemInfo("curProject.id",this.editData.getCurProject().getId()));
+		filterItems = filter.getFilterItems();
+		filterItems.add(new FilterItemInfo("state",FDCBillStateEnum.AUDITTED_VALUE));
+		filterItems.add(new FilterItemInfo("curProject.id",this.editData.getCurProject().getId()));
 		HashSet set = new HashSet();
 		set.add(ContractPropertyEnum.DIRECT_VALUE);
 		set.add(ContractPropertyEnum.THREE_PARTY_VALUE);
 		set.add(ContractPropertyEnum.STRATEGY_VALUE);
 		filterItems.add(new FilterItemInfo("contractPropert", set,
 				CompareType.INCLUDE));
+		
+		view=new EntityViewInfo();
 		view.setFilter(filter);
 		this.prmtContractBillReceive.setEntityViewInfo(view);
 		
@@ -2933,6 +3011,8 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 			
 			this.cbConnectedTransaction.setRequired(false);
 		}
+		this.prmtcontractType.setAccessAuthority(CtrlCommonConstant.AUTHORITY_COMMON);
+		this.prmtcontractType.setEnabled(false);
 	}
 	protected void prmtTAEntry_dataChanged(DataChangeEvent e) throws Exception {
 		this.tblInvite.removeRows();
@@ -3047,7 +3127,7 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 		kDTabbedPane1.add(this.panelInvite, resHelper.getString("panelInvite.constraints"));
 		kDTabbedPane1.add(this.kDContainer4, resHelper.getString("kDContainer4.constraints"));
 		kDTabbedPane1.add(this.kDContainer5, resHelper.getString("kDContainer5.constraints"));
-		
+		kDTabbedPane1.add(this.kDContainer6, resHelper.getString("kDContainer6.constraints"));
 //		kDTabbedPane1.add(pnlInviteInfo, resHelper.getString("pnlInviteInfo.constraints"));
 		//亿达需要，万科先注销
 		//		kDTabbedPane1.add(pnlCost, "成本信息");		
@@ -3224,6 +3304,9 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 //				this.cbOrgType.setSelectedItem(null);
 //				this.cbOrgType.setEnabled(true);
 //			}
+			if(this.cbOrgType.getSelectedItem()==null)
+				this.cbOrgType.setSelectedItem(info.getOrgType());
+			
 			info=ContractTypeFactory.getRemoteInstance().getContractTypeInfo("select *,contractWFTypeEntry.contractWFType.*,inviteTypeEntry.inviteType.* from where id='"+info.getId().toString()+"'");
 			Set id = new HashSet();
 			for (int i = 0; i < info.getContractWFTypeEntry().size(); i++) {
@@ -3297,6 +3380,18 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 					this.prmtpartB.setEnabled(true);
 				}
 			}
+			if(info.isIsPurchaseApply()){
+				this.prmtPurchaseApply.setEnabled(true);
+				this.btnViewPurchaseApply.setEnabled(true);
+				if(ContractPropertyEnum.SUPPLY.equals(this.contractPropert.getSelectedItem())){
+					this.prmtPurchaseApply.setEnabled(false);
+					this.btnViewPurchaseApply.setEnabled(false);
+				}
+			}else{
+				this.prmtPurchaseApply.setEnabled(false);
+				this.prmtPurchaseApply.setValue(null);
+				this.btnViewPurchaseApply.setEnabled(false);
+			}
 			String paramValue="true";
 			try {
 				paramValue = ParamControlFactory.getRemoteInstance().getParamValue(new ObjectUuidPK(SysContext.getSysContext().getCurrentOrgUnit().getId()), "YF_MARKETPROJECTCONTRACT");
@@ -3348,6 +3443,13 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 				this.prmtpartB.setEnabled(false);
 			}else{
 				this.prmtpartB.setEnabled(true);
+			}
+			this.prmtPurchaseApply.setEnabled(false);
+			this.prmtPurchaseApply.setValue(null);
+			this.btnViewPurchaseApply.setEnabled(false);
+			if(ContractPropertyEnum.SUPPLY.equals(this.contractPropert.getSelectedItem())){
+				this.prmtPurchaseApply.setEnabled(false);
+				this.btnViewPurchaseApply.setEnabled(false);
 			}
 			
 			this.prmtMarketProject.setEnabled(false);
@@ -3579,7 +3681,7 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 	public void setOprtState(String oprtType) {
 		super.setOprtState(oprtType);
 		if (STATUS_ADDNEW.equals(oprtType)) {
-			prmtcontractType.setEnabled(true);
+//			prmtcontractType.setEnabled(true);
 			actionSplit.setEnabled(false);
 		} else {
 			if (this.editData != null) {
@@ -3651,7 +3753,11 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 			this.actionMALine.setEnabled(false);
 			this.actionMRLine.setEnabled(false);
 			
-			this.tblMarket.setEditable(false);
+			this.tblMarket.setEnabled(false);
+			
+			this.actionMDALine.setEnabled(false);
+			this.actionMDRLine.setEnabled(false);
+			this.kdtMDeveloperEntry.setEnabled(false);
 		} else {
 			this.actionDetailALine.setEnabled(true);
 			this.actionDetailILine.setEnabled(true);
@@ -3659,6 +3765,12 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 			
 			this.actionMALine.setEnabled(true);
 			this.actionMRLine.setEnabled(true);
+			
+			this.tblMarket.setEnabled(true);
+			
+			this.actionMDALine.setEnabled(true);
+			this.actionMDRLine.setEnabled(true);
+			this.kdtMDeveloperEntry.setEnabled(true);
 		}
 		
 		if(this.curProject!=null){
@@ -3734,7 +3846,7 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 				//				prmtcontractType.setEnabled(false);
 				actionSplit.setEnabled(true);
 			} else {
-				prmtcontractType.setEnabled(true);
+//				prmtcontractType.setEnabled(true);
 				actionSplit.setEnabled(false);
 			}
 		}
@@ -3830,6 +3942,8 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 		sic.add(new SelectorItemInfo("oaOpinion"));
 		sic.add(new SelectorItemInfo("oaState"));
 		sic.add(new SelectorItemInfo("isTimeOut"));
+		
+		sic.add(new SelectorItemInfo("center"));
 		return sic;
 	}
 
@@ -4270,7 +4384,7 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 
 	public void actionAddNew_actionPerformed(ActionEvent e) throws Exception {
 		super.actionAddNew_actionPerformed(e);
-		prmtcontractType.setEnabled(true);
+//		prmtcontractType.setEnabled(true);
 		kDDateCreateTime.setEnabled(false);
 		comboCurrency.setEnabled(true);
 		prmtModel.setEnabled(true);
@@ -4303,7 +4417,7 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 				//				prmtcontractType.setEnabled(false);
 				actionSplit.setEnabled(true);
 			} else {
-				prmtcontractType.setEnabled(true);
+//				prmtcontractType.setEnabled(true);
 				//				actionSplit.setEnabled(true);
 			}
 		}
@@ -4383,6 +4497,7 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 			this.txtamount.setEnabled(true);
 		}else if (this.contractPropert.getSelectedItem() == ContractPropertyEnum.STRATEGY) {
 			this.txtamount.setEnabled(false);
+			this.prmtlandDeveloper.setEnabled(false);
 		}
 		fillDetailByPropert((ContractPropertyEnum) this.contractPropert.getSelectedItem(),(ContractTypeInfo) this.prmtcontractType.getValue());
 		this.txtNumber.setEnabled(false);
@@ -5810,7 +5925,9 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 		FDCClientVerifyHelper.verifyEmpty(this, prmtcontractType);
 		//增加校验
 		FDCClientVerifyHelper.verifyEmpty(this, prmtpartB);
-		FDCClientVerifyHelper.verifyEmpty(this, prmtlandDeveloper);
+		if(this.contractPropert.getSelectedItem() != ContractPropertyEnum.STRATEGY){
+			FDCClientVerifyHelper.verifyEmpty(this, prmtlandDeveloper);
+		}
 		FDCClientVerifyHelper.verifyEmpty(this, prmtRespDept);
 		FDCClientVerifyHelper.verifyEmpty(this, prmtRespPerson);
 		if(isNeed){
@@ -5927,6 +6044,33 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 					}
 				}else{
 					FDCMsgBox.showWarning(this,"合同金额超出立项剩余金额！");
+					SysUtil.abort();
+				}
+			}
+		}
+		if(this.contractPropert.getSelectedItem() == ContractPropertyEnum.STRATEGY){
+			if(this.kdtMDeveloperEntry.getRowCount()==0){
+				FDCMsgBox.showWarning(this,"多甲方签订明细不能为空！");
+				SysUtil.abort();
+			}
+			for(int i=0;i<this.kdtMDeveloperEntry.getRowCount();i++){
+				if(this.kdtMDeveloperEntry.getRow(i).getCell("landDeveloper").getValue()==null){
+					FDCMsgBox.showWarning(this,"甲方不能为空！");
+					SysUtil.abort();
+				}
+				if(this.kdtMDeveloperEntry.getRow(i).getCell("center").getValue()==null){
+					FDCMsgBox.showWarning(this,"管理中心不能为空！");
+					SysUtil.abort();
+				}
+				if(this.editData.getCenter()!=null){
+					if(this.editData.getCenter().indexOf(this.kdtMDeveloperEntry.getRow(i).getCell("center").getValue().toString())<0){
+						this.editData.setCenter(this.editData.getCenter()+this.kdtMDeveloperEntry.getRow(i).getCell("center").getValue().toString()+";");
+					}
+				}else{
+					this.editData.setCenter(this.kdtMDeveloperEntry.getRow(i).getCell("center").getValue().toString()+";");
+				}
+				if(this.kdtMDeveloperEntry.getRow(i).getCell("amount").getValue()==null){
+					FDCMsgBox.showWarning(this,"分摊金额不能为空！");
 					SysUtil.abort();
 				}
 			}
@@ -8028,6 +8172,69 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 		this.kdtYZEntry.getColumn("admin").getStyleAttributes().setLocked(true);
 		this.kdtYZEntry.getColumn("type").getStyleAttributes().setLocked(true);
 		this.kdtYZEntry.getColumn("count").setRequired(true);
+		
+		
+		this.kdtMDeveloperEntry.checkParsed();
+		this.kdtMDeveloperEntry.setEditable(true);
+		btnAddRowinfo = new KDWorkButton();
+		btnDeleteRowinfo = new KDWorkButton();
+
+		this.actionMDALine.putValue("SmallIcon", EASResource.getIcon("imgTbtn_addline"));
+		btnAddRowinfo = (KDWorkButton) this.kDContainer6.add(this.actionMDALine);
+		btnAddRowinfo.setText("新增行");
+		btnAddRowinfo.setSize(new Dimension(140, 19));
+
+		this.actionMDRLine.putValue("SmallIcon", EASResource.getIcon("imgTbtn_deleteline"));
+		btnDeleteRowinfo = (KDWorkButton) this.kDContainer6.add(this.actionMDRLine);
+		btnDeleteRowinfo.setText("删除行");
+		btnDeleteRowinfo.setSize(new Dimension(140, 19));
+		
+		this.kdtMDeveloperEntry.getColumn("amount").setEditor(amountEditor);
+
+		KDBizPromptBox f7Box = new KDBizPromptBox(); 
+		KDTDefaultCellEditor f7Editor = new KDTDefaultCellEditor(f7Box);
+		f7Box.setDisplayFormat("$name$");
+		f7Box.setEditFormat("$number$");
+		f7Box.setCommitFormat("$number$");
+		f7Box.setQueryInfo("com.kingdee.eas.fdc.basedata.app.LandDeveloperQuery");
+		f7Box.addSelectorListener(new SelectorListener() {
+			public void willShow(SelectorEvent e) {
+				KDBizPromptBox f7 = (KDBizPromptBox) e.getSource();
+				f7.getQueryAgent().setDefaultFilterInfo(null);
+				f7.getQueryAgent().setHasCUDefaultFilter(false);
+				f7.getQueryAgent().resetRuntimeEntityView();
+				EntityViewInfo view = new EntityViewInfo();
+				FilterInfo filter = new FilterInfo();
+				filter.getFilterItems().add(
+						new FilterItemInfo("isEnabled", Boolean.TRUE));
+				HashSet set = new HashSet();
+				set.add(OrgConstants.SYS_CU_ID);
+				String cuId = editData.getCU().getId().toString();
+				set.add(cuId);
+				filter.getFilterItems().add(
+						new FilterItemInfo("CU.id", set, CompareType.INCLUDE));
+				view.setFilter(filter);
+				f7.setEntityViewInfo(view);
+			}
+		});
+		f7Editor = new KDTDefaultCellEditor(f7Box);
+		this.kdtMDeveloperEntry.getColumn("landDeveloper").setEditor(f7Editor);
+		
+		KDComboBox combo = new KDComboBox();
+        for(int i = 0; i < ManagementCenterEnum.getEnumList().size(); i++){
+        	combo.addItem(ManagementCenterEnum.getEnumList().get(i));
+        }
+        KDTDefaultCellEditor comboEditor = new KDTDefaultCellEditor(combo);
+		this.kdtMDeveloperEntry.getColumn("center").setEditor(comboEditor);
+		
+		this.kdtMDeveloperEntry.getColumn("landDeveloper").setRequired(true);
+		this.kdtMDeveloperEntry.getColumn("landDeveloper").setWidth(230);
+		this.kdtMDeveloperEntry.getColumn("center").setRequired(true);
+		this.kdtMDeveloperEntry.getColumn("amount").setRequired(true);
+		
+		this.kdtMDeveloperEntry.getColumn("amount").setEditor(amountEditor);
+		this.kdtMDeveloperEntry.getColumn("amount").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
+		this.kdtMDeveloperEntry.getColumn("amount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.getAlignment("right"));
 	}
 	public void actionYZALine_actionPerformed(ActionEvent e) throws Exception {
 		UIContext uiContext = new UIContext(this);
@@ -8054,9 +8261,15 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 		setMarketEntry();
 	}
 	protected void pkJzEndDate_dataChanged(DataChangeEvent e) throws Exception {
+		if(isLoad){
+			return;
+		}
 		setMarketEntry();
 	}
 	protected void pkJzStartDate_dataChanged(DataChangeEvent e) throws Exception {
+		if(isLoad){
+			return;
+		}
 		setMarketEntry();
 	}
 	private void setMarketEntry() throws ParseException{
@@ -8195,6 +8408,37 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
 				 }
 			 }
 		 }
+	}
+	protected void kdtMDeveloperEntry_editStopped(KDTEditEvent e)
+			throws Exception {
+		 IRow r = this.kdtMDeveloperEntry.getRow(e.getRowIndex());
+		 int colIndex = e.getColIndex();
+		 if(colIndex == this.tblMarket.getColumnIndex("amount")){
+			 BigDecimal total=FDCHelper.ZERO;
+			for(int i=0;i<this.kdtMDeveloperEntry.getRowCount();i++){
+				total=FDCHelper.add(total, this.kdtMDeveloperEntry.getRow(i).getCell("amount").getValue());
+			}
+			this.txtamount.setValue(total);
+		 }
+	}
+
+	@Override
+	public void actionMDALine_actionPerformed(ActionEvent e) throws Exception {
+		IRow row = this.kdtMDeveloperEntry.addRow();
+		ContractMDeveloperEntryInfo info = new ContractMDeveloperEntryInfo();
+		info.setId(BOSUuid.create(info.getBOSType()));
+		
+		row.setUserObject(info);
+	}
+
+	@Override
+	public void actionMDRLine_actionPerformed(ActionEvent e) throws Exception {
+		int activeRowIndex = kdtMDeveloperEntry.getSelectManager().getActiveRowIndex();
+		if(activeRowIndex<0){
+			FDCMsgBox.showError("请先选择一行数据");
+			abort();
+		}
+		kdtMDeveloperEntry.removeRow(activeRowIndex);
 	}
 
 	public void actionMALine_actionPerformed(ActionEvent e) throws Exception {
@@ -8345,6 +8589,18 @@ public class ContractBillEditUI extends AbstractContractBillEditUI implements IW
     	}else{
     		super.actionAuditResult_actionPerformed(e);
     	}
+	}
+
+	@Override
+	protected void btnViewPurchaseApply_actionPerformed(ActionEvent e)
+			throws Exception {
+		if(this.prmtPurchaseApply.getValue()!=null){
+			UIContext uiContext = new UIContext(this);
+			uiContext.put("ID", ((PurchaseApplyInfo)this.prmtPurchaseApply.getValue()).getId());
+	        IUIFactory uiFactory = UIFactory.createUIFactory(UIFactoryName.MODEL);
+	        IUIWindow uiWindow = uiFactory.create(PurchaseApplyEditUI.class.getName(), uiContext,null,OprtState.VIEW);
+	        uiWindow.show();
+		}
 	}
 	
 }

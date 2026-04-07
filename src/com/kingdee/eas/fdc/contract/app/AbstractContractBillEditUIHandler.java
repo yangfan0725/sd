@@ -119,4 +119,14 @@ public abstract class AbstractContractBillEditUIHandler extends com.kingdee.eas.
 	}
 	protected void _handleActionYZRLine(RequestContext request,ResponseContext response, Context context) throws Exception {
 	}
+	public void handleActionMDALine(RequestContext request,ResponseContext response, Context context) throws Exception {
+		_handleActionMDALine(request,response,context);
+	}
+	protected void _handleActionMDALine(RequestContext request,ResponseContext response, Context context) throws Exception {
+	}
+	public void handleActionMDRLine(RequestContext request,ResponseContext response, Context context) throws Exception {
+		_handleActionMDRLine(request,response,context);
+	}
+	protected void _handleActionMDRLine(RequestContext request,ResponseContext response, Context context) throws Exception {
+	}
 }

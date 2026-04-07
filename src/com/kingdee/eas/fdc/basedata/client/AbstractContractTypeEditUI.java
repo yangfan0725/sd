@@ -66,6 +66,15 @@ public abstract class AbstractContractTypeEditUI extends com.kingdee.eas.framewo
     protected com.kingdee.bos.ctrl.swing.KDCheckBox cbIsWebPC;
     protected com.kingdee.bos.ctrl.swing.KDCheckBox cbIsReceive;
     protected com.kingdee.bos.ctrl.swing.KDCheckBox cbIsRelateReceive;
+    protected com.kingdee.bos.ctrl.swing.KDCheckBox cbIsFund;
+    protected com.kingdee.bos.ctrl.swing.KDCheckBox cbIsTrip;
+    protected com.kingdee.bos.ctrl.swing.KDCheckBox cbIsExpense;
+    protected com.kingdee.bos.ctrl.swing.KDCheckBox cbIsPurchase;
+    protected com.kingdee.bos.ctrl.swing.KDCheckBox cbIsHide;
+    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtHideDay;
+    protected com.kingdee.bos.ctrl.swing.KDLabel kDLabel2;
+    protected com.kingdee.bos.ctrl.swing.KDLabel kDLabel3;
+    protected com.kingdee.bos.ctrl.swing.KDCheckBox cbIsPurchaseApply;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox bizName;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtLongNumber;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox bizDutyOrgUnit;
@@ -130,6 +139,15 @@ public abstract class AbstractContractTypeEditUI extends com.kingdee.eas.framewo
         this.cbIsWebPC = new com.kingdee.bos.ctrl.swing.KDCheckBox();
         this.cbIsReceive = new com.kingdee.bos.ctrl.swing.KDCheckBox();
         this.cbIsRelateReceive = new com.kingdee.bos.ctrl.swing.KDCheckBox();
+        this.cbIsFund = new com.kingdee.bos.ctrl.swing.KDCheckBox();
+        this.cbIsTrip = new com.kingdee.bos.ctrl.swing.KDCheckBox();
+        this.cbIsExpense = new com.kingdee.bos.ctrl.swing.KDCheckBox();
+        this.cbIsPurchase = new com.kingdee.bos.ctrl.swing.KDCheckBox();
+        this.cbIsHide = new com.kingdee.bos.ctrl.swing.KDCheckBox();
+        this.txtHideDay = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
+        this.kDLabel2 = new com.kingdee.bos.ctrl.swing.KDLabel();
+        this.kDLabel3 = new com.kingdee.bos.ctrl.swing.KDLabel();
+        this.cbIsPurchaseApply = new com.kingdee.bos.ctrl.swing.KDCheckBox();
         this.bizName = new com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox();
         this.txtLongNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.bizDutyOrgUnit = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
@@ -159,6 +177,15 @@ public abstract class AbstractContractTypeEditUI extends com.kingdee.eas.framewo
         this.cbIsWebPC.setName("cbIsWebPC");
         this.cbIsReceive.setName("cbIsReceive");
         this.cbIsRelateReceive.setName("cbIsRelateReceive");
+        this.cbIsFund.setName("cbIsFund");
+        this.cbIsTrip.setName("cbIsTrip");
+        this.cbIsExpense.setName("cbIsExpense");
+        this.cbIsPurchase.setName("cbIsPurchase");
+        this.cbIsHide.setName("cbIsHide");
+        this.txtHideDay.setName("txtHideDay");
+        this.kDLabel2.setName("kDLabel2");
+        this.kDLabel3.setName("kDLabel3");
+        this.cbIsPurchaseApply.setName("cbIsPurchaseApply");
         this.bizName.setName("bizName");
         this.txtLongNumber.setName("txtLongNumber");
         this.bizDutyOrgUnit.setName("bizDutyOrgUnit");
@@ -246,6 +273,23 @@ public abstract class AbstractContractTypeEditUI extends com.kingdee.eas.framewo
         this.cbIsReceive.setText(resHelper.getString("cbIsReceive.text"));
         // cbIsRelateReceive		
         this.cbIsRelateReceive.setText(resHelper.getString("cbIsRelateReceive.text"));
+        // cbIsFund		
+        this.cbIsFund.setText(resHelper.getString("cbIsFund.text"));
+        // cbIsTrip		
+        this.cbIsTrip.setText(resHelper.getString("cbIsTrip.text"));
+        // cbIsExpense		
+        this.cbIsExpense.setText(resHelper.getString("cbIsExpense.text"));
+        // cbIsPurchase		
+        this.cbIsPurchase.setText(resHelper.getString("cbIsPurchase.text"));
+        // cbIsHide		
+        this.cbIsHide.setText(resHelper.getString("cbIsHide.text"));
+        // txtHideDay
+        // kDLabel2		
+        this.kDLabel2.setText(resHelper.getString("kDLabel2.text"));
+        // kDLabel3		
+        this.kDLabel3.setText(resHelper.getString("kDLabel3.text"));
+        // cbIsPurchaseApply		
+        this.cbIsPurchaseApply.setText(resHelper.getString("cbIsPurchaseApply.text"));
         // bizName		
         this.bizName.setRequired(true);		
         this.bizName.setMaxLength(80);
@@ -348,7 +392,7 @@ public abstract class AbstractContractTypeEditUI extends com.kingdee.eas.framewo
      */
     public void initUIContentLayout()
     {
-        this.setBounds(new Rectangle(10, 10, 290, 470));
+        this.setBounds(new Rectangle(10, 10, 290, 570));
         this.setLayout(null);
         contName.setBounds(new Rectangle(10, 30, 270, 19));
         this.add(contName, null);
@@ -356,9 +400,9 @@ public abstract class AbstractContractTypeEditUI extends com.kingdee.eas.framewo
         this.add(contLongNumber, null);
         chkIsEnabled.setBounds(new Rectangle(282, 278, 140, 19));
         this.add(chkIsEnabled, null);
-        kDLabel1.setBounds(new Rectangle(12, 370, 100, 19));
+        kDLabel1.setBounds(new Rectangle(11, 505, 100, 19));
         this.add(kDLabel1, null);
-        bizDescription.setBounds(new Rectangle(10, 394, 270, 67));
+        bizDescription.setBounds(new Rectangle(11, 525, 270, 34));
         this.add(bizDescription, null);
         chkIsCost.setBounds(new Rectangle(185, 207, 102, 19));
         this.add(chkIsCost, null);
@@ -378,18 +422,36 @@ public abstract class AbstractContractTypeEditUI extends com.kingdee.eas.framewo
         this.add(contInviteType, null);
         cbIsAccountView.setBounds(new Rectangle(10, 207, 172, 19));
         this.add(cbIsAccountView, null);
-        cbSinglePayment.setBounds(new Rectangle(10, 230, 140, 19));
+        cbSinglePayment.setBounds(new Rectangle(10, 229, 140, 19));
         this.add(cbSinglePayment, null);
-        cbIsTA.setBounds(new Rectangle(10, 253, 246, 19));
+        cbIsTA.setBounds(new Rectangle(10, 251, 246, 19));
         this.add(cbIsTA, null);
-        cbIsMarket.setBounds(new Rectangle(11, 276, 254, 19));
+        cbIsMarket.setBounds(new Rectangle(10, 295, 254, 19));
         this.add(cbIsMarket, null);
-        cbIsWebPC.setBounds(new Rectangle(11, 299, 274, 19));
+        cbIsWebPC.setBounds(new Rectangle(10, 317, 274, 19));
         this.add(cbIsWebPC, null);
-        cbIsReceive.setBounds(new Rectangle(11, 322, 140, 19));
+        cbIsReceive.setBounds(new Rectangle(10, 361, 140, 19));
         this.add(cbIsReceive, null);
-        cbIsRelateReceive.setBounds(new Rectangle(11, 347, 198, 19));
+        cbIsRelateReceive.setBounds(new Rectangle(10, 340, 198, 19));
         this.add(cbIsRelateReceive, null);
+        cbIsFund.setBounds(new Rectangle(10, 382, 140, 19));
+        this.add(cbIsFund, null);
+        cbIsTrip.setBounds(new Rectangle(10, 403, 115, 19));
+        this.add(cbIsTrip, null);
+        cbIsExpense.setBounds(new Rectangle(10, 424, 140, 19));
+        this.add(cbIsExpense, null);
+        cbIsPurchase.setBounds(new Rectangle(10, 445, 140, 19));
+        this.add(cbIsPurchase, null);
+        cbIsHide.setBounds(new Rectangle(10, 466, 205, 19));
+        this.add(cbIsHide, null);
+        txtHideDay.setBounds(new Rectangle(134, 486, 42, 19));
+        this.add(txtHideDay, null);
+        kDLabel2.setBounds(new Rectangle(13, 486, 131, 19));
+        this.add(kDLabel2, null);
+        kDLabel3.setBounds(new Rectangle(178, 486, 44, 19));
+        this.add(kDLabel3, null);
+        cbIsPurchaseApply.setBounds(new Rectangle(10, 273, 140, 19));
+        this.add(cbIsPurchaseApply, null);
         //contName
         contName.setBoundEditor(bizName);
         //contLongNumber
@@ -528,6 +590,13 @@ public abstract class AbstractContractTypeEditUI extends com.kingdee.eas.framewo
 		dataBinder.registerBinding("isWebPC", boolean.class, this.cbIsWebPC, "selected");
 		dataBinder.registerBinding("isReceive", boolean.class, this.cbIsReceive, "selected");
 		dataBinder.registerBinding("isRelateReceive", boolean.class, this.cbIsRelateReceive, "selected");
+		dataBinder.registerBinding("isFund", boolean.class, this.cbIsFund, "selected");
+		dataBinder.registerBinding("isTrip", boolean.class, this.cbIsTrip, "selected");
+		dataBinder.registerBinding("isExpense", boolean.class, this.cbIsExpense, "selected");
+		dataBinder.registerBinding("isPurchase", boolean.class, this.cbIsPurchase, "selected");
+		dataBinder.registerBinding("isHide", boolean.class, this.cbIsHide, "selected");
+		dataBinder.registerBinding("hideDay", int.class, this.txtHideDay, "value");
+		dataBinder.registerBinding("isPurchaseApply", boolean.class, this.cbIsPurchaseApply, "selected");
 		dataBinder.registerBinding("name", String.class, this.bizName, "_multiLangItem");
 		dataBinder.registerBinding("longNumber", String.class, this.txtLongNumber, "text");
 		dataBinder.registerBinding("dutyOrgUnit", com.kingdee.eas.basedata.org.AdminOrgUnitInfo.class, this.bizDutyOrgUnit, "data");
@@ -603,6 +672,13 @@ public abstract class AbstractContractTypeEditUI extends com.kingdee.eas.framewo
 		getValidateHelper().registerBindProperty("isWebPC", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("isReceive", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("isRelateReceive", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("isFund", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("isTrip", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("isExpense", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("isPurchase", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("isHide", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("hideDay", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("isPurchaseApply", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("name", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("longNumber", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("dutyOrgUnit", ValidateHelper.ON_SAVE);    
@@ -673,6 +749,13 @@ public abstract class AbstractContractTypeEditUI extends com.kingdee.eas.framewo
         sic.add(new SelectorItemInfo("isWebPC"));
         sic.add(new SelectorItemInfo("isReceive"));
         sic.add(new SelectorItemInfo("isRelateReceive"));
+        sic.add(new SelectorItemInfo("isFund"));
+        sic.add(new SelectorItemInfo("isTrip"));
+        sic.add(new SelectorItemInfo("isExpense"));
+        sic.add(new SelectorItemInfo("isPurchase"));
+        sic.add(new SelectorItemInfo("isHide"));
+        sic.add(new SelectorItemInfo("hideDay"));
+        sic.add(new SelectorItemInfo("isPurchaseApply"));
         sic.add(new SelectorItemInfo("name"));
         sic.add(new SelectorItemInfo("longNumber"));
 		if(selectorAll.equalsIgnoreCase("true"))

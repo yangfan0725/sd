@@ -64,6 +64,7 @@ import com.kingdee.eas.fdc.contract.PayRequestBillFactory;
 import com.kingdee.eas.fdc.contract.PayRequestBillInfo;
 import com.kingdee.eas.fdc.contract.app.HttpClientUtil;
 import com.kingdee.eas.fi.cas.CashPamentBillUtil;
+import com.kingdee.eas.fi.cas.PaymentBill;
 import com.kingdee.eas.fi.cas.PaymentBillCollection;
 import com.kingdee.eas.fi.cas.PaymentBillEntryInfo;
 import com.kingdee.eas.fi.cas.PaymentBillFactory;
@@ -208,6 +209,26 @@ public class PaymentBillControllerBeanEx extends PaymentBillControllerBean {
          		
          		formData.add(act);
             }
+        	if(info.getSourceBillId()!=null&&BOSUuid.read(info.getSourceBillId()).getType().equals(info.getBOSType())){
+        		SelectorItemCollection srcsic = new SelectorItemCollection();
+        		srcsic.add("fdcPayReqNumber");
+            	PaymentBillInfo srcinfo=PaymentBillFactory.getLocalInstance(ctx).getPaymentBillInfo(new ObjectUuidPK(info.getSourceBillId()),srcsic);
+            	if(srcinfo.getFdcPayReqNumber()!=null&&srcinfo.getFdcPayReqNumber().indexOf("MK")>=0){
+                	JSONObject act=new JSONObject();
+             		
+             		act.put("formNo", srcinfo.getFdcPayReqNumber().split("-")[1]);
+             		act.put("paidDate", lt);
+             		act.put("type", srcinfo.getFdcPayReqNumber().split("-")[2]);
+             		
+             		if(info.getPayerAccountBank()==null){
+             			throw new EASBizException(new NumericExceptionSubItem("100","¸¶¿îÕË»§Îª¿Õ£¡"));
+             		}
+             		AccountBankInfo account=AccountBankFactory.getLocalInstance(ctx).getAccountBankInfo(new ObjectUuidPK(info.getPayerAccountBank().getId()));
+             		act.put("payerAccountCode", account.getBankAccountNumber());
+             		
+             		formData.add(act);
+                }
+        	}
 		}
 		if(formData.size()>0){
 			JSONObject login=new JSONObject();

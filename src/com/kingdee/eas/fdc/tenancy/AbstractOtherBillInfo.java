@@ -110,6 +110,19 @@ public class AbstractOtherBillInfo extends com.kingdee.eas.fdc.tenancy.TenBillBa
     {
         setString("des", item);
     }
+    /**
+     * Object:K其他合同's 合同类型property 
+     */
+    public com.kingdee.eas.fdc.tenancy.OtherBillTypeEnum getType()
+    {
+        return com.kingdee.eas.fdc.tenancy.OtherBillTypeEnum.getEnum(getString("type"));
+    }
+    public void setType(com.kingdee.eas.fdc.tenancy.OtherBillTypeEnum item)
+    {
+		if (item != null) {
+        setString("type", item.getValue());
+		}
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("73402BAE");

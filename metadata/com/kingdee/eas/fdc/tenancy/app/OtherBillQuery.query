@@ -462,6 +462,37 @@
             </query>
         </queryField>
         <queryField>
+            <name>type</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.OtherBillQuery].units.queryField[type].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>46ee4e9e-515c-436c-b844-e9f4ddf23533</key>
+                    <parentUnit>
+                        <key name="name" value="type" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="OtherBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="type" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="OtherBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
             <name>startDate</name>
             <userDefined>true</userDefined>
             <formulaString />
@@ -639,6 +670,37 @@
                     </subEntity>
                     <refProperty>
                         <key name="name" value="amount" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="OtherBillQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>entry.totalAmount</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.OtherBillQuery].units.queryField[entry.totalAmount].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>eba67dd2-a4f9-4dda-932c-4899d7d7847d</key>
+                    <parentUnit>
+                        <key name="name" value="entry.totalAmount" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="entry" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="totalAmount" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
@@ -1439,6 +1501,22 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.OtherBillQuery].units.queryField[entry.totalAmount].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收取总额" />
+            <lang locale="zh_HK" value="收取總額" />
+            <lang locale="zh_TW" value="收取總額" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.OtherBillQuery].units.queryField[entry.totalAmount].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.OtherBillQuery].units.queryField[entry.totalAmount].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.OtherBillQuery].units.queryField[entry.workload].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="面积/量" />
@@ -1572,6 +1650,22 @@
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.OtherBillQuery].units.queryField[type].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="合同类型" />
+            <lang locale="zh_HK" value="合同類型" />
+            <lang locale="zh_TW" value="合同類型" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.OtherBillQuery].units.queryField[type].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.OtherBillQuery].units.queryField[type].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
     </resource>
 </joinQuery>

@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<joinQuery xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.tenancy.app</package>
+    <name>XHRoomQuery</name>
+    <alias>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].description</description>
+    <userDefined>true</userDefined>
+    <reportDataSource />
+    <bizUnitPK />
+    <connectionProvider />
+    <subObjects>
+        <subEntity>
+            <name>XHRoom</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].subObjects.subEntity[XHRoom].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoom" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>CU</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].subObjects.subEntity[CU].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CtrlUnit" />
+            </entityRef>
+        </subEntity>
+        <subEntity>
+            <name>sellProject</name>
+            <alias>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].subObjects.subEntity[sellProject].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.fdc.sellhouse.app" />
+                <key name="name" value="SellProject" />
+            </entityRef>
+        </subEntity>
+    </subObjects>
+    <units>
+        <propertyUnit>
+            <name>288138ac-5719-4dfb-bb04-e0e5abcaf07b</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.propertyUnit[288138ac-5719-4dfb-bb04-e0e5abcaf07b].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>0b69c8f8-2553-4abe-90f3-5cc2888610d7</key>
+                    <parentUnit>
+                        <key name="name" value="288138ac-5719-4dfb-bb04-e0e5abcaf07b" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="XHRoom" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="CU" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>ec94ae52-afaa-477d-8654-fd64517f1262</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.propertyUnit[ec94ae52-afaa-477d-8654-fd64517f1262].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>e7ba6b04-1c0f-4f4f-add9-e90e06e38412</key>
+                    <parentUnit>
+                        <key name="name" value="ec94ae52-afaa-477d-8654-fd64517f1262" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CU" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>736f79a4-55c8-4a12-9259-c136c5227c61</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.propertyUnit[736f79a4-55c8-4a12-9259-c136c5227c61].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a9132308-bd4a-4351-9b6f-2196d42e3170</key>
+                    <parentUnit>
+                        <key name="name" value="736f79a4-55c8-4a12-9259-c136c5227c61" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="XHRoom" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="sellProject" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>d2fe386f-c0cb-4a5f-84f7-f30cb4c5431f</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.propertyUnit[d2fe386f-c0cb-4a5f-84f7-f30cb4c5431f].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>7a13732d-62cd-45b4-bc3f-8ff90012746b</key>
+                    <parentUnit>
+                        <key name="name" value="d2fe386f-c0cb-4a5f-84f7-f30cb4c5431f" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="sellProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+        </propertyUnit>
+        <queryField>
+            <name>number</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[number].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>94088821-c989-4354-b672-d413dc08c7b1</key>
+                    <parentUnit>
+                        <key name="name" value="number" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="XHRoom" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="number" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>name</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>7a7ca616-7738-4956-a0ec-dc9ab54362ff</key>
+                    <parentUnit>
+                        <key name="name" value="name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="XHRoom" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>area</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[area].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>8980619c-f699-4583-bd94-902ac000126b</key>
+                    <parentUnit>
+                        <key name="name" value="area" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="XHRoom" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="area" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>isSale</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[isSale].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>203cb626-64bb-41d2-a3de-67691b01d850</key>
+                    <parentUnit>
+                        <key name="name" value="isSale" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="XHRoom" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="isSale" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>CU.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[CU.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>fc3cdd61-fd2e-4625-bc71-745482924a15</key>
+                    <parentUnit>
+                        <key name="name" value="CU.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="CU" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>sellProject.id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[sellProject.id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>8fd9298c-a939-40a0-a7fd-9bbd3f45678c</key>
+                    <parentUnit>
+                        <key name="name" value="sellProject.id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="sellProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>id</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[id].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>93682a58-85ab-4f29-b884-2536883d0624</key>
+                    <parentUnit>
+                        <key name="name" value="id" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="XHRoom" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+        </queryField>
+    </units>
+    <defaultFilter>
+        <name>defaultFilter</name>
+        <formulaString />
+        <query>
+            <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+            <key name="name" value="XHRoomQuery" />
+        </query>
+    </defaultFilter>
+    <queryPK>
+        <name>QueryPK</name>
+        <alias>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].queryPK[QueryPK].description</description>
+        <keyProperties>
+            <queryField>
+                <key name="name" value="id" />
+            </queryField>
+        </keyProperties>
+    </queryPK>
+    <isDistinct>false</isDistinct>
+    <joins>
+        <join>
+            <name>35bb29f6-15b5-4b17-b97b-14c531097f6c</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="XHRoom" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="CU" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>a7764f33-d7c0-434b-844a-7dea334fe427</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="288138ac-5719-4dfb-bb04-e0e5abcaf07b" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="ec94ae52-afaa-477d-8654-fd64517f1262" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="35bb29f6-15b5-4b17-b97b-14c531097f6c" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+        </join>
+        <join>
+            <name>7318d080-57aa-4818-bfff-8aea6821304f</name>
+            <formulaString>#0</formulaString>
+            <type>INNER JOIN</type>
+            <leftObject>
+                <key name="name" value="XHRoom" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="sellProject" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>7cb1a06d-e25d-4063-b5ca-4040fd139cab</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="736f79a4-55c8-4a12-9259-c136c5227c61" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="d2fe386f-c0cb-4a5f-84f7-f30cb4c5431f" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="7318d080-57aa-4818-bfff-8aea6821304f" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="XHRoomQuery" />
+            </query>
+        </join>
+    </joins>
+    <resource>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="星瀚房间查询" />
+            <lang locale="zh_HK" value="星瀚房間查詢" />
+            <lang locale="zh_TW" value="星瀚房間查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="星瀚房间查询" />
+            <lang locale="zh_HK" value="星瀚房間查詢" />
+            <lang locale="zh_TW" value="星瀚房間查詢" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].queryPK[QueryPK].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].queryPK[QueryPK].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].subObjects.subEntity[CU].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].subObjects.subEntity[XHRoom].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].subObjects.subEntity[sellProject].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.propertyUnit[288138ac-5719-4dfb-bb04-e0e5abcaf07b].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.propertyUnit[736f79a4-55c8-4a12-9259-c136c5227c61].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.propertyUnit[d2fe386f-c0cb-4a5f-84f7-f30cb4c5431f].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.propertyUnit[ec94ae52-afaa-477d-8654-fd64517f1262].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[CU.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[CU.id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[area].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="面积" />
+            <lang locale="zh_HK" value="面積" />
+            <lang locale="zh_TW" value="面積" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[area].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[area].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[isSale].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="是否已售" />
+            <lang locale="zh_HK" value="是否已售" />
+            <lang locale="zh_TW" value="是否已售" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[isSale].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[isSale].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[number].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[sellProject.id].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="ID" />
+            <lang locale="zh_HK" value="ID" />
+            <lang locale="zh_TW" value="ID" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.XHRoomQuery].units.queryField[sellProject.id].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+    </resource>
+</joinQuery>
+

@@ -286,6 +286,26 @@
                 <key name="name" value="FWorkload" />
             </mappingField>
         </ownProperty>
+        <ownProperty>
+            <name>totalAmount</name>
+            <alias>entityObject[com.kingdee.eas.fdc.tenancy.app.OtherBillEntry].properties.ownProperty[totalAmount].alias</alias>
+            <description>entityObject[com.kingdee.eas.fdc.tenancy.app.OtherBillEntry].properties.ownProperty[totalAmount].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>BigDecimal</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>13</length>
+            <precision>28</precision>
+            <decimalDigits>10</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.fdc.tenancy.app.OtherBillEntry].properties.ownProperty[totalAmount].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="FTotalAmount" />
+            </mappingField>
+        </ownProperty>
     </properties>
     <logicalKey>
         <name>id</name>
@@ -485,6 +505,24 @@
             <lang locale="zh_CN" value="单价" />
             <lang locale="zh_HK" value="單價" />
             <lang locale="zh_TW" value="單價" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.OtherBillEntry].properties.ownProperty[totalAmount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收取总额" />
+            <lang locale="zh_HK" value="收取總額" />
+            <lang locale="zh_TW" value="收取總額" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.OtherBillEntry].properties.ownProperty[totalAmount].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.OtherBillEntry].properties.ownProperty[totalAmount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收取总额" />
+            <lang locale="zh_HK" value="收取總額" />
+            <lang locale="zh_TW" value="收取總額" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.fdc.tenancy.app.OtherBillEntry].properties.ownProperty[workload].alias">
             <lang locale="en_US" value="null" />

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.contract</package>
+    <name>TransferTypeEnum</name>
+    <alias>bizEnum[com.kingdee.eas.fdc.contract.TransferTypeEnum].alias</alias>
+    <description>bizEnum[com.kingdee.eas.fdc.contract.TransferTypeEnum].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.fdc.contract.TransferTypeEnum</className>
+    <enumDataType>STRING</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>ONE</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.TransferTypeEnum].enumValues.enumValue[ONE].alias</alias>
+            <userDefined>true</userDefined>
+            <value>ONE</value>
+        </enumValue>
+        <enumValue>
+            <name>MANY</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.TransferTypeEnum].enumValues.enumValue[MANY].alias</alias>
+            <userDefined>true</userDefined>
+            <value>MANY</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.TransferTypeEnum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="转出方式" />
+            <lang locale="zh_HK" value="轉出方式" />
+            <lang locale="zh_TW" value="轉出方式" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.TransferTypeEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="转出方式" />
+            <lang locale="zh_HK" value="轉出方式" />
+            <lang locale="zh_TW" value="轉出方式" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.TransferTypeEnum].enumValues.enumValue[MANY].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="多笔" />
+            <lang locale="zh_HK" value="多筆" />
+            <lang locale="zh_TW" value="多筆" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.TransferTypeEnum].enumValues.enumValue[ONE].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单笔" />
+            <lang locale="zh_HK" value="單筆" />
+            <lang locale="zh_TW" value="單筆" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.TransferTypeEnum].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

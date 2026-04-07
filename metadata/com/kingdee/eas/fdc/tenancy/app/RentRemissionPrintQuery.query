@@ -882,6 +882,37 @@
                 <key name="name" value="RentRemissionPrintQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>sellProject.description</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.tenancy.app.RentRemissionPrintQuery].units.queryField[sellProject.description].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>135128aa-2b23-4b8c-8e9f-d03761a0ff17</key>
+                    <parentUnit>
+                        <key name="name" value="sellProject.description" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="sellProject" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="description" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.tenancy.app" />
+                <key name="name" value="RentRemissionPrintQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -1182,6 +1213,12 @@
             <lang locale="zh_CN" value="房间" />
             <lang locale="zh_HK" value="房間" />
             <lang locale="zh_TW" value="房間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.RentRemissionPrintQuery].units.queryField[sellProject.description].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="租赁项目描述" />
+            <lang locale="zh_HK" value="租賃項目描述" />
+            <lang locale="zh_TW" value="租賃項目描述" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.tenancy.app.RentRemissionPrintQuery].units.queryField[sellProject.name].displayName">
             <lang locale="en_US" value="null" />

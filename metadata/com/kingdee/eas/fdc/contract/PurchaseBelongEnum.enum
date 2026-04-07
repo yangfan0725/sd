@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.fdc.contract</package>
+    <name>PurchaseBelongEnum</name>
+    <alias>bizEnum[com.kingdee.eas.fdc.contract.PurchaseBelongEnum].alias</alias>
+    <description>bizEnum[com.kingdee.eas.fdc.contract.PurchaseBelongEnum].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.fdc.contract.PurchaseBelongEnum</className>
+    <enumDataType>STRING</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>GCL</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.PurchaseBelongEnum].enumValues.enumValue[GCL].alias</alias>
+            <userDefined>true</userDefined>
+            <value>GCL</value>
+        </enumValue>
+        <enumValue>
+            <name>HWL</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.PurchaseBelongEnum].enumValues.enumValue[HWL].alias</alias>
+            <userDefined>true</userDefined>
+            <value>HWL</value>
+        </enumValue>
+        <enumValue>
+            <name>FWL</name>
+            <alias>bizEnum[com.kingdee.eas.fdc.contract.PurchaseBelongEnum].enumValues.enumValue[FWL].alias</alias>
+            <userDefined>true</userDefined>
+            <value>FWL</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseBelongEnum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购归属" />
+            <lang locale="zh_HK" value="採購歸屬" />
+            <lang locale="zh_TW" value="採購歸屬" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseBelongEnum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="采购归属" />
+            <lang locale="zh_HK" value="採購歸屬" />
+            <lang locale="zh_TW" value="採購歸屬" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseBelongEnum].enumValues.enumValue[FWL].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="服务类" />
+            <lang locale="zh_HK" value="服務類" />
+            <lang locale="zh_TW" value="服務類" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseBelongEnum].enumValues.enumValue[GCL].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="工程类" />
+            <lang locale="zh_HK" value="工程類" />
+            <lang locale="zh_TW" value="工程類" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseBelongEnum].enumValues.enumValue[HWL].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="货物类" />
+            <lang locale="zh_HK" value="貨物類" />
+            <lang locale="zh_TW" value="貨物類" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.fdc.contract.PurchaseBelongEnum].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

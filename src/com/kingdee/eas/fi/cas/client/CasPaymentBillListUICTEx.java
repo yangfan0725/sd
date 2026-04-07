@@ -31,6 +31,7 @@ import com.kingdee.bos.metadata.entity.SelectorItemInfo;
 import com.kingdee.bos.ui.face.IUIFactory;
 import com.kingdee.bos.ui.face.IUIWindow;
 import com.kingdee.bos.ui.face.UIFactory;
+import com.kingdee.bos.util.BOSUuid;
 import com.kingdee.eas.basedata.org.CompanyOrgUnitFactory;
 import com.kingdee.eas.basedata.org.CompanyOrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
@@ -42,10 +43,17 @@ import com.kingdee.eas.fdc.basedata.FDCSQLBuilder;
 import com.kingdee.eas.fdc.basedata.client.FDCMsgBox;
 import com.kingdee.eas.fdc.contract.BankNumCollection;
 import com.kingdee.eas.fdc.contract.BankNumFactory;
+import com.kingdee.eas.fdc.contract.ExpenseCostInfo;
+import com.kingdee.eas.fdc.contract.FundTransfer;
+import com.kingdee.eas.fdc.contract.FundTransferInfo;
 import com.kingdee.eas.fdc.contract.PayReqUtils;
+import com.kingdee.eas.fdc.contract.TripCostInfo;
 import com.kingdee.eas.fdc.contract.app.OaUtil;
 import com.kingdee.eas.fdc.contract.client.ContractWithoutTextEditUI;
+import com.kingdee.eas.fdc.contract.client.ExpenseCostEditUI;
+import com.kingdee.eas.fdc.contract.client.FundTransferEditUI;
 import com.kingdee.eas.fdc.contract.client.PayRequestBillEditUI;
+import com.kingdee.eas.fdc.contract.client.TripCostEditUI;
 import com.kingdee.eas.fi.cas.BgCtrlPaymentBillHandler;
 import com.kingdee.eas.fi.cas.BillStatusEnum;
 import com.kingdee.eas.fi.cas.IPaymentBill;
@@ -247,7 +255,7 @@ public class CasPaymentBillListUICTEx extends CasPaymentBillListUI{
 			}
 			UIContext uiContext = new UIContext(this);
 			uiContext.put("ID", id);
-	        IUIFactory uiFactory = UIFactory.createUIFactory(UIFactoryName.MODEL);
+	        IUIFactory uiFactory = UIFactory.createUIFactory(UIFactoryName.NEWTAB);
 	        IUIWindow uiWindow = uiFactory.create(className, uiContext,null,OprtState.VIEW);
 	        uiWindow.show();
 		}else{
@@ -260,7 +268,27 @@ public class CasPaymentBillListUICTEx extends CasPaymentBillListUI{
 				
 				Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler "+link);  
 	    	}else{
-	    		super.actionTraceUp_actionPerformed(e);
+	    		if(info.getSourceBillId()!=null){
+	    			String className=null;
+	    			if(BOSUuid.read(info.getSourceBillId()).getType().equals(new FundTransferInfo().getBOSType())){
+	    				className=FundTransferEditUI.class.getName();
+	    			}else if(BOSUuid.read(info.getSourceBillId()).getType().equals(new TripCostInfo().getBOSType())){
+	    				className=TripCostEditUI.class.getName();
+	    			}else if(BOSUuid.read(info.getSourceBillId()).getType().equals(new ExpenseCostInfo().getBOSType())){
+	    				className=ExpenseCostEditUI.class.getName();
+	    			}
+	    			if(className!=null){
+	    				UIContext uiContext = new UIContext(this);
+		    			uiContext.put("ID", info.getSourceBillId());
+		    	        IUIFactory uiFactory = UIFactory.createUIFactory(UIFactoryName.NEWTAB);
+		    	        IUIWindow uiWindow = uiFactory.create(className, uiContext,null,OprtState.VIEW);
+		    	        uiWindow.show();
+	    			}else{
+	    				super.actionTraceUp_actionPerformed(e);
+	    			}
+	    		}else{
+	    			super.actionTraceUp_actionPerformed(e);
+	    		}
 	    	}
 		}
 	}

@@ -1740,6 +1740,9 @@ public class ImportExcelRoomUIForSHE extends AbstractImportExcelRoomUIForSHE {
 				view.setFilter(filter);
 				view.getSelector().add("*");
 				view.getSelector().add("buildUnit.*");
+				view.getSelector().add("building.*");
+				view.getSelector().add("building.sellProject.name");
+				view.getSelector().add("building.sellProject.number");
 
 				rooms = RoomFactory.getRemoteInstance().getRoomCollection(view);
 			}else if(unit != null){
@@ -1751,6 +1754,9 @@ public class ImportExcelRoomUIForSHE extends AbstractImportExcelRoomUIForSHE {
 				view.setFilter(filter);
 				view.getSelector().add("*");
 				view.getSelector().add("buildUnit.*");
+				view.getSelector().add("building.*");
+				view.getSelector().add("building.sellProject.name");
+				view.getSelector().add("building.sellProject.number");
 				
 				rooms = RoomFactory.getRemoteInstance().getRoomCollection(view);
 			}else{
@@ -1762,6 +1768,9 @@ public class ImportExcelRoomUIForSHE extends AbstractImportExcelRoomUIForSHE {
 				view.setFilter(filter);
 				view.getSelector().add("*");
 				view.getSelector().add("buildUnit.*");
+				view.getSelector().add("building.*");
+				view.getSelector().add("building.sellProject.name");
+				view.getSelector().add("building.sellProject.number");
 				
 				rooms = RoomFactory.getRemoteInstance().getRoomCollection(view);
 			}

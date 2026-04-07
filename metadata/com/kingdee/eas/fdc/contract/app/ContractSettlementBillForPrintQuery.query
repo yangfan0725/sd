@@ -2112,6 +2112,37 @@
                 <key name="name" value="ContractSettlementBillForPrintQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>orgAuditCost</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.fdc.contract.app.ContractSettlementBillForPrintQuery].units.queryField[orgAuditCost].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>bf99b182-761d-465b-8c1e-7566968ec30a</key>
+                    <parentUnit>
+                        <key name="name" value="orgAuditCost" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="ContractSettlementBill" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="orgAuditCost" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.fdc.contract.app" />
+                <key name="name" value="ContractSettlementBillForPrintQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -2793,6 +2824,12 @@
             <lang locale="zh_CN" value="结算单编码" />
             <lang locale="zh_HK" value="結算單編碼" />
             <lang locale="zh_TW" value="結算單編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ContractSettlementBillForPrintQuery].units.queryField[orgAuditCost].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="造价咨询机构审核造价" />
+            <lang locale="zh_HK" value="造價諮詢機構審核造價" />
+            <lang locale="zh_TW" value="造價諮詢機構審核造價" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.fdc.contract.app.ContractSettlementBillForPrintQuery].units.queryField[orgUnit.displayName].displayName">
             <lang locale="en_US" value="null" />

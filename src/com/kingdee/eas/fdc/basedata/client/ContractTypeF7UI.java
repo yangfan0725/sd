@@ -219,7 +219,42 @@ if(getUIContext().get("isReceive") != null){
 		filter.getFilterItems().add(
 				new FilterItemInfo("isReceive", Boolean.FALSE));
 	}
-	
+}
+if(getUIContext().get("isPurchase") != null){
+	if(((Boolean)getUIContext().get("isPurchase")).booleanValue()){
+		filter.getFilterItems().add(
+				new FilterItemInfo("isPurchase", Boolean.TRUE));
+	}else{
+		filter.getFilterItems().add(
+				new FilterItemInfo("isPurchase", Boolean.FALSE));
+	}
+}
+if(getUIContext().get("isFund") != null){
+	if(((Boolean)getUIContext().get("isFund")).booleanValue()){
+		filter.getFilterItems().add(
+				new FilterItemInfo("isFund", Boolean.TRUE));
+	}else{
+		filter.getFilterItems().add(
+				new FilterItemInfo("isFund", Boolean.FALSE));
+	}
+}
+if(getUIContext().get("isTrip") != null){
+	if(((Boolean)getUIContext().get("isTrip")).booleanValue()){
+		filter.getFilterItems().add(
+				new FilterItemInfo("isTrip", Boolean.TRUE));
+	}else{
+		filter.getFilterItems().add(
+				new FilterItemInfo("isTrip", Boolean.FALSE));
+	}
+}
+if(getUIContext().get("isExpense") != null){
+	if(((Boolean)getUIContext().get("isExpense")).booleanValue()){
+		filter.getFilterItems().add(
+				new FilterItemInfo("isExpense", Boolean.TRUE));
+	}else{
+		filter.getFilterItems().add(
+				new FilterItemInfo("isExpense", Boolean.FALSE));
+	}
 }
 /* <-MISALIGNED-> */ /* 211*/        return filter;
             }

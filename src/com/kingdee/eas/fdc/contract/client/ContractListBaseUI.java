@@ -445,6 +445,14 @@ public abstract class ContractListBaseUI extends AbstractContractListBaseUI {
 				new FilterItemInfo("isEnabled", Boolean.TRUE));
 		filter.getFilterItems().add(
 				new FilterItemInfo("isReceive", Boolean.FALSE));
+		filter.getFilterItems().add(
+				new FilterItemInfo("isFund", Boolean.FALSE));
+		filter.getFilterItems().add(
+				new FilterItemInfo("isTrip", Boolean.FALSE));
+		filter.getFilterItems().add(
+				new FilterItemInfo("isExpense", Boolean.FALSE));
+		filter.getFilterItems().add(
+				new FilterItemInfo("isPurchase", Boolean.FALSE));
 		return filter;
 	}
 

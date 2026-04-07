@@ -81,6 +81,7 @@ import com.kingdee.eas.fdc.contract.ChangeAuditBillFactory;
 import com.kingdee.eas.fdc.contract.ChangeAuditBillInfo;
 import com.kingdee.eas.fdc.contract.ContractBillFactory;
 import com.kingdee.eas.fdc.contract.ContractBillInfo;
+import com.kingdee.eas.fdc.contract.ContractPropertyEnum;
 import com.kingdee.eas.fdc.contract.FDCUtils;
 import com.kingdee.eas.fdc.contract.PayReqUtils;
 import com.kingdee.eas.fdc.contract.PayRequestBillCollection;
@@ -448,6 +449,14 @@ public class PayRequestBillListUI extends AbstractPayRequestBillListUI {
 		checkSelected(getMainTable());
 		checkContractSplitState();
 		checkParamForAddNew();
+		String contractId = getContractBillId();
+		SelectorItemCollection sic = new SelectorItemCollection();
+		sic.add("contractPropert");
+		ContractBillInfo bill = ContractBillFactory.getRemoteInstance().getContractBillInfo(new ObjectUuidPK(BOSUuid.read(contractId)), sic);
+		if(bill.getContractPropert().equals(ContractPropertyEnum.STRATEGY)){
+			FDCMsgBox.showError("多甲方协议的合同不能申请付款。");
+			SysUtil.abort();
+		}
 		super.actionAddNew_actionPerformed(e);
 	}
 

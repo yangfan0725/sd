@@ -235,7 +235,7 @@
             <userDefined>false</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>9,338,989,45,13</constraints>
+            <constraints>9,358,989,45,13</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -368,6 +368,17 @@
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
             <constraints>720,203,276,19,137</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+        </component>
+        <component>
+            <name>contConnectedTransaction</name>
+            <alias>uiObject[com.kingdee.eas.fdc.contract.client.ContractDetailFullInfoUI].components.component[contConnectedTransaction].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>9,336,276,19,261</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -705,6 +716,12 @@
             <lang locale="zh_TW" value="1013,1000" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.fdc.contract.client.ContractDetailFullInfoUI].components.component[contAmtBig].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.fdc.contract.client.ContractDetailFullInfoUI].components.component[contConnectedTransaction].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />

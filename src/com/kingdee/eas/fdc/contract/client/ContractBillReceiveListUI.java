@@ -1288,6 +1288,11 @@ protected void tblMain_tableSelectChanged(
 				FDCMsgBox.showInfo(this, "您选择的是跨期合同新增，请注意！");
 			}
 		}
+		Object userObject2 = getTypeSelectedTreeNode().getUserObject();
+		if(userObject2==null||!(userObject2 instanceof ContractTypeInfo)||!getTypeSelectedTreeNode().isLeaf()){
+			FDCMsgBox.showWarning(this, "请选择明细合同类别！");
+			SysUtil.abort();
+		}
 		super.actionAddNew_actionPerformed(e);
 	}
 

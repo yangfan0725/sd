@@ -1644,10 +1644,23 @@ public class FDCReceivingBillControllerBean extends AbstractFDCReceivingBillCont
 		
 		if(type.equals(RevBillTypeEnum.refundment)){
 			PaymentBillFactory.getLocalInstance(ctx).submit(pay);
-			Set payId=new HashSet();
-			payId.add(pay.getId().toString());
-			PaymentBillFactory.getLocalInstance(ctx).audit(payId);
-			PaymentBillFactory.getLocalInstance(ctx).pay(payId);
+			HashMap hmParamIn = new HashMap();
+			hmParamIn.put("ISSAVED", ContextUtil.getCurrentOrgUnit(ctx).getId().toString());
+
+			HashMap hmAllParam = ParamControlFactory.getLocalInstance(ctx).getParamHashMap(hmParamIn);
+
+			boolean isSaved=true;
+			if (hmAllParam.get("ISSAVED") != null) {
+				isSaved = Boolean.valueOf(
+						hmAllParam.get("ISSAVED").toString())
+						.booleanValue();
+			}
+			if(isSaved){
+				Set payId=new HashSet();
+				payId.add(pay.getId().toString());
+				PaymentBillFactory.getLocalInstance(ctx).audit(payId);
+				PaymentBillFactory.getLocalInstance(ctx).pay(payId);
+			}
 		}else{
 			ReceivingBillFactory.getLocalInstance(ctx).submit(rev);
 			HashMap hmParamIn = new HashMap();

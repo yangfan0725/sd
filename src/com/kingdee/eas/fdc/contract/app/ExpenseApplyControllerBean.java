@@ -5,6 +5,7 @@ import javax.ejb.*;
 import java.rmi.RemoteException;
 import com.kingdee.bos.*;
 import com.kingdee.bos.util.BOSObjectType;
+import com.kingdee.bos.util.BOSUuid;
 import com.kingdee.bos.metadata.IMetaDataPK;
 import com.kingdee.bos.metadata.rule.RuleExecutor;
 import com.kingdee.bos.metadata.MetaDataPK;
@@ -27,12 +28,14 @@ import com.kingdee.bos.metadata.entity.SorterItemCollection;
 import com.kingdee.eas.framework.CoreBaseCollection;
 import com.kingdee.bos.metadata.entity.FilterInfo;
 import com.kingdee.eas.fdc.contract.ExpenseApplyCollection;
+import com.kingdee.eas.fdc.contract.ExpenseCostFactory;
 import com.kingdee.eas.framework.CoreBillBaseCollection;
 import com.kingdee.eas.framework.CoreBaseInfo;
 import com.kingdee.eas.fdc.contract.ExpenseApplyInfo;
 import com.kingdee.eas.fdc.basedata.FDCBillCollection;
 import com.kingdee.eas.fdc.basedata.FDCBillInfo;
 import com.kingdee.eas.framework.ObjectBaseCollection;
+import com.kingdee.util.NumericExceptionSubItem;
 
 public class ExpenseApplyControllerBean extends AbstractExpenseApplyControllerBean
 {
@@ -42,4 +45,14 @@ protected void checkNameDup(Context ctx, FDCBillInfo billInfo)throws BOSExceptio
     	
     	
     }
+protected void _unAudit(Context ctx, BOSUuid billId) throws BOSException,
+		EASBizException {
+	if(ExpenseCostFactory.getLocalInstance(ctx).exists("select * from where expenseApply.id='"+billId+"'")){
+		throw new EASBizException(new NumericExceptionSubItem("100","存在报销单，不能进行反审批操作！"));
+	}
+	super._unAudit(ctx, billId);
+		
+}
+
+
 }

@@ -106,6 +106,7 @@ import com.kingdee.eas.fdc.contract.app.OaUtil;
 import com.kingdee.eas.fdc.contract.programming.ProgrammingContractInfo;
 import com.kingdee.eas.fdc.contract.programming.client.ContractBillLinkProgContEditUI;
 import com.kingdee.eas.fdc.sellhouse.client.PaymentManageRelateBillUI;
+import com.kingdee.eas.fi.cas.BillStatusEnum;
 import com.kingdee.eas.fm.common.ContextHelperFactory;
 import com.kingdee.eas.framework.CoreBaseInfo;
 import com.kingdee.eas.framework.FrameWorkException;
@@ -844,7 +845,36 @@ protected void tblMain_tableSelectChanged(
 			MsgBox.showWarning("请选择工程项目进行添加附件！");
 		}
 	}
-	
+	public boolean canUploadAttaForAudited(Object obj, boolean canUploadForAudited)
+    {
+/* <-MISALIGNED-> */ /* 537*/        boolean isEdit = false;
+/* <-MISALIGNED-> */ /* 538*/        if(canUploadForAudited)
+        {
+/* <-MISALIGNED-> */ /* 539*/            if(obj != null && (obj.toString().equals(FDCBillStateEnum.SAVED.toString()) || obj.toString().equals(FDCBillStateEnum.SUBMITTED.toString()) || obj.toString().equals(FDCBillStateEnum.AUDITTING.toString()) || obj.toString().equals(FDCBillStateEnum.AUDITTED.toString()) || obj.toString().equals(BillStatusEnum.SAVE.toString()) || obj.toString().equals(BillStatusEnum.SUBMIT.toString()) || obj.toString().equals(BillStatusEnum.AUDITING.toString()) || obj.toString().equals(BillStatusEnum.AUDITED.toString())))
+
+
+
+
+
+/* 548*/                isEdit = true;
+
+/* 550*/            else/* 550*/                isEdit = false;
+        } else
+
+/* 553*/        if(obj != null && (obj.toString().equals(FDCBillStateEnum.SAVED.toString()) || obj.toString().equals(FDCBillStateEnum.SUBMITTED.toString())  || obj.toString().equals(BillStatusEnum.SAVE.toString()) || obj.toString().equals(BillStatusEnum.SUBMIT.toString())))
+
+
+
+
+
+
+/* 560*/            isEdit = true;
+
+/* 562*/        else/* 562*/            isEdit = false;
+
+
+/* 565*/        return isEdit;
+    }
     public void actionAttachment_actionPerformed(ActionEvent e) throws Exception
     {
 //    	super.actionAttachment_actionPerformed(e);
@@ -875,7 +905,7 @@ protected void tblMain_tableSelectChanged(
     		int rowIdx=tblMain.getSelectManager().getActiveRowIndex();
     		ICell cell =tblMain.getCell(rowIdx, getBillStatePropertyName());
     		Object obj=cell.getValue();
-    		isEdit=ContractClientUtils.canUploadAttaForAudited(obj, canUploadForAudited);
+    		isEdit=canUploadAttaForAudited(obj, canUploadForAudited);
     	}
     	//add by david_yang PT043562 2011.03.29
     	 if(isEdit){

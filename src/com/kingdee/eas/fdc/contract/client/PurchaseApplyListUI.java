@@ -21,11 +21,13 @@ import org.apache.log4j.Logger;
 
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.metadata.IMetaDataPK;
+import com.kingdee.bos.metadata.data.SortType;
 import com.kingdee.bos.metadata.entity.EntityViewInfo;
 import com.kingdee.bos.metadata.entity.FilterInfo;
 import com.kingdee.bos.metadata.entity.FilterItemCollection;
 import com.kingdee.bos.metadata.entity.FilterItemInfo;
 import com.kingdee.bos.metadata.entity.SelectorItemCollection;
+import com.kingdee.bos.metadata.entity.SorterItemCollection;
 import com.kingdee.bos.metadata.entity.SorterItemInfo;
 import com.kingdee.bos.metadata.query.util.CompareType;
 import com.kingdee.bos.ui.face.CoreUIObject;
@@ -287,6 +289,11 @@ public class PurchaseApplyListUI extends AbstractPurchaseApplyListUI
 			{
 				viewInfo.setFilter(filter);
 			}
+			SorterItemCollection sort=new SorterItemCollection();
+			SorterItemInfo itme = new SorterItemInfo("createTime");
+			itme.setSortType(SortType.DESCEND);
+			sort.add(itme);
+			viewInfo.setSorter(sort);
 		}catch (Exception e)
 		{
 			handleException(e);

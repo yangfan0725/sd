@@ -94,6 +94,7 @@ import com.kingdee.eas.fdc.finance.client.PaymentBillEditUI;
 import com.kingdee.eas.fdc.finance.client.PaymentFullListUI;
 import com.kingdee.eas.fdc.invite.supplier.SupplierStockFactory;
 import com.kingdee.eas.fdc.invite.supplier.SupplierStockInfo;
+import com.kingdee.eas.fi.cas.BillStatusEnum;
 import com.kingdee.eas.fi.cas.PaymentBillEntryFactory;
 import com.kingdee.eas.fi.cas.PaymentBillEntryInfo;
 import com.kingdee.eas.fi.cas.PaymentBillFactory;
@@ -2006,9 +2007,39 @@ public class PayRequestBillListUI extends AbstractPayRequestBillListUI {
 	    		int rowIdx=getBillListTable().getSelectManager().getActiveRowIndex();
 	    		ICell cell =getBillListTable().getCell(rowIdx, getBillStatePropertyName());
 	    		Object obj=cell.getValue();
-	    		isEdit=ContractClientUtils.canUploadAttaForAudited(obj, canUploadForAudited);
+	    		isEdit=canUploadAttaForAudited(obj, canUploadForAudited);
 	    	}
 	    	acm.showAttachmentListUIByBoID(boID,this,isEdit);
 	    	this.refreshList();
+	    }
+	 public boolean canUploadAttaForAudited(Object obj, boolean canUploadForAudited)
+	    {
+	/* <-MISALIGNED-> */ /* 537*/        boolean isEdit = false;
+	/* <-MISALIGNED-> */ /* 538*/        if(canUploadForAudited)
+	        {
+	/* <-MISALIGNED-> */ /* 539*/            if(obj != null && (obj.toString().equals(FDCBillStateEnum.SAVED.toString()) || obj.toString().equals(FDCBillStateEnum.SUBMITTED.toString()) || obj.toString().equals(FDCBillStateEnum.AUDITTING.toString()) || obj.toString().equals(FDCBillStateEnum.AUDITTED.toString()) || obj.toString().equals(BillStatusEnum.SAVE.toString()) || obj.toString().equals(BillStatusEnum.SUBMIT.toString()) || obj.toString().equals(BillStatusEnum.AUDITING.toString()) || obj.toString().equals(BillStatusEnum.AUDITED.toString())))
+
+
+
+
+
+	/* 548*/                isEdit = true;
+
+	/* 550*/            else/* 550*/                isEdit = false;
+	        } else
+
+	/* 553*/        if(obj != null && (obj.toString().equals(FDCBillStateEnum.SAVED.toString()) || obj.toString().equals(FDCBillStateEnum.SUBMITTED.toString())  || obj.toString().equals(BillStatusEnum.SAVE.toString()) || obj.toString().equals(BillStatusEnum.SUBMIT.toString())))
+
+
+
+
+
+
+	/* 560*/            isEdit = true;
+
+	/* 562*/        else/* 562*/            isEdit = false;
+
+
+	/* 565*/        return isEdit;
 	    }
 }

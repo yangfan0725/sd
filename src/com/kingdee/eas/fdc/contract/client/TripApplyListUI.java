@@ -22,6 +22,7 @@ import org.apache.log4j.Logger;
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.metadata.IMetaDataPK;
 import com.kingdee.bos.metadata.MetaDataPK;
+import com.kingdee.bos.metadata.data.SortType;
 import com.kingdee.bos.metadata.entity.EntityViewInfo;
 import com.kingdee.bos.metadata.entity.FilterInfo;
 import com.kingdee.bos.metadata.entity.FilterItemCollection;
@@ -300,6 +301,11 @@ public class TripApplyListUI extends AbstractTripApplyListUI
 			{
 				viewInfo.setFilter(filter);
 			}
+			SorterItemCollection sort=new SorterItemCollection();
+			SorterItemInfo itme = new SorterItemInfo("createTime");
+			itme.setSortType(SortType.DESCEND);
+			sort.add(itme);
+			viewInfo.setSorter(sort);
 		}catch (Exception e)
 		{
 			handleException(e);

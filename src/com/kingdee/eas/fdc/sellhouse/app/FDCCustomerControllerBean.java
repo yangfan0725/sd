@@ -27,6 +27,7 @@ import com.kingdee.bos.metadata.entity.SelectorItemCollection;
 import com.kingdee.bos.metadata.entity.SelectorItemInfo;
 import com.kingdee.bos.metadata.query.util.CompareType;
 import com.kingdee.bos.util.BOSUuid;
+import com.kingdee.eas.basedata.master.auxacct.AssistantHGFactory;
 import com.kingdee.eas.basedata.master.cssp.CSSPGroupCollection;
 import com.kingdee.eas.basedata.master.cssp.CSSPGroupFactory;
 import com.kingdee.eas.basedata.master.cssp.CSSPGroupInfo;
@@ -525,8 +526,12 @@ public class FDCCustomerControllerBean extends
 	
 	private void delSysCustomerByFDCCustomer(Context ctx, IObjectPK pk) throws BOSException, EASBizException{
 		FDCCustomerInfo fdcCustomer = getFDCCusByPK(ctx, pk);
+		
 		if (fdcCustomer.getSysCustomer() != null) {
 			String id = fdcCustomer.getSysCustomer().getId().toString();
+			if(AssistantHGFactory.getLocalInstance(ctx).exists("select * from where customer.id='"+id+"'")){
+				throw new EASBizException(new NumericExceptionSubItem("100","已经被横表引用不能进行删除操作！"));
+			}
 			String sql = "delete from T_BD_Customer where fid=?";
 			DbUtil.execute(ctx, sql, new Object[] { id });
 		}		

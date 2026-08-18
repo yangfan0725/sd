@@ -21,11 +21,14 @@ import org.apache.log4j.Logger;
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.metadata.IMetaDataPK;
 import com.kingdee.bos.metadata.MetaDataPK;
+import com.kingdee.bos.metadata.data.SortType;
 import com.kingdee.bos.metadata.entity.EntityViewInfo;
 import com.kingdee.bos.metadata.entity.FilterInfo;
 import com.kingdee.bos.metadata.entity.FilterItemCollection;
 import com.kingdee.bos.metadata.entity.FilterItemInfo;
 import com.kingdee.bos.metadata.entity.SelectorItemCollection;
+import com.kingdee.bos.metadata.entity.SorterItemCollection;
+import com.kingdee.bos.metadata.entity.SorterItemInfo;
 import com.kingdee.bos.metadata.query.util.CompareType;
 import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.bos.ui.face.IUIFactory;
@@ -208,12 +211,6 @@ public class ExpenseCostListUI extends AbstractExpenseCostListUI
     	
     	this.tblExpenseCost.getColumn("amount").getStyleAttributes().setNumberFormat("#,##0.00;-#,##0.00");
     	this.tblExpenseCost.getColumn("amount").getStyleAttributes().setHorizontalAlign(HorizontalAlignment.RIGHT);
-    	
-    	String[] fields=new String[this.tblMain.getColumnCount()];
-		for(int i=0;i<this.tblMain.getColumnCount();i++){
-			fields[i]=this.tblMain.getColumnKey(i);
-		}
-		KDTableHelper.setSortedColumn(this.tblMain,fields);
 	}
     protected boolean isIgnoreCUFilter() {
 		return true;
@@ -393,6 +390,11 @@ public class ExpenseCostListUI extends AbstractExpenseCostListUI
 			{
 				viewInfo.setFilter(filter);
 			}
+			SorterItemCollection sort=new SorterItemCollection();
+			SorterItemInfo itme = new SorterItemInfo("createTime");
+			itme.setSortType(SortType.DESCEND);
+			sort.add(itme);
+			viewInfo.setSorter(sort);
 		}catch (Exception e)
 		{
 			handleException(e);

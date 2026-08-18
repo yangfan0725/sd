@@ -22,11 +22,14 @@ import org.apache.log4j.Logger;
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.metadata.IMetaDataPK;
 import com.kingdee.bos.metadata.MetaDataPK;
+import com.kingdee.bos.metadata.data.SortType;
 import com.kingdee.bos.metadata.entity.EntityViewInfo;
 import com.kingdee.bos.metadata.entity.FilterInfo;
 import com.kingdee.bos.metadata.entity.FilterItemCollection;
 import com.kingdee.bos.metadata.entity.FilterItemInfo;
 import com.kingdee.bos.metadata.entity.SelectorItemCollection;
+import com.kingdee.bos.metadata.entity.SorterItemCollection;
+import com.kingdee.bos.metadata.entity.SorterItemInfo;
 import com.kingdee.bos.metadata.query.util.CompareType;
 import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.bos.util.BOSUuid;
@@ -65,6 +68,7 @@ import com.kingdee.eas.fdc.basedata.client.FDCMsgBox;
 import com.kingdee.eas.fdc.basedata.client.ProjectTreeBuilder;
 import com.kingdee.eas.fdc.contract.ExpenseApplyFactory;
 import com.kingdee.eas.fdc.contract.ExpenseApplyInfo;
+import com.kingdee.eas.fdc.merch.common.KDTableHelper;
 import com.kingdee.eas.framework.*;
 import com.kingdee.eas.framework.client.tree.DefaultLNTreeNodeCtrl;
 import com.kingdee.eas.framework.client.tree.ILNTreeNodeCtrl;
@@ -294,6 +298,11 @@ public class ExpenseApplyListUI extends AbstractExpenseApplyListUI
 			{
 				viewInfo.setFilter(filter);
 			}
+			SorterItemCollection sort=new SorterItemCollection();
+			SorterItemInfo itme = new SorterItemInfo("createTime");
+			itme.setSortType(SortType.DESCEND);
+			sort.add(itme);
+			viewInfo.setSorter(sort);
 		}catch (Exception e)
 		{
 			handleException(e);

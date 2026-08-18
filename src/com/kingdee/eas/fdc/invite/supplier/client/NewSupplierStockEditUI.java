@@ -200,6 +200,8 @@ public class NewSupplierStockEditUI extends AbstractNewSupplierStockEditUI
 		btnAuditResult.setIcon(EASResource.getIcon("imgTbtn_multapproveresult"));
 		btnWorkFlowG.setIcon(EASResource.getIcon("imgTbtn_flowchart"));
 		this.prmtPurchaseOrgUnit.setEnabled(false);
+		
+		this.actionCopy.setVisible(false);
 	}
     public void storeFields()
     {

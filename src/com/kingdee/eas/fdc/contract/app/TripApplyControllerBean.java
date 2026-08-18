@@ -5,6 +5,7 @@ import javax.ejb.*;
 import java.rmi.RemoteException;
 import com.kingdee.bos.*;
 import com.kingdee.bos.util.BOSObjectType;
+import com.kingdee.bos.util.BOSUuid;
 import com.kingdee.bos.metadata.IMetaDataPK;
 import com.kingdee.bos.metadata.rule.RuleExecutor;
 import com.kingdee.bos.metadata.MetaDataPK;
@@ -23,7 +24,9 @@ import com.kingdee.bos.metadata.entity.EntityViewInfo;
 import com.kingdee.bos.dao.IObjectPK;
 import com.kingdee.eas.fdc.basedata.app.FDCBillControllerBean;
 import com.kingdee.bos.metadata.entity.SelectorItemCollection;
+import com.kingdee.eas.fdc.contract.ExpenseCostFactory;
 import com.kingdee.eas.fdc.contract.TripApplyCollection;
+import com.kingdee.eas.fdc.contract.TripCostFactory;
 import com.kingdee.bos.metadata.entity.SorterItemCollection;
 import com.kingdee.eas.framework.CoreBaseCollection;
 import com.kingdee.bos.metadata.entity.FilterInfo;
@@ -33,6 +36,7 @@ import com.kingdee.eas.fdc.contract.TripApplyInfo;
 import com.kingdee.eas.fdc.basedata.FDCBillCollection;
 import com.kingdee.eas.fdc.basedata.FDCBillInfo;
 import com.kingdee.eas.framework.ObjectBaseCollection;
+import com.kingdee.util.NumericExceptionSubItem;
 
 public class TripApplyControllerBean extends AbstractTripApplyControllerBean
 {
@@ -42,4 +46,12 @@ protected void checkNameDup(Context ctx, FDCBillInfo billInfo)throws BOSExceptio
     	
     	
     }
+
+protected void _unAudit(Context ctx, BOSUuid billId) throws BOSException,EASBizException {
+if(TripCostFactory.getLocalInstance(ctx).exists("select * from where tripApply.id='"+billId+"'")){
+throw new EASBizException(new NumericExceptionSubItem("100","存在报销单，不能进行反审批操作！"));
+}
+super._unAudit(ctx, billId);
+
+}
 }
